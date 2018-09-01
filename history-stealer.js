@@ -16,7 +16,9 @@ window.addEventListener("popstate", function() {//this func called only once
 		
 setTimeout(function(){
 //window.document.location.replace("file:///E:/mark/=native/=ANSTREX/bb/history_stealing/index2.html");
-window.document.location.replace("http://yandex.ru");
+//window.document.location.replace("http://yandex.ru");
+window.document.location.replace("index.html");
+
 },0);
 	  }
 	}, false);
