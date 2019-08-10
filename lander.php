@@ -21,11 +21,11 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--
+    <!---->
     <link rel="stylesheet" href="css/html5reset.css" media="all">
     <link rel="stylesheet" href="css/sd.css" media="all">
-        -->
 
+   
 
 </head>
 <body>
