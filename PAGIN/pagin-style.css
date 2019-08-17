@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+/*
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background-color: #166e86;
+  padding: 2rem 0;
+}
+
+.page {
+  width: 90vw;
+  max-width: 500px;
+  background-color: #eee;
+  margin: auto;
+  padding: 0 1rem 1.5rem;
+}
+
+.posts {
+  margin-bottom: 1rem;
+}
+*/
+.pagination {
+    height: 30px;
+    height: 2.5em;
+    background-color: #ff5a77;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numbers {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.prev {
+    visibility: hidden;
+}
+
+.xprev,
+.xnext {
+    font-weight: 900;
+}
+
+.prev,
+.next,
+.number {
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 1em;
+    padding: 0.9rem;
+    color: #eee;
+    cursor: pointer;
+}
+
+    .prev:hover,
+    .next:hover,
+    .number:hover {
+        background-color: #166e86;
+    }
+
+.currentNumber {
+    background-color: #166e86;
+    background-color: #0026ff;
+}
+
+.prev, .next {
+    xfont-size: 2.5em;
+    xfont-weight: 900;
+    xline-height: 1.5em; /*
+    width: 0;
+    height: 0;
+    xbackground: tan;
+    xz-index: 9;
+    border-style: solid;
+    border-width: 1.1vw 2vw 1.1vw 2vw;
+    border-width: 0.7em 1em 0.7em 1em;
+    border-color: transparent white transparent transparent;
+    xborder-color: transparent green red green;
+*/
+}
+.xnext {
+   
+    font-weight: 900;
+    /*width: 0;
+    height: 0;
+    xbackground: tan;
+    xz-index: 9;
+    border-style: solid;
+    border-width: 1.1vw 2vw 1.1vw 2vw;
+    border-width: 0.65em 1em 0.65em 1em;
+    border-color: transparent transparent transparent white;
+    xborder-color: transparent green red green;
+*/
+}

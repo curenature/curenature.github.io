@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--  <script src="./wheel_files/jquery-latest.min.js.download" type="text/javascript"></script>
+      <script src="./wheel_files/device.min.js.download"></script>
+      <script src="./wheel_files/timespent.js.download"></script>
+      <script src="./wheel_files/bots.js.download"></script>
+      <script src="./wheel_files/dr-dtime.js.download"></script>
+        -->
+    <link href="./wheel_files/index.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="spin-wrapper">
+        <p style="text-align: center;">
+            โปรดทราบ!
+            <br> ตอนนี้กำลังมีการจับรางวัลเพื่อส่วนลดเพิ่มเติมสำหรับ Dietonica ใช้โชคดีที่มีของคุณและกดปุ่ม "SPIN" ถ้าโชคดี คุณจะสามารถสั่งผลิตภัณฑ์ได้ในราคาพิเศษสุดๆ! ขอให้คุณโชคดี!
+            <br>
+        </p>
+        <div class="wheel-wrarpper">
+            <div class="wheel">
+                <img alt="" class="wheel-img" src="./wheel_files/prizewheel.png">
+                <div class="wheel-cursor">
+                    <img alt="" src="./wheel_files/wheel-cursor.png"><span class="cursor-text lt48" onclick="spin();">SPIN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="RA4CSZ_e3qI7YOg">
+        <span class="area-name"></span>
+        <div class="tail"></div>
+    </div>
+    <div class="spin-result-wrapper">
+        <!--         <div class="pop-up-layer"> -->
+        <div class="pop-up-window">
+            <div class="close-popup"></div><span class="pop-up-heading">ยินดีด้วย!</span>
+            <p class="pop-up-text">คุณสามารถสั่ง Dietonica พร้อมส่วนลด 50%!</p><a class="pop-up-button" href="http://uwiee.voluumtrk.com/click" target="_blank">Ok</a>
+        </div>
+        <!--     </div>  -->
+    </div>
+    <script>
+        var resultWrapper = document.querySelector('.spin-result-wrapper');
+        var wheel = document.querySelector('.wheel-img');
+
+        function spin() {
+            if (wheel.classList.contains('rotated')) {
+                resultWrapper.style.display = "block";
+            } else {
+                // wheel.style.transform = "rotate(1753deg)";
+                wheel.classList.add('super-rotation');
+                setTimeout(function () {
+                    resultWrapper.style.display = "block";
+                }, 8000);
+                setTimeout(function () {
+                    var spinLinks = document.getElementsByTagName('a');
+                    var spinHref = spinLinks[0].href;
+                    window.open(spinHref);
+                }, 10000);
+                wheel.classList.add('rotated');
+            }
+        }
+        var closePopup = document.querySelector('.close-popup');
+        closePopup.onclick = function () {
+            resultWrapper.style.display = "none";
+        }
+    </script>
+    <style type="text/css">
+
+        /* Code tidied up by ScrapBook */
+
+        .super-rotation {
+            animation-name: super-rotation;
+            animation-duration: 7s;
+            animation-fill-mode: forwards;
+            transition-timing-function: ease-in-out;
+        }
+
+        @keyframes super-rotation {
+            70% {
+                transform: rotate(1783deg);
+            }
+
+            100% {
+                transform: rotate(1774deg);
+            }
+        }
+    </style>
+    <script>
+        var offerLink = 'http://uwiee.voluumtrk.com/click'; // <-- ссылка на трекер
+        var vitrina = '';
+        var isPopup = false;
+        var msgText = ''; // <-- Заголовок Попап
+        var lnkUrl = 'http://uwiee.voluumtrk.com/click'; // <-- ссылка на трекер
+        var lnkTxt = ''; // <-- Текст ссылки
+        var comeBack = true;
+        var jsCity = false;
+    </script>
+
+</body>
+</html>
