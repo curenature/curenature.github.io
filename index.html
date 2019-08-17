@@ -211,7 +211,7 @@
         }
 
             .postpart::before {
-                content: "Page ";
+                content: "sPage ";
             }
     </style>
     <style>
@@ -247,6 +247,12 @@
             /*lets take 1533 + 1 as a 100%,90px is 90 * 100 / (1533 + 1) percents,1% = 1vw*/
             font-size: 90px; /*fallback*/
             font-size: calc(90vw * 100 / (1533 + 1));
+             transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+         background:#ccc;opacity:0.99;
         }
 
             .tr-wrap .divtoberotated {  background:#ccc;opacity:0.99;
