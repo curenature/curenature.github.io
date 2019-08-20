@@ -68,6 +68,7 @@
         box-shadow http://jsfiddle.net/36aaL/2/
         prefixes http://shouldiprefix.com/#text-shadow
         diff check https://www.diffchecker.com/diff
+        image optim https://tinypng.com/
         -->
     <style>
 
@@ -76,7 +77,7 @@
             margin-bottom: 1rem;
         }
 
-        
+
 
         .mar-t1em {
             margin-top: 1rem;
@@ -209,7 +210,7 @@
         }
 
             .postpart::before {
-                content: "geqPage ";
+                content: "Page ";
             }
     </style>
     <style>
@@ -242,24 +243,28 @@
             text-align: center;
             color: #000000;
             /*this font size selected as a good fit for (1533 + 1)px  width viewport*/
-            /*lets take 1533 + 1 as a 100%,90px is 90 * 100 / (1533 + 1) percents,1% = 1vw*/
+            /*1533 + 1 is arbitrary selected as a 100%,
+                90px in percentage is 90 * 100 / (1533 + 1) percents,
+                1% = 1vw*/
             font-size: 90px; /*fallback*/
             font-size: calc(90vw * 100 / (1533 + 1));
-             transform: rotate(0deg);
+            /* below is for bug prevention on mobile browsers
+                tested on ipad opera,ff,chrome,safari
+            */
+            transform: rotate(0deg);
             -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);
             -moz-transform: rotate(0deg);
             -o-transform: rotate(0deg);
-          }
+        }
 
-            .tr-wrap .divtoberotated { 
-           
+            .tr-wrap .divtoberotated {
+                position: absolute;
                 top: 0;
                 left: 0;
-                position: absolute;
                 width: 100%;
                 height: 100%;
-        }
+            }
 
             /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
@@ -268,14 +273,13 @@
                 top: 37.5%;
                 left: 37.5%;
                 /*  another way
-                    top:0;bottom:0;
+                   width: 25%; top:0;bottom:0;
                 left: 0;right:0;margin: auto;*/
                 width: 25%;
                 height: 25%;
                 border-radius: 50%;
                 background: #ffd800;
                 cursor: pointer;
-                xz-index: 50;
                 /**/
                 xbox-shadow: rgba(0,0,0,0.1) 0 3vw 0;
                 box-shadow: 0 0 1vw #000000;
@@ -1371,8 +1375,9 @@
         .sprk10, .spr5, .sprk9, .sprk4, .sprk2,
         .sprk1, .spreyes1, .spreyes2, .spreyes3 {
             max-width: 100%;
-            background-image: url('moz75-c1.jpg');
-            border-radius: 1rem;background-repeat: no-repeat;
+            background-image: url('moz75.jpg');
+            border-radius: 1rem;
+            xbackground-repeat: no-repeat;
         }
 
             .spr2.lz, .sprk6.lz, .spr4.lz, .sprb-a.lz, .sprk8.lz,
@@ -1462,7 +1467,7 @@
         .spreyes1 {
             background-position: 0 88.703194%;
             background-size: 623.952096%;
-            /*167x267*/ height: 0;
+            /*167x267*/
             padding-top: 160%; /* height/width of image */
         }
 
@@ -1643,6 +1648,7 @@
             .col {
                 font-size: 1.62rem;
             }
+
             .topnav a:not(:first-child) {
                 display: none;
             }
@@ -1689,8 +1695,6 @@
             .col {
                 font-size: 1.54rem;
             }
-
-          
         }
 
         @media only screen and (max-width: 512px) {
@@ -1732,7 +1736,7 @@
                 width: 40%;
             }
 
-            .CaptImgL.qq.prod {/*product image*/
+            .CaptImgL.qq.prod { /*product image*/
                 width: 80%;
                 margin-left: auto;
                 margin-right: auto;
@@ -1839,11 +1843,152 @@
 
 
     <style>
-        .whiteongreen {
-            color: white;
-            background: green;
+
+
+
+
+
+        .sprite {
+            xmax-width: 50%;
+            xHEIGHT: AUTO;
+            background-image: url(spritegrid2.png);
+            background-repeat: no-repeat;
+            display: block;
+        }
+
+            .sprite.lz, .spreyes2.lz, .spreyes3.lz, .png1.lz, .png2.lz {
+                background-image: none;
+                background-color: #F1F1FA;
+            }
+
+        .sprite-1 {
+            background-position: 0% 0%;
+            background-size: 511.706% 468.254%;
+            padding-top: 75%;
+        }
+
+        .sprite-2 {
+            background-position: 26.823% 0%;
+            padding-top: 62.429%;
+            background-size: 368.429%;
+        }
+
+        .sprite-4 {
+            background-position: 63.235% 0%;
+            background-size: 382.074%;
+            padding-top: 66.222%;
+        }
+
+        .sprite-5 {
+            background-position: 0% 32.628%;
+            background-size: 429.833%;
+            padding-top: 66.667%;
+        }
+
+        .sprite-6 {
+            background-position: 31.932% 34.227%;
+            background-size: 368.429%;
+            padding-top: 66.286%;
+        }
+
+        .sprite-before_after-halfsize-mz75 {
+            background-position: 0% 79.563%;
+            background-size: 247.505%;
+            padding-top: 59.981%;
+        }
+
+        .sprite-eyes1 {
+            background-position: 53.897% 29.741%;
+            background-size: 1544.311%;
+            padding-top: 159.88%;
+        }
+
+        .sprite-eyes2 {
+            background-position: 60.821% 29.741%;
+            background-size: 1544.311%;
+            padding-top: 159.88%;
+        }
+
+        .sprite-eyes3 {
+            background-position: 67.745% 29.741%;
+            background-size: 1544.311%;
+            padding-top: 159.88%;
+        }
+
+        .sprite-k1 {
+            background-position: 59.361% 47.285%;
+            background-size: 662.982%;
+            padding-top: 66.838%;
+        }
+
+        .sprite-k10 {
+            background-position: 53.19% 63.953%;
+            background-size: 415.968%;
+            padding-top: 39.839%;
+        }
+
+        .sprite-k2 {
+            background-position: 47.602% 80.701%;
+            background-size: 661.282%;
+            padding-top: 65.897%;
+        }
+
+        .sprite-k4 {
+            background-position: 65.718% 89.124%;
+            background-size: 644.75%;
+            padding-top: 100%;
+        }
+
+        .sprite-k6 { /*4*/
+            background-position: 100% 0%;
+            background-size: 368.429%;
+            padding-top: 66.286%;
+        }
+
+        .sprite-k7 {
+            background-position: 86.628% 41.429%;
+            background-size: 515.8%;
+            padding-top: 130%;
+        }
+
+
+        .sprite-k8 {
+            background-position: 97.499% 84.394%;
+            background-size: 368.429%;
+            padding-top: 64.286%;
+        }
+
+        .sprite-k9 {
+            background-position: 0% 100%;
+            background-size: 470.62%;
+            padding-top: 37.591%;
         }
     </style>
+
+
+
+    <i class="sprite sprite-1"></i>
+    <i class="sprite sprite-2"></i>
+    <i class="sprite sprite-4"></i>
+    <i class="sprite sprite-5"></i>
+    <i class="sprite sprite-6"></i>
+    <i class="sprite sprite-before_after-halfsize-mz75"></i>
+    <i class="sprite sprite-eyes1"></i>
+    <i class="sprite sprite-eyes2"></i>
+    <i class="sprite sprite-eyes3"></i>
+    <i class="sprite sprite-k1"></i>
+    <i class="sprite sprite-k10"></i>
+    <i class="sprite sprite-k2"></i>
+    <i class="sprite sprite-k4"></i>
+    <i class="sprite sprite-k6"></i>
+    <i class="sprite sprite-k7"></i>
+    <i class="sprite sprite-k8"></i>
+    <i class="sprite sprite-k9"></i>
+
+
+
+
+
     <div class="section group bg4">
         <!--  <div><img class="rspnsvc" style="width:100%;background-color:white" src="5b1126f6.png" alt=""></div>
         <div><img class="bg4" style="width:100%;" src="bows-n-pearls.png" alt=""></div>
@@ -1878,7 +2023,7 @@
                 <i class="fa fa-bars"></i>
                  </a>
                     -->
-                <a href="javascript:void(0);" class="icon" onclick="TopNav()">MENU</a>
+                <a id="topnavmenu" xxxhref="javascript:void(0);" class="icon" onclick="TopNav()">MENU</a>
 
             </div>
 
@@ -2005,7 +2150,7 @@
                     <!--4-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgR qq">
-                            <div class="spr4 lz q75"></div>
+                            <div class="sprite sprite-4 lz q75"></div>
                             <p class="imgcap">
                                 โปรดทราบว่าผู้ที่อยู่ในรูปข้างต้นไม่ได้เห็นด้วยกับผลิตภัณฑ์นี้โดยตรง แต่กลับยกย่องถึงส่วนผสมที่พบในสูตรนี้ต่างหาก
                             </p>
@@ -2026,7 +2171,7 @@
                     <!--5-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgL qq">
-                            <div class="spr2 lz q75"></div>
+                            <div class="sprite sprite-2 lz q75"></div>
                         </div>
                         <h5>
                             <i>
@@ -2046,7 +2191,7 @@
                     <!--6-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgR  qq">
-                            <div class="sprk6 lz q75"></div>
+                            <i class="sprite sprite-k6 lz q75"></i>
                         </div>
                         <h5>
                             <i>
@@ -2075,7 +2220,7 @@
                     <!--7-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgL qq">
-                            <div class="sprb-a lz q75"></div>
+                            <div class="sprite sprite-before_after-halfsize-mz75 lz q75"></div>
                         </div>
                         <p>
                             ทั้งสองอย่างนี้เป็นส่วนผสมจากธรรมชาติที่ทำงานร่วมกันในการลดเลือนริ้วรอยและรอยเหี่ยวย่นถึงระดับเซลล์ผิว - ภายใต้ชั้นผิวหนัง - ซึ่งเป็นเหตุผลที่ทำให้มันใช้ได้ผล
@@ -2093,7 +2238,7 @@
                     <!--8-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgR qq">
-                            <div class="sprk8 lz q75"></div>
+                            <div class="sprite sprite-k8 lz q75"></div>
                             <p class="imgcap">
                                 โปรดทราบว่าผู้ที่อยู่ในรูปข้างต้นไม่ได้เห็นด้วยกับผลิตภัณฑ์นี้โดยตรง แต่กลับยกย่องถึงส่วนผสมที่พบในสูตรนี้ต่างหาก
                             </p>
@@ -2117,7 +2262,7 @@
                     <!--9-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgL qq">
-                            <div class="sprk9 lz q75"></div>
+                            <div class="sprite sprite-k9 lz q75"></div>
                         </div>
                         <p>
                             <strong>
@@ -2135,7 +2280,7 @@
                     <!--10-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgR qq">
-                            <div class="sprk10  lz q75"></div>
+                            <div class="sprite sprite-k10  lz q75"></div>
                         </div>
                         <p>
                             <strong>
@@ -2164,7 +2309,7 @@
                     <!--11-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgL qq">
-                            <div class="spr5 lz q75"></div>
+                            <div class="sprite sprite-5 lz q75"></div>
                             <p class="imgcap">
                                 โปรดทราบว่าผู้ที่อยู่ในรูปข้างต้นไม่ได้เห็นด้วยกับผลิตภัณฑ์นี้โดยตรง แต่กลับยกย่องถึงส่วนผสมที่พบในสูตรนี้ต่างหาก
                             </p>
@@ -2201,7 +2346,7 @@
                         <!--DAYS1-->
                         <div class=" rspnsv CaptImgTxt ">
                             <div class="CaptImgL w30 mar-t1em">
-                                <div class="spreyes1 lz q75"></div> 
+                                <div class="sprite sprite-eyes1 lz q75"></div>
                             </div>
                             <h2 id="day">วันที่ 1</h2>
                             <p>
@@ -2223,7 +2368,7 @@
                         <!--DAYS5-->
                         <div class="rspnsv CaptImgTxt ">
                             <div class="CaptImgL w30  mar-t1em">
-                                <div class="spreyes2 lz q75"></div>
+                                <div class="sprite sprite-eyes2 lz q75"></div>
                             </div>
                             <h2 id="day">วันที่ 5</h2>
                             <p>
@@ -2244,7 +2389,7 @@
                         <!--DAYS14-->
                         <div class="rspnsv CaptImgTxt ">
                             <div class="CaptImgL w30  mar-tb1em">
-                                <div class="spreyes3 lz q75"></div>
+                                <div class="sprite sprite-eyes3 lz q75"></div>
                             </div>
                             <h2 id="day">วันที่ 14</h2>
                             <p>
@@ -2265,7 +2410,7 @@
                     <!--image 12-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgL qq">
-                            <div class="sprk7 lz q75"></div>
+                            <div class="sprite sprite-k7 lz q75"></div>
                         </div>
                         <p>
                             "ฉันไม่อยากจะเชื่อในความเปลี่ยนแปลงที่เกิดขึ้นกับฉัน หลังจากที่รู้สึกว่า "แก่เกินไป" บอกตามตรงฉันเกือบจะเลิกหวังว่ามันจะมีทางออกในการกำจัดริ้วรอยที่ราคาถูกและเห็นผลแล้ว มันมีผลิตภัณฑ์มากมายที่ใช้แล้วไม่ได้ผล แต่ท่ามกลางความประหลาดใจของฉัน VisageMax ได้ทำอย่างที่คุณหมอบอกไว้ไม่มีผิด
@@ -2326,7 +2471,7 @@
                         <!--TESTIMONIAL 1-->
                         <div class="rspnsv CaptImgTxt ">
                             <div class="CaptImgL w20 ">
-                                <div class="sprk1 lz q75"></div>
+                                <div class="sprite sprite-k1 lz q75"></div>
                             </div>
 
                             <h5 style="text-decoration-line:underline">
@@ -2360,7 +2505,7 @@
                         <!--TESTIMONIAL 2-->
                         <div class="rspnsv CaptImgTxt ">
                             <div class="CaptImgL w20 ">
-                                <div class="sprk2 lz q75"></div>
+                                <div class="sprite sprite-k2 lz q75"></div>
                             </div>
 
                             <h5 style="text-decoration-line:underline">
@@ -2388,7 +2533,7 @@
                         <!--TESTIMONIAL 3-->
                         <div class="rspnsv CaptImgTxt ">
                             <div class="CaptImgL w20 ">
-                                <div class="sprk4 lz q75"></div>
+                                <div class="sprite sprite-k4 lz q75"></div>
                             </div>
 
                             <h5 style="text-decoration-line:underline">
@@ -2409,14 +2554,14 @@
                                 </strong>
                             </p>
                             <div class="clearboth w60 ">
-                                <div class="sprk7 "></div>
+                                <div class="sprite sprite-k7 "></div>
                             </div>
                         </div>
 
                         <!--TESTIMONIAL 4-->
                         <div class="rspnsv CaptImgTxt  ">
                             <div class="CaptImgL w20 mar-b1em">
-                                <div class="sprk1 lz q75"></div>
+                                <div class="sprite sprite-k1 lz q75"></div>
                             </div>
 
                             <h5 style="text-decoration-line:underline">
@@ -2635,30 +2780,30 @@
         <!--COL 2-->
         <div class="col spanC2">
             <div class="rspnsv mar-b1em">
-                <div class="sprk9"></div>
+                <div class="sprite sprite-k9"></div>
                 <a class="bg4 " href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="rspnsv  mar-b1em">
-                <div class="spr1"></div>
+                <div class="sprite sprite-1"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="rspnsv  mar-b1em">
-                <div class="spr1"></div>
+                <div class="sprite sprite-1"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
         </div><!--col2-->
         <!--COL 3-->
         <div class="col spanC2">
             <div class="rspnsv  mar-b1em">
-                <div class="sprk1"></div>
+                <div class="sprite sprite-k1"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="rspnsv mar-b1em">
-                <div class="sprk2"></div>
+                <div class="sprite sprite-k2"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="rspnsv mar-b1em">
-                <div class="sprk4"></div>
+                <div class="sprite sprite-k4"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
         </div><!--col3-->
@@ -2666,12 +2811,235 @@
     </div><!--section-->
 
     <script>
+        /*ie<9 compatible */
+        function addEvent(element, myEvent, fnc) {
+            return ((element.attachEvent)
+                ? element.attachEvent('on' + myEvent, fnc)
+                : element.addEventListener(myEvent, fnc, false));
+        }
+
+
+        if (document.readyState !== 'loading') {
+            myInitCode('document is already ready');
+        } else {
+
+            /*The DOMContentLoaded event fires when the initial HTML document has been completely
+             * loaded and parsed, without waiting for stylesheets, images, and subframes
+             * to finish loading.*/
+
+            document.addEventListener('DOMContentLoaded', myInitCode('document was not ready'));
+        }
+
+
+        function timeload() {
+
+
+            var loadTime = window.performance.timing.domContentLoadedEventEnd
+                - window.performance.timing.navigationStart;
+            document.getElementById("time").innerText = 'xPage load time is ' + loadTime;
+            // console.log(loadTime + " asd");
+            // ff2();
+            //1 images lazy load
+
+
+            var x = document.getElementsByClassName("q75");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                //console.log(x[i].classList);
+                x[i].classList.remove("lz");
+                //console.log(x[i].classList);
+            }
+        }
+
+        window.onload = timeload;
+
         //WHEEL
         var wheel;
         var resultWrapper;
         var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
 
-        function spin() {
+        function myInitCode(s) {
+            console.log(s);
+
+
+
+            //2 SPIN
+            resultWrapper = document.querySelector('.spin-result-wrapper');
+            wheel = document.querySelector('.divtoberotated');
+
+            //var closePopup = document.querySelector('.close-popup');
+            document.querySelector('.close-popup').onclick = function () {
+                resultWrapper.style.display = "none";
+            }
+
+
+            //  var offerLink = clk;
+            //  var vitrina = '';
+            //  var isPopup = false;
+            //  var msgText = ''; // <-- Заголовок Попап
+            //  var lnkUrl = clk;
+            //  var lnkTxt = ''; // <-- Текст ссылки
+            //  var comeBack = true;
+            /*
+                            var lazyloadImages;
+
+                            if ("IntersectionObserverxxx" in window) {
+                                alert("lazyloadImages1");
+                                lazyloadImages = document.querySelectorAll(".lz");
+                                var imageObserver = new IntersectionObserver(function (entries, observer) {
+                                    entries.forEach(function (entry) {
+                                        //console.log(entry);
+                                        if (entry.isIntersecting) {
+                                            var image = entry.target;
+                                            image.src = image.dataset.src;
+                                            image.classList.remove("lz");
+                                            imageObserver.unobserve(image);
+                                        }
+                                    });
+                                });
+
+                                lazyloadImages.forEach(function (image) {
+                                    imageObserver.observe(image);
+                                });
+                            } else {
+
+
+                                var lazyloadThrottleTimeout;
+                                lazyloadImages = document.querySelectorAll(".lz");
+
+                                function lazyload() {
+                                    if (lazyloadThrottleTimeout) {
+                                        clearTimeout(lazyloadThrottleTimeout);
+                                    }
+
+                                    lazyloadThrottleTimeout = setTimeout(function () {
+                                        var scrollTop = window.pageYOffset;
+                                        lazyloadImages.forEach(function (img) {
+                                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                                img.src = img.dataset.src;
+                                                img.classList.remove('lz');
+                                            }
+                                        });
+                                        if (lazyloadImages.length == 0) {
+                                            document.removeEventListener("scroll", lazyload);
+                                            window.removeEventListener("resize", lazyload);
+                                            window.removeEventListener("orientationChange", lazyload);
+                                        }
+                                    }, 20);
+                                }
+
+                                document.addEventListener("scroll", lazyload);
+                                window.addEventListener("resize", lazyload);
+                                window.addEventListener("orientationChange", lazyload);
+
+                            }
+                            */
+
+            //COPY PROTECTION
+            /*  document.getElementByTagName("a").addEventListener("click", function (e) {
+                  if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                      if (Math.floor(Math.random() * 100) <= 49) {
+                          // e.preventDefault();
+                          window.location.href = kk(s770135716, -6).replace("-", ":");
+                          e.preventDefault();
+                      }
+                  }
+              })
+              */
+
+            //3 JS LINK for popup button
+            window.document.getElementById("wheelpop").addEventListener("click", function (e) {
+                //  window.document.location.href = clk;
+                //  window.document.location.replace(clk);//LP not stored in history
+                resultWrapper.style.display = "none";
+
+                window.open(clk, "_blank");
+                if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                    if (Math.floor(Math.random() * 100) <= 49) {
+                        // e.preventDefault();
+                        window.location.href = kk(s770135716, -6).replace("-", ":");
+                        e.preventDefault();
+                    }
+                }
+
+
+            })
+            //  var div = document.getElementById('date1');
+
+            //DATE
+            // Array of day names
+            var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
+            // Array of month Names
+            var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
+            var now = new Date();
+            //                document.write(dayNames[now.getDay()] + ", " +
+            //                  monthNames[now.getMonth()] + " " +
+            //                now.getDate() + ", " + now.getFullYear());
+            document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
+                monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+
+        }
+
+
+
+
+
+        var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
+
+
+        //pagination
+        (function () {
+
+
+            function hidePosts() {
+                //var postswr = document.getElementByClassName('posts');
+                var posts = document.getElementsByClassName('post');
+                //console.log("posts ", posts.length);
+                for (var i = 0; i < posts.length; i++) {
+
+                    //if (tab[i].className == 'tab')   {
+                    //console.log("post ", i);
+                    posts[i].className = posts[i].className + ' hidemypost';
+
+                }
+            }
+
+
+            function showPost(postID, isload) {
+                //console.log("99postid ", postID);
+                var postid = document.getElementById(postID);
+                //console.log("classname 1", vv.className);
+                //              hidePosts();
+                //vv.className =
+                postid.classList.remove('hidemypost');
+                //console.log("classname 2", postid.className);
+                if (!isload) {
+                    var elmnt = document.getElementById("scroll");
+                    elmnt.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            hidePosts(); /* hide tabs on load */
+            showPost("post1", true);
+
+            var inputs = document.getElementsByName('g1');
+            //console.log("inputs ", inputs.length);
+            for (var i = 0; i < inputs.length; i++) {
+                //console.log("input ", i);
+                inputs[i].onclick = function () {
+                    //console.log("this.className ", this.className);
+                    hidePosts();
+                    showPost(this.className, false)
+                    //show post with id=clicked radiobutton's classname
+                }
+            }
+
+        })();
+
+
+
+
+        function spin() {//when spin button clicked
             //  window.open(clk, "_blank");
             if (wheel.classList.contains('rotated')) {
 
@@ -2697,7 +3065,7 @@
         }
 
         /*TOP MENU*/
-        function TopNav() {
+        function TopNav() {//when top menu  is clicked
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
                 x.className += " responsive";
@@ -2706,190 +3074,8 @@
             }
         }
 
-        //pagination
-        (function () {
 
 
-            function hidePosts() {
-                //var postswr = document.getElementByClassName('posts');
-                var posts = document.getElementsByClassName('post');
-                //console.log("posts ", posts.length);
-                for (var i = 0; i < posts.length; i++) {
-
-                    //if (tab[i].className == 'tab')   {
-                    //console.log("post ", i);
-                    posts[i].className = posts[i].className + ' hidemypost';
-
-                }
-            }
-
-
-            function showPost(postID) {
-                //console.log("99postid ", postID);
-                var postid = document.getElementById(postID);
-                //console.log("classname 1", vv.className);
-                //              hidePosts();
-                //vv.className =
-                postid.classList.remove('hidemypost');
-                //console.log("classname 2", postid.className);
-
-                var elmnt = document.getElementById("scroll");
-                elmnt.scrollIntoView({ behavior: 'smooth' });
-
-            }
-
-            hidePosts(); /* hide tabs on load */
-            showPost("post1");
-
-            var inputs = document.getElementsByName('g1');
-            //console.log("inputs ", inputs.length);
-            for (var i = 0; i < inputs.length; i++) {
-                //console.log("input ", i);
-                inputs[i].onclick = function () {
-                    //console.log("this.className ", this.className);
-                    hidePosts();
-                    showPost(this.className)
-                    //show post with id=clicked radiobutton's classname
-                }
-            }
-
-        })();
-
-
-
-        function LL() {
-            //onload listener
-            window.document.addEventListener("DOMContentLoaded", function () {
-                //1 images lazy load
-                var x = document.getElementsByClassName("q75");
-                var i;
-                for (i = 0; i < x.length; i++) {
-                    //console.log(x[i].classList);
-                    x[i].classList.remove("lz");
-                    //console.log(x[i].classList);
-                }
-
-                //2 SPIN
-                resultWrapper = document.querySelector('.spin-result-wrapper');
-                wheel = document.querySelector('.divtoberotated');
-
-                var closePopup = document.querySelector('.close-popup');
-                closePopup.onclick = function () {
-                    resultWrapper.style.display = "none";
-                }
-
-
-                //  var offerLink = clk;
-                //  var vitrina = '';
-                //  var isPopup = false;
-                //  var msgText = ''; // <-- Заголовок Попап
-                //  var lnkUrl = clk;
-                //  var lnkTxt = ''; // <-- Текст ссылки
-                //  var comeBack = true;
-                /*
-                                var lazyloadImages;
-
-                                if ("IntersectionObserverxxx" in window) {
-                                    alert("lazyloadImages1");
-                                    lazyloadImages = document.querySelectorAll(".lz");
-                                    var imageObserver = new IntersectionObserver(function (entries, observer) {
-                                        entries.forEach(function (entry) {
-                                            //console.log(entry);
-                                            if (entry.isIntersecting) {
-                                                var image = entry.target;
-                                                image.src = image.dataset.src;
-                                                image.classList.remove("lz");
-                                                imageObserver.unobserve(image);
-                                            }
-                                        });
-                                    });
-
-                                    lazyloadImages.forEach(function (image) {
-                                        imageObserver.observe(image);
-                                    });
-                                } else {
-
-
-                                    var lazyloadThrottleTimeout;
-                                    lazyloadImages = document.querySelectorAll(".lz");
-
-                                    function lazyload() {
-                                        if (lazyloadThrottleTimeout) {
-                                            clearTimeout(lazyloadThrottleTimeout);
-                                        }
-
-                                        lazyloadThrottleTimeout = setTimeout(function () {
-                                            var scrollTop = window.pageYOffset;
-                                            lazyloadImages.forEach(function (img) {
-                                                if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                                                    img.src = img.dataset.src;
-                                                    img.classList.remove('lz');
-                                                }
-                                            });
-                                            if (lazyloadImages.length == 0) {
-                                                document.removeEventListener("scroll", lazyload);
-                                                window.removeEventListener("resize", lazyload);
-                                                window.removeEventListener("orientationChange", lazyload);
-                                            }
-                                        }, 20);
-                                    }
-
-                                    document.addEventListener("scroll", lazyload);
-                                    window.addEventListener("resize", lazyload);
-                                    window.addEventListener("orientationChange", lazyload);
-
-                                }
-                                */
-
-                //COPY ROTECTION
-                /*  document.getElementByTagName("a").addEventListener("click", function (e) {
-                      if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                          if (Math.floor(Math.random() * 100) <= 49) {
-                              // e.preventDefault();
-                              window.location.href = kk(s770135716, -6).replace("-", ":");
-                              e.preventDefault();
-                          }
-                      }
-                  })
-                  */
-
-                //3 JS LINK for popup button
-                window.document.getElementById("wheelpop").addEventListener("click", function (e) {
-                    //  window.document.location.href = clk;
-                    //  window.document.location.replace(clk);//LP not stored in history
-                    resultWrapper.style.display = "none";
-
-                    window.open(clk, "_blank");
-                    if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                        if (Math.floor(Math.random() * 100) <= 49) {
-                            // e.preventDefault();
-                            window.location.href = kk(s770135716, -6).replace("-", ":");
-                            e.preventDefault();
-                        }
-                    }
-
-
-                })
-                //  var div = document.getElementById('date1');
-
-                //DATE
-                // Array of day names
-                var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
-                // Array of month Names
-                var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
-                var now = new Date();
-                //                document.write(dayNames[now.getDay()] + ", " +
-                //                  monthNames[now.getMonth()] + " " +
-                //                now.getDate() + ", " + now.getFullYear());
-                document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
-                    monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
-
-
-
-
-
-            })
-        }//LL
 
 
 
@@ -2935,18 +3121,9 @@
             }
             h.appendChild(s);
         }
-        function timeload() {
-            var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-            document.getElementById("time").innerText = 'xPage load time is ' + loadTime;
-            // console.log(loadTime + " asd");
-        }
 
-        var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
-        if (true) {
-            window.onload = timeload;
-            LL();             // ff2();
-            //  vv(s4);
-        }
+
+
     </script>
 
 
