@@ -1,22 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript">
-        // Add load event listener.
-        window.addEventListener("load", loadTime, false);
-
-        function loadTime() {
-            // Get current time.
-            var now = new Date().getTime();
-            // Calculate page load time.
-            var page_load_time = now - performance.timing.navigationStart;
-            // Write the load time to the F12 console.
-            if (window.console) console.log("page_load_time ="+ page_load_time);
-        }
-     //   window.onresize = function () {
-       //     document.getElementById("size").innerHTML = window.innerWidth;
-     //   };
-    </script>
 
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine & Chrome Frame -->
@@ -40,9 +24,10 @@
 
     <link href="./files/wheel.css" rel="stylesheet">
     <link rel="stylesheet" href="./css-spin-wheel/dist/css-wheel-orig.css">
-     -->
+
     <link rel="stylesheet" href="./PAGIN/pagin-style.css">
-    <!--####################>
+    -->
+    <!--####################-->
     <!--####################-->
     <!--####################-->
     <!--####################-->
@@ -1384,6 +1369,27 @@
             xheight: 0;
             padding-top: 130%; /* height/width of image */
         }
+
+        .png2, .png1 {
+            xmax-width: 100%;
+            background-image: url('png1png2-opti.png');
+        }
+
+
+        .png1 {
+            background-position: 0 100%;
+            background-size: 171.232877%;
+            /*292x394*/
+            padding-top: 134.93%; /* height/width of image */
+        }
+
+        .png2 {
+            background-position: 0 0%;
+            background-size: 100%;
+            /*500x325*/
+            padding-top: 65%; /* height/width of image */
+        }
+
     </style>
 
     <!--####################>
@@ -1668,7 +1674,7 @@
         }
     </style>
 
-    <!--####################>
+    <!--####################-->
     <!--####################-->
     <!--####################-->
     <!--####################-->
@@ -1787,7 +1793,7 @@
             padding-top: 100%;
         }
 
-        .sprite-k6 { /*4*/
+        .sprite-k6 {
             background-position: 100% 0%;
             background-size: 368.429%;
             padding-top: 66.286%;
@@ -1822,6 +1828,11 @@
 
     <p id="time">time</p>
     <p>Window size: <span id="size"></span> pixels</p>
+    <script>
+        window.onresize = function () {
+            document.getElementById("size").innerHTML = window.innerWidth;
+        };
+    </script>
     <!--
     <div id="cont">
           <div>
@@ -1829,13 +1840,8 @@
             <p><a href="http://yahoo.com">Foobar.com</a></p>
         </div>
         -->
-
-
-
-
-
     <!--
-    <i class="sprite sprite-1"></i>
+    <div class="sprite sprite-1"></div>
     <i class="sprite sprite-2"></i>
     <i class="sprite sprite-4"></i>
     <i class="sprite sprite-5"></i>
@@ -1848,7 +1854,7 @@
     <i class="sprite sprite-k10"></i>
     <i class="sprite sprite-k2"></i>
     <i class="sprite sprite-k4"></i>
-    <i class="sprite sprite-k6"></i>
+    <div class="sprite sprite-k6"></div>
     <i class="sprite sprite-k7"></i>
     <i class="sprite sprite-k8"></i>
     <i class="sprite sprite-k9"></i>
@@ -1891,7 +1897,7 @@
                 <i class="fa fa-bars"></i>
                  </a>
                     -->
-                <a id="topnavmenu" xxxhref="javascript:void(0);" class="icon" onclick="TopNav()">MENU</a>
+                <a id="topnavmenu" xxxhref="javascript:void(0);" class="icon">MENU</a>
 
             </div>
 
@@ -2059,7 +2065,7 @@
                     <!--6-->
                     <div class="rspnsv CaptImgTxt">
                         <div class="CaptImgR  qq">
-                            <i class="sprite sprite-k6 lz q75"></i>
+                            <div class="sprite sprite-k6 lz q75"></div>
                         </div>
                         <h5>
                             <i>
@@ -2448,24 +2454,25 @@
             </div><!--posts-->
             <div class="abody bg4">
                 <div class="nav-inline-block">
+                    <!--autocomplete="off" is needed for firefox-->
                     <label class="radio1">
-                        <input type="radio" name="g1" value="" class="post1" checked>
+                        <input type="radio" name="g1" value="" class="post1" checked autocomplete="off">
                         <span>1</span>
                     </label>
                     <label class="radio1">
-                        <input type="radio" name="g1" value="" class="post2">
+                        <input type="radio" name="g1" value="" class="post2" autocomplete="off">
                         <span>2</span>
                     </label>
                     <label class="radio1">
-                        <input type="radio" name="g1" value="" class="post3">
+                        <input type="radio" name="g1" value="" class="post3" autocomplete="off">
                         <span>3</span>
                     </label>
                     <label class="radio1">
-                        <input type="radio" name="g1" value="" class="post4">
+                        <input type="radio" name="g1" value="" class="post4" autocomplete="off">
                         <span>4</span>
                     </label>
                     <label class="radio1">
-                        <input type="radio" name="g1" value="" class="post5">
+                        <input type="radio" name="g1" value="" class="post5" autocomplete="off">
                         <span>5</span>
                     </label>
                 </div>
@@ -2610,7 +2617,7 @@
 
                     <div class="tr-cursor1"></div>
                     <div class="tr-cursor2"></div>
-                    <div id="spinbutton" onclick="spin();"></div>
+                    <div id="spinbutton"></div>
 
                 </div>
                 <div class="spin-result-wrapper">
@@ -2685,16 +2692,16 @@
                 ? element.attachEvent('on' + myEvent, fnc)
                 : element.addEventListener(myEvent, fnc, false));
         }
-       
+
         if (document.readyState !== 'loading') {
-            myInitCode('document is  ready');
+            onDOMContentLoaded('document is  ready');
         } else {
 
             /*The DOMContentLoaded event fires when the initial HTML document has been completely
              * loaded and parsed, without waiting for stylesheets, images, and subframes
              * to finish loading.*/
 
-            document.addEventListener('DOMContentLoaded', myInitCode('document was not ready'));
+            document.addEventListener('DOMContentLoaded', onDOMContentLoaded('document was not ready'), false);
         }
         /*
         function msec() {
@@ -2702,31 +2709,19 @@
             return d.getTime();
             // document.getElementById("demo").innerHTML = n;
         }*/
-       // var n1, n2, n3;
+        // var n1, n2, n3;
 
-       
+
         //window.onload = windowonload;
 
-        //WHEEL
-        var wheel;
-        var resultWrapper;
-        var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
 
-        function myInitCode(s) {
-           // n1 = msec();
+        function onDOMContentLoaded(s) {
+            // n1 = msec();
 
             console.log(s);
 
 
 
-            //2 SPIN
-            resultWrapper = document.querySelector('.spin-result-wrapper');
-            wheel = document.querySelector('.divtoberotated');
-
-            //var closePopup = document.querySelector('.close-popup');
-            document.querySelector('.close-popup').onclick = function () {
-                resultWrapper.style.display = "none";
-            }
 
 
             //  var offerLink = clk;
@@ -2791,35 +2786,7 @@
                             }
                             */
 
-            //COPY PROTECTION
-            /*  document.getElementByTagName("a").addEventListener("click", function (e) {
-                  if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                      if (Math.floor(Math.random() * 100) <= 49) {
-                          // e.preventDefault();
-                          window.location.href = kk(s770135716, -6).replace("-", ":");
-                          e.preventDefault();
-                      }
-                  }
-              })
-              */
 
-            //3 JS LINK for popup button
-            window.document.getElementById("wheelpop").addEventListener("click", function (e) {
-                //  window.document.location.href = clk;
-                //  window.document.location.replace(clk);//LP not stored in history
-                resultWrapper.style.display = "none";
-
-                window.open(clk, "_blank");
-                if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                    if (Math.floor(Math.random() * 100) <= 49) {
-                        // e.preventDefault();
-                        window.location.href = kk(s770135716, -6).replace("-", ":");
-                        e.preventDefault();
-                    }
-                }
-
-
-            })
             //  var div = document.getElementById('date1');
 
             //DATE
@@ -2834,131 +2801,184 @@
             document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
                 monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
 
-        }
-       
+            //WHEEL
+            (function () {
+
+                var wheel;
+                var resultWrapper;
+                var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
 
 
-        window.onload = function () {
+                resultWrapper = document.querySelector('.spin-result-wrapper');
+                wheel = document.querySelector('.divtoberotated');
+
+                //var closePopup = document.querySelector('.close-popup');
+                document.querySelector('.close-popup').onclick = function () {
+                    resultWrapper.style.display = "none";
+                }
+                //COPY PROTECTION
+                /*  document.getElementByTagName("a").addEventListener("click", function (e) {
+                      if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                          if (Math.floor(Math.random() * 100) <= 49) {
+                              // e.preventDefault();
+                              window.location.href = kk(s770135716, -6).replace("-", ":");
+                              e.preventDefault();
+                          }
+                      }
+                  })
+                  */
+
+                //3 JS LINK for popup button
+                window.document.getElementById("wheelpop").addEventListener("click", function (e) {
+                    //  window.document.location.href = clk;
+                    //  window.document.location.replace(clk);//LP not stored in history
+                    resultWrapper.style.display = "none";
+
+                    window.open(clk, "_blank");
+                    if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                        if (Math.floor(Math.random() * 100) <= 49) {
+                            // e.preventDefault();
+                            window.location.href = kk(s770135716, -6).replace("-", ":");
+                            e.preventDefault();
+                        }
+                    }
+
+
+                })
+
+                function spin() {
+                    //  window.open(clk, "_blank");
+                    if (wheel.classList.contains('rotated')) {
+
+                        resultWrapper.style.display = "block";//show popup
+                        //console.log("1");
+                    } else {
+                        // wheel.style.transform = "rotate(1753deg)";
+                        wheel.classList.add('super-rotation');
+                        setTimeout(function () {//show popup in 8 sec
+                            resultWrapper.style.display = "block";// console.log("qwe");
+                        }, 8000);
+                        // setTimeout(ow(), 10000);
+                        //setTimeout(function () {
+                        // var spinLinks = document.getElementsByTagName('a');
+                        // var spinHref = spinLinks[0].href;
+                        //var spinHref = clk; console.log(clk);
+                        //window.open(spinHref, "_blank");
+                        //  ow();
+                        // }, 10000);
+                        wheel.classList.add('rotated');
+                        //console.log("2");
+                    }
+                }
+                window.document.getElementById("spinbutton").addEventListener("click", spin, false);
+
+            })();
+
+
+            //pagination
+            (function () {
+
+
+                function loopPosts(aciveradio, isload) {
+                    var posts = document.getElementsByClassName('post');
+                    //console.log("posts ", posts.length);
+                    for (var i = 0; i < posts.length; i++) {
+
+                        //console.log("post ", i);
+                        if (posts[i].id == aciveradio.className) {
+                            posts[i].classList.remove('hidemypost');
+                        } else if (posts[i].className == "post") {
+                            posts[i].className = posts[i].className + ' hidemypost';
+                        }
+                        // console.log(i, "  ", posts[i].className);
+                    }
+                    if (!isload) {
+                        var elmnt = document.getElementById("scroll");
+                        elmnt.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
 
 
 
-           // var loadTime = window.performance.timing.domContentLoadedEventEnd
-             //   - window.performance.timing.navigationStart;
-            // console.log(loadTime + " asd");
-            // ff2();
-            //1 images lazy load
+                var qq = document.getElementsByClassName('post1');
+                loopPosts(qq[0], true);
+
+                var inputs = document.getElementsByName('g1');
+                //console.log("inputs ", inputs.length);
+                for (var i = 0; i < inputs.length; i++) {
+                    //console.log("input ", i);
+                    inputs[i].onclick = function () {
+                        //
+                        // console.log("this.className ", this.className);
+                        loopPosts(this, false);
+                    }
+                }
+
+            })();
+
+            //page on load
+            (function () {
+                function doconload() {
+                    // Get current time.
+                    var now = new Date().getTime();
+                    // Calculate page load time.
+                    var page_load_time = now - performance.timing.navigationStart;
+                    // Write the load time to the F12 console.
+                    if (window.console) console.log("page_load_time =" + page_load_time);
 
 
-            var x = document.getElementsByClassName("q75");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                //console.log(x[i].classList);
-                x[i].classList.remove("lz");
-                //console.log(x[i].classList);
+                    var x = document.getElementsByClassName("q75");
+                    var i;
+                    for (i = 0; i < x.length; i++) {
+                        //console.log(x[i].classList);
+                        x[i].classList.remove("lz");
+                        //console.log(x[i].classList);
+                    }
+                    //n2 = msec();
+                    //document.getElementById("time").innerText = 'load time is ' + loadTime + "  " + (n2 - n1);
+
+
+
+                }
+                window.addEventListener("load", doconload, false);
+            })();
+
+
+            /*TOP MENU*/
+            function TopNav() {//when top menu  is clicked
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
             }
-            //n2 = msec();
-            //document.getElementById("time").innerText = 'load time is ' + loadTime + "  " + (n2 - n1);
+            window.document.getElementById("myTopnav").addEventListener("click", TopNav, false);
 
-            // Get current time.
-            var now = new Date().getTime();
-            // Calculate page load time.
-            var page_load_time = now - performance.timing.navigationStart;
-            // Write the load time to the F12 console.
-            if (window.console) console.log("page_load_time =" + page_load_time);
 
 
         }
+
+
+
+
+
+
+        //   window.onresize = function () {
+        //     document.getElementById("size").innerHTML = window.innerWidth;
+        //   };
+
+
 
 
         var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
 
 
-        //pagination
-        (function () {
-
-
-            function hidePosts() {
-                //var postswr = document.getElementByClassName('posts');
-                var posts = document.getElementsByClassName('post');
-                //console.log("posts ", posts.length);
-                for (var i = 0; i < posts.length; i++) {
-
-                    //if (tab[i].className == 'tab')   {
-                    //console.log("post ", i);
-                    posts[i].className = posts[i].className + ' hidemypost';
-
-                }
-            }
-
-
-            function showPost(postID, isload) {
-                //console.log("99postid ", postID);
-                var postid = document.getElementById(postID);
-                //console.log("classname 1", vv.className);
-                //              hidePosts();
-                //vv.className =
-                postid.classList.remove('hidemypost');
-                //console.log("classname 2", postid.className);
-                if (!isload) {
-                    var elmnt = document.getElementById("scroll");
-                    elmnt.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-
-            hidePosts(); /* hide tabs on load */
-            showPost("post1", true);
-
-            var inputs = document.getElementsByName('g1');
-            //console.log("inputs ", inputs.length);
-            for (var i = 0; i < inputs.length; i++) {
-                //console.log("input ", i);
-                inputs[i].onclick = function () {
-                    //console.log("this.className ", this.className);
-                    hidePosts();
-                    showPost(this.className, false)
-                    //show post with id=clicked radiobutton's classname
-                }
-            }
-
-        })();
 
 
 
 
-        function spin() {//when spin button clicked
-            //  window.open(clk, "_blank");
-            if (wheel.classList.contains('rotated')) {
 
-                resultWrapper.style.display = "block";//show popup
-                //console.log("1");
-            } else {
-                // wheel.style.transform = "rotate(1753deg)";
-                wheel.classList.add('super-rotation');
-                setTimeout(function () {//show popup in 8 sec
-                    resultWrapper.style.display = "block";// console.log("qwe");
-                }, 8000);
-                // setTimeout(ow(), 10000);
-                //setTimeout(function () {
-                // var spinLinks = document.getElementsByTagName('a');
-                // var spinHref = spinLinks[0].href;
-                //var spinHref = clk; console.log(clk);
-                //window.open(spinHref, "_blank");
-                //  ow();
-                // }, 10000);
-                wheel.classList.add('rotated');
-                //console.log("2");
-            }
-        }
-
-        /*TOP MENU*/
-        function TopNav() {//when top menu  is clicked
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
 
 
 
