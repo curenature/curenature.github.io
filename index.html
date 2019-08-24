@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="nojs">
 <head>
-
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -70,6 +69,9 @@
         prefixes http://shouldiprefix.com/#text-shadow
         diff check https://www.diffchecker.com/diff
         image optim https://tinypng.com/
+        sprite grid gen  https://spritegen.website-performance.org/
+        webp using https://css-tricks.com/using-webp-images/
+
         -->
     <style>
 
@@ -1389,7 +1391,6 @@
             /*500x325*/
             padding-top: 65%; /* height/width of image */
         }
-
     </style>
 
     <!--####################>
@@ -1540,6 +1541,7 @@
             }
 
             .topnav a.icon {
+                cursor: pointer;
                 float: right;
                 display: block;
             }
@@ -1552,9 +1554,10 @@
 
                 .topnav.responsive .icon {
                     position: absolute;
+                    xcursor: pointer;
                     right: 0;
                     top: 0;
-                    xbackground-color: #a23c15;
+                    background-color: #a23c15;
                 }
 
 
@@ -1704,9 +1707,19 @@
         }
 
 
+        .nojs .sprite {
+            background-image: url("spritegrid2test.png");
+        }
+
+        .no-webp .sprite {
+            background-image: url("spritegrid2test.png");
+        }
+
+        .webp .sprite {
+            background-image: url("spritegrid2squoosh675.webp");
+        }
 
         .sprite {
-            background-image: url(spritegrid2-tinypng.com.png);
             border-radius: 1rem;
         }
 
@@ -2625,7 +2638,7 @@
                         <div class="close-popup">X</div>
                         <span class="pop-up-heading">ยินดีด้วย!</span>
                         <p class="pop-up-text">คุณสามารถสั่ง VisageMax พร้อมส่วนลด 50%!</p>
-                        <div id="wheelpop" class="pop-up-button">OK</div>
+                        <div id="wheelpopOK" class="pop-up-button">OK</div>
                     </div>
                 </div>
             </div>
@@ -2686,7 +2699,12 @@
     </div><!--section-->
 
     <script>
-        /*ie<9 compatible */
+        /*! modernizr 3.6.0 (Custom Build) | MIT *
+   * https://modernizr.com/download/?-webp-setclasses !*/
+        !function (e, n, A) { function o(e, n) { return typeof e === n } function t() { var e, n, A, t, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-")) } } function a(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var o = e.split("."), t = Modernizr[o[0]]; if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr; n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) { return n in e && o(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), t(), a(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);  /*ie<9 compatible */
+
+
+
         function addEvent(element, myEvent, fnc) {
             return ((element.attachEvent)
                 ? element.attachEvent('on' + myEvent, fnc)
@@ -2714,15 +2732,15 @@
 
         //window.onload = windowonload;
 
-
+      
         function onDOMContentLoaded(s) {
             // n1 = msec();
 
             console.log(s);
 
+            document.documentElement.classList.remove("nojs");
 
-
-
+            
 
             //  var offerLink = clk;
             //  var vitrina = '';
@@ -2732,59 +2750,59 @@
             //  var lnkTxt = ''; // <-- Текст ссылки
             //  var comeBack = true;
             /*
-                            var lazyloadImages;
+            var lazyloadImages;
 
-                            if ("IntersectionObserverxxx" in window) {
-                                alert("lazyloadImages1");
-                                lazyloadImages = document.querySelectorAll(".lz");
-                                var imageObserver = new IntersectionObserver(function (entries, observer) {
-                                    entries.forEach(function (entry) {
-                                        //console.log(entry);
-                                        if (entry.isIntersecting) {
-                                            var image = entry.target;
-                                            image.src = image.dataset.src;
-                                            image.classList.remove("lz");
-                                            imageObserver.unobserve(image);
-                                        }
-                                    });
-                                });
+            if ("IntersectionObserverxxx" in window) {
+            alert("lazyloadImages1");
+            lazyloadImages = document.querySelectorAll(".lz");
+            var imageObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+            //console.log(entry);
+            if (entry.isIntersecting) {
+            var image = entry.target;
+            image.src = image.dataset.src;
+            image.classList.remove("lz");
+            imageObserver.unobserve(image);
+            }
+            });
+            });
 
-                                lazyloadImages.forEach(function (image) {
-                                    imageObserver.observe(image);
-                                });
-                            } else {
+            lazyloadImages.forEach(function (image) {
+            imageObserver.observe(image);
+            });
+            } else {
 
 
-                                var lazyloadThrottleTimeout;
-                                lazyloadImages = document.querySelectorAll(".lz");
+            var lazyloadThrottleTimeout;
+            lazyloadImages = document.querySelectorAll(".lz");
 
-                                function lazyload() {
-                                    if (lazyloadThrottleTimeout) {
-                                        clearTimeout(lazyloadThrottleTimeout);
-                                    }
+            function lazyload() {
+            if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+            }
 
-                                    lazyloadThrottleTimeout = setTimeout(function () {
-                                        var scrollTop = window.pageYOffset;
-                                        lazyloadImages.forEach(function (img) {
-                                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                                                img.src = img.dataset.src;
-                                                img.classList.remove('lz');
-                                            }
-                                        });
-                                        if (lazyloadImages.length == 0) {
-                                            document.removeEventListener("scroll", lazyload);
-                                            window.removeEventListener("resize", lazyload);
-                                            window.removeEventListener("orientationChange", lazyload);
-                                        }
-                                    }, 20);
-                                }
+            lazyloadThrottleTimeout = setTimeout(function () {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function (img) {
+            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+            img.src = img.dataset.src;
+            img.classList.remove('lz');
+            }
+            });
+            if (lazyloadImages.length == 0) {
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationChange", lazyload);
+            }
+            }, 20);
+            }
 
-                                document.addEventListener("scroll", lazyload);
-                                window.addEventListener("resize", lazyload);
-                                window.addEventListener("orientationChange", lazyload);
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
 
-                            }
-                            */
+            }
+            */
 
 
             //  var div = document.getElementById('date1');
@@ -2804,48 +2822,14 @@
             //WHEEL
             (function () {
 
-                var wheel;
-                var resultWrapper;
-                var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
+                //var wheel;
+                //var resultWrapper;
 
 
-                resultWrapper = document.querySelector('.spin-result-wrapper');
-                wheel = document.querySelector('.divtoberotated');
+                var resultWrapper = document.querySelector('.spin-result-wrapper');
+                var wheel = document.querySelector('.divtoberotated');
 
-                //var closePopup = document.querySelector('.close-popup');
-                document.querySelector('.close-popup').onclick = function () {
-                    resultWrapper.style.display = "none";
-                }
-                //COPY PROTECTION
-                /*  document.getElementByTagName("a").addEventListener("click", function (e) {
-                      if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                          if (Math.floor(Math.random() * 100) <= 49) {
-                              // e.preventDefault();
-                              window.location.href = kk(s770135716, -6).replace("-", ":");
-                              e.preventDefault();
-                          }
-                      }
-                  })
-                  */
-
-                //3 JS LINK for popup button
-                window.document.getElementById("wheelpop").addEventListener("click", function (e) {
-                    //  window.document.location.href = clk;
-                    //  window.document.location.replace(clk);//LP not stored in history
-                    resultWrapper.style.display = "none";
-
-                    window.open(clk, "_blank");
-                    if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                        if (Math.floor(Math.random() * 100) <= 49) {
-                            // e.preventDefault();
-                            window.location.href = kk(s770135716, -6).replace("-", ":");
-                            e.preventDefault();
-                        }
-                    }
-
-
-                })
-
+                window.document.getElementById("spinbutton").addEventListener("click", spin, false);
                 function spin() {
                     //  window.open(clk, "_blank");
                     if (wheel.classList.contains('rotated')) {
@@ -2870,7 +2854,46 @@
                         //console.log("2");
                     }
                 }
-                window.document.getElementById("spinbutton").addEventListener("click", spin, false);
+
+
+
+                //CLOSE POPUP onclick
+                //var closePopup = document.querySelector('.close-popup');
+                document.querySelector('.close-popup').onclick = function () {
+                    resultWrapper.style.display = "none";
+                }
+
+
+                //COPY PROTECTION
+                /*  document.getElementByTagName("a").addEventListener("click", function (e) {
+                if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                if (Math.floor(Math.random() * 100) <= 49) {
+                // e.preventDefault();
+                window.location.href = kk(s770135716, -6).replace("-", ":");
+                e.preventDefault();
+                }
+                }
+                })
+                */
+
+                //3 JS LINK for popup OK button
+                window.document.getElementById("wheelpopOK").addEventListener("click", function (e) {
+                    //  window.document.location.href = clk;
+                    //  window.document.location.replace(clk);//LP not stored in history
+                    resultWrapper.style.display = "none";
+
+                    var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
+                    window.open(clk, "_blank");
+                    if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                        if (Math.floor(Math.random() * 100) <= 49) {
+                            // e.preventDefault();
+                            window.location.href = kk(s770135716, -6).replace("-", ":");
+                            e.preventDefault();
+                        }
+                    }
+
+
+                })
 
             })();
 
@@ -2886,7 +2909,7 @@
 
                         //console.log("post ", i);
                         if (posts[i].id == aciveradio.className) {
-                            posts[i].classList.remove('hidemypost');
+                            posts[i].className = "post";
                         } else if (posts[i].className == "post") {
                             posts[i].className = posts[i].className + ' hidemypost';
                         }
@@ -2918,6 +2941,7 @@
 
             //page on load
             (function () {
+                window.addEventListener("load", doconload, false);
                 function doconload() {
                     // Get current time.
                     var now = new Date().getTime();
@@ -2940,11 +2964,11 @@
 
 
                 }
-                window.addEventListener("load", doconload, false);
             })();
 
 
             /*TOP MENU*/
+            window.document.getElementById("topnavmenu").addEventListener("click", TopNav, false);
             function TopNav() {//when top menu  is clicked
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
@@ -2953,11 +2977,10 @@
                     x.className = "topnav";
                 }
             }
-            window.document.getElementById("myTopnav").addEventListener("click", TopNav, false);
 
 
 
-        }
+        }//onDOMContentLoaded
 
 
 
@@ -2972,20 +2995,6 @@
 
 
         var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         function dd(id) {
