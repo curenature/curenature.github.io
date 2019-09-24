@@ -16,6 +16,16 @@
 
     <link rel="stylesheet" href="vp.css" media="all">
 
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bb000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="css/html5reset.css" media="all">
        <link rel="stylesheet" href="css/sd.css" media="all">
@@ -24,14 +34,22 @@
       <link rel="stylesheet" href="./PAGIN/pagin-style.css">
     <link rel="shortcut icon" href="/favicon.ico">
         -->
-
-
-
+    <script>
+        document.documentElement.classList.remove("nojs");
+        //if webp supported? if yes then this script add webp class to html tag
+        !function (e, n, A) { function o(e, n) { return typeof e === n } function t() { var e, n, A, t, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-")) } } function a(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var o = e.split("."), t = Modernizr[o[0]]; if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr; n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) { return n in e && o(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), t(), a(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
+    </script>
     <!--####################-->
     <!--####################-->
     <!--####################-->
     <!--####################-->
-    <!--test http://www.cssdesk.com/
+    <!--to verify azure cust domain PAUSE clouflare in overview page
+        azure+CF https://aaronmsft.com/posts/static-sites-hugo-azure-cloudflare/
+        favicons https://realfavicongenerator.net
+        https://realfavicongenerator.net/favicon_checker#.XYmInChKiM8
+        test
+        https://www.webpagetest.org/
+        http://www.cssdesk.com/
         https://www.powermapper.com/products/sortsite/checks/browser-compatibility/
     html css icons https://www.toptal.com/designers/htmlarrows/symbols/            css colors
             https://www.w3schools.com/cssref/css_colors.asp*/
@@ -75,7 +93,9 @@
             webp using https://css-tricks.com/using-webp-images/
             browser compat   https://modernizr.com/download
             image compress https://squoosh.app/
-            -->
+        aws cloudflare   https://miketabor.com/how-to-host-a-static-website-using-aws-s3-and-cloudflare/
+
+        -->
 
 
 </head>
@@ -84,7 +104,7 @@
       <output id="range_weight_disp"></output>
     -->
 
-    <p>time=<span id="time"></span></p>
+    <p>awstime=<span id="time"></span></p>
     <p>Window size: <span id="size"></span> pixels</p>
 
     <!--
@@ -139,7 +159,7 @@
 
 
             <div class="topnav" id="myTopnav">
-                <a href="#scroll">Home</a>
+                <a href="indexroot.html">Home</a>
                 <a href="#scroll" class="active">Money Magnet</a>
                 <a href="#scroll">Varicose</a>
                 <a href="#scroll">Belly Fat</a>
@@ -766,7 +786,7 @@
                                 </strong>
                             </p>
                             <div class="clearboth w60 ">
-                                <div class="sprite sprite-k7 "></div>
+                                <div class="sprite sprite-k7 lz q75 "></div>
                             </div>
                         </div>
 
@@ -820,7 +840,7 @@
                 <h1>VISAGEMAX ผลิตภัณฑ์อาจขาดตลาด</h1>
                 <div class="rspnsv CaptImgTxt  ">
                     <div class="CaptImgL  qq prod">
-                        <div class="sprite2 png1  lz q75">  </div>
+                        <div class="sprite2 png1  lz q75"> </div>
                     </div>
                     <div>
                         <br /><!--need it-->
@@ -923,7 +943,7 @@
     -->
 
 
-    <div class="section group bg4">
+    <div class="section  bg4">
         <!--6 most popular products in Thailand now  thai  6 สินค้ายอดนิยมของคนไทยตอนนี้-->
         <h1>6 สินค้ายอดนิยมของคนไทยตอนนี้</h1>
 
@@ -963,8 +983,6 @@
     <script>
         //        !function (e, t, n) { function a(e) { var t = c.className, n = Modernizr._config.classPrefix || ""; if (f && (t = t.baseVal), Modernizr._config.enableJSClass) { var a = new RegExp("(^|\\s)" + n + "no-js(\\s|$)"); t = t.replace(a, "$1" + n + "js$2") } Modernizr._config.enableClasses && (t += " " + n + e.join(" " + n), f ? c.className.baseVal = t : c.className = t) } function s(e, t) { return typeof e === t } function i() { var e, t, n, a, i, o, u; for (var c in r) if (r.hasOwnProperty(c)) { if (e = [], t = r[c], t.name && (e.push(t.name.toLowerCase()), t.options && t.options.aliases && t.options.aliases.length)) for (n = 0; n < t.options.aliases.length; n++)e.push(t.options.aliases[n].toLowerCase()); for (a = s(t.fn, "function") ? t.fn() : t.fn, i = 0; i < e.length; i++)o = e[i], u = o.split("."), 1 === u.length ? Modernizr[u[0]] = a : (!Modernizr[u[0]] || Modernizr[u[0]] instanceof Boolean || (Modernizr[u[0]] = new Boolean(Modernizr[u[0]])), Modernizr[u[0]][u[1]] = a), l.push((a ? "" : "no-") + u.join("-")) } } function o() { return "function" != typeof t.createElement ? t.createElement(arguments[0]) : f ? t.createElementNS.call(t, "http://www.w3.org/2000/svg", arguments[0]) : t.createElement.apply(t, arguments) } var l = [], r = [], u = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, t) { var n = this; setTimeout(function () { t(n[e]) }, 0) }, addTest: function (e, t, n) { r.push({ name: e, fn: t, options: n }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = u, Modernizr = new Modernizr; var c = t.documentElement, f = "svg" === c.nodeName.toLowerCase(), p = o("input"), m = "search tel url email datetime date month week time datetime-local number range color".split(" "), d = {}; Modernizr.inputtypes = function (e) { for (var a, s, i, o = e.length, l = "1)", r = 0; o > r; r++)p.setAttribute("type", a = e[r]), i = "text" !== p.type && "style" in p, i && (p.value = l, p.style.cssText = "position:absolute;visibility:hidden;", /^range$/.test(a) && p.style.WebkitAppearance !== n ? (c.appendChild(p), s = t.defaultView, i = s.getComputedStyle && "textfield" !== s.getComputedStyle(p, null).WebkitAppearance && 0 !== p.offsetHeight, c.removeChild(p)) : /^(search|tel)$/.test(a) || (i = /^(url|email)$/.test(a) ? p.checkValidity && p.checkValidity() === !1 : p.value != l)), d[e[r]] = !!i; return d }(m); var h = "autocomplete autofocus list placeholder max min multiple pattern required step".split(" "), g = {}; Modernizr.input = function (t) { for (var n = 0, a = t.length; a > n; n++)g[t[n]] = !!(t[n] in p); return g.list && (g.list = !(!o("datalist") || !e.HTMLDataListElement)), g }(h), i(), a(l), delete u.addTest, delete u.addAsyncTest; for (var v = 0; v < Modernizr._q.length; v++)Modernizr._q[v](); e.Modernizr = Modernizr }(window, document);
 
-        !function (e, n, A) { function o(e, n) { return typeof e === n } function t() { var e, n, A, t, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-")) } } function a(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var o = e.split("."), t = Modernizr[o[0]]; if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr; n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) { return n in e && o(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), t(), a(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
-
         /*ie<9 compatible */
 
 
@@ -1002,7 +1020,6 @@
 
             console.log(s);
 
-            document.documentElement.classList.remove("nojs");
 
 
 
@@ -1268,8 +1285,11 @@
                     var x = document.getElementsByClassName("q75");
                     var i;
                     for (i = 0; i < x.length; i++) {
-                        //console.log(x[i].classList);
-                        x[i].classList.remove("lz");
+                        //console.log(x[i].className);
+                        x[i].classList.replace("lz", "lzstart");
+                        //console.log(x[i].className);
+                      //  x[i].classList.remove("lz");
+                     //   x[i].classList.add("lzstart");
                         //console.log(x[i].classList);
                     }
                     //n2 = msec();
@@ -1340,9 +1360,9 @@
 
 
 
-                                                                                                                                                                                                                                                    //    slider.oninput = function () {
-                                                                                                                                                                                                                                                      //      output.innerHTML = this.value;
-                                                                                                                                                                                                                                                      //  }
+                                                                                                                                                                                                                                                                //    slider.oninput = function () {
+                                                                                                                                                                                                                                                                  //      output.innerHTML = this.value;
+                                                                                                                                                                                                                                                                  //  }
 
 
     </script>

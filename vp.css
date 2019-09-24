@@ -1456,140 +1456,16 @@ p:before {
 }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-
-.no-webp .sprite, /*if webp is not supported*/
-.nojs .sprite /*if javascript is not supported*/ {
-    background-image: url("spritegrid2mz75.jpg");
-}
-/*if webp is  supported*/
-.webp .sprite {
-    background-image: url("spritegrid2squoosh675.webp");
-}
-
-.sprite, .sprite2 {
+.spr6, .spr1, .sprk7, .sprite, .sprite2 {
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -o-border-radius: 1rem;
-}
-
-    .sprite.lz, .sprite2.lz {
-        background-image: none;
-        background-color: #F1F1FA;
-    }
-
-.sprite-1 {
-    background-position: 0% 0%;
-    background-size: 511.706% 468.254%;
-    padding-top: 75%;
-}
-
-.sprite-2 {
-    background-position: 26.823% 0%;
-    padding-top: 62.429%;
-    background-size: 368.429%;
-}
-
-.sprite-4 {
-    background-position: 63.235% 0%;
-    background-size: 382.074%;
-    padding-top: 66.222%;
-}
-
-.sprite-5 {
-    background-position: 0% 32.628%;
-    background-size: 429.833%;
-    padding-top: 66.667%;
-}
-
-.sprite-6 {
-    background-position: 31.932% 34.227%;
-    background-size: 368.429%;
-    padding-top: 66.286%;
-}
-
-.sprite-before_after-halfsize-mz75 {
-    background-position: 0% 79.563%;
-    background-size: 247.505%;
-    padding-top: 59.981%;
-}
-
-.sprite-eyes1 {
-    background-position: 53.897% 29.741%;
-    background-size: 1544.311%;
-    padding-top: 159.88%;
-}
-
-.sprite-eyes2 {
-    background-position: 60.821% 29.741%;
-    background-size: 1544.311%;
-    padding-top: 159.88%;
-}
-
-.sprite-eyes3 {
-    background-position: 67.745% 29.741%;
-    background-size: 1544.311%;
-    padding-top: 159.88%;
-}
-
-.sprite-k1 {
-    background-position: 59.361% 47.285%;
-    background-size: 662.982%;
-    padding-top: 66.838%;
-}
-
-.sprite-k10 {
-    background-position: 53.19% 63.953%;
-    background-size: 415.968%;
-    padding-top: 39.839%;
-}
-
-.sprite-k2 {
-    background-position: 47.602% 80.701%;
-    background-size: 661.282%;
-    padding-top: 65.897%;
-}
-
-.sprite-k4 {
-    background-position: 65.718% 89.124%;
-    background-size: 644.75%;
-    padding-top: 100%;
-}
-
-.sprite-k6 {
-    background-position: 100% 0%;
-    background-size: 368.429%;
-    padding-top: 66.286%;
-}
-
-.sprite-k7 {
-    background-position: 86.628% 41.429%;
-    background-size: 515.8%;
-    padding-top: 130%;
-}
-
-
-.sprite-k8 {
-    background-position: 97.499% 84.394%;
-    background-size: 368.429%;
-    padding-top: 64.286%;
-}
-
-.sprite-k9 {
-    background-position: 0% 100%;
-    background-size: 470.62%;
-    padding-top: 37.591%;
 }
 
 .spr6, .spr1, .sprk7 {
     background-image: url('1-k7-6-0px.jpg');
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -o-border-radius: 1rem;
 }
 
 .spr6 {
@@ -1610,22 +1486,150 @@ p:before {
     padding-top: 130%; /* height/width of image */
 }
 
+.sprite.lz, .sprite2.lz {
+    background-image: none;
+    background-color: #F1F1FA;
+}
+/*if webp is not supported*/
+html.no-webp .sprite.lzstart, /*if webp is not supported*/
+html.nojs .sprite /*if javascript is not supported*/ {
+    background-image: url("spritegrid2mz75.jpg");
+}
 
-.sprite2 {
+html.no-webp .sprite2.lzstart, /*if webp is not supported*/
+html.nojs .sprite2 /*if javascript is not supported*/ {
     background-image: url('png1png2-opti.png');
 }
 
-.png1 {
+
+/*if webp is  supported*/
+html.webp .sprite.lzstart {
+    background-image: url("spritegrid2squoosh675.webp");
+}
+
+html.webp .sprite2.lzstart {
+    background-image: url('png1png2-opti.png');
+}
+
+.sprite.sprite-1 {
+    background-position: 0% 0%;
+    background-size: 511.706% 468.254%;
+    padding-top: 75%;
+}
+
+.sprite.sprite-2 {
+    background-position: 26.823% 0%;
+    padding-top: 62.429%;
+    background-size: 368.429%;
+}
+
+.sprite.sprite-4 {
+    background-position: 63.235% 0%;
+    background-size: 382.074%;
+    padding-top: 66.222%;
+}
+
+.sprite.sprite-5 {
+    background-position: 0% 32.628%;
+    background-size: 429.833%;
+    padding-top: 66.667%;
+}
+
+.sprite.sprite-6 {
+    background-position: 31.932% 34.227%;
+    background-size: 368.429%;
+    padding-top: 66.286%;
+}
+
+.sprite.sprite-before_after-halfsize-mz75 {
+    background-position: 0% 79.563%;
+    background-size: 247.505%;
+    padding-top: 59.981%;
+}
+
+.sprite.sprite-eyes1 {
+    background-position: 53.897% 29.741%;
+    background-size: 1544.311%;
+    padding-top: 159.88%;
+}
+
+.sprite.sprite-eyes2 {
+    background-position: 60.821% 29.741%;
+    background-size: 1544.311%;
+    padding-top: 159.88%;
+}
+
+.sprite.sprite-eyes3 {
+    background-position: 67.745% 29.741%;
+    background-size: 1544.311%;
+    padding-top: 159.88%;
+}
+
+.sprite.sprite-k1 {
+    background-position: 59.361% 47.285%;
+    background-size: 662.982%;
+    padding-top: 66.838%;
+}
+
+.sprite.sprite-k10 {
+    background-position: 53.19% 63.953%;
+    background-size: 415.968%;
+    padding-top: 39.839%;
+}
+
+.sprite.sprite-k2 {
+    background-position: 47.602% 80.701%;
+    background-size: 661.282%;
+    padding-top: 65.897%;
+}
+
+.sprite.sprite-k4 {
+    background-position: 65.718% 89.124%;
+    background-size: 644.75%;
+    padding-top: 100%;
+}
+
+.sprite.sprite-k6 {
+    background-position: 100% 0%;
+    background-size: 368.429%;
+    padding-top: 66.286%;
+}
+
+.sprite.sprite-k7 {
+    background-position: 86.628% 41.429%;
+    background-size: 515.8%;
+    padding-top: 130%;
+}
+
+
+.sprite.sprite-k8 {
+    background-position: 97.499% 84.394%;
+    background-size: 368.429%;
+    padding-top: 64.286%;
+}
+
+.sprite.sprite-k9 {
+    background-position: 0% 100%;
+    background-size: 470.62%;
+    padding-top: 37.591%;
+}
+
+
+
+
+
+
+.sprite2.png1 {
     background-position: 0 100%;
     background-size: 171.232877%;
     padding-top: 134.93%;
 }
-
-.png2 {
+/*
+.sprire2.png2 {
     background-position: 0 0%;
     background-size: 100%;
     padding-top: 65%;
-}
+}*/
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 .mar-b1em {
     margin-bottom: 1rem;
