@@ -36,7 +36,7 @@
         -->
     <script>
         document.documentElement.classList.remove("nojs");
-        //if webp supported? if yes then this script add webp class to html tag
+        //if webp supported? if yes then this function adds webp class to html tag
         !function (e, n, A) { function o(e, n) { return typeof e === n } function t() { var e, n, A, t, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-")) } } function a(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var o = e.split("."), t = Modernizr[o[0]]; if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr; n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) { return n in e && o(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), t(), a(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
     </script>
     <!--####################-->
@@ -95,6 +95,12 @@
             image compress https://squoosh.app/
         aws cloudflare   https://miketabor.com/how-to-host-a-static-website-using-aws-s3-and-cloudflare/
 
+       dns lookup(pause CF(devel mode or orange icon is not enough))  https://digwebinterface.com/?hostnames=trendynow.xyz&type=&ns=resolver&useresolver=8.8.4.4&nameservers=
+        github custom domain  https://hackernoon.com/use-custom-domain-with-github-pages-2-straightforward-steps-cf561eee244f
+
+        github+cloudflare https://www.toptal.com/github/unlimited-scale-web-hosting-github-pages-cloudflare
+
+        google optimize  https://optimize.google.com/optimize/home/?_ga=2.88182169.364938948.1569538008-1990968475.1569538008&_gac=1.49151700.1569538040.Cj0KCQjww7HsBRDkARIsAARsIT4ZhdTISDyDoa1n7y7hRSNbUwthmqh3GL8GjKEIPApCGHuYkckLq1oaAijcEALw_wcB#/accounts/4702906867/containers/13043398
         -->
 
 
@@ -103,8 +109,8 @@
     <!-- <input type="range" name="weight" id="range_weight" value="5" min="1" max="100" oninput="range_weight_disp.value = range_weight.value">
       <output id="range_weight_disp"></output>
     -->
-
-    <p>gh awstime=<span id="time"></span></p>
+    <div id="statis"></div>
+    <p>v1 time=<span id="time"></span></p>
     <p>Window size: <span id="size"></span> pixels</p>
 
     <!--
@@ -947,8 +953,8 @@
         <!--6 most popular products in Thailand now  thai  6 สินค้ายอดนิยมของคนไทยตอนนี้-->
         <h1>6 สินค้ายอดนิยมของคนไทยตอนนี้</h1>
 
-        <!--COL 2-->
-        <div class="col spanC2">
+        <!--COL 1-->
+        <div class="col spanC3">
             <div class="rspnsv mar-b1em">
                 <div class="sprite sprite-k9  lz q75"></div>
                 <a class="bg4 " href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
@@ -961,9 +967,9 @@
                 <div class="sprite sprite-1  lz q75"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
-        </div><!--col2-->
-        <!--COL 3-->
-        <div class="col spanC2">
+        </div><!--col 1-->
+        <!--COL 2-->
+        <div class="col spanC3">
             <div class="rspnsv  mar-b1em">
                 <div class="sprite sprite-k1  lz q75"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
@@ -976,7 +982,24 @@
                 <div class="sprite sprite-k4  lz q75"></div>
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
-        </div><!--col3-->
+        </div><!--col 2-->
+        <!--COL 3-->
+        <div class="col spanC3">
+            <div class="rspnsv  mar-b1em">
+                <div class="sprite sprite-k1  lz q75"></div>
+                <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+            </div>
+            <div class="rspnsv mar-b1em">
+                <div class="sprite sprite-k2  lz q75"></div>
+                <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+            </div>
+            <div class="rspnsv mar-b1em">
+                <div class="sprite sprite-k4  lz q75"></div>
+                <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+            </div>
+        </div><!--col 3-->
+
+
         <div class="pad-1em xbg4"><img class="rspnsv w100" src="8779a.png" alt="image1"></div>
     </div><!--section-->
 
@@ -1219,31 +1242,29 @@
             //FONT
             (function () {
 
-                var fs = 100;
+
+                var aa = sessionStorage.getItem("currfontsize");
+                console.log("aa ", aa);
+                var fs = aa !== null ? parseInt(aa) : 100;
+                console.log("fs ", fs);
                 var i3 = document.getElementById('icon3');
                 var i4 = document.getElementById('icon4');
                 var x = document.getElementById("root");
-                //console.log("aasi.length ", aasi.length);
-                //                for (var i = 0; i < aasi.length; i++) {
-                //console.log("input ", i);
 
                 i3.onclick = function () {
-                    fs = fs > 50 ? fs - 10 : fs;
+                    fs = fs > 50 ? (fs) - 10 : fs;
                     x.style.fontSize = fs + "%";
+                    sessionStorage.setItem("currfontsize", fs);
                     console.log("fs ", fs);
                 }
-
-                //
-                //console.log("this.style.fontSize ", this.style.fontSize);
-                //   output.innerHTML = this.value;
-                //                x.style.fontSize = this.style.fontSize;
-                //                    console.log(" root fs=" + x.style.fontSize);
 
                 i4.onclick = function () {
-                    fs = fs < 170 ? fs + 10 : fs;
+                    fs = fs < 170 ? (fs) + 10 : fs;
                     x.style.fontSize = fs + "%";
+                    sessionStorage.setItem("currfontsize", fs);
                     console.log("fs ", fs);
                 }
+
             })();
 
 
@@ -1271,8 +1292,27 @@
 
             //page on load
             (function () {
+                function measureCRP() {
+                    var t = window.performance.timing,
+                        interactive = t.domInteractive - t.domLoading,
+                        dcl = t.domContentLoadedEventStart - t.domLoading,
+                        complete = t.domComplete - t.domLoading,
+                        firstv = t.domComplete - t.navigationStart;
+                    var stats = document.createElement('p');
+                    stats.textContent = 'interactive: ' + interactive + 'ms, ' +
+                        'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms, firstv: ' + firstv + 'ms';
+                    document.body.appendChild(stats);
+                    document.getElementById("statis").appendChild(stats);
+                }
+                //                var body=get
+                //              body.onload = measureCRP();
+                //document.body.onload = measureCRP();
+
                 window.addEventListener("load", doconload, false);
                 function doconload() {
+                    measureCRP();
+
+
                     // Get current time.
                     var now = new Date().getTime();
                     // Calculate page load time.
@@ -1288,14 +1328,12 @@
                         //console.log(x[i].className);
                         x[i].classList.replace("lz", "lzstart");
                         //console.log(x[i].className);
-                      //  x[i].classList.remove("lz");
-                     //   x[i].classList.add("lzstart");
+                        //  x[i].classList.remove("lz");
+                        //   x[i].classList.add("lzstart");
                         //console.log(x[i].classList);
                     }
                     //n2 = msec();
                     //document.getElementById("time").innerText = 'load time is ' + loadTime + "  " + (n2 - n1);
-
-
 
                 }
 
@@ -1360,9 +1398,9 @@
 
 
 
-                                                                                                                                                                                                                                                                //    slider.oninput = function () {
-                                                                                                                                                                                                                                                                  //      output.innerHTML = this.value;
-                                                                                                                                                                                                                                                                  //  }
+                                                                                                                                                                                                                                                                                            //    slider.oninput = function () {
+                                                                                                                                                                                                                                                                                              //      output.innerHTML = this.value;
+                                                                                                                                                                                                                                                                                              //  }
 
 
     </script>

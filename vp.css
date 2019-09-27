@@ -926,6 +926,10 @@ body {
     width: 50%;
 }
 
+.spanC3 {
+    width: calc(100%/3);
+    xwidth: 50%;
+}
 
 
 .xgroup:before,
@@ -1247,9 +1251,15 @@ p:before {
     .CaptImgL.w20 {
         width: 30%;
     }
+
+    
 }
 
 @media only screen and (max-width: 819px) {
+    .spanC3 {
+        width: calc(100%/2);
+        xwidth: 50%;
+    }
     .tr-wrap {
         font-size: calc(90px * 100/80* (700 + 1) / (1533 + 1)); /*fallback*/
         font-size: calc(90vw * 100/80* 100 / (1533 + 1));
@@ -1324,6 +1334,10 @@ p:before {
 }
 
 @media only screen and (max-width: 599px) {
+    .spanC3 {
+        width: 100%;
+        xwidth: 50%;
+    }
     .tr-wrap {
         width: 80%;
         padding-bottom: 80%;
