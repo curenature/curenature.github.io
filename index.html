@@ -37,7 +37,13 @@
     <script>
         document.documentElement.classList.remove("nojs");
         //if webp supported? if yes then this function adds webp class to html tag
-        !function (e, n, A) { function o(e, n) { return typeof e === n } function t() { var e, n, A, t, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-")) } } function a(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var o = e.split("."), t = Modernizr[o[0]]; if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr; n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) { return n in e && o(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), t(), a(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
+        //modernizr-click webp and then click built,then select build-copytoclipboard ,then paste here inside head tag
+        //script will append class webp if webp supported or class no-webp if not supported
+        /*! modernizr 3.6.0 (Custom Build) | MIT *
+* https://modernizr.com/download/?-webp-setclasses !*/
+        !function (e, n, A) { function o(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function t(e, n) { return typeof e === n } function a() { var e, n, A, o, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (o = t(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = o : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = o), s.push((o ? "" : "no-") + l.join("-")) } } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var t = e.split("."), a = Modernizr[t[0]]; if (2 == t.length && (a = a[t[1]]), "undefined" != typeof a) return Modernizr; n = "function" == typeof n ? n() : n, 1 == t.length ? Modernizr[t[0]] = n : (!Modernizr[t[0]] || Modernizr[t[0]] instanceof Boolean || (Modernizr[t[0]] = new Boolean(Modernizr[t[0]])), Modernizr[t[0]][t[1]] = n), o([(n && 0 != n ? "" : "no-") + t.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = t(e, "undefined") || t(e.call, "undefined") ? function (e, n) { return n in e && t(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), a(), o(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
+
+        //another WRONG method https://codepen.io/sandip_rb/pen/ZWNEwr
     </script>
     <!--####################-->
     <!--####################-->
@@ -92,7 +98,7 @@
             sprite grid gen  https://spritegen.website-performance.org/
             webp using https://css-tricks.com/using-webp-images/
             browser compat   https://modernizr.com/download
-            image compress https://squoosh.app/
+            image compress/convert https://squoosh.app/
         aws cloudflare   https://miketabor.com/how-to-host-a-static-website-using-aws-s3-and-cloudflare/
 
        dns lookup(pause CF(devel mode or orange icon is not enough))  https://digwebinterface.com/?hostnames=trendynow.xyz&type=&ns=resolver&useresolver=8.8.4.4&nameservers=
@@ -101,6 +107,18 @@
         github+cloudflare https://www.toptal.com/github/unlimited-scale-web-hosting-github-pages-cloudflare
 
         google optimize  https://optimize.google.com/optimize/home/?_ga=2.88182169.364938948.1569538008-1990968475.1569538008&_gac=1.49151700.1569538040.Cj0KCQjww7HsBRDkARIsAARsIT4ZhdTISDyDoa1n7y7hRSNbUwthmqh3GL8GjKEIPApCGHuYkckLq1oaAijcEALw_wcB#/accounts/4702906867/containers/13043398
+
+        find offers and LP inurl:voluumdata antenna
+        aff nw https://about.giddyup.io/partners/
+        site sucker
+        similarweb
+        listicles allow you to test many prods,base lp on season or holiday days
+        pinterest as a traff source
+
+        CF worker site https://developers.cloudflare.com/workers/sites/
+        test https://www.dareboost.com
+
+
         -->
 
 
@@ -110,7 +128,7 @@
       <output id="range_weight_disp"></output>
     -->
     <div id="statis"></div>
-    <p>v1 time=<span id="time"></span></p>
+    <p>v2 time=<span id="time"></span></p>
     <p>Window size: <span id="size"></span> pixels</p>
 
     <!--
@@ -147,6 +165,7 @@
         <!--  <div><img class="rspnsvc" style="width:100%;background-color:white" src="5b1126f6.png" alt=""></div>
         <div><img class="bg4" style="width:100%;" src="bows-n-pearls.png" alt=""></div>
          -->
+
         <div class="pad-1em xbg4"><img class="rspnsv w100" src="7682a.png" alt="image1"></div>
 
         <!--
@@ -1111,132 +1130,6 @@
 
             //  var div = document.getElementById('date1');
 
-            //DATE
-            // Array of day names
-            var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
-            // Array of month Names
-            var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
-            var now = new Date();
-            //                document.write(dayNames[now.getDay()] + ", " +
-            //                  monthNames[now.getMonth()] + " " +
-            //                now.getDate() + ", " + now.getFullYear());
-            document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
-                monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
-
-            //WHEEL
-            (function () {
-
-                //var wheel;
-                //var resultWrapper;
-
-
-                var resultWrapper = document.querySelector('.spin-result-wrapper');
-                var wheel = document.querySelector('.divtoberotated');
-
-                window.document.getElementById("spinbutton").addEventListener("click", spin, false);
-                function spin() {
-                    //  window.open(clk, "_blank");
-                    if (wheel.classList.contains('rotated')) {
-
-                        resultWrapper.style.display = "block";//show popup
-                        //console.log("1");
-                    } else {
-                        // wheel.style.transform = "rotate(1753deg)";
-                        wheel.classList.add('super-rotation');
-                        setTimeout(function () {//show popup in 8 sec
-                            resultWrapper.style.display = "block";// console.log("qwe");
-                        }, 8000);
-                        // setTimeout(ow(), 10000);
-                        //setTimeout(function () {
-                        // var spinLinks = document.getElementsByTagName('a');
-                        // var spinHref = spinLinks[0].href;
-                        //var spinHref = clk; console.log(clk);
-                        //window.open(spinHref, "_blank");
-                        //  ow();
-                        // }, 10000);
-                        wheel.classList.add('rotated');
-                        //console.log("2");
-                    }
-                }
-
-
-
-                //CLOSE POPUP onclick
-                //var closePopup = document.querySelector('.close-popup');
-                document.querySelector('.close-popup').onclick = function () {
-                    resultWrapper.style.display = "none";
-                }
-
-
-                //COPY PROTECTION
-                /*  document.getElementByTagName("a").addEventListener("click", function (e) {
-                if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                if (Math.floor(Math.random() * 100) <= 49) {
-                // e.preventDefault();
-                window.location.href = kk(s770135716, -6).replace("-", ":");
-                e.preventDefault();
-                }
-                }
-                })
-                */
-
-                //3 JS LINK for popup OK button
-                window.document.getElementById("wheelpopOK").addEventListener("click", function (e) {
-                    //  window.document.location.href = clk;
-                    //  window.document.location.replace(clk);//LP not stored in history
-                    resultWrapper.style.display = "none";
-
-                    var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
-                    window.open(clk, "_blank");
-                    if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                        if (Math.floor(Math.random() * 100) <= 49) {
-                            // e.preventDefault();
-                            window.location.href = kk(s770135716, -6).replace("-", ":");
-                            e.preventDefault();
-                        }
-                    }
-
-
-                })
-
-            })();
-
-
-            //pagination
-            (function () {
-                function loopPosts(aciveradio, isload) {
-                    var posts = document.getElementsByClassName('post');
-                    //console.log("posts ", posts.length);
-                    for (var i = 0; i < posts.length; i++) {
-
-                        //console.log("post ", i);
-                        if (posts[i].id == aciveradio.className) {
-                            posts[i].className = "post";
-                        } else if (posts[i].className == "post") {
-                            posts[i].className = posts[i].className + ' hidemypost';
-                        }
-                        //console.log(i, " class=", posts[i].className);
-                    }
-                    if (!isload) {
-                        var elmnt = document.getElementById("scroll");
-                        elmnt.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-
-                var qq = document.getElementsByClassName('post1');//first radio
-                loopPosts(qq[0], true);
-
-                var inputs = document.getElementsByName('g1');
-                //console.log("inputs ", inputs.length);
-                for (var i = 0; i < inputs.length; i++) {
-                    //console.log("input ", i);
-                    inputs[i].onclick = function () {
-                        //
-                        // console.log("this.className ", this.className);
-                        loopPosts(this, false);
-                    }
-                }
-            })();
 
 
             //FONT
@@ -1286,32 +1179,166 @@
 
                 }, false);
 
-            window.onresize = function () {
-                document.getElementById("size").innerHTML = window.innerWidth;
-            };
 
             //page on load
             (function () {
-                function measureCRP() {
-                    var t = window.performance.timing,
-                        interactive = t.domInteractive - t.domLoading,
-                        dcl = t.domContentLoadedEventStart - t.domLoading,
-                        complete = t.domComplete - t.domLoading,
-                        firstv = t.domComplete - t.navigationStart;
-                    var stats = document.createElement('p');
-                    stats.textContent = 'interactive: ' + interactive + 'ms, ' +
-                        'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms, firstv: ' + firstv + 'ms';
-                    document.body.appendChild(stats);
-                    document.getElementById("statis").appendChild(stats);
-                }
+
                 //                var body=get
                 //              body.onload = measureCRP();
                 //document.body.onload = measureCRP();
 
                 window.addEventListener("load", doconload, false);
                 function doconload() {
+
+                    //DATE
+                    // Array of day names
+                    var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
+                    // Array of month Names
+                    var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
+                    var now = new Date();
+                    //                document.write(dayNames[now.getDay()] + ", " +
+                    //                  monthNames[now.getMonth()] + " " +
+                    //                now.getDate() + ", " + now.getFullYear());
+                    document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
+                        monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+
+                    //WHEEL
+                    (function () {
+
+                        //var wheel;
+                        //var resultWrapper;
+
+
+                        var resultWrapper = document.querySelector('.spin-result-wrapper');
+                        var wheel = document.querySelector('.divtoberotated');
+
+                        window.document.getElementById("spinbutton").addEventListener("click", spin, false);
+                        function spin() {
+                            //  window.open(clk, "_blank");
+                            if (wheel.classList.contains('rotated')) {
+
+                                resultWrapper.style.display = "block";//show popup
+                                //console.log("1");
+                            } else {
+                                // wheel.style.transform = "rotate(1753deg)";
+                                wheel.classList.add('super-rotation');
+                                setTimeout(function () {//show popup in 8 sec
+                                    resultWrapper.style.display = "block";// console.log("qwe");
+                                }, 8000);
+                                // setTimeout(ow(), 10000);
+                                //setTimeout(function () {
+                                // var spinLinks = document.getElementsByTagName('a');
+                                // var spinHref = spinLinks[0].href;
+                                //var spinHref = clk; console.log(clk);
+                                //window.open(spinHref, "_blank");
+                                //  ow();
+                                // }, 10000);
+                                wheel.classList.add('rotated');
+                                //console.log("2");
+                            }
+                        }
+
+
+
+                        //CLOSE POPUP onclick
+                        //var closePopup = document.querySelector('.close-popup');
+                        document.querySelector('.close-popup').onclick = function () {
+                            resultWrapper.style.display = "none";
+                        }
+
+
+                        //COPY PROTECTION
+                        /*  document.getElementByTagName("a").addEventListener("click", function (e) {
+                        if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                        if (Math.floor(Math.random() * 100) <= 49) {
+                        // e.preventDefault();
+                        window.location.href = kk(s770135716, -6).replace("-", ":");
+                        e.preventDefault();
+                        }
+                        }
+                        })
+                        */
+
+                        //3 JS LINK for popup OK button
+                        window.document.getElementById("wheelpopOK").addEventListener("click", function (e) {
+                            //  window.document.location.href = clk;
+                            //  window.document.location.replace(clk);//LP not stored in history
+                            resultWrapper.style.display = "none";
+
+                            var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
+                            window.open(clk, "_blank");
+                            if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
+                                if (Math.floor(Math.random() * 100) <= 49) {
+                                    // e.preventDefault();
+                                    window.location.href = kk(s770135716, -6).replace("-", ":");
+                                    e.preventDefault();
+                                }
+                            }
+
+
+                        })
+
+                    })();
+
+
+                    //pagination
+                    (function () {
+                        function loopPosts(aciveradio, isload) {
+                            var posts = document.getElementsByClassName('post');
+                            //console.log("posts ", posts.length);
+                            for (var i = 0; i < posts.length; i++) {
+
+                                //console.log("post ", i);
+                                if (posts[i].id == aciveradio.className) {
+                                    posts[i].className = "post";
+                                } else if (posts[i].className == "post") {
+                                    posts[i].className = posts[i].className + ' hidemypost';
+                                }
+                                //console.log(i, " class=", posts[i].className);
+                            }
+                            if (!isload) {
+                                var elmnt = document.getElementById("scroll");
+                                elmnt.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
+
+                        var qq = document.getElementsByClassName('post1');//first radio
+                        loopPosts(qq[0], true);
+
+                        var inputs = document.getElementsByName('g1');
+                        //console.log("inputs ", inputs.length);
+                        for (var i = 0; i < inputs.length; i++) {
+                            //console.log("input ", i);
+                            inputs[i].onclick = function () {
+                                //
+                                // console.log("this.className ", this.className);
+                                loopPosts(this, false);
+                            }
+                        }
+                    })();//WHEEL
+
+
+
+
+
+                    function measureCRP() {
+                        var t = window.performance.timing,
+                            interactive = t.domInteractive - t.domLoading,
+                            dcl = t.domContentLoadedEventStart - t.domLoading,
+                            complete = t.domComplete - t.domLoading,
+                            firstv = t.domComplete - t.navigationStart;
+                        var stats = document.createElement('p');
+                        stats.textContent = 'interactive: ' + interactive + 'ms, ' +
+                            'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms, firstv: ' + firstv + 'ms';
+                        document.body.appendChild(stats);
+                        document.getElementById("statis").appendChild(stats);
+                    }
+
                     measureCRP();
 
+                    window.onresize = function () {
+                        document.getElementById("size").innerHTML = window.innerWidth;
+                    };
 
                     // Get current time.
                     var now = new Date().getTime();
@@ -1398,9 +1425,9 @@
 
 
 
-                                                                                                                                                                                                                                                                                            //    slider.oninput = function () {
-                                                                                                                                                                                                                                                                                              //      output.innerHTML = this.value;
-                                                                                                                                                                                                                                                                                              //  }
+                                                                                                                                                                                                                                                                                                    //    slider.oninput = function () {
+                                                                                                                                                                                                                                                                                                      //      output.innerHTML = this.value;
+                                                                                                                                                                                                                                                                                                      //  }
 
 
     </script>
