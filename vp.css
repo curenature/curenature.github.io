@@ -1156,7 +1156,23 @@ p:before {
         font-size: 200%;
         cursor: pointer;
     }
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.masonry { /* Masonry container */
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 0.5rem;
+    -moz-column-gap: 0.5rem;
+    column-gap: 0.5rem;
+    margin: 0 0.5rem 0;
+    font-size: .85rem;
+}
 
+    .masonry .item {
+        display: inline-block;
+        margin: 0 0 0.5rem 0;
+        xwidth: 100%;
+    }
 
 
 
@@ -1207,6 +1223,12 @@ p:before {
 }
 
 @media only screen and (max-width: 1121px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 3;
+    }
+
     .tr-wrap {
         font-size: calc(90px * (958 + 1) / (1533 + 1)); /*fallback*/
         font-size: calc(90vw * 100 / (1533 + 1));
@@ -1227,6 +1249,7 @@ p:before {
 }
 
 @media only screen and (max-width: 958px) {
+
     .tr-wrap {
         font-size: calc(90px * 100/80 * (819 + 1) / (1533 + 1)); /*fallback*/
         font-size: calc(90vw * 100/80 * 100 / (1533 + 1));
@@ -1251,8 +1274,6 @@ p:before {
     .CaptImgL.w20 {
         width: 30%;
     }
-
-    
 }
 
 @media only screen and (max-width: 819px) {
@@ -1260,6 +1281,7 @@ p:before {
         width: calc(100%/2);
         xwidth: 50%;
     }
+
     .tr-wrap {
         font-size: calc(90px * 100/80* (700 + 1) / (1533 + 1)); /*fallback*/
         font-size: calc(90vw * 100/80* 100 / (1533 + 1));
@@ -1280,6 +1302,12 @@ p:before {
 }
 
 @media only screen and (max-width: 700px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 2;
+    }
+
     .tr-wrap {
         width: 70%;
         padding-bottom: 70%;
@@ -1338,6 +1366,7 @@ p:before {
         width: 100%;
         xwidth: 50%;
     }
+
     .tr-wrap {
         width: 80%;
         padding-bottom: 80%;
@@ -1360,6 +1389,12 @@ p:before {
 }
 
 @media only screen and (max-width: 512px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+
     .tr-wrap {
         width: 90%;
         padding-bottom: 90%;
@@ -1478,8 +1513,11 @@ p:before {
     -o-border-radius: 1rem;
 }
 
-.spr6, .spr1, .sprk7 {
-    background-image: url('1-k7-6-0px.jpg');
+html.no-webp .spr6, html.no-webp .spr1, html.no-webp .sprk7 {
+    background-image: url('1-k7-6-0px-mz75.jpg');
+}
+html.webp .spr6, html.webp .spr1, html.webp .sprk7 {
+    background-image: url('1-k7-6-0px-075.webp');
 }
 
 .spr6 {
@@ -1506,12 +1544,12 @@ p:before {
 }
 /*if webp is not supported*/
 html.no-webp .sprite.lzstart, /*if webp is not supported*/
-html.nojs .sprite /*if javascript is not supported*/ {
+html.nojs .sprite /*if javascript is not supported so we can not know that webp is supported*/ {
     background-image: url("spritegrid2mz75.jpg");
 }
 
 html.no-webp .sprite2.lzstart, /*if webp is not supported*/
-html.nojs .sprite2 /*if javascript is not supported*/ {
+html.nojs .sprite2 /*if javascript is not supported  so we can not know that webp is supported*/ {
     background-image: url('png1png2-opti.png');
 }
 
