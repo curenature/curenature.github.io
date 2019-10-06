@@ -1505,17 +1505,58 @@ p:before {
 }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-.spr6, .spr1, .sprk7, .sprite, .sprite2 {
+html.no-webp .sprite0 {
+    background-image: url(sprite0-mz75.jpg);
+}
+
+html.webp .sprite0 {
+    background-image: url(sprite0-675.webp);
+}
+
+.sprite0.sprite-1 {
+    background-size: 575%;
+    padding-top: 75%;
+    background-position: 0% 0%;
+}
+
+.sprite0.sprite-7682a {
+    background-size: 289.8%;
+    padding-top: 10%;
+    background-position: 26.554% 0%;
+}
+
+.sprite0.sprite-feature2 {
+    background-size: 120.851%;
+    padding-top: 7.673%;
+    background-position: 0% 81.116%;
+}
+
+.sprite0.sprite-k7 {
+    background-size: 579.6%;
+    padding-top: 130%;
+    background-position: 100% 0%;
+}
+
+
+/*.spr6, .spr1, .sprk7, 
+*/
+.sprite.lz, .sprite2.lz {
+    background-image: none;
+    background-color: #F1F1FA;
+}
+
+.sprite, .sprite2 {
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -o-border-radius: 1rem;
 }
-
+/*
 html.no-webp .spr6, html.no-webp .spr1, html.no-webp .sprk7 {
     background-image: url('1-k7-6-0px-mz75.jpg');
 }
+
 html.webp .spr6, html.webp .spr1, html.webp .sprk7 {
     background-image: url('1-k7-6-0px-075.webp');
 }
@@ -1523,29 +1564,29 @@ html.webp .spr6, html.webp .spr1, html.webp .sprk7 {
 .spr6 {
     background-position: 0 0%;
     background-size: 100%;
-    padding-top: 66.29%; /* height/width of image */
+    padding-top: 66.29%;
 }
 
 .spr1 {
     background-position: 0 41.651706%;
     background-size: 138.888889%;
-    padding-top: 75%; /* height/width of image */
+    padding-top: 75%;
 }
 
 .sprk7 {
     background-position: 0 100%;
     background-size: 140%;
-    padding-top: 130%; /* height/width of image */
+    padding-top: 130%; 
 }
+*/
 
-.sprite.lz, .sprite2.lz {
-    background-image: none;
-    background-color: #F1F1FA;
-}
-/*if webp is not supported*/
 html.no-webp .sprite.lzstart, /*if webp is not supported*/
 html.nojs .sprite /*if javascript is not supported so we can not know that webp is supported*/ {
     background-image: url("spritegrid2mz75.jpg");
+}
+
+html.webp .sprite.lzstart {
+    background-image: url("spritegrid2squoosh675.webp");
 }
 
 html.no-webp .sprite2.lzstart, /*if webp is not supported*/
@@ -1553,22 +1594,16 @@ html.nojs .sprite2 /*if javascript is not supported  so we can not know that web
     background-image: url('png1png2-opti.png');
 }
 
-
-/*if webp is  supported*/
-html.webp .sprite.lzstart {
-    background-image: url("spritegrid2squoosh675.webp");
-}
-
 html.webp .sprite2.lzstart {
     background-image: url('png1png2-opti.png');
 }
-
+/*
 .sprite.sprite-1 {
     background-position: 0% 0%;
     background-size: 511.706% 468.254%;
     padding-top: 75%;
 }
-
+    */
 .sprite.sprite-2 {
     background-position: 26.823% 0%;
     padding-top: 62.429%;
@@ -1646,12 +1681,12 @@ html.webp .sprite2.lzstart {
     background-size: 368.429%;
     padding-top: 66.286%;
 }
-
+/*
 .sprite.sprite-k7 {
     background-position: 86.628% 41.429%;
     background-size: 515.8%;
     padding-top: 130%;
-}
+}*/
 
 
 .sprite.sprite-k8 {
