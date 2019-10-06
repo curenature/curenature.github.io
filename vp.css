@@ -1505,11 +1505,11 @@ p:before {
 }
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-html.no-webp .sprite0 {
+html.no-webp .sprite0.lzstart {
     background-image: url(sprite0-mz75.jpg);
 }
 
-html.webp .sprite0 {
+html.webp .sprite0.lzstart {
     background-image: url(sprite0-675.webp);
 }
 
@@ -1540,7 +1540,7 @@ html.webp .sprite0 {
 
 /*.spr6, .spr1, .sprk7, 
 */
-.sprite.lz, .sprite2.lz {
+.sprite0.lz, .sprite.lz, .sprite2.lz {
     background-image: none;
     background-color: #F1F1FA;
 }
