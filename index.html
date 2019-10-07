@@ -143,6 +143,70 @@
 
     <style>
         /*
+        xhtml, xbody {
+            height: 400%;
+            font-weight: 800;
+        }
+
+        xbody {
+            background: #030321;
+            font-family: Arial;
+        }
+
+        svg {
+            background: rgb(113, 195, 65);
+            xline-height: 1.2;
+            display: block;
+            background: #030321;
+            font-family: Arial;
+            font-size: 650%;
+            xfont: 10.5em 'Montserrat';
+            width: 100%;
+            xheight: 300px;
+            margin: 0 auto;
+        }
+
+        .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+            .text-copy:nth-child(1) {
+                stroke: #4D163D;
+                animation-delay: -1s;
+            }
+
+            .text-copy:nth-child(2) {
+                stroke: #840037;
+                animation-delay: -2s;
+            }
+
+            .text-copy:nth-child(3) {
+                stroke: #BD0034;
+                animation-delay: -3s;
+            }
+
+            .text-copy:nth-child(4) {
+                stroke: #BD0034;
+                animation-delay: -4s;
+            }
+
+            .text-copy:nth-child(5) {
+                stroke: #FDB731;
+                animation-delay: -5s;
+            }
+
+        @keyframes stroke-offset {
+            100% {
+                stroke-dashoffset: -35%;
+            }
+        }
+          */
+        /*
         problem ie8 border-raius,background-size
         vw not supported ie<=11
         calc,animation-*,transition-timing-function,transition not supported ie<=9
@@ -2743,8 +2807,22 @@
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
         </div>
+        <!--https://codepen.io/ClaireLarsen/pen/XmVyVX-->
+        <!--   <svg viewBox="0 0 960 120">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">TAKE-ACTION.NET</text>
+            </symbol>
 
-
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+             -->
+        <!--https://codepen.io/cesar2535/pen/ByYXpN/--> 
         <!-- <div class="pad-1em xbg4"><img class="xrspnsv w100" src="8779a.png" alt="image1"></div>
         -->
         <!--   <picture>
@@ -2754,10 +2832,10 @@
         </picture>
          -->
     </div><!--section-->
-    <div id="statis"></div>
-    <p>v2 time=<span id="time"></span></p>
-    <p>Window size: <span id="size"></span> pixels</p>
-
+    <!--  <div id="statis"></div>
+      <p>v2 time=<span id="time"></span></p>
+      <p>Window size: <span id="size"></span> pixels</p>
+        -->
     <script>
 
 
@@ -3000,9 +3078,9 @@
 
 
                 var aa = sessionStorage.getItem("currfontsize");
-                console.log("aa ", aa);
+               // console.log("aa ", aa);
                 var fs = aa !== null ? parseInt(aa) : 100;
-                console.log("fs ", fs);
+              //  console.log("fs ", fs);
                 var i3 = document.getElementById('icon3');
                 var i4 = document.getElementById('icon4');
                 var x = document.getElementById("root");
@@ -3011,7 +3089,7 @@
                     fs = fs > 50 ? (fs) - 10 : fs;
                     x.style.fontSize = fs + "%";
                     sessionStorage.setItem("currfontsize", fs);
-                    console.log("fs ", fs);
+                  //  console.log("fs ", fs);
                 }
 
                 i4.onclick = function () {
@@ -3066,7 +3144,7 @@
 
 
 
-
+            /*
 
             function measureCRP() {
                 var t = window.performance.timing,
@@ -3087,6 +3165,8 @@
                 document.getElementById("size").innerHTML = window.innerWidth;
             };
 
+
+
             // Get current time.
             var now = new Date().getTime();
             // Calculate page load time.
@@ -3095,7 +3175,7 @@
             if (window.console) console.log("page_load_time =" + page_load_time);
             document.getElementById("time").innerHTML = page_load_time;
 
-
+*/
 
             //n2 = msec();
             //document.getElementById("time").innerText = 'load time is ' + loadTime + "  " + (n2 - n1);
@@ -3103,69 +3183,69 @@
         }
 
 
-            //  })();
-            //  }//onDOMContentLoaded
+                                //  })();
+                                //  }//onDOMContentLoaded
 
 
 
 
 
-            //   window.onresize = function () {
-            //     document.getElementById("size").innerHTML = window.innerWidth;
-            //   };
+                                //   window.onresize = function () {
+                                //     document.getElementById("size").innerHTML = window.innerWidth;
+                                //   };
 
 
 
 
 /*
 
-            function dd(id) {
-                var imgDefer = document.getElementById(id);
-                //  console.log(i + " qwe");
-                imgDefer.setAttribute('src', imgDefer.getAttribute('data-src'));
-            }
-            function xgg() {
-                var imgDefer = document.getElementsByTagName('img');
-                for (var i = 0; i < imgDefer.length; i++) {
-                    if (imgDefer[i].getAttribute('data-src')) {
-                        //  console.log(i + " qwe");
-                        imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
-                    }
-                }
-            }
+                                function dd(id) {
+                                    var imgDefer = document.getElementById(id);
+                                    //  console.log(i + " qwe");
+                                    imgDefer.setAttribute('src', imgDefer.getAttribute('data-src'));
+                                }
+                                function xgg() {
+                                    var imgDefer = document.getElementsByTagName('img');
+                                    for (var i = 0; i < imgDefer.length; i++) {
+                                        if (imgDefer[i].getAttribute('data-src')) {
+                                            //  console.log(i + " qwe");
+                                            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
+                                        }
+                                    }
+                                }
 
 
-            function kk(es, num) {
-                function sgn(x) {//ie11 doesnt support Math.sign
-                    return (x > 0) - (x < 0);
-                }
-                var m = ""; var i; var sgnm = sgn(num);
-                for (i = 0; i < es.length; i++) {
-                    var a = sgnm * ((i + (sgnm * num) - 1) % (sgnm * num));
-                    m += String.fromCharCode(es.charCodeAt(i) + a);
-                }
-                return m;
-            }
+                                function kk(es, num) {
+                                    function sgn(x) {//ie11 doesnt support Math.sign
+                                        return (x > 0) - (x < 0);
+                                    }
+                                    var m = ""; var i; var sgnm = sgn(num);
+                                    for (i = 0; i < es.length; i++) {
+                                        var a = sgnm * ((i + (sgnm * num) - 1) % (sgnm * num));
+                                        m += String.fromCharCode(es.charCodeAt(i) + a);
+                                    }
+                                    return m;
+                                }
 
-            var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
-            function vv(s4) {
-                var h = document.getElementsByTagName('head')[0];
-                var s = document.createElement('style');
-                s.setAttribute('type', 'text/css');
-                var s1 = kk(unescape(s4), -6);
-                if (s.styleSheet) {   // IE
-                    s.styleSheet.cssText = s1;
-                } else {                // the world
-                    s.appendChild(document.createTextNode(s1));
-                }
-                h.appendChild(s);
-            }
+                                var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
+                                function vv(s4) {
+                                    var h = document.getElementsByTagName('head')[0];
+                                    var s = document.createElement('style');
+                                    s.setAttribute('type', 'text/css');
+                                    var s1 = kk(unescape(s4), -6);
+                                    if (s.styleSheet) {   // IE
+                                        s.styleSheet.cssText = s1;
+                                    } else {                // the world
+                                        s.appendChild(document.createTextNode(s1));
+                                    }
+                                    h.appendChild(s);
+                                }
 
 */
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                //    slider.oninput = function () {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  //      output.innerHTML = this.value;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  //  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    //    slider.oninput = function () {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      //      output.innerHTML = this.value;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      //  }
 
 
     </script>
