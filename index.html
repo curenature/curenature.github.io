@@ -801,86 +801,82 @@
 
                         <!--calc radius for crcle with c=100  r=100/2p-->
                         <!-- https://medium.com/@heyoka/scratch-made-svg-donut-pie-charts-in-html5-2c587e935d72
-                            radius based on the circumference is: r = C/(2π), or r = 100/(2π)
-                             Current segment offset=
-                            Circumference − All preceding segments’ total length + First segment’s offset
-                    https://css-tricks.com/transforms-on-svg-elements/
+            radius based on the circumference is: r = C/(2π), or r = 100/(2π)
+             Current segment offset=
+            Circumference − All preceding segments’ total length + First segment’s offset
+    https://css-tricks.com/transforms-on-svg-elements/
 
 
 
-                           circle lenght 360
-                            diameter 360/p=114.591559026,radius=180/p=57.2957795131
-                            -->
-
-                        <svg width="100%" height="100%" viewBox="0 0 114.591559026 114.591559026"
-                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <!--SECTORS-->
-                            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="0" stroke="dodgerblue"></circle>
-                            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="60" stroke="pink"></circle>
-                            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="120" stroke="salmon"></circle>
-                            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="180" stroke="lightgray"></circle>
-                            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="240" stroke="salmon"></circle>
-                            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="300" stroke="tan"></circle>
-
-
-                            <!--MOVING BORDER  -->
-                            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
-                            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
-                            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
-                            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
-                            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
-                            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
-
-
-
-                            <!--CENTER POINT-->
-                            <circle cx="57.2957795131" cy="57.2957795131" r="1" fill="#fff"></circle>
-                            <!--TEXSTS
-                        -->
-                            <text x="25" y="57.2957795131" fill="red" font-size="15" text-anchor="middle" dominant-baseline="central"
-                                  transform="rotate(30,57.2957795131,57.2957795131)">50%</text>
-                            <text x="25" y="57.2957795131" fill="black" font-size="15" text-anchor="middle" dominant-baseline="central"
-                                  transform="rotate(90,57.2957795131,57.2957795131)">0%</text>
-                            <text x="25" y="57.2957795131" fill="green" font-size="15" text-anchor="middle" dominant-baseline="central"
-                                  transform="rotate(150,57.2957795131,57.2957795131)">10%</text>
-                            <text x="25" y="57.2957795131" fill="white" font-size="15" text-anchor="middle" dominant-baseline="central"
-                                  transform="rotate(210,57.2957795131,57.2957795131)">20%</text>
-                            <text x="25" y="57.2957795131" fill="green" font-size="15" text-anchor="middle" dominant-baseline="central"
-                                  transform="rotate(270,57.2957795131,57.2957795131)">30%</text>
-                            <text x="25" y="57.2957795131" fill="white" font-size="15" text-anchor="middle" dominant-baseline="central"
-                                  transform="rotate(330,57.2957795131,57.2957795131) ">40%</text>
-
-
-
-                        </svg>
-
+           circle lenght 360
+            diameter 360/p=114.591559026,radius=180/p=57.2957795131
+            -->
                         <!--
-                    <div class="tr-6sec"></div>
-                    <div class="tr-6sec"></div>
-                    <div class="tr-6fab"></div>
-                    <div class="tr-6fab "></div>
-                    <div class="tr-6fab "></div>
-                    -->
+
+        <svg width="100%" height="100%" viewBox="0 0 114.591559026 114.591559026"
+             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="0" stroke="dodgerblue"></circle>
+            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="60" stroke="pink"></circle>
+            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="120" stroke="salmon"></circle>
+            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="180" stroke="lightgray"></circle>
+            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="240" stroke="salmon"></circle>
+            <circle class="sectorq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131" stroke-dashoffset="300" stroke="tan"></circle>
+
+
+            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
+            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
+            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
+            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
+            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
+            <circle class="spinnerq" cx="57.2957795131" cy="57.2957795131" r="57.2957795131"></circle>
+
+
+
+            <circle cx="57.2957795131" cy="57.2957795131" r="1" fill="#fff"></circle>
+            <text x="25" y="57.2957795131" fill="red" font-size="15" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(30,57.2957795131,57.2957795131)">50%</text>
+            <text x="25" y="57.2957795131" fill="black" font-size="15" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(90,57.2957795131,57.2957795131)">0%</text>
+            <text x="25" y="57.2957795131" fill="green" font-size="15" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(150,57.2957795131,57.2957795131)">10%</text>
+            <text x="25" y="57.2957795131" fill="white" font-size="15" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(210,57.2957795131,57.2957795131)">20%</text>
+            <text x="25" y="57.2957795131" fill="green" font-size="15" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(270,57.2957795131,57.2957795131)">30%</text>
+            <text x="25" y="57.2957795131" fill="white" font-size="15" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(330,57.2957795131,57.2957795131) ">40%</text>
+
+
+
+        </svg>
+        -->
+                        <!--
+    <div class="tr-6sec"></div>
+    <div class="tr-6sec"></div>
+    <div class="tr-6fab"></div>
+    <div class="tr-6fab "></div>
+    <div class="tr-6fab "></div>
+    -->
                         <!---->
                     </div>
 
-                    <div class="svgspinbutton">
+                    <div class="svgspinbutton"id="spinbutton">
 
 
-                        <!-- -->
-                        <svg width="100%" height="100%" viewBox="0 0 114.591559026 114.591559026"
-                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <polyline points="52.2957795131,57.2957795131  57.2957795131,40  62.2957795131,57.2957795131  52.2957795131,57.2957795131"
-                                      style="stroke:#006600; fill: #33cc33;"></polyline>
-                            <g cursor="pointer" id="spinbutton">
-                                <circle cx="57.2957795131" cy="57.2957795131" r="15" fill="#5ff" stroke="green" stroke-width="1"></circle>
-                                <text x="57.2957795131" y="52.2957795131" fill="green" font-size="7" text-anchor="middle" dominant-baseline="central"
-                                      transform="rotate(0,57.2957795131,57.2957795131) ">&#9886;&#9757;&#9887;</text>
-                                <text x="57.2957795131" y="62.2957795131" fill="green" font-size="7" text-anchor="middle" dominant-baseline="central"
-                                      transform="rotate(0,57.2957795131,57.2957795131) ">SPIN</text>
-                            </g>
-                        </svg>
-
+                        <!--
+    <svg width="100%" height="100%" viewBox="0 0 114.591559026 114.591559026"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polyline points="52.2957795131,57.2957795131  57.2957795131,40  62.2957795131,57.2957795131  52.2957795131,57.2957795131"
+                  style="stroke:#006600; fill: #33cc33;"></polyline>
+        <g cursor="pointer" id="spinbutton">
+            <circle cx="57.2957795131" cy="57.2957795131" r="15" fill="#5ff" stroke="green" stroke-width="1"></circle>
+            <text x="57.2957795131" y="52.2957795131" fill="green" font-size="7" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(0,57.2957795131,57.2957795131) ">&#9886;&#9757;&#9887;</text>
+            <text x="57.2957795131" y="62.2957795131" fill="green" font-size="7" text-anchor="middle" dominant-baseline="central"
+                  transform="rotate(0,57.2957795131,57.2957795131) ">SPIN</text>
+        </g>
+    </svg>
+         -->
                     </div>
 
 
