@@ -1105,12 +1105,14 @@ h6 {
     white-space: pre-wrap;
     white-space: pre;
 }
-.post p:first-child:before {
+
+.post xp:first-child:before {
     content: "\2611";
-    xwhite-space:normal
+    xwhite-space: normal
 }
-.post p:nth-child(5n+1)::before {
-    content: "\2611";
+
+.post p:nth-child(3)::before {
+    content: "\2764";
     xwhite-space: normal
 }
 
@@ -1849,63 +1851,75 @@ html.webp .sprite2.lzstart {
         stroke-dashoffset: -180;
     }
 }
+
 /**/
 .bodyqu {
     fill: none;
     font-size: 185px;
     font-weight: 900;
     letter-spacing: 6px;
-    stroke-dasharray: 75 375;
+    stroke-dasharray: 45 315;
     stroke-dashoffset: 0;
     stroke-linejoin: round;
     stroke-width: 7;
     text-anchor: middle;
-    animation: strokequ 10s infinite linear;
-    -webkit-animation: strokequ 10s infinite linear;
+    animation: cirqu 12s infinite linear;
+    -webkit-animation: cirqu 12s infinite linear;
 }
-  
-    .bodyqu:nth-child(5n+1) {
+
+    .spinnerq:nth-child(6n+1),
+    .bodyqu:nth-child(6n+1) {
         stroke: #F2385A;
         animation-delay: -2s;
         -webkit-animation-delay: -2s;
     }
 
-    .bodyqu:nth-child(5n+2) {
+    .spinnerq:nth-child(6n+2),
+    .bodyqu:nth-child(6n+2) {
         stroke: #F5A503;
         animation-delay: -4s;
         -webkit-animation-delay: -4s;
     }
 
-    .bodyqu:nth-child(5n+3) {
+    .spinnerq:nth-child(6n+3),
+    .bodyqu:nth-child(6n+3) {
         stroke: #E9F1DF;
         animation-delay: -6s;
         -webkit-animation-delay: -6s;
     }
 
-    .bodyqu:nth-child(5n+4) {
+    .spinnerq:nth-child(6n+4),
+    .bodyqu:nth-child(6n+4) {
         stroke: #56D9CD;
         animation-delay: -8s;
         -webkit-animation-delay: -8s;
     }
 
-    .bodyqu:nth-child(5n+5) {
+    .spinnerq:nth-child(6n+5),
+    .bodyqu:nth-child(6n+5) {
         stroke: #3AA1BF;
         animation-delay: -10s;
         -webkit-animation-delay: -10s;
     }
 
-@-webkit-keyframes strokequ {
+    .spinnerq:nth-child(6n+6),
+    .bodyqu:nth-child(6n+6) {
+        stroke: green;
+        animation-delay: -12s;
+        -webkit-animation-delay: -12s;
+    }
+/*@-webkit-keyframes strokequ {
     100% {
-        stroke-dashoffset: -450;
+        stroke-dashoffset: -540;
     }
 }
 
 @keyframes strokequ {
     100% {
-        stroke-dashoffset: -450;
+        stroke-dashoffset: -540;
     }
 }
-    
+*/
 .spinnerq {
     fill: none;
     stroke-width: 5;
@@ -1913,7 +1927,7 @@ html.webp .sprite2.lzstart {
     animation: cirqu 12s infinite linear;
     -webkit-animation: cirqu 12s infinite linear;
 }
-
+/*
     .spinnerq:nth-child(6n+1) {
         stroke: maroon;
         animation-delay: -2s;
@@ -1949,7 +1963,7 @@ html.webp .sprite2.lzstart {
         animation-delay: -12s;
         -webkit-animation-delay: -12s;
     }
-
+    */
 @-webkit-keyframes cirqu {
     100% {
         stroke-dashoffset: -360;
@@ -1963,7 +1977,6 @@ html.webp .sprite2.lzstart {
 }
 
 .sectorq {
-  
     stroke-width: 114.591559026;
     stroke-dasharray: 60 300;
     fill: transparent;
