@@ -1097,9 +1097,21 @@ h6 {
     filter: alpha(opacity=60);
 }
 
-p:before {
-    content: "\27A4";
-    content: "\2764";
+.post p:before {
+    xcontent: "\27A4";
+    xcontent: "\A\2764";
+    xcontent: "\A\2611";
+    content: "\A\2764";
+    white-space: pre-wrap;
+    white-space: pre;
+}
+.post p:first-child:before {
+    content: "\2611";
+    xwhite-space:normal
+}
+.post p:nth-child(5n+1)::before {
+    content: "\2611";
+    xwhite-space: normal
 }
 
 .link1 {
