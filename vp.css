@@ -924,7 +924,7 @@ body {
     xfont-size: 300%;
     width: 72%; /*golden ratio*/
     margin: 0 auto;
-    clear: both;
+    xclear: both;
     /*  padding: 0px;
                                       margin: 0px;
 
@@ -1837,12 +1837,12 @@ html.webp .sprite2.lzstart {
         stroke-dashoffset: -180;
     }
 }
-/*
+/**/
 .bodyqu {
     fill: none;
-    font-size: 185;
+    font-size: 185px;
     font-weight: 900;
-    letter-spacing: 6;
+    letter-spacing: 6px;
     stroke-dasharray: 75 375;
     stroke-dashoffset: 0;
     stroke-linejoin: round;
@@ -1893,7 +1893,7 @@ html.webp .sprite2.lzstart {
         stroke-dashoffset: -450;
     }
 }
-    */
+    
 .spinnerq {
     fill: none;
     stroke-width: 5;
