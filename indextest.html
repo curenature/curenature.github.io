@@ -208,11 +208,26 @@
         </picture>
          -->
     </div><!--section-->
-    <!--type="text/javascript" src="originaljs.js"-->
-    <!--
-        <script src="originaljs.js">
-        </script>
+    <!--type="text/javascript" src="originaljs.js"
+
+    <script src="originaljs.js">
         -->
+    <!--
+    -->
+    <script>
+        //LAZY
+        var x = document.getElementsByClassName("q75");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            //console.log(x[i].className);
+            x[i].classList.replace("lz", "lzstart");
+            //console.log(x[i].className);
+            //  x[i].classList.remove("lz");
+            //   x[i].classList.add("lzstart");
+            //console.log(x[i].classList);
+        }
+
+    </script>
 
 </body>
 </html>
