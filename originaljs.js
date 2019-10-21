@@ -149,21 +149,18 @@ window.addEventListener("orientationChange", lazyload);
 /**/
 document.addEventListener('DOMContentLoaded', onDOMContentLoaded(''), false);
 function onDOMContentLoaded(s) {
-
     //FONT
     function fontupdown() {
-
         var aa = sessionStorage.getItem("currfontsize");
         //console.log("currfontsize ", aa);
         var fs = aa !== null ? parseInt(aa) : 100;
         //console.log("fs ", fs);
         var x = document.getElementById("root");
-        //  x.style.zoom = fs + "%";
+        // x.style.zoom = fs + "%";
         var i3 = document.getElementById('icon3');
         var i4 = document.getElementById('icon4');
         var i5 = document.getElementById('icon5');
-       // i5.innerText = fs + "%";
-
+        // i5.innerText = fs + "%";
         i3.onclick = function () {
             fs = fs > 50 ? (fs) - 10 : fs;
             x.style.fontSize = fs + "%";
@@ -171,6 +168,7 @@ function onDOMContentLoaded(s) {
             i5.innerText = fs + "%";
             console.log("fs ", fs);
         }
+
         i4.onclick = function () {
             fs = fs < 170 ? (fs) + 10 : fs;
             x.style.fontSize = fs + "%";
@@ -178,20 +176,20 @@ function onDOMContentLoaded(s) {
             i5.innerText = fs + "%";
             console.log("fs ", fs);
         }
-    } //FONT
+
+    }
+    //FONT
 
 
 
 
     fontupdown();
-
 }
 
 
 
 window.addEventListener("load", doconload, false);
 function doconload() {
-
     //LAZY
     var x = document.getElementsByClassName("q75");
     var i;
@@ -199,40 +197,35 @@ function doconload() {
         //console.log(x[i].className);
         x[i].classList.replace("lz", "lzstart");
         //console.log(x[i].className);
-        //  x[i].classList.remove("lz");
-        //   x[i].classList.add("lzstart");
+        // x[i].classList.remove("lz");
+        // x[i].classList.add("lzstart");
         //console.log(x[i].classList);
     }
+
     //https://afarkas.github.io/lazysizes/index.html
 
     function filldate() {
-        //DATE
-        // Array of day names
+        //DATE // Array of day names
         var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
         // Array of month Names
         var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
         var now = new Date();
-        //                document.write(dayNames[now.getDay()] + ", " +
-        //                  monthNames[now.getMonth()] + " " +
-        //                now.getDate() + ", " + now.getFullYear());
-        document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " +
-            monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+        // document.write(dayNames[now.getDay()] + ", " + // monthNames[now.getMonth()] + " " + // now.getDate() + ", " + now.getFullYear());
+        document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
     }
 
     filldate();
-
     /*TOP MENU*/
-    window.document.getElementById("topnavmenu").addEventListener("click",
-        function () {//when top menu  is clicked
-            var x = document.getElementById("myTopnav");
-            console.log("1",x.className);
-            if (x.className == "topnav") {
-                x.className += " tnclicked";
-            } else {
-                x.className = "topnav";
-            }
-            console.log("2",x.className)
-        }, false);
+    window.document.getElementById("topnavmenu").addEventListener("click", function () {//when top menu  is clicked
+        var x = document.getElementById("myTopnav");
+        console.log("1", x.className);
+        if (x.className == "topnav") {
+            x.className += " tnclicked";
+        } else {
+            x.className = "topnav";
+        }
+        console.log("2", x.className)
+    }, false);
 
 
     //WHEEL
@@ -240,7 +233,7 @@ function doconload() {
         //var wheel;
         //var resultWrapper;
         var resultWrapper = document.querySelector('.spin-result-wrapper');
-        var wheel = document.querySelector('.divtoberotated');
+        var wheel = document.querySelector('.divtoberotated1');
         window.document.getElementById("spinbutton").addEventListener("click", spin, false);
         function spin() {
             //  window.open(clk, "_blank");
@@ -308,9 +301,13 @@ function doconload() {
             for (var i = 0; i < posts.length; i++) {
                 //console.log("post ", i);
                 if (posts[i].id == aciveradio.className) {
-                    posts[i].className = "post";
-                } else if (posts[i].className == "post") {
-                    posts[i].className = posts[i].className + ' hidemypost';
+                    posts[i].classList.remove("hidemypost")
+                    //posts[i].className = "post";
+                } else if (!posts[i].classList.contains("hidemypost")) {
+                    //} else if (posts[i].className == "post") {
+                    posts[i].classList.add("hidemypost")
+
+                    //   posts[i].className = posts[i].className + ' hidemypost';
                 }
                 console.log(i, " class=", posts[i].className);
             }
@@ -322,6 +319,8 @@ function doconload() {
         //  var qq = document.getElementsByClassName('post1');//first radio
         //   loopPosts(qq[0], true);
         var inputs = document.getElementsByName('g1');
+        // var inputs = document.querySelectorAll(".radio1 span");
+
         //console.log("inputs ", inputs.length);
         for (var i = 0; i < inputs.length; i++) {
             //console.log("input ", i);
@@ -332,8 +331,9 @@ function doconload() {
             }
         }
     })();//pagination
-
 }
+
+
 
     /*
     function measureCRP() {
