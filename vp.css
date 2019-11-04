@@ -110,13 +110,14 @@ fieldset {
 }
 
 
-#scrolltop {
+xxx#scrolltop {
     clear: both;
     overflow: hidden; /*for visible text  inside bottom*/
     display: block;
     margin: 7px auto;
     font-weight: 900;
 }
+
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
@@ -227,7 +228,7 @@ nav #menu {
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*HOVER or ACTIVE*/
-#scrolltop:hover,
+xxx#scrolltop:hover,
 .paging input:checked + .label1,
 .bg4inv,
 button:hover,
@@ -252,7 +253,7 @@ xxnav xx#toggle xxli:hover xxa {
 #toggle:focus,
 #icon3:focus,
 #icon4:focus,nav a:focus,
-#scrolltop:focus {
+#xxxscrolltop:focus {
     box-shadow: 0 0 5px 5px bisque;
     xborder: none;
     xoutline: 2px dashed #17171d;
@@ -260,6 +261,7 @@ xxnav xx#toggle xxli:hover xxa {
 }
 
 #logo:focus {
+    font-weight: 900;
     outline: none;
 }
 

@@ -57,10 +57,10 @@
     <!--"overflow:scroll" scroll bar is always visible even on f5-->
     <div class="section">
         <header>
-            <svg id="logo"width="100%"height="100%"viewBox="0 0 2000 160"
-                 xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg id="logo" width="100%" height="100%" viewBox="0 0 2000 160"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!--            <text id="stext" alignment-baseline="middle"dominant-baseline="central" x="50%" y="50%">TAKE-ACTION.NET</text>
-                -->
+            -->
                 <defs>
                     <style type="text/css">
                         #svgtitle {
@@ -83,7 +83,7 @@
                         }
                     </style>
                 </defs>
-                <text id="stext" dy="73" x="50%" y="50%" font-size="186" letter-spacing="20" stroke-width="7" text-anchor="middle" font-weight="100">TAKE-ACTION.NET</text>
+                <text id="stext" dy="73" x="50%" y="50%" font-size="186"font-weight="900" letter-spacing="20" stroke-width="7" text-anchor="middle" font-weight="100">TAKE-ACTION.NET</text>
 
                 <g id="svgtitle">
                     <use xlink:href="#stext" class="bodyqu"></use>
@@ -140,98 +140,54 @@
             </nav>
 
             <!--
-                    <div class="topnav" id="myTopnav">
-                        <div class="alist" id="alist">
-                            <a href="indexroot.html">Home</a>
-                            <a href="m2.html" class="active">Money Magnet</a>
-                            <a href="m3.html">Varicose</a>
-                            <a href="m4.html">Belly Fat</a>
-                            <a href="m5.html">Joint Pain</a>
-                            <a href="m6.html">Anti Aging</a>
-                            <a href="m7.html">Parasites/Warts/Pappilomas</a>
-                            <a href="contact.html">Contact</a>
-                            <a href="about.html">About</a>
-                            <span class="opct0">click here for the chance to win up to 50% discount</span>
+                <div class="topnav" id="myTopnav">
+                    <div class="alist" id="alist">
+                        <a href="indexroot.html">Home</a>
+                        <a href="m2.html" class="active">Money Magnet</a>
+                        <a href="m3.html">Varicose</a>
+                        <a href="m4.html">Belly Fat</a>
+                        <a href="m5.html">Joint Pain</a>
+                        <a href="m6.html">Anti Aging</a>
+                        <a href="m7.html">Parasites/Warts/Pappilomas</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="about.html">About</a>
+                        <span class="opct0">click here for the chance to win up to 50% discount</span>
 
-                        </div>
-                        <span id="topnavicon" class="icon">&#9776;</span>
                     </div>
-            -->
+                    <span id="topnavicon" class="icon">&#9776;</span>
+                </div>
+        -->
         </header>
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <h1 class="clrbth xovf">
             คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้<!-- คุณจะใช้จ่าย-->
         </h1>
         <!--   <div class="sprite0 sprite-feature2 lz q75 mar-t1em clrbth ovf"></div>
-        -->
+    -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <div id="scroll"></div>
         <!--FONT-->
         <!--&#x21EA;   &#x278D;&#x273F;&#x2714;&#x2705;-->
         <!--
-                <div class="t-a-c brd">
-                    <button type="button" id="icon3">
-                        <span>decrease text size</span>
+            <div class="t-a-c brd">
+                <button type="button" id="icon3">
+                    <span>decrease text size</span>
 
-            <span>&#x2296;&#x1f50d;</span>
-            </button>
-            <span id="icon5">100%</span>
-            <button type="button" id="icon4">
-                <span>increase text size</span>
-                <span>&#x1f50e;&#x2295;</span>
-            </button>
-        </div>
-        -->
+        <span>&#x2296;&#x1f50d;</span>
+        </button>
+        <span id="icon5">100%</span>
+        <button type="button" id="icon4">
+            <span>increase text size</span>
+            <span>&#x1f50e;&#x2295;</span>
+        </button>
+    </div>
+    -->
         <script>
             //DONT MOVE DOWN
             var aa = sessionStorage.getItem("currfontsize");
             document.getElementById('icon5').innerText = (aa !== null ? parseInt(aa) : 100) + "%";
         </script>
 
-        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-        <!--PAGINATION-->
-        <div class="paging">
-            <fieldset>
-                <legend>select part of article</legend>
-                <!--autocomplete="off" is needed for firefox-->
-                <input id="n1" type="radio" name="parts of article" value="part 1" class="post1" checked autocomplete="off">
-                <label for="n1" class="label1">1</label>
-                <input id="n2" type="radio" name="parts of article" value="part 2" class="post2" autocomplete="off">
-                <label for="n2" class="label1">2</label>
-                <input id="n3" type="radio" name="parts of article" value="part 3" class="post3" autocomplete="off">
-                <label for="n3" class="label1">3</label>
-                <input id="n4" type="radio" name="parts of article" value="part 4" class="post4" autocomplete="off">
-                <label for="n4" class="label1">4</label>
-                <input id="n5" type="radio" name="parts of article" value="part 5" class="post5" autocomplete="off">
-                <label for="n5" class="label1">5</label>
-                <!--
-
-
-                            <ul>
-                                <li>
-                                    <input id="n1" type="radio" name="parts of article" value="part 1" class="post1" checked autocomplete="off">
-                                    <label for="n1" class="label1">1</label>
-                                </li>
-                                <li>
-                                    <input id="n2" type="radio" name="parts of article" value="part 2" class="post2" autocomplete="off">
-                                    <label for="n2" class="label1">2</label>
-                                </li>
-                                <li>
-                                    <input id="n3" type="radio" name="parts of article" value="part 3" class="post3" autocomplete="off">
-                                    <label for="n3" class="label1">3</label>
-                                </li>
-                                <li>
-                                    <input id="n4" type="radio" name="parts of article" value="part 4" class="post4" autocomplete="off">
-                                    <label for="n4" class="label1">4</label>
-                                </li>
-                                <li>
-                                    <input id="n5" type="radio" name="parts of article" value="part 5" class="post5" autocomplete="off">
-                                    <label for="n5" class="label1">5</label>
-                                </li>
-                            </ul>
-                -->
-            </fieldset>
-        </div> <!--END PAGINATION-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--pages-->
         <div class="posts" id="posts">
@@ -246,8 +202,8 @@
                         <div class="sprite sprite-k1 lz q75"></div>
                     </div>
                     <!--aaaclrbth bg1 changes  bgc even in emty area of column
-                        BUT changing bgc in aaaclrbth css class changes bgc only behind text
-                    -->
+                    BUT changing bgc in aaaclrbth css class changes bgc only behind text
+                -->
                     <div class="column70">
                         <p>
                             <i>
@@ -603,8 +559,8 @@
                 <div class="postpart">Part 4</div>
 
                 <!--for <div class="clrbth"> to set background-color use overflow:hidden
-                style="background-color:red;overflow:hidden"
-                -->
+            style="background-color:red;overflow:hidden"
+            -->
                 <div class="clrbth">
                     <div class="CaptImgR qq">
                         <div class="sprite0 sprite-1 lz q75"></div>
@@ -768,13 +724,58 @@
             </div><!--PAGE 5-->
         </div><!--END PAGES-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-        <button id="scrolltop" type="button">
-            <span>go top</span>
-            <span id="scrollspan">&uarr;&uarr;&uarr;</span>
-        </button>
-        <!--
-        <a id="scrolltop" href="#scroll"><span>go top</span><span>&#8679;&#8679;&#8679;</span></a>
+        <!--PAGINATION-->
+        <div class="paging">
+            <fieldset>
+                <legend>select part of article</legend>
+                <!--autocomplete="off" is needed for firefox-->
+                <input id="n1" type="radio" name="parts of article" value="part 1" class="post1" checked autocomplete="off">
+                <label for="n1" class="label1">1</label>
+                <input id="n2" type="radio" name="parts of article" value="part 2" class="post2" autocomplete="off">
+                <label for="n2" class="label1">2</label>
+                <input id="n3" type="radio" name="parts of article" value="part 3" class="post3" autocomplete="off">
+                <label for="n3" class="label1">3</label>
+                <input id="n4" type="radio" name="parts of article" value="part 4" class="post4" autocomplete="off">
+                <label for="n4" class="label1">4</label>
+                <input id="n5" type="radio" name="parts of article" value="part 5" class="post5" autocomplete="off">
+                <label for="n5" class="label1">5</label>
+                <!--
+
+
+                        <ul>
+                            <li>
+                                <input id="n1" type="radio" name="parts of article" value="part 1" class="post1" checked autocomplete="off">
+                                <label for="n1" class="label1">1</label>
+                            </li>
+                            <li>
+                                <input id="n2" type="radio" name="parts of article" value="part 2" class="post2" autocomplete="off">
+                                <label for="n2" class="label1">2</label>
+                            </li>
+                            <li>
+                                <input id="n3" type="radio" name="parts of article" value="part 3" class="post3" autocomplete="off">
+                                <label for="n3" class="label1">3</label>
+                            </li>
+                            <li>
+                                <input id="n4" type="radio" name="parts of article" value="part 4" class="post4" autocomplete="off">
+                                <label for="n4" class="label1">4</label>
+                            </li>
+                            <li>
+                                <input id="n5" type="radio" name="parts of article" value="part 5" class="post5" autocomplete="off">
+                                <label for="n5" class="label1">5</label>
+                            </li>
+                        </ul>
+            -->
+            </fieldset>
+        </div> <!--END PAGINATION-->
+        <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+        <!--  <button id="scrolltop" type="button">
+          <span>go top</span>
+          <span id="scrollspan">&uarr;&uarr;&uarr;</span>
+      </button>
         -->
+        <!--
+    <a id="scrolltop" href="#scroll"><span>go top</span><span>&#8679;&#8679;&#8679;</span></a>
+    -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--OFFER-->
         <div class="bg1 t-a-c mar-lr2prc clrbth  ovf-a">
@@ -804,8 +805,8 @@
             </p>
 
             <!-- b-o-t-t-r-a-p
-            <a href="https://go.take-action.net/click/2" class="link1" > Order Now</a >
-            -->
+        <a href="https://go.take-action.net/click/2" class="link1" > Order Now</a >
+        -->
         </div> <!--END OFFER-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--WHEEL-->
@@ -858,7 +859,7 @@
                 </defs>
 
                 <!--
-                -->
+            -->
                 <circle cx="114.591559026" cy="114.591559026" r="119.591559026"></circle>
 
                 <circle id="spinw2" cx="114.591559026" cy="114.591559026" r="114.591559026"> </circle>
@@ -872,7 +873,7 @@
 
                 <g class="divtoberotated1">
                     <!--
-                    -->
+                -->
                     <circle id="spinw1" cx="114.591559026" cy="114.591559026" r="57.2957795131" stroke-width="104.591559026"></circle>
                     <use xlink:href="#spinw1" class="sectorq"></use>
                     <use xlink:href="#spinw1" class="sectorq"></use>
@@ -914,7 +915,7 @@
                 <use xlink:href="#spinw3" class="spn1 spn2"></use>
 
                 <!--                <circle  cx="114.591559026" cy="114.591559026" r="26.6478897565" fill="#999"> </circle>
-                -->
+            -->
                 <circle cx="114.591559026" cy="114.591559026" r="24.6478897565" fill="#fff"> </circle>
                 <text x="50%" y="50%" fill="green" font-size="18" text-anchor="middle" dominant-baseline="central">SPIN</text>
 
@@ -925,10 +926,10 @@
             </button>
 
             <!--
-                    <svg class="svg2" width="100%" height="100%" viewBox="0 0 229.183118052 229.183118052" xreserveAspectRatio="xMinYMin meet"
-                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    </svg>
-            -->
+                <svg class="svg2" width="100%" height="100%" viewBox="0 0 229.183118052 229.183118052" xreserveAspectRatio="xMinYMin meet"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                </svg>
+        -->
             <div class="spin-result-wrapper">
                 <div class="pop-up-window ">
                     <span class="greencircle"> &#10004;</span>
@@ -1119,43 +1120,27 @@
             
             logo.focus();//for firefox;
 
-            /*   */
-            var toggle = document.querySelector('#toggle');
-            //toggle.focus(); toggle.blur();
-            //var menu = document.querySelector('#menu');
-            //            var togglesp =toggle.querySelector('#toggle span:nth-child(2)');
-            // var menuItems = document.querySelectorAll('#menu li a');
 
-            console.log("toggle", toggle.className);
-            toggle.addEventListener('click', function () {
-                if (toggle.classList.contains('is-active')) {
-                    this.setAttribute('aria-expanded', 'false');
-                    toggle.classList.remove('is-active');
-
-                } else {
-                    this.setAttribute('aria-expanded', 'true');
-                    toggle.classList.add('is-active');
-
-                    //togglesp.innerText = togglesp.innerText + &#10005; //menuItems[0].focus();
-                }
-                console.log("toggle", toggle.className);
-            });
-            var textsize = document.querySelector('#textsize');
-            //var txtszrw = document.querySelector('#txtszrw');
-            // var menuItems = document.querySelectorAll('#menu li a');
-
-            console.log("textsize", textsize.className);
-            textsize.addEventListener('click', function () {
+            function ftoggle() {
                 if (this.classList.contains('is-active')) {
                     this.setAttribute('aria-expanded', 'false');
                     this.classList.remove('is-active');
+
                 } else {
                     this.setAttribute('aria-expanded', 'true');
                     this.classList.add('is-active');
-                    //menuItems[0].focus();
+
+                    //togglesp.innerText = togglesp.innerText + &#10005; //menuItems[0].focus();
                 }
-                console.log("txtszrw", this.className);
-            });
+                //console.log("toggle", toggle.className);
+            }
+            /*   */
+            var toggle = document.querySelector('#toggle');
+            //console.log("toggle", toggle.className);
+            toggle.addEventListener('click', ftoggle);
+
+            var textsize = document.querySelector('#textsize');
+            textsize.addEventListener('click', ftoggle);
 
             //WHEEL
             (function () {
@@ -1304,11 +1289,11 @@
                     }
                 }
                 /**/
-                document.getElementById('scrolltop').onclick = function () {
+              /*  document.getElementById('scrolltop').onclick = function () {
                     var elmnt = document.getElementById("scroll");
                     elmnt.scrollIntoView({ behavior: 'smooth' });
                     document.getElementById(activeradioid).focus()
-                }
+                }*/
             })();//pagination
 
 
