@@ -16,7 +16,7 @@ xxhtml {
 }
 
 .posts {
-    margin: 0 2%;
+    xmargin: 0 2%;
     xbackground-color: tan;
 }
 
@@ -63,7 +63,7 @@ xxhtml {
 
 .column70 {
     box-sizing: border-box; /*to prevent adding padding to width percent*/
-    padding-left: 2%;
+    padding: 0 1%;
     width: 70%;
     float: left;
     xoverflow: hidden;
@@ -84,15 +84,20 @@ xxhtml {
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*BUTTONS*/
 button {
+    display: inline;
     background: none;
-    xborder: none;
-    text-align: center;
+    border: none;
+    xtext-align: center; /*it aligns buttons by height*/
     cursor: pointer;
     color: bisque;
     font-size: 30px;
     border: 2px solid bisque;
     margin: 7px;
+    xmargin: 0;
+    padding: 0 7px;
     height: 45px;
+    xoverflow: hidden;
+    vertical-align: top;
 }
 
     button > span:first-child,
@@ -110,117 +115,10 @@ fieldset {
 }
 
 
-xxx#scrolltop {
-    clear: both;
-    overflow: hidden; /*for visible text  inside bottom*/
-    display: block;
-    margin: 7px auto;
-    font-weight: 900;
-}
 
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
-nav {
-    xpadding-right: 15px;
-}
-
-    nav #toggle {
-        display: none;
-        float: right;
-    }
-
-    nav #textsize {
-        display: inline;
-        float: right;
-    }
-
-        nav #toggle .spclose,
-        nav #textsize .spclose {
-            display: none;
-        }
-
-    nav .txtszr1 {
-        font-size: 20px;
-    }
-
-
-    nav #menu {
-        xfloat: right;
-        padding: 0;
-        margin: 0;
-        xbackground: dodgerblue;
-        display: inline;
-        xdisplay: none;
-    }
-
-    nav #txtszrw {
-        padding: 0;
-        margin: 0;
-        xbackground: dodgerblue;
-        display: inline;
-        display: none;
-        float: right
-    }
-
-    nav #textsize.is-active .spclose,
-    nav #textsize.is-active ~ #txtszrw,
-    nav #toggle.is-active .spclose,
-    nav #toggle.is-active ~ #menu {
-        xdisplay: block;
-        display: inline;
-    }
-
-    nav li {
-        float: left;
-        margin: 3px 0;
-        xbackground: brown;
-        display: inline;
-    }
-
-
-
-
-    nav a {
-        xbackground: hotpink;
-        color: bisque;
-        padding: 1px 6px;
-        margin: 0px 15px;
-    }
-
-        nav a.active {
-            background-color: bisque;
-            color: #423c15;
-        }
-
-
-
-.nojs nav #toggle {
-    display: none;
-}
-
-.nojs nav ul {
-    display: block;
-}
-
-@media (max-width: 700px) {
-    nav #toggle {
-        display: inline;
-    }
-
-    
-
-
-nav #menu {
-    display: none;
-}
-
-    nav ul.is-active,
-    nav #txtszrw.is-active {
-        xdisplay: inline;
-    }
-
-}
 
 .brd {
     border: 1px solid bisque
@@ -228,7 +126,7 @@ nav #menu {
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*HOVER or ACTIVE*/
-xxx#scrolltop:hover,
+
 .paging input:checked + .label1,
 .bg4inv,
 button:hover,
@@ -252,7 +150,7 @@ xxnav xx#toggle xxli:hover xxa {
 #textsize:focus,
 #toggle:focus,
 #icon3:focus,
-#icon4:focus,nav a:focus,
+#icon4:focus, nav a:focus,
 #xxxscrolltop:focus {
     box-shadow: 0 0 5px 5px bisque;
     xborder: none;
@@ -261,8 +159,8 @@ xxnav xx#toggle xxli:hover xxa {
 }
 
 #logo:focus {
-    font-weight: 900;
     outline: none;
+    xxdisplay: block /*prevents bottom space but adds some tremble*/
 }
 
 button::-moz-focus-inner {
@@ -277,10 +175,6 @@ button::-moz-focus-inner {
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /*FONT SIZER*/
 
-#icon5 {
-    xmargin: 0 2px;
-    font-size: 30px;
-}
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
@@ -303,7 +197,7 @@ button::-moz-focus-inner {
     padding-bottom: 50%;
     margin: 0 auto;
     position: relative;
-    xbackground-color: pink;
+    background-color: pink;
 }
 
 
@@ -311,7 +205,7 @@ button::-moz-focus-inner {
     position: absolute;
     width: 90%;
     left: 5%;
-    xdisplay: block; /*prevent emty space in bottom*/
+    xdisplay: block; /*prevent emty space in bottom if position is not absolute.For abs pos display prop makes no sense/difference*/
     overflow: visible
 }
 
@@ -595,11 +489,12 @@ body {
     color: bisque;
     width: 72%; /*golden ratio*/
     margin: auto;
+    xpadding: 0 2%;
     xclear: both;
     /*  padding: 0px;
-                                      margin: 0px;
-
-                                      background-color: #423c15;*/
+       margin: 0px;
+     background-color: #423c15;
+    */
 }
 
 
@@ -720,13 +615,13 @@ h6 {
     xoverflow: auto;
     float: left;
     width: 50%;
-    margin-right: 1rem;
+    margin-right: 1%;
 }
 
 .CaptImgR {
     float: right;
     width: 50%;
-    margin-left: 1rem;
+    margin-left: 1%;
 }
 
 
@@ -963,6 +858,7 @@ h6 {
     .section {
         font-size: 88%;
         width: 100%;
+        xxpadding: 0 2%;
     }
 
     h1 {
@@ -1111,7 +1007,7 @@ h6 {
 
 @media only screen and (max-width: 438px) {
     .column70 {
-        padding: 0;
+        xpadding: 1%;
         float: none;
         xwidth: 100%;
         width: auto;
@@ -1401,7 +1297,7 @@ html.webp .sprite2.lzstart {
 
 
 .mar-lr2prc {
-    margin: 0 2%
+    margin: 0 1%
 }
 
 .mar-lr1em {
@@ -1426,6 +1322,9 @@ html.webp .sprite2.lzstart {
 
 .pad-t1em {
     padding-top: 1rem
+}
+.pad-t2prc {
+    padding-top: 1%
 }
 
 .pad-b1em {

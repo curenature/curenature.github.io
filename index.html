@@ -37,53 +37,180 @@
         //modernizr-click webp and then click built,then select build-copytoclipboard ,then paste here inside head tag
         //script will append class webp if webp supported or class no-webp if not supported
         /*! modernizr 3.6.0 (Custom Build) | MIT *
-* https://modernizr.com/download/?-webp-setclasses !*/
+         * https://modernizr.com/download/?-webp-setclasses !*/
         !function (e, n, A) { function o(e) { var n = u.className, A = Modernizr._config.classPrefix || ""; if (c && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)"); n = n.replace(o, "$1" + A + "js$2") } Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n) } function t(e, n) { return typeof e === n } function a() { var e, n, A, o, a, i, l; for (var f in r) if (r.hasOwnProperty(f)) { if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++)e.push(n.options.aliases[A].toLowerCase()); for (o = t(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = o : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = o), s.push((o ? "" : "no-") + l.join("-")) } } function i(e, n) { if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else { e = e.toLowerCase(); var t = e.split("."), a = Modernizr[t[0]]; if (2 == t.length && (a = a[t[1]]), "undefined" != typeof a) return Modernizr; n = "function" == typeof n ? n() : n, 1 == t.length ? Modernizr[t[0]] = n : (!Modernizr[t[0]] || Modernizr[t[0]] instanceof Boolean || (Modernizr[t[0]] = new Boolean(Modernizr[t[0]])), Modernizr[t[0]][t[1]] = n), o([(n && 0 != n ? "" : "no-") + t.join("-")]), Modernizr._trigger(e, n) } return Modernizr } var s = [], r = [], l = { _version: "3.6.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var A = this; setTimeout(function () { n(A[e]) }, 0) }, addTest: function (e, n, A) { r.push({ name: e, fn: n, options: A }) }, addAsyncTest: function (e) { r.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = l, Modernizr = new Modernizr; var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase(); !function () { var e = {}.hasOwnProperty; f = t(e, "undefined") || t(e.call, "undefined") ? function (e, n) { return n in e && t(e.constructor.prototype[n], "undefined") } : function (n, A) { return e.call(n, A) } }(), l._l = {}, l.on = function (e, n) { this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () { Modernizr._trigger(e, Modernizr[e]) }, 0) }, l._trigger = function (e, n) { if (this._l[e]) { var A = this._l[e]; setTimeout(function () { var e, o; for (e = 0; e < A.length; e++)(o = A[e])(n) }, 0), delete this._l[e] } }, Modernizr._q.push(function () { l.addTest = i }), Modernizr.addAsyncTest(function () { function e(e, n, A) { function o(n) { var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e; i(e, a && o ? new Boolean(o) : o), A && A(n) } var t = new Image; t.onerror = o, t.onload = o, t.src = n } var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }], A = n.shift(); e(A.name, A.uri, function (A) { if (A && "load" === A.type) for (var o = 0; o < n.length; o++)e(n[o].name, n[o].uri) }) }), a(), o(s), delete l.addTest, delete l.addAsyncTest; for (var p = 0; p < Modernizr._q.length; p++)Modernizr._q[p](); e.Modernizr = Modernizr }(window, document);
 
-        // DONT MOVE DOWN!!!
-        (function () {
-            var aa = sessionStorage.getItem("currfontsize");
-            // console.log("currfontsize ", aa);
-            var fs = aa !== null ? parseInt(aa) : 100;
-            // console.log("fs ", fs);
-            document.getElementById("root").style.fontSize = fs + "%";
-        }());
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        }
+
     </script>
 </head>
 <body style="overflow-x:auto;  overflow-y:scroll">
+
+    <style>
+        #icon5 {
+            display: inline;
+            vertical-align: bottom;
+            xmargin: 0 2px;
+            font-size: 30px;
+        }
+
+        nav { /*background ignored*/
+            xmargin: 0 2%
+        }
+
+            nav #toggle {
+                display: inline-block;
+                xfloat: left;
+            }
+
+            nav #textsize {
+                display: inline-block;
+                xdisplay: inline-block;
+                xfloat: left;
+            }
+
+                nav #toggle .spclose,
+                nav #textsize .spclose {
+                    display: none;
+                }
+
+            nav .txtszr1 {
+                font-size: 25px;
+            }
+
+            nav .txtszr2 {
+                font-size: 35px;
+            }
+
+
+            nav #menu {
+                xfloat: left;
+                xpadding: 0;
+                xmargin: 0;
+                xbackground: dodgerblue;
+                xbackground: salmon;
+                xdisplay: inline;
+                display: none;
+            }
+
+            nav #txtszrw {
+                xpadding: 0;
+                xmargin: 0;
+                xbackground: dodgerblue;
+                xdisplay: inline-block;
+                display: none;
+                xfloat: left;
+                overflow: hidden;
+            }
+
+            nav #textsize.is-active .spclose,
+            nav #toggle.is-active .spclose {
+                xdisplay: block;
+                display: inline;
+            }
+
+            nav #toggle.is-active ~ #menu {
+                xdisplay: block;
+                display: inline-block;
+            }
+
+            nav #textsize.is-active ~ #txtszrw {
+                xdisplay: block;
+                display: inline-block;vertical-align:top;
+            }
+
+            nav li {
+                xclear: left;
+                float: left;
+                margin: 3px 0;
+                xbackground: brown;
+                display: inline;
+            }
+
+
+
+
+            nav a {
+                clear: both;
+                display: inline;
+                float: left;
+                xbackground: hotpink;
+                color: bisque;
+                padding: 1px 6px;
+                margin: 0px 15px;
+            }
+
+                nav a.active {
+                    background-color: bisque;
+                    color: #423c15;
+                }
+
+
+
+        .nojs nav #toggle {
+            display: none;
+        }
+
+        .nojs nav ul {
+            display: block;
+        }
+
+
+        @media (max-width: 700px) {
+            nav #toggle {
+                display: inline;
+            }
+
+
+
+
+            nav #menu {
+                display: none;
+            }
+
+            nav ul.is-active,
+            nav #txtszrw.is-active {
+                xdisplay: inline;
+            }
+        }
+
+        .bg5 {
+            background: black
+        }
+    </style>
     <!--"overflow:scroll" scroll bar is always visible even on f5-->
     <div class="section">
         <header>
-            <svg id="logo" width="100%" height="100%" viewBox="0 0 2000 160"
+            <svg class="xbg1 pad-t2prc" id="logo" width="100%" height="100%" viewBox="0 0 2000 160"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!--            <text id="stext" alignment-baseline="middle"dominant-baseline="central" x="50%" y="50%">TAKE-ACTION.NET</text>
                 -->
                 <defs>
                     <style type="text/css">
                         #svgtitle {
-                            display: inline;
+                            visibility: visible;
                         }
 
                         #svgtitles {
-                            display: none;
+                            visibility: hidden;
+                            xdisplay: none;
                             xtext-shadow: 0 1px 0 hsl(174,5%,80%), 0 2px 0 hsl(174,5%,75%), 0 3px 0 hsl(174,5%,70%), 0 4px 0 hsl(174,5%,66%), 0 5px 0 hsl(174,5%,64%), 0 6px 0 hsl(174,5%,62%), 0 7px 0 hsl(174,5%,61%), 0 8px 0 hsl(174,5%,60%), 0 0 5px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.2), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.2), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.3);
                         }
 
-                        @media only screen and (max-width: 512px) {
+                        @media only screen and (max-width: 850px) {
                             #svgtitle {
-                                display: none;
+                                visibility: hidden;
+                                xdisplay: block;
                             }
 
                             #svgtitles {
-                                display: inline;
+                                visibility: visible;
+                                xdisplay: none;
                             }
                         }
                     </style>
                 </defs>
-                <text id="stext" dy="73" x="50%" y="50%" font-size="186" font-weight="900" letter-spacing="0" stroke-width="7" text-anchor="middle" font-weight="100">TAKE-ACTION.NET</text>
+                <text id="stext" dy="" x="50%" y="50%" font-size="192" font-weight="900" letter-spacing="0"
+                      text-anchor="middle" dominant-baseline="central" stroke-width="9">TAKE-ACTION.NET</text>
 
                 <g id="svgtitle">
                     <use xlink:href="#stext" class="bodyqu"></use>
@@ -97,48 +224,54 @@
                     <use xlink:href="#stext" class="bodyqus"></use>
                 </g>
             </svg>
-            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-            <!--https://codepen.io/shadeed/pen/c0376e254f5343afc0211935eea16e16-->
-
             <nav role="navigation">
 
                 <button type="button" id="toggle" aria-expanded="false">
                     <span>open or close menu content</span>
-                    <span>&#9776;</span><span class="spclose">&#10005;</span>
+                    <span>&#9776;</span>
+                    <span class="spclose">&#10005;</span>
                 </button>
                 <button type="button" id="textsize" aria-expanded="false">
                     <span>open or close text size tool</span>
-                    <span class="txtszr1">A</span><span class="txtszr2">A</span><span class="spclose">&#10005;</span>
+
+                    <span class="txtszr1">A</span><span class="txtszr2">A</span>
+                    <span class="spclose">&#10005;</span>
                 </button>
 
-                <div class="xxt-a-c" id="txtszrw">
+                <div id="txtszrw">
                     <button type="button" id="icon3">
                         <span>decrease text size</span>
                         <span>&#x2296;</span>
                         <!--&#x1f50d;-->
                     </button>
-                    <span id="icon5">100%</span>
 
                     <button type="button" id="icon4">
                         <span>increase text size</span>
                         <span>&#x2295;</span><!--&#x1f50e;-->
                     </button>
+                    <span id="icon5">100%</span>
                 </div>
 
-                <ul id="menu">
-                    <li><a href="indexroot.html">Home</a></li>
-                    <li><a href="m2.html" class="active">Money Magnet</a></li>
-                    <li><a href="m3.html">Varicose</a></li>
-                    <li><a href="m4.html">Belly Fat</a></li>
-                    <li><a href="m5.html">Joint Pain</a></li>
-                    <li><a href="m6.html">Anti Aging</a></li>
-                    <li><a href="m7.html">Parasites /Warts /Pappilomas</a></li><!--must not be long-->
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
+                <div id="menu">
+                    <a href="indexroot.html">Home</a>
+                    <a href="m2.html" class="active">Money Magnet</a>
+                    <a href="m3.html">Varicose</a>
+                    <a href="m4.html">Belly Fat</a>
+                    <a href="m5.html">Joint Pain</a>
+                    <a href="m6.html">Anti Aging</a>
+                    <a href="m7.html">Parasites /Warts /Pappilomas</a><!--must not be long-->
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                </div>
 
             </nav>
 
+
+
+
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--https://codepen.io/shadeed/pen/c0376e254f5343afc0211935eea16e16-->
             <!--
                     <div class="topnav" id="myTopnav">
                         <div class="alist" id="alist">
@@ -157,11 +290,11 @@
                         <span id="topnavicon" class="icon">&#9776;</span>
                     </div>
             -->
+            <h1 class="xbg1 xclrbth xovf">
+                คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้<!-- คุณจะใช้จ่าย-->
+            </h1>
         </header>
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-        <h1 class="clrbth xovf">
-            คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้<!-- คุณจะใช้จ่าย-->
-        </h1>
         <!--   <div class="sprite0 sprite-feature2 lz q75 mar-t1em clrbth ovf"></div>
         -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
@@ -182,15 +315,9 @@
             </button>
         </div>
         -->
-        <script>
-            //DONT MOVE DOWN
-            var aa = sessionStorage.getItem("currfontsize");
-            document.getElementById('icon5').innerText = (aa !== null ? parseInt(aa) : 100) + "%";
-        </script>
-
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--pages-->
-        <div class="posts" id="posts">
+        <div class="posts xmar-lr2prc" id="posts">
             <!--ovf triggers mar-t1em in pagination-->
             <div class="post" id="post1">
                 <div class="postpart">Part 1 TESTIMONIALS</div>
@@ -433,56 +560,60 @@
                     <div class="CaptImgR qq">
                         <div class="sprite sprite-2 lz q75"></div>
                     </div>
-                    <p>
-                        2
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        3
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            2
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            3
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
                 <div class="clrbth">
                     <div class="CaptImgL qq">
                         <div class="sprite sprite-4 lz q75"></div>
                     </div>
-                    <p>
-                        4
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        5
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        6
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            4
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            5
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            6
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
             </div>
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
@@ -494,64 +625,68 @@
                     <div class="CaptImgL w30  mar-t1em">
                         <div class="sprite sprite-eyes1 lz q75"></div>
                     </div>
-
-                    <h2>วันที่ 1</h2>
-                    <p>
-                        "หลังจากวันแรกของการใช้
-                        <!--<a target="_blank" href="https://go.take-action.net/click">-->
-                        VisageMax
-                        <!--</a>--> ฉันตกใจมากกับผลลัพธ์ที่น่าทึ่ง
-                        <strong>
-                            รอยย่น, จุดด่างดำ, และริ้วรอย ลดขนาดลงอย่างเห็นได้ชัดต่อหน้าต่อตาของฉัน!
-                        </strong>  ฉันประหลาดใจในผลลัพธ์ที่ได้และรู้สึกเด็กลง 15 ปีอีกครั้ง มันเหมือนกับการมองดูริ้วรอยและรอยเหี่ยวย่นทั้งหมดของฉันค่อยๆจางหายไป!
-                    </p>
-                    <p>
-                        ฉันไม่รู้ว่าจะอธิบายมันอย่างไร ฉันรู้สึกอบอุ่นซาบซ่านที่แก้ม, รอบดวงตา,และที่หน้าผาก ฉันส่องกระจกดูและเห็นว่าใบหน้าของฉันดูมีสีอมชมพูเล็กน้อย- ผลจากการที่เลือดสูบฉีดมาที่ผิวหน้าทำให้หน้าของฉันเหมือนได้เกิดใหม่
-                    </p>
-                    <p>
-                        หลังจากที่ผลิตภัณฑ์ซึมเข้าสู่ผิว ใบหน้าของฉันดูกระชับและเปล่งปลั่งขึ้น
-                    </p>
+                    <div class="mar-lr2prc">
+                        <h2>วันที่ 1</h2>
+                        <p>
+                            "หลังจากวันแรกของการใช้
+                            <!--<a target="_blank" href="https://go.take-action.net/click">-->
+                            VisageMax
+                            <!--</a>--> ฉันตกใจมากกับผลลัพธ์ที่น่าทึ่ง
+                            <strong>
+                                รอยย่น, จุดด่างดำ, และริ้วรอย ลดขนาดลงอย่างเห็นได้ชัดต่อหน้าต่อตาของฉัน!
+                            </strong>  ฉันประหลาดใจในผลลัพธ์ที่ได้และรู้สึกเด็กลง 15 ปีอีกครั้ง มันเหมือนกับการมองดูริ้วรอยและรอยเหี่ยวย่นทั้งหมดของฉันค่อยๆจางหายไป!
+                        </p>
+                        <p>
+                            ฉันไม่รู้ว่าจะอธิบายมันอย่างไร ฉันรู้สึกอบอุ่นซาบซ่านที่แก้ม, รอบดวงตา,และที่หน้าผาก ฉันส่องกระจกดูและเห็นว่าใบหน้าของฉันดูมีสีอมชมพูเล็กน้อย- ผลจากการที่เลือดสูบฉีดมาที่ผิวหน้าทำให้หน้าของฉันเหมือนได้เกิดใหม่
+                        </p>
+                        <p>
+                            หลังจากที่ผลิตภัณฑ์ซึมเข้าสู่ผิว ใบหน้าของฉันดูกระชับและเปล่งปลั่งขึ้น
+                        </p>
+                    </div>
                 </div>
                 <!--DAYS5-->
                 <div class="clrbth">
                     <div class="CaptImgL w30  mar-t1em">
                         <div class="sprite sprite-eyes2 lz q75"></div>
                     </div>
-
-                    <h2>วันที่ 5</h2>
-                    <p>
-                        "หลังจากห้าวันของการใช้
-                        <!--<a target="_blank" href="https://go.take-action.net/click">-->
-                        VisageMax
-                        <!--</a>-->  ฉันไม่อยากจะเชื่อว่า VisageMax ทำให้ฉันดูแตกต่างไปจากเดิมมากแค่ไหน
-                    </p>
-                    <p>
-                        <strong>
-                            แม้กระทั่งเพื่อนร่วมงานก็ชมว่าฉันดูมีพลังและสุขภาพดีขึ้น และพวกเขาบางคนรู้ว่าเคล็ดลับของฉันคืออะไร!
-                        </strong>
-                    </p>
-                    <p>
-                        ฉันรู้สึกประหลาดใจกับผลลัพธ์ที่ได้ และรู้สึกว่าเด็กลงถึง 15 ปีอีกครั้ง มันเหมือนกับการมองดูริ้วรอยและรอยเหี่ยวย่นค่อยๆจางหายไป ฉันแทบจะรอดูไม่ไหวว่ามันสามารถทำให้ฉันเปลี่ยนแปลงได้มากซักแค่ไหน
-                    </p>
+                    <div class="mar-lr2prc">
+                        <h2>วันที่ 5</h2>
+                        <p>
+                            "หลังจากห้าวันของการใช้
+                            <!--<a target="_blank" href="https://go.take-action.net/click">-->
+                            VisageMax
+                            <!--</a>-->  ฉันไม่อยากจะเชื่อว่า VisageMax ทำให้ฉันดูแตกต่างไปจากเดิมมากแค่ไหน
+                        </p>
+                        <p>
+                            <strong>
+                                แม้กระทั่งเพื่อนร่วมงานก็ชมว่าฉันดูมีพลังและสุขภาพดีขึ้น และพวกเขาบางคนรู้ว่าเคล็ดลับของฉันคืออะไร!
+                            </strong>
+                        </p>
+                        <p>
+                            ฉันรู้สึกประหลาดใจกับผลลัพธ์ที่ได้ และรู้สึกว่าเด็กลงถึง 15 ปีอีกครั้ง มันเหมือนกับการมองดูริ้วรอยและรอยเหี่ยวย่นค่อยๆจางหายไป ฉันแทบจะรอดูไม่ไหวว่ามันสามารถทำให้ฉันเปลี่ยนแปลงได้มากซักแค่ไหน
+                        </p>
+                    </div>
                 </div>
                 <!--DAYS14-->
                 <div class="clrbth">
                     <div class="CaptImgL w30  mar-t1em">
                         <div class="sprite sprite-eyes3 lz q75"></div>
                     </div>
-                    <h2>วันที่ 14</h2>
-                    <p>
-                        " หลังจากใช้ได้ 14 วัน นอกจากความสงสัยทั้งหมดของฉันจะหายไปแล้ว ริ้วรอยของฉันก็หายไปด้วย!
-                    </p>
-                    <p>
-                        รอยย่นที่หน้าผากของฉัน, ผิวหย่อนคล้อยที่คอ, รอยตีนกา - แม้กระทั่งจุดที่เกิดจากอายุบนใบหน้าของฉันก็หายไปอย่างสิ้นเชิง ฉันไม่เคยรู้สึกหรือเห็นอะไรที่ช่วยยกกระชับผิวของฉันมาก่อน ไม่ว่ามันจะมีราคาแพงแค่ไหนก็ตาม!
-                    </p>
-                    <p>
-                        หลังจากใช้สองสัปดาห์ ผิวของฉันก็ยังคงดีเช่นเดิม จริงๆแล้วมันดีขึ้นทุกวันๆจนกระทั่งมันสวยและเปล่งปลั่งราวกับเมื่อ 20 ปีที่แล้ว
-                        <strong>
-                            มาถึงจุดจุดนี้ เพื่อนและครอบครัวของฉันตกใจมาก พวกเขาแทบจะไม่เชื่อถึงความแตกต่างและเชื่อว่าฉันโกหกเกี่ยวกับการแอบไปทำโบท็อกซ์มา - ฉันแทบรอที่จะโชว์บทความนี้ให้พวกเขาดูไม่ไหว!"
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <h2>วันที่ 14</h2>
+                        <p>
+                            " หลังจากใช้ได้ 14 วัน นอกจากความสงสัยทั้งหมดของฉันจะหายไปแล้ว ริ้วรอยของฉันก็หายไปด้วย!
+                        </p>
+                        <p>
+                            รอยย่นที่หน้าผากของฉัน, ผิวหย่อนคล้อยที่คอ, รอยตีนกา - แม้กระทั่งจุดที่เกิดจากอายุบนใบหน้าของฉันก็หายไปอย่างสิ้นเชิง ฉันไม่เคยรู้สึกหรือเห็นอะไรที่ช่วยยกกระชับผิวของฉันมาก่อน ไม่ว่ามันจะมีราคาแพงแค่ไหนก็ตาม!
+                        </p>
+                        <p>
+                            หลังจากใช้สองสัปดาห์ ผิวของฉันก็ยังคงดีเช่นเดิม จริงๆแล้วมันดีขึ้นทุกวันๆจนกระทั่งมันสวยและเปล่งปลั่งราวกับเมื่อ 20 ปีที่แล้ว
+                            <strong>
+                                มาถึงจุดจุดนี้ เพื่อนและครอบครัวของฉันตกใจมาก พวกเขาแทบจะไม่เชื่อถึงความแตกต่างและเชื่อว่าฉันโกหกเกี่ยวกับการแอบไปทำโบท็อกซ์มา - ฉันแทบรอที่จะโชว์บทความนี้ให้พวกเขาดูไม่ไหว!"
+                            </strong>
+                        </p>
+                    </div>
                 </div>
             </div>
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
@@ -565,100 +700,104 @@
                     <div class="CaptImgR qq">
                         <div class="sprite0 sprite-1 lz q75"></div>
                     </div>
-
-                    <p>
-                        1
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        1.1
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        1.2
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            1
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            1.1
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            1.2
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
                 <div class="clrbth">
                     <div class="CaptImgL qq">
                         <div class="sprite0 sprite-1 lz q75"></div>
                     </div>
-                    <p>
-                        1
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        1.1
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        1.2
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            1
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            1.1
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            1.2
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
                 <div class="clrbth">
                     <div class="CaptImgR qq">
                         <div class="sprite0 sprite-1 lz q75"></div>
                     </div>
-                    <p>
-                        1
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        1.1
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        1.2
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            1
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            1.1
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            1.2
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
-
             </div>
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <div id="post5" class="post hidemypost">
@@ -667,65 +806,69 @@
                     <div class="CaptImgR qq">
                         <div class="sprite sprite-k4 lz q75"></div>
                     </div>
-                    <p>
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
                 <div class="clrbth">
                     <div class="CaptImgR qq">
                         <div class="sprite sprite-k6 lz q75"></div>
                     </div>
-                    <p>
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
-                    <p>
-                        <strong>
-                            <i>
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                            </i>
-                        </strong>
-                    </p>
+                    <div class="mar-lr2prc">
+                        <p>
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                        <p>
+                            <strong>
+                                <i>
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                                </i>
+                            </strong>
+                        </p>
+                    </div>
                 </div>
             </div><!--PAGE 5-->
         </div><!--END PAGES-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--PAGINATION-->
-        <div class="paging">
+        <div class="paging bg5">
             <fieldset>
                 <legend>select part of article</legend>
                 <!--autocomplete="off" is needed for firefox-->
@@ -778,7 +921,7 @@
         -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--OFFER-->
-        <div class="bg1 t-a-c mar-lr2prc clrbth  ovf-a">
+        <div class="bg1 xt-a-c xmar-lr2prc clrbth  ovf-a">
             <!--ovf-a is neededto fill full background for text-->
 
             <h1 class="textshadow">VVVISAGEMAX ผลิตภัณฑ์อาจขาดตลาด</h1>
@@ -889,17 +1032,17 @@
 
 
 
-                        <text x="15" y="114.591559026" fill="red"font-size="30" dominant-baseline="central"
+                        <text x="15" y="114.591559026" fill="red" font-size="30" dominant-baseline="central"
                               transform="rotate(30 114.591559026 114.591559026)">50%</text>
-                        <text x="15" y="114.591559026" fill="black"font-size="30" dominant-baseline="central"
+                        <text x="15" y="114.591559026" fill="black" font-size="30" dominant-baseline="central"
                               transform="rotate(90 114.591559026 114.591559026)">0%</text>
-                        <text x="15" y="114.591559026" fill="green"font-size="30" dominant-baseline="central"
+                        <text x="15" y="114.591559026" fill="green" font-size="30" dominant-baseline="central"
                               transform="rotate(150 114.591559026 114.591559026)">10%</text>
-                        <text x="15" y="114.591559026" fill="white"font-size="30" dominant-baseline="central"
+                        <text x="15" y="114.591559026" fill="white" font-size="30" dominant-baseline="central"
                               transform="rotate(210 114.591559026 114.591559026)">20%</text>
-                        <text x="15" y="114.591559026" fill="green"font-size="30" dominant-baseline="central"
+                        <text x="15" y="114.591559026" fill="green" font-size="30" dominant-baseline="central"
                               transform="rotate(270 114.591559026 114.591559026)">30%</text>
-                        <text x="15" y="114.591559026" fill="white"font-size="30" dominant-baseline="central"
+                        <text x="15" y="114.591559026" fill="white" font-size="30" dominant-baseline="central"
                               transform="rotate(330 114.591559026 114.591559026)">40%</text>
 
 
@@ -947,7 +1090,7 @@
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <!-- LIST-->
         <h1> 6 สินค้ายอดนิยมของคนไทยตอนนี้</h1>
-        <div class="masonry  mar-lr2prc clrbth">
+        <div class="masonry  xxmar-lr2prc clrbth">
             <div class="item">
                 1
                 <div class="sprite0 sprite-1  lz q75"> </div>
@@ -1027,10 +1170,24 @@
     <!--
     -->
     <script>
+        (function () {
+            var aa = sessionStorage.getItem("currfontsize");
+            // console.log("currfontsize ", aa);
+            var fs = aa !== null ? parseInt(aa) : 100;
+            // console.log("fs ", fs);
+            document.getElementById("root").style.fontSize = fs + "%";
+        }());
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
 
         document.addEventListener('DOMContentLoaded', onDOMContentLoaded(''), false);
         function onDOMContentLoaded(s) {
             //FONT
+            //DONT MOVE DOWN
+            var aa = sessionStorage.getItem("currfontsize");
+            document.getElementById('icon5').innerText = (aa !== null ? parseInt(aa) : 100) + "%";
+
             function fontupdown() {
                 var aa = sessionStorage.getItem("currfontsize");
                 //console.log("currfontsize ", aa);
