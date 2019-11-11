@@ -45,6 +45,7 @@
 </head>
 <body style="overflow-x:auto;  overflow-y:scroll">
 
+
     <style>
         #icon5 {
             display: inline;
@@ -54,24 +55,30 @@
         }
 
         nav { /*background ignored*/
-            xmargin: 0 2%
         }
 
-            nav #toggle {
-                display: inline-block;
-                xfloat: left;
-            }
-
+            nav #textsize.is-active .spclose,
+            nav #toggle.is-active .spclose,
+            .xnojs nav #textsize ~ #txtszrw,
+            .nojs nav #toggle ~ #menu,
+            nav #textsize.is-active ~ #txtszrw,
+            nav #toggle.is-active ~ #menu,
+            nav #toggle,
             nav #textsize {
                 display: inline-block;
-                xdisplay: inline-block;
-                xfloat: left;
+                vertical-align: top;
             }
 
+                nav #txtszrw,
+                nav #menu,
                 nav #toggle .spclose,
-                nav #textsize .spclose {
+                nav #textsize .spclose,
+                .nojs nav #toggle,
+                .nojs nav #textsize {
                     display: none;
                 }
+
+
 
             nav .txtszr1 {
                 font-size: 25px;
@@ -82,96 +89,41 @@
             }
 
 
-            nav #menu {
-                xfloat: left;
-                xpadding: 0;
-                xmargin: 0;
-                xbackground: dodgerblue;
-                xbackground: salmon;
-                xdisplay: inline;
-                display: none;
-            }
 
-            nav #txtszrw {
-                xpadding: 0;
-                xmargin: 0;
-                xbackground: dodgerblue;
-                xdisplay: inline-block;
-                display: none;
-                xfloat: left;
-                overflow: hidden;
-            }
-
-            nav #textsize.is-active .spclose,
-            nav #toggle.is-active .spclose {
-                xdisplay: block;
-                display: inline;
-            }
-
-            nav #toggle.is-active ~ #menu {
-                xdisplay: block;
-                display: inline-block;
-            }
-
-            nav #textsize.is-active ~ #txtszrw {
-                xdisplay: block;
-                display: inline-block;vertical-align:top;
-            }
-
-            nav li {
-                xclear: left;
-                float: left;
-                margin: 3px 0;
-                xbackground: brown;
-                display: inline;
-            }
 
 
 
 
             nav a {
-                clear: both;
-                display: inline;
+                xclear: both;
+                xdisplay: inline;
                 float: left;
                 xbackground: hotpink;
                 color: bisque;
-                padding: 1px 6px;
+                padding: 5px 6px;
                 margin: 0px 15px;
             }
 
-                nav a.active {
-                    background-color: bisque;
-                    color: #423c15;
-                }
-
-
-
-        .nojs nav #toggle {
-            display: none;
+        .nojs nav a {
+            clear: none;
+            xdisplay: inline;
+            xfloat: left;
+            xbackground: hotpink;
+            xcolor: bisque;
+            xpadding: 5px 6px;
+            xmargin: 0px 15px;
         }
 
-        .nojs nav ul {
-            display: block;
+        nav a.active {
+            background-color: bisque;
+            color: #423c15;
         }
 
 
-        @media (max-width: 700px) {
-            nav #toggle {
-                display: inline;
-            }
 
 
 
 
-            nav #menu {
-                display: none;
-            }
-
-            nav ul.is-active,
-            nav #txtszrw.is-active {
-                xdisplay: inline;
-            }
-        }
 
         .bg5 {
             background: black
@@ -180,10 +132,12 @@
     <!--"overflow:scroll" scroll bar is always visible even on f5-->
     <div class="section">
         <header>
+            <!--LOGO
             <svg class="xbg1 pad-t2prc" id="logo" width="100%" height="100%" viewBox="0 0 2000 160"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!--            <text id="stext" alignment-baseline="middle"dominant-baseline="central" x="50%" y="50%">TAKE-ACTION.NET</text>
+
                 -->
+            <svg class="xbg1 pad-t2prc" id="logo" viewBox="0 0 2000 160">
                 <defs>
                     <style type="text/css">
                         #svgtitle {
@@ -192,26 +146,21 @@
 
                         #svgtitles {
                             visibility: hidden;
-                            xdisplay: none;
-                            xtext-shadow: 0 1px 0 hsl(174,5%,80%), 0 2px 0 hsl(174,5%,75%), 0 3px 0 hsl(174,5%,70%), 0 4px 0 hsl(174,5%,66%), 0 5px 0 hsl(174,5%,64%), 0 6px 0 hsl(174,5%,62%), 0 7px 0 hsl(174,5%,61%), 0 8px 0 hsl(174,5%,60%), 0 0 5px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.2), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.2), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.3);
                         }
 
                         @media only screen and (max-width: 850px) {
                             #svgtitle {
                                 visibility: hidden;
-                                xdisplay: block;
                             }
 
                             #svgtitles {
                                 visibility: visible;
-                                xdisplay: none;
                             }
                         }
                     </style>
                 </defs>
                 <text id="stext" dy="" x="50%" y="50%" font-size="192" font-weight="900" letter-spacing="0"
                       text-anchor="middle" dominant-baseline="central" stroke-width="9">TAKE-ACTION.NET</text>
-
                 <g id="svgtitle">
                     <use xlink:href="#stext" class="bodyqu"></use>
                     <use xlink:href="#stext" class="bodyqu"></use>
@@ -224,6 +173,10 @@
                     <use xlink:href="#stext" class="bodyqus"></use>
                 </g>
             </svg>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--NAV & FONT-->
+            <!--&#x21EA;   &#x278D;&#x273F;&#x2714;&#x2705;-->
             <nav role="navigation">
 
                 <button type="button" id="toggle" aria-expanded="false">
@@ -233,25 +186,21 @@
                 </button>
                 <button type="button" id="textsize" aria-expanded="false">
                     <span>open or close text size tool</span>
-
                     <span class="txtszr1">A</span><span class="txtszr2">A</span>
                     <span class="spclose">&#10005;</span>
                 </button>
-
                 <div id="txtszrw">
                     <button type="button" id="icon3">
                         <span>decrease text size</span>
                         <span>&#x2296;</span>
                         <!--&#x1f50d;-->
                     </button>
-
                     <button type="button" id="icon4">
                         <span>increase text size</span>
                         <span>&#x2295;</span><!--&#x1f50e;-->
                     </button>
                     <span id="icon5">100%</span>
                 </div>
-
                 <div id="menu">
                     <a href="indexroot.html">Home</a>
                     <a href="m2.html" class="active">Money Magnet</a>
@@ -263,61 +212,19 @@
                     <a href="contact.html">Contact</a>
                     <a href="about.html">About</a>
                 </div>
-
             </nav>
-
-
-
-
-
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <!--https://codepen.io/shadeed/pen/c0376e254f5343afc0211935eea16e16-->
-            <!--
-                    <div class="topnav" id="myTopnav">
-                        <div class="alist" id="alist">
-                            <a href="indexroot.html">Home</a>
-                            <a href="m2.html" class="active">Money Magnet</a>
-                            <a href="m3.html">Varicose</a>
-                            <a href="m4.html">Belly Fat</a>
-                            <a href="m5.html">Joint Pain</a>
-                            <a href="m6.html">Anti Aging</a>
-                            <a href="m7.html">Parasites/Warts/Pappilomas</a>
-                            <a href="contact.html">Contact</a>
-                            <a href="about.html">About</a>
-                            <span class="opct0">click here for the chance to win up to 50% discount</span>
-
-                        </div>
-                        <span id="topnavicon" class="icon">&#9776;</span>
-                    </div>
-            -->
-            <h1 class="xbg1 xclrbth xovf">
+            <h1 class="">
                 คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้<!-- คุณจะใช้จ่าย-->
             </h1>
         </header>
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-        <!--   <div class="sprite0 sprite-feature2 lz q75 mar-t1em clrbth ovf"></div>
-        -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <div id="scroll"></div>
-        <!--FONT-->
-        <!--&#x21EA;   &#x278D;&#x273F;&#x2714;&#x2705;-->
-        <!--
-                <div class="t-a-c brd">
-                    <button type="button" id="icon3">
-                        <span>decrease text size</span>
-
-            <span>&#x2296;&#x1f50d;</span>
-            </button>
-            <span id="icon5">100%</span>
-            <button type="button" id="icon4">
-                <span>increase text size</span>
-                <span>&#x1f50e;&#x2295;</span>
-            </button>
-        </div>
-        -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--pages-->
-        <div class="posts xmar-lr2prc" id="posts">
+        <div class="posts" id="posts">
             <!--ovf triggers mar-t1em in pagination-->
             <div class="post" id="post1">
                 <div class="postpart">Part 1 TESTIMONIALS</div>
@@ -808,59 +715,38 @@
                     </div>
                     <div class="mar-lr2prc">
                         <p>
-                            <strong>
-                                <i>
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                </i>
-                            </strong>
+
+
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+
                         </p>
                         <p>
-                            <strong>
-                                <i>
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                </i>
-                            </strong>
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
                         </p>
                         <p>
-                            <strong>
-                                <i>
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                </i>
-                            </strong>
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
                         </p>
                     </div>
                 </div>
                 <div class="clrbth">
-                    <div class="CaptImgR qq">
+                    <div class="CaptImgL qq">
                         <div class="sprite sprite-k6 lz q75"></div>
                     </div>
                     <div class="mar-lr2prc">
                         <p>
-                            <strong>
-                                <i>
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                </i>
-                            </strong>
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
                         </p>
                         <p>
-                            <strong>
-                                <i>
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                </i>
-                            </strong>
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
                         </p>
                         <p>
-                            <strong>
-                                <i>
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                    เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
-                                </i>
-                            </strong>
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
+                            เมื่อไม่นานมานี้คุณหมอชื่อดังได้เปิดตัวผลิตภัณฑ์ดูแลผิวและลดเลือนริ้วรอย ที่มีชื่อว่า VisageMax เป็นการค้นพบวิธีที่ทำให้ดูเด็กลงถึงครึ่งหนึ่งของอายุจริงและวิธีที่คุณสามารถใช้ผลิตภัณฑ์ตัวเดียวกันนี้เพื่อทำให้ดูเด็กลงด้วย!
                         </p>
                     </div>
                 </div>
@@ -954,10 +840,14 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--WHEEL-->
         <div id="spinw">
-            <!--css outside of svg does not work-->
+            <!--css outside of svg does not work
 
             <svg class="svg1 bg1" width="100%" height="100%" viewBox="0 0 229.183118052 229.183118052" xreserveAspectRatio="xMinYMin meet"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                -->
+
+            <svg class="svg1 bg1" viewBox="0 0 229.183118052 229.183118052">
                 <defs>
                     <style type="text/css">
                         text {
@@ -1090,7 +980,7 @@
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <!-- LIST-->
         <h1> 6 สินค้ายอดนิยมของคนไทยตอนนี้</h1>
-        <div class="masonry  xxmar-lr2prc clrbth">
+        <div class="masonry  mar-lr2prc clrbth">
             <div class="item">
                 1
                 <div class="sprite0 sprite-1  lz q75"> </div>
@@ -1153,6 +1043,10 @@
         </div>
         <!-- END LIST-->
     </div><!-- END SECTION-->
+    
+
+
+
     <!-- https://codepen.io/cesar2535/pen/ByYXpN/
     -->
     <!-- <div class="pad-1em xbg4" > <img class="xrspnsv w100" src="8779a.png" alt="image1" > </div >
@@ -1170,13 +1064,19 @@
     <!--
     -->
     <script>
-        (function () {
-            var aa = sessionStorage.getItem("currfontsize");
-            // console.log("currfontsize ", aa);
-            var fs = aa !== null ? parseInt(aa) : 100;
-            // console.log("fs ", fs);
-            document.getElementById("root").style.fontSize = fs + "%";
-        }());
+        //http://www.financeconvert.com/a-primary-mgid-native-affiliate-marketing-campaign-setting-setup/
+        //https://adsbyjson.wordpress.com/2018/10/22/mgid-campaign-setting-setup/
+        //https://blog.mgid.com/2017/02/mgid-macros-made-simple/
+        //http://jsfiddle.net/ChristianL/AVyND/
+        var referrer = document.referrer;
+        //console.log("referrer ", referrer )
+            (function () {
+                var aa = sessionStorage.getItem("currfontsize");
+                // console.log("currfontsize ", aa);
+                var fs = aa !== null ? parseInt(aa) : 100;
+                // console.log("fs ", fs);
+                document.getElementById("root").style.fontSize = fs + "%";
+            }());
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         }
