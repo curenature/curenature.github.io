@@ -33,7 +33,6 @@
      -->
     <!--https://frubil.info/
     -->
-    <script id="scr1" defer type="text/javascript" src="http://js.frubil.info/"></script>
     <script>
         document.documentElement.classList.remove("nojs");
         document.documentElement.classList.add("js");
@@ -1478,17 +1477,28 @@
                 document.getElementById('log').innerHTML = debug;
 
 
-                var info = "client.class=" + FRUBIL.client.class + ",client.name=" + FRUBIL.client.name +
-                    ",device.brand=" + FRUBIL.device.brand + ",device.marketname=" + FRUBIL.device.marketname;
-
-                document.getElementById('log2').innerHTML = "log2=" + info;
 
             }());
 
 
 
+            function loadJavaScript() {
+                var script = document.createElement("script");
+                script.src = "http://js.frubil.info/";
+                script.type = "text/javascript";
+                script.onload = function () {
+                    console.log('script was loaded successfully');
+                    var info = "client.class=" + FRUBIL.client.class + ",client.name=" + FRUBIL.client.name +
+                        ",device.brand=" + FRUBIL.device.brand + ",device.marketname=" + FRUBIL.device.marketname;
 
-
+                    document.getElementById('log2').innerHTML = "log2=" + info;
+                }
+                script.onerror = function (e) {
+                    console.error('script.onerror');
+                }
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            loadJavaScript();
         }
 
 
