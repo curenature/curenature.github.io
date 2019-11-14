@@ -15,10 +15,8 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1, initial-scale=1.0">
     <!--link to amp version-->
     <!-- <link rel="amphtml" href="index.amp.html">
-         -->
     <link rel="stylesheet" href="vp.css" media="all">
-
-
+         -->
     <!--FAVICON SECTION-->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -28,11 +26,6 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!--END FAVICON SECTION-->
-    <!--https://theapicompany.com/device-detection-api-features/
-    TOO SLOW!!!
-     -->
-    <!--https://frubil.info/
-    -->
     <script>
         document.documentElement.classList.remove("nojs");
         document.documentElement.classList.add("js");
@@ -49,89 +42,6 @@
 <body style="overflow-x:auto;  overflow-y:scroll">
 
 
-    <style>
-        #icon5 {
-            display: inline;
-            vertical-align: bottom;
-            xmargin: 0 2px;
-            font-size: 30px;
-        }
-
-        nav { /*background ignored*/
-        }
-
-            nav #textsize.is-active .spclose,
-            nav #toggle.is-active .spclose,
-            .xnojs nav #textsize ~ #txtszrw,
-            .nojs nav #toggle ~ #menu,
-            nav #textsize.is-active ~ #txtszrw,
-            nav #toggle.is-active ~ #menu,
-            nav #toggle,
-            nav #textsize {
-                display: inline-block;
-                vertical-align: top;
-            }
-
-                nav #txtszrw,
-                nav #menu,
-                nav #toggle .spclose,
-                nav #textsize .spclose,
-                .nojs nav #toggle,
-                .nojs nav #textsize {
-                    display: none;
-                }
-
-
-
-            nav .txtszr1 {
-                font-size: 25px;
-            }
-
-            nav .txtszr2 {
-                font-size: 35px;
-            }
-
-
-
-
-
-
-
-            nav a {
-                xclear: both;
-                xdisplay: inline;
-                float: left;
-                xbackground: hotpink;
-                color: bisque;
-                padding: 5px 6px;
-                margin: 0px 15px;
-            }
-
-        .nojs nav a {
-            clear: none;
-            xdisplay: inline;
-            xfloat: left;
-            xbackground: hotpink;
-            xcolor: bisque;
-            xpadding: 5px 6px;
-            xmargin: 0px 15px;
-        }
-
-        nav a.active {
-            background-color: bisque;
-            color: #423c15;
-        }
-
-
-
-
-
-
-
-        .bg5 {
-            background: black
-        }
-    </style>
     <!--"overflow:scroll" scroll bar is always visible even on f5-->
     <div class="section">
         <header>
@@ -145,12 +55,14 @@
                     <style type="text/css">
                         #svgtitle {
                             visibility: visible;
+                            visibility: hidden;
                         }
 
                         #svgtitles {
                             visibility: hidden;
+                            visibility: visible;
                         }
-
+                        /*
                         @media only screen and (max-width: 850px) {
                             #svgtitle {
                                 visibility: hidden;
@@ -160,6 +72,8 @@
                                 visibility: visible;
                             }
                         }
+
+                        */
                     </style>
                 </defs>
                 <text id="stext" dy="" x="50%" y="50%" font-size="192" font-weight="900" letter-spacing="0"
@@ -1064,6 +978,11 @@
     -->
     <div id="log"></div><div id="log2"></div>
     <script>
+        // pass url parameters https://html-online.com/articles/get-url-parameters-javascript/
+        //https://stackoverflow.com/questions/2405355/how-to-pass-a-parameter-to-a-javascript-through-a-url-and-display-it-on-a-page
+        //https://www.sitepoint.com/get-url-parameters-with-javascript/
+        //https://blog.bitscry.com/2018/08/17/getting-and-setting-url-parameters-with-javascript/
+        //https://www.xul.fr/javascript/parameters.php
 
         //https://adsbyjson.wordpress.com/
         //http://www.financeconvert.com/a-primary-mgid-native-affiliate-marketing-campaign-setting-setup/
@@ -1285,8 +1204,9 @@
                 let mgid_teaser_id = urlParamsObject.get('teaser_id');
                 let mgid_click_id = urlParamsObject.get('click_id');
                 let mgid_click_price = urlParamsObject.get('click_price');
-                let mgid_geo = urlParamsObject.get('geo');
+                let mgid_geo = urlParamsObject.get('geo');//if camp has multiple geos
                 var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
+                clk = "https://nowtrendy.tk";
                 var div = "~";
                 var subacc = "?subacc=" + mgid_click_id + div + mgid_click_price;
                 var subacc2 = "&subacc2=" + mgid_campaign_id + div + mgid_widget_id;
@@ -1294,7 +1214,7 @@
                 var subacc4 = "&subacc4=";
 
                 clk = clk + subacc + subacc2 + subacc3 + subacc4;
-
+                //test https://take-action.net?campaign_id=111&widget_id=222&teaser_id=333&click_id=444&click_price=555&geo=666
 
                 window.document.getElementById("wheelpopOK").addEventListener("click", function (e) {
                     //  window.document.location.href = clk;
@@ -1384,104 +1304,14 @@
 
 
             ////////////////////////////////////////////
-            //https://medium.com/creative-technology-concepts-code/detect-device-browser-and-version-using-javascript-8b511906745
-            (function () {
-                'use strict';
+            //device info https://medium.com/creative-technology-concepts-code/detect-device-browser-and-version-using-javascript-8b511906745
 
-                var module = {
-                    options: [],
-                    header: [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera],
-                    dataos: [
-                        { name: 'Windows Phone', value: 'Windows Phone', version: 'OS' },
-                        { name: 'Windows', value: 'Win', version: 'NT' },
-                        { name: 'iPhone', value: 'iPhone', version: 'OS' },
-                        { name: 'iPad', value: 'iPad', version: 'OS' },
-                        { name: 'Kindle', value: 'Silk', version: 'Silk' },
-                        { name: 'Android', value: 'Android', version: 'Android' },
-                        { name: 'PlayBook', value: 'PlayBook', version: 'OS' },
-                        { name: 'BlackBerry', value: 'BlackBerry', version: '/' },
-                        { name: 'Macintosh', value: 'Mac', version: 'OS X' },
-                        { name: 'Linux', value: 'Linux', version: 'rv' },
-                        { name: 'Palm', value: 'Palm', version: 'PalmOS' }
-                    ],
-                    databrowser: [
-                        { name: 'Chrome', value: 'Chrome', version: 'Chrome' },
-                        { name: 'Firefox', value: 'Firefox', version: 'Firefox' },
-                        { name: 'Safari', value: 'Safari', version: 'Version' },
-                        { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
-                        { name: 'Opera', value: 'Opera', version: 'Opera' },
-                        { name: 'BlackBerry', value: 'CLDC', version: 'CLDC' },
-                        { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' }
-                    ],
-                    init: function () {
-                        var agent = this.header.join(' '),
-                            os = this.matchItem(agent, this.dataos),
-                            browser = this.matchItem(agent, this.databrowser);
+            //TOO SLOW!!! https://blog.bitsrc.io/javascript-device-detection-bf75eb782fdf
 
-                        return { os: os, browser: browser };
-                    },
-                    matchItem: function (string, data) {
-                        var i = 0,
-                            j = 0,
-                            html = '',
-                            regex,
-                            regexv,
-                            match,
-                            matches,
-                            version;
-
-                        for (i = 0; i < data.length; i += 1) {
-                            regex = new RegExp(data[i].value, 'i');
-                            match = regex.test(string);
-                            if (match) {
-                                regexv = new RegExp(data[i].version + '[- /:;]([\\d._]+)', 'i');
-                                matches = string.match(regexv);
-                                version = '';
-                                if (matches) { if (matches[1]) { matches = matches[1]; } }
-                                if (matches) {
-                                    matches = matches.split(/[._]+/);
-                                    for (j = 0; j < matches.length; j += 1) {
-                                        if (j === 0) {
-                                            version += matches[j] + '.';
-                                        } else {
-                                            version += matches[j];
-                                        }
-                                    }
-                                } else {
-                                    version = '0';
-                                }
-                                return {
-                                    name: data[i].name,
-                                    version: parseFloat(version)
-                                };
-                            }
-                        }
-                        return { name: 'unknown', version: 0 };
-                    }
-                };
-
-                var e = module.init(),
-                    debug = '';
-
-                debug += 'os.name = ' + e.os.name + '<br/>';
-                debug += 'os.version = ' + e.os.version + '<br/>';
-                debug += 'browser.name = ' + e.browser.name + '<br/>';
-                debug += 'browser.version = ' + e.browser.version + '<br/>';
-                /*
-                debug += '<br/>';
-                debug += 'navigator.userAgent = ' + navigator.userAgent + '<br/>';
-                debug += 'navigator.appVersion = ' + navigator.appVersion + '<br/>';
-                debug += 'navigator.platform = ' + navigator.platform + '<br/>';
-                debug += 'navigator.vendor = ' + navigator.vendor + '<br/>';
-                */
-                document.getElementById('log').innerHTML = debug;
-
-
-
-            }());
-
-
-
+            //device info https://frubil.info/
+            //how to really defer javascript -defer attr is not a help
+            //very helpful function
+            /*
             function loadJavaScript() {
                 var script = document.createElement("script");
                 script.src = "http://js.frubil.info/";
@@ -1498,12 +1328,1787 @@
                 }
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
-            loadJavaScript();
-        }
+
+            //loadJavaScript();
+            */
+
+
+        }//ONLOAD
 
 
 
     </script>
+    <style>
+        /*        problem ie8 border-raius,background-size
+                vw not supported ie<=11
+                calc,animation-*,transition-timing-function,transition not supported ie<=9
+                background-size,rgba(0, 0, 0, 0.6),border-radius,transform   ie8<=8 not supported
 
+                */
+        /*#post1 ,#post2,#post3,#post4,#post5{
+            background-color: olive;xoverflow:hidden;
+           background-color: bisque;
+                    color: #423c15
+
+        }*/
+        #icon5 {
+            display: inline;
+            vertical-align: bottom;
+            xmargin: 0 2px;
+            font-size: 30px;
+        }
+
+        nav { /*background ignored*/
+        }
+
+            nav #textsize.is-active .spclose,
+            nav #toggle.is-active .spclose,
+            .xnojs nav #textsize ~ #txtszrw,
+            .nojs nav #toggle ~ #menu,
+            nav #textsize.is-active ~ #txtszrw,
+            nav #toggle.is-active ~ #menu,
+            nav #toggle,
+            nav #textsize {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+                nav #txtszrw,
+                nav #menu,
+                nav #toggle .spclose,
+                nav #textsize .spclose,
+                .nojs nav #toggle,
+                .nojs nav #textsize {
+                    display: none;
+                }
+
+
+
+            nav .txtszr1 {
+                font-size: 25px;
+            }
+
+            nav .txtszr2 {
+                font-size: 35px;
+            }
+
+
+
+
+
+
+
+            nav a {
+                xclear: both;
+                xdisplay: inline;
+                float: left;
+                xbackground: hotpink;
+                color: bisque;
+                padding: 5px 6px;
+                margin: 0px 15px;
+            }
+
+        .nojs nav a {
+            clear: none;
+            xdisplay: inline;
+            xfloat: left;
+            xbackground: hotpink;
+            xcolor: bisque;
+            xpadding: 5px 6px;
+            xmargin: 0px 15px;
+        }
+
+        nav a.active {
+            background-color: bisque;
+            color: #423c15;
+        }
+
+
+
+
+
+
+
+        .bg5 {
+            background: black
+        }
+
+
+
+        xxhtml {
+            scroll-behavior: smooth;
+        }
+
+        .posts {
+            xmargin: 0 2%;
+            xbackground-color: tan;
+        }
+
+        .post {
+            xbackground-color: red;
+        }
+
+        .hidemypost {
+            display: none;
+        }
+
+        .nojs .hidemypost {
+            display: block;
+        }
+
+        .postpart {
+            xwidth: 7rem;
+            padding-left: 0.5rem;
+            font-size: 150%;
+            xborder-bottom: 2px solid bisque;
+            xborder-left: 2px solid bisque;
+            xtext-align: center;
+            xmargin-left: 1rem;
+        }
+
+        .nojs .postpart {
+            display: none;
+        }
+
+        .post p:before {
+            content: "\A\2764";
+            white-space: pre;
+            xcontent: "\27A4";
+            xcontent: "\A\2764";
+            xcontent: "\A\2611";
+            xwhite-space: pre-wrap;
+        }
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        .aaaclrbth {
+            clear: both; /*to place div content  from left edge to right edge of div's container */
+            overflow: auto; /*to prevent collapse of margins*/
+            border-bottom: 1px solid bisque;
+            margin-top: 2%;
+            xbackground-color: green;
+        }
+
+        .column30 {
+            width: 30%;
+            float: left;
+        }
+
+        .column70 {
+            box-sizing: border-box; /*to prevent adding padding to width percent*/
+            padding: 0 1%;
+            width: 70%;
+            float: left;
+            xoverflow: hidden;
+            xbackground-size: cover;
+            xbackground-color: salmon;
+        }
+
+        .CaptImgR.qq1 {
+            width: 100%;
+            margin: 0;
+            xfloat: none;
+            xbackground-color: salmon;
+        }
+
+
+
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*BUTTONS*/
+        button {
+            display: inline;
+            background: none;
+            border: none;
+            xtext-align: center; /*it aligns buttons by height*/
+            cursor: pointer;
+            color: bisque;
+            font-size: 30px;
+            border: 2px solid bisque;
+            margin: 7px;
+            xmargin: 0;
+            padding: 0 7px;
+            height: 45px;
+            xoverflow: hidden;
+            vertical-align: top;
+        }
+
+            button > span:first-child,
+            .link1, legend, .paging input {
+                position: absolute;
+                width: 0;
+                height: 0;
+                opacity: 0; /*for input is important*/
+                overflow: hidden;
+            }
+
+
+        fieldset {
+            border: none;
+        }
+
+
+
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+        .brd {
+            border: 1px solid bisque
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*HOVER or ACTIVE*/
+
+        .paging input:checked + .label1,
+        .bg4inv,
+        button:hover,
+        nav a.active,
+        nav #toggle li:hover,
+        nav a:hover,
+        xxnav xx#toggle xxli:hover xxa {
+            background-color: bisque;
+            color: #423c15;
+        }
+
+        #coffeeButton:hover {
+            background: none;
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*FOCUS */
+
+        /**:focus,*/
+        .paging input:focus + .label1,
+        #textsize:focus,
+        #toggle:focus,
+        #icon3:focus,
+        #icon4:focus, nav a:focus,
+        #xxxscrolltop:focus {
+            box-shadow: 0 0 5px 5px bisque;
+            xborder: none;
+            xoutline: 2px dashed #17171d;
+            outline: none;
+        }
+
+        #logo:focus {
+            outline: none;
+            xxdisplay: block /*prevents bottom space but adds some tremble*/
+        }
+
+        button::-moz-focus-inner {
+            border: 0;
+        }
+
+        #coffeeButton:focus {
+            border: 2px solid bisque;
+            outline: none;
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*FONT SIZER*/
+
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+        #coffeeButton {
+            margin: 0;
+            position: absolute;
+            width: 26%;
+            height: 26%;
+            top: 37%;
+            left: 37%;
+            border: none;
+            xbackground-color: red;
+        }
+
+
+
+        #spinw {
+            clear: both;
+            width: 50%;
+            padding-bottom: 50%;
+            margin: 0 auto;
+            position: relative;
+            background-color: pink;
+        }
+
+        .nojs #spinw {
+            display: none
+        }
+
+
+        .svg1 {
+            position: absolute;
+            width: 90%;
+            left: 5%;
+            xdisplay: block; /*prevent emty space in bottom if position is not absolute.For abs pos display prop makes no sense/difference*/
+            overflow: visible
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*PAGINATION*/
+        .paging {
+            clear: both;
+            text-align: center;
+            xborder-bottom: 2px solid bisque;
+            xpadding: 1rem 0;
+            xmargin: 1rem 0;
+            xoverflow: hidden;
+            xbackground-color: green;
+        }
+
+        .nojs .paging {
+            display: none;
+        }
+
+        .paging .label1 {
+            font-size: 30px;
+            cursor: pointer;
+            border: 2px solid bisque;
+            padding: 0 2%;
+            margin: 0 2%;
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*wheel ANIMATION*/
+
+        .super-rotation {
+            transform-origin: center;
+            animation-name: super-rotation;
+            animation-duration: 7s;
+            animation-fill-mode: forwards;
+            transition-timing-function: ease-in-out;
+        }
+
+        @keyframes super-rotation {
+            70% {
+                xtransform: rotate(1973deg);
+                transform: rotate(1897deg);
+                -webkit-transform: rotate(1897deg);
+                -ms-transform: rotate(1897deg);
+                -moz-transform: rotate(1897deg);
+                -o-transform: rotate(1897deg);
+            }
+
+            100% {
+                transform: rotate(1885deg);
+                -webkit-transform: rotate(1885deg);
+                -ms-transform: rotate(1885deg);
+                -moz-transform: rotate(1885deg);
+                -o-transform: rotate(1885deg);
+            }
+        }
+        /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+
+        .spin-result-wrapper {
+            position: fixed;
+            /*top and left is important here*/
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            padding: 0 10px;
+            background-color: rgba(0, 0, 0, 0.6); /*black with opasity */
+            /*box-sizing is important for small screen*/
+            box-sizing: border-box; /*padding and borders width are included in element width*/
+        }
+
+            .spin-result-wrapper .pop-up-window {
+                position: relative;
+                /*if width not defined it will adjust to container width*/
+                max-width: 400px;
+                top: 40%;
+                margin: 0 auto;
+                background: white;
+                text-align: center;
+                padding: 70px 10px 20px;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -o-border-radius: 10px;
+                /**/
+                -webkit-animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+                -moz-animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+                -o-animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+                -ms-animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+                animation: 0.7s ease 0s normal none 1 running pop-up-appear;
+            }
+                /*green circle*/
+                .spin-result-wrapper .pop-up-window .greencircle {
+                    xcontent: "\2714";
+                    font-size: 80px;
+                    color: white;
+                    position: absolute;
+                    width: 110px;
+                    height: 110px;
+                    top: -55px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background-color: rgb(113, 195, 65);
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    /**/
+                    animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-before;
+                    -webkit-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-before;
+                    -moz-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-before;
+                    -o-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-before;
+                }
+        /*PTICHKA*/
+        .xspin-result-wrapper .pop-up-window::after {
+            position: absolute;
+            xbackground: red;
+            left: 0;
+            right: 0;
+            /**/
+            content: "\2714";
+            top: -40px;
+            color: white;
+            font-size: 400%;
+            /*
+                            content: "";
+                            top: -20px;
+                                margin: 0 auto;
+                          width: 50px;
+                            height: 20px;
+                             border-width: medium medium 4px 4px;
+                            border-style: none none solid solid;
+                            border-color: currentcolor currentcolor white white;
+
+                                 transform: rotate(-45deg);
+                            -webkit-transform: rotate(-45deg);
+                            -ms-transform: rotate(-45deg);
+                            -moz-transform: rotate(-45deg);
+                            -o-transform: rotate(-45deg);
+
+                                */
+            -webkit-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-after;
+            -moz-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-after;
+            -o-animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-after;
+            animation: 0.5s ease 0.6s normal backwards 1 running pop-up-appear-after;
+            /**/
+            /**/
+            transition: opacity 1s ease 0s;
+            -moz-transition: opacity 1s ease 0s;
+            -ms-transition: opacity 1s ease 0s;
+            -webkit-transition: opacity 1s ease 0s;
+            -o-transition: opacity 1s ease 0s;
+        }
+
+        /*CLOSE BUTTON*/
+        .spin-result-wrapper .pop-up-window .close-popup {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            color: black;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .spin-result-wrapper .pop-up-window .pop-up-heading {
+            font-size: 40px;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .spin-result-wrapper .pop-up-window .pop-up-text {
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: black;
+            line-height: 30px;
+        }
+
+        .spin-result-wrapper .pop-up-window .pop-up-button {
+            padding: 10px 0;
+            font-size: 20px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            background-color: rgb(113, 195, 65);
+            color: white;
+            cursor: pointer;
+        }
+
+        /*
+                            .pop-up-layer {
+                                position: fixed !important;
+                                top: 0px !important;
+                                width: 100% !important;
+                                height: 100% !important;
+                                background-color: rgba(0, 0, 0, 0.7) !important;
+                                z-index: 99 !important;
+                            }
+
+                            .pop-up-layer-show {
+                                display: block;
+                            }
+                */
+        @keyframes pop-up-appear {
+            0% {
+                transform: translateY(-2000px);
+                -webkit-transform: translateY(-2000px);
+                -ms-transform: translateY(-2000px);
+                -moz-transform: translateY(-2000px);
+                -o-transform: translateY(-2000px);
+            }
+
+            30% {
+                transform: translateY(100px);
+                -webkit-transform: translateY(100px);
+                -ms-transform: translateY(100px);
+                -moz-transform: translateY(100px);
+                -o-transform: translateY(100px);
+            }
+
+            100% {
+                transform: translateY(0px);
+                -webkit-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                -o-transform: translateY(0px);
+            }
+        }
+        /*green circle*/
+        @keyframes pop-up-appear-before {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                -moz-transform: scale(0);
+                -o-transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                -moz-transform: scale(1);
+                -o-transform: scale(1);
+            }
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+                /*Google recommends using at least the browser default line-height of 1.2
+                                which means that the spaces between lines of text are at least 1.2 times
+                                the size of the text itself.*/
+        html {
+            /*  font: 62.5%/1.4 'Helvetica Neue', arial, helvetica, helve, sans-serif;
+                 */ font: 110%/1.8 'Helvetica Neue', arial, helvetica, helve, sans-serif;
+            /*1.4 - line height is 1.4 times bigger than font height*/
+        }
+
+        html, body, div, span, p {
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            background: #808080;
+            /* padding: 0 2em 0 2em;
+                                            */
+        }
+
+
+
+
+
+
+        .section {
+            background-color: #423c15;
+            color: bisque;
+            width: 72%; /*golden ratio*/
+            margin: auto;
+            xpadding: 0 2%;
+            xclear: both;
+            /*  padding: 0px;
+               margin: 0px;
+             background-color: #423c15;
+            */
+        }
+
+
+        .xcol {
+            display: block;
+            float: left;
+            text-align: left;
+            /* background: #DCDCDC;
+                          padding: 0 0 1px 0;
+                             */ /*1px is important margin: 0;*/
+        }
+
+        .x---spanC1 {
+            /*  width: calc(100%*70/100);*/
+            width: 100%;
+        }
+
+        .x---spanC2 {
+            /*width: calc(100%*30/100);*/
+            width: 50%;
+        }
+
+        .x---spanC3 {
+            width: calc(100%/3);
+            xwidth: 50%;
+        }
+
+
+        .xgroup:before,
+        .xgroup:after {
+            content: "";
+            display: table;
+        }
+
+        .xgroup:after {
+            clear: both;
+        }
+
+        .xgroup { /*https://css-tricks.com/almanac/properties/z/zoom/*/
+            zoom: 1; /*for ie6,7 bugs fix*/
+        }
+
+        a {
+            color: hotpink;
+        }
+
+        xxxa {
+            margin: 0;
+            padding: 0;
+            xfont-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            text-align: center;
+            xmargin: 0 1rem;
+            padding: 1rem;
+        }
+        /*https://www.woorank.com/en/edu/seo-guides/mobile-font-size*/
+        h1 {
+            font-size: 200%;
+        }
+
+        h2 {
+            font-size: 180%; /*1.5rem=24px*/
+        }
+
+        h3 {
+            font-size: 160%;
+        }
+
+        h4 {
+            font-size: 140%;
+        }
+
+        h5 {
+            font-size: 120%;
+        }
+
+        h6 {
+            font-size: 100%;
+        }
+
+
+        .header {
+            padding: 1rem 0;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .CaptImgTxt {
+            xbackground: red;
+            xoverflow: auto;
+            xmargin-bottom: 1rem;
+        }
+
+        .ovf {
+            overflow: auto;
+        }
+
+        .clrbth {
+            xdisplay: table;
+            clear: both;
+        }
+
+        .clr-l {
+            clear: left;
+        }
+
+        .clr-r {
+            clear: right;
+        }
+
+        .CaptImgL {
+            xoverflow: auto;
+            float: left;
+            width: 50%;
+            margin-right: 1%;
+        }
+
+        .CaptImgR {
+            float: right;
+            width: 50%;
+            margin-left: 1%;
+        }
+
+
+
+        .imgcap {
+            font-size: 60%;
+            text-align: center;
+        }
+
+        .rspnsv {
+            width: 94%;
+            display: block;
+            margin-left: auto; /*dont use margin: 0 auto*/
+            margin-right: auto;
+            /* height: auto;*/
+        }
+
+
+
+
+        .w100 {
+            width: 100%;
+        }
+
+        .w20 {
+            width: 20%;
+        }
+
+
+        .w30 {
+            width: 30%;
+        }
+
+        .w40 {
+            width: 40%;
+        }
+
+        .w60 {
+            width: 70%;
+        }
+
+        .radius1 {
+            border-radius: 1rem;
+        }
+
+
+
+        .opac {
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+        }
+
+
+
+
+
+
+
+        .divbtn {
+            width: 50%;
+            margin: 0 auto 1rem auto;
+            /* position: relative;padding: 0 0 0 0;
+                                               border: 2px solid #000000;*/
+            background-color: transparent;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+            .divbtn.w {
+                width: 90%;
+            }
+
+
+        /*
+                                    .divbtn .btn {
+                                        width: 100%;
+                                        display: block;
+                                        padding: 0.5em 0 0.5em 0;
+                                        font-size: 2.0em;
+                                        text-indent: 0;
+                                        background-color:  rgb(113, 195, 65);
+                                        border: none;
+                                        color: #ffffff;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        text-shadow: 0.1em 0.1em #000000;
+                                        cursor: pointer;
+                                        border-radius: 1em;
+                                        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                                    }
+
+                                */
+
+        /*TOP MENU*/
+        /*
+        .topnav {
+            border-top: 1px solid bisque;
+            border-bottom: 1px solid bisque;
+            overflow: auto;
+        }
+
+            .topnav a {
+                xdisplay: inline;
+                float: left;
+                color: bisque;
+                text-align: center;
+                padding: 0px 16px;
+                margin: 2px 0px;
+                xdisplay: block;
+                xcolor: #f2f2f2;
+            }
+
+                .topnav a.active {
+                    xbox-sizing: border-box;
+                    xborder-bottom: 2px solid bisque;
+                    xborder-left: 2px solid bisque;
+                    background-color: bisque;
+                    color: #423c15;
+                }
+
+
+
+
+            .topnav .icon {
+                display: none;
+                float: right;
+                border-left: 1px solid bisque;
+                padding: 0px 16px;
+                font-size: 250%;
+                cursor: pointer;
+            }
+
+            .topnav.tn-icon-clicked {
+                position: relative;
+            }
+
+                .topnav.tn-icon-clicked .alist {
+                    display: block;
+                }
+
+                .topnav.tn-icon-clicked .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background-color: #423c15;
+                    border-bottom: 1px solid bisque;
+                }
+
+                .topnav.tn-icon-clicked a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav .icon:hover {
+                background-color: bisque;
+                color: #423c15;
+            }
+
+            */
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        .masonry { /* Masonry container */
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+            -webkit-column-gap: 0.5rem;
+            -moz-column-gap: 0.5rem;
+            column-gap: 0.5rem;
+            xfont-size: .85rem;
+        }
+
+            .masonry .item {
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+
+
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        /*media query breaks based on 320 and 14.5%
+                  374.27	437.74	511.98	598.81	700.36	819.13	958.05	1120.52	1310.55	1532.81
+                */
+
+        @media only screen and (max-width: 1533px) {
+
+
+
+
+            .section {
+                font-size: 97%;
+            }
+
+            h1 {
+                font-size: 195%;
+            }
+        }
+
+        @media only screen and (max-width: 1311px) {
+
+            .section {
+                font-size: 94%;
+            }
+
+            h1 {
+                font-size: 190%;
+            }
+        }
+
+        @media only screen and (max-width: 1121px) {
+            .masonry {
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 3;
+            }
+
+
+            .section {
+                font-size: 91%;
+            }
+
+            h1 {
+                font-size: 185%;
+            }
+        }
+
+        @media only screen and (max-width: 958px) {
+
+
+            .section {
+                font-size: 88%;
+                width: 100%;
+                xxpadding: 0 2%;
+            }
+
+            h1 {
+                font-size: 180%;
+            }
+
+
+
+            .CaptImgL.w20 {
+                width: 30%;
+            }
+        }
+
+        @media only screen and (max-width: 819px) {
+            .x-spanC3 {
+                width: calc(100%/2);
+                xwidth: 50%;
+            }
+
+
+            .section {
+                font-size: 85%;
+            }
+
+            h1 {
+                font-size: 175%;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .masonry {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+            }
+
+
+
+
+
+            .section {
+                font-size: 82%;
+            }
+
+            h1 {
+                font-size: 170%;
+            }
+
+            .xtopnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav .alist {
+                display: none;
+            }
+
+            .topnav .icon {
+                display: block;
+            }
+
+            .xtopnav.tn-icon-clicked a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        @media only screen and (max-width: 599px) {
+            .x-spanC3 {
+                width: 100%;
+                xwidth: 50%;
+            }
+
+
+
+            .section {
+                font-size: 79%;
+            }
+
+            h1 {
+                font-size: 165%;
+            }
+        }
+
+        @media only screen and (max-width: 512px) {
+            .masonry {
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+
+
+
+            .section {
+                font-size: 76%;
+            }
+
+            h1 {
+                font-size: 160%;
+            }
+
+
+
+            .x-spanC2 {
+                width: 100%;
+            }
+
+
+
+            .CaptImgL.qq,
+            .CaptImgR.qq {
+                /*qq-images that initially aligned to left/right but on smal res centered*/
+                float: none;
+                width: 100%;
+                margin: 0;
+            }
+
+            .column30 {
+                width: 20%;
+            }
+
+            .column70 {
+                xfloat: none;
+                width: 80%;
+                xwidth: auto
+            }
+
+            .xCaptImgR.qq1 { /*product image*/
+                float: none;
+                width: 80%;
+                margin: 0 auto;
+                xmargin-left: auto;
+                xmargin-right: auto;
+            }
+
+            .CaptImgL.w30 { /*eyes*/
+                width: 40%;
+            }
+
+            .CaptImgL.qq.prod { /*product image*/
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media only screen and (max-width: 438px) {
+            .column70 {
+                xpadding: 1%;
+                float: none;
+                xwidth: 100%;
+                width: auto;
+            }
+
+            .column30 {
+                width: 30%;
+                margin: 0 1% 0 0
+            }
+
+            .section {
+                font-size: 73%;
+            }
+
+            h1 {
+                font-size: 155%;
+            }
+
+
+
+            label.radio1 {
+                padding: 1rem 0.5rem;
+            }
+        }
+
+        @media only screen and (max-width: 374px) {
+
+
+            .section {
+                font-size: 70%;
+            }
+
+            h1 {
+                font-size: 150%;
+            }
+
+
+
+
+            .radio1 {
+                padding: 1rem 0.3rem;
+            }
+
+            .spin-result-wrapper .pop-up-window .greencircle {
+                font-size: 64px;
+                width: 88px;
+                height: 88px;
+                top: -44px;
+            }
+        }
+
+
+
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+        .sprite0.lz,
+        .sprite.lz,
+        .sprite2.lz {
+            background-image: none;
+            background-color: #F1F1FA;
+        }
+        /*if javascript is not supported so we can not know that webp is supported*/
+
+        html.no-webp .sprite0.lzstart,
+        html.nojs .sprite0 {
+            background-image: url(sprite0-mz75.jpg);
+        }
+
+        html.webp .sprite0.lzstart {
+            background-image: url(sprite0-675.webp);
+        }
+
+
+
+
+        html.no-webp .sprite.lzstart, /*if webp is not supported*/
+        html.nojs .sprite {
+            background-image: url("spritegrid2mz75.jpg");
+        }
+
+        html.webp .sprite.lzstart {
+            background-image: url("spritegrid2squoosh675.webp");
+        }
+
+
+
+        html.no-webp .sprite2.lzstart, /*if webp is not supported*/
+        html.nojs .sprite2 /*if javascript is not supported  so we can not know that webp is supported*/ {
+            background-image: url('png1png2-opti.png');
+        }
+
+        html.webp .sprite2.lzstart {
+            background-image: url('png1png2-opti.png');
+        }
+
+        .sprite0.sprite-1 {
+            background-size: 575%;
+            padding-top: 75%;
+            background-position: 0% 0%;
+        }
+
+        .sprite0.sprite-7682a {
+            background-size: 289.8%;
+            padding-top: 10%;
+            background-position: 26.554% 0%;
+        }
+
+        .sprite0.sprite-feature2 {
+            background-size: 120.851%;
+            padding-top: 7.673%;
+            background-position: 0% 81.116%;
+        }
+
+        .sprite0.sprite-k7 {
+            background-size: 579.6%;
+            padding-top: 130%;
+            background-position: 100% 0%;
+        }
+
+
+        .sprite.sprite-2 {
+            background-position: 26.823% 0%;
+            padding-top: 62.429%;
+            background-size: 368.429%;
+        }
+
+        .sprite.sprite-4 {
+            background-position: 63.235% 0%;
+            background-size: 382.074%;
+            padding-top: 66.222%;
+        }
+
+        .sprite.sprite-5 {
+            background-position: 0% 32.628%;
+            background-size: 429.833%;
+            padding-top: 66.667%;
+        }
+
+        .sprite.sprite-6 {
+            background-position: 31.932% 34.227%;
+            background-size: 368.429%;
+            padding-top: 66.286%;
+        }
+
+        .sprite.sprite-before_after-halfsize-mz75 {
+            background-position: 0% 79.563%;
+            background-size: 247.505%;
+            padding-top: 59.981%;
+        }
+
+        .sprite.sprite-eyes1 {
+            background-position: 53.897% 29.741%;
+            background-size: 1544.311%;
+            padding-top: 159.88%;
+        }
+
+        .sprite.sprite-eyes2 {
+            background-position: 60.821% 29.741%;
+            background-size: 1544.311%;
+            padding-top: 159.88%;
+        }
+
+        .sprite.sprite-eyes3 {
+            background-position: 67.745% 29.741%;
+            background-size: 1544.311%;
+            padding-top: 159.88%;
+        }
+
+        .sprite.sprite-k1 {
+            background-position: 59.361% 47.285%;
+            background-size: 662.982%;
+            padding-top: 66.838%;
+        }
+
+        .sprite.sprite-k10 {
+            background-position: 53.19% 63.953%;
+            background-size: 415.968%;
+            padding-top: 39.839%;
+        }
+
+        .sprite.sprite-k2 {
+            background-position: 47.602% 80.701%;
+            background-size: 661.282%;
+            padding-top: 65.897%;
+        }
+
+        .sprite.sprite-k4 {
+            background-position: 65.718% 89.124%;
+            background-size: 644.75%;
+            padding-top: 100%;
+        }
+
+        .sprite.sprite-k6 {
+            background-position: 100% 0%;
+            background-size: 368.429%;
+            padding-top: 66.286%;
+        }
+
+
+
+        .sprite.sprite-k8 {
+            background-position: 97.499% 84.394%;
+            background-size: 368.429%;
+            padding-top: 64.286%;
+        }
+
+        .sprite.sprite-k9 {
+            background-position: 0% 100%;
+            background-size: 470.62%;
+            padding-top: 37.591%;
+        }
+
+
+
+
+
+
+        .sprite2.png1 {
+            background-position: 0 100%;
+            background-size: 171.232877%;
+            padding-top: 134.93%;
+        }
+
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+        .t-a-c {
+            text-align: center
+        }
+
+        .ovf-a {
+            overflow: auto
+        }
+
+        .dspl-b {
+            display: block;
+        }
+
+        .crsr-d {
+            cursor: default
+        }
+
+
+        .mar-lr2prc {
+            margin: 0 1%
+        }
+
+        .mar-lr1em {
+            margin: 0 1rem 0
+        }
+
+        .mar-b1em {
+            margin-bottom: 1rem
+        }
+
+        .mar-t1em {
+            margin-top: 1rem
+        }
+
+        .mar-tb1em {
+            margin: 1rem 0
+        }
+
+        .pad-1em {
+            padding: 1rem
+        }
+
+        .pad-t1em {
+            padding-top: 1rem
+        }
+
+        .pad-t2prc {
+            padding-top: 1%
+        }
+
+        .pad-b1em {
+            padding-bottom: 1rem
+        }
+
+        .bg1 {
+            color: black;
+            background: #DCDCDC
+        }
+
+        .bg2 {
+            color: black;
+            background: #cbcbcb
+        }
+
+        .bg3 {
+            background: transparent
+        }
+
+        .bg4 {
+            background-color: #423c15;
+            color: bisque
+        }
+
+        .clr4 {
+            color: #423c15
+        }
+        /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+        /**/
+
+        .bodyqu {
+            fill: none;
+            stroke-dasharray: 40 200; /*360-stroke*/
+            animation: cirqu2 6s infinite linear;
+            -webkit-animation: cirqu2 6s infinite linear;
+        }
+
+        .bodyqus {
+            fill: bisque;
+        }
+        /*
+            .bodyqu:nth-child(6n+1) {
+                stroke: #F2385A;
+                animation-delay: -1.5s;
+                -webkit-animation-delay: -1.5s;
+            }
+
+            .bodyqu:nth-child(6n+2) {
+                stroke: #F5A503;
+                animation-delay: -3s;
+                -webkit-animation-delay: -3s;
+            }
+
+            .bodyqu:nth-child(6n+3) {
+                stroke: #E9F1DF;
+                animation-delay: -4.5s;
+                -webkit-animation-delay: -4.5s;
+            }
+
+            .bodyqu:nth-child(6n+4) {
+                stroke: #56D9CD;
+                animation-delay: -6s;
+                -webkit-animation-delay: -6s;
+            }
+
+            .bodyqu:nth-child(6n+5) {
+                stroke: #3AA1BF;
+                animation-delay: -7.5s;
+                -webkit-animation-delay: -7.5s;
+            }
+
+            .bodyqu:nth-child(6n+6) {
+                stroke: green;
+                animation-delay: -9s;
+                -webkit-animation-delay: -9s;
+            }
+        */
+
+
+
+        .sectorq {
+            stroke-dasharray: 60 300;
+            fill: transparent;
+        }
+
+            .sectorq:nth-child(6n+1) {
+                stroke-dashoffset: 0;
+                stroke: dodgerblue;
+            }
+
+            .sectorq:nth-child(6n+2) {
+                stroke-dashoffset: 60;
+                stroke: salmon;
+            }
+
+            .sectorq:nth-child(6n+3) {
+                stroke-dashoffset: 120;
+                stroke: grey;
+            }
+
+            .sectorq:nth-child(6n+4) {
+                stroke-dashoffset: 180;
+                stroke: pink;
+            }
+
+            .sectorq:nth-child(6n+5) {
+                stroke-dashoffset: 240;
+                stroke: tan;
+            }
+
+            .sectorq:nth-child(6n+6) {
+                stroke-dashoffset: 300;
+                stroke: olive;
+            }
+
+        .spn1, .spn2 {
+            fill: transparent;
+            stroke-width: 8;
+            xstroke-dasharray: 60 300;
+            stroke-dasharray: 30 150;
+            animation: cirqu 6s infinite linear;
+            -webkit-animation: cirqu 6s infinite linear;
+        }
+
+        .spn2 {
+            stroke-width: 6;
+        }
+
+        .spn1:nth-child(6n+1),
+        .bodyqu:nth-child(6n+1) {
+            stroke: #F2385A;
+            animation-delay: -1s;
+            -webkit-animation-delay: -1s;
+        }
+
+        .spn1:nth-child(6n+2),
+        .bodyqu:nth-child(6n+2) {
+            stroke: #F5A503;
+            animation-delay: -2s;
+            -webkit-animation-delay: -2s;
+        }
+
+        .spn1:nth-child(6n+3),
+        .bodyqu:nth-child(6n+3) {
+            stroke: #E9F1DF;
+            animation-delay: -3s;
+            -webkit-animation-delay: -3s;
+        }
+
+        .spn1:nth-child(6n+4),
+        .bodyqu:nth-child(6n+4) {
+            stroke: #56D9CD;
+            animation-delay: -4s;
+            -webkit-animation-delay: -4s;
+        }
+
+        .spn1:nth-child(6n+5),
+        .bodyqu:nth-child(6n+5) {
+            stroke: #3AA1BF;
+            animation-delay: -5s;
+            -webkit-animation-delay: -5s;
+        }
+
+        .spn1:nth-child(6n+6),
+        .bodyqu:nth-child(6n+6) {
+            stroke: green;
+            animation-delay: -6s;
+            -webkit-animation-delay: -6s;
+        }
+        /*offs=stroks#*(stroke+gap)*/
+        @-webkit-keyframes cirqu {
+            100% {
+                stroke-dashoffset: -180;
+            }
+        }
+
+        @keyframes cirqu {
+            100% {
+                stroke-dashoffset: -180;
+            }
+        }
+        /*offs=stroks#*(stroke+gap)*/
+        @-webkit-keyframes cirqu2 {
+            100% {
+                stroke-dashoffset: -240;
+            }
+        }
+
+        @keyframes cirqu2 {
+            100% {
+                stroke-dashoffset: -240;
+            }
+        }
+
+
+        .resp-sharing-button__link,
+        .resp-sharing-button__icon {
+            display: inline-block
+        }
+
+        .resp-sharing-button__link {
+            text-decoration: none;
+            color: #fff;
+            margin: 0.5em
+        }
+
+        .resp-sharing-button {
+            border-radius: 5px;
+            transition: 25ms ease-out;
+            padding: 0.5em 0.75em;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+        }
+
+        .resp-sharing-button__icon svg {
+            width: 1em;
+            height: 1em;
+            margin-right: 0.4em;
+            vertical-align: top
+        }
+
+        .resp-sharing-button--small svg {
+            margin: 0;
+            vertical-align: middle
+        }
+
+        /* Non solid icons get a stroke */
+        .resp-sharing-button__icon {
+            stroke: #fff;
+            fill: none
+        }
+
+        /* Solid icons get a fill */
+        .resp-sharing-button__icon--solid,
+        .resp-sharing-button__icon--solidcircle {
+            fill: #fff;
+            stroke: none
+        }
+
+        .resp-sharing-button--twitter {
+            background-color: #55acee
+        }
+
+            .resp-sharing-button--twitter:hover {
+                background-color: #2795e9
+            }
+
+        .resp-sharing-button--pinterest {
+            background-color: #bd081c
+        }
+
+            .resp-sharing-button--pinterest:hover {
+                background-color: #8c0615
+            }
+
+        .resp-sharing-button--facebook {
+            background-color: #3b5998
+        }
+
+            .resp-sharing-button--facebook:hover {
+                background-color: #2d4373
+            }
+
+        .resp-sharing-button--tumblr {
+            background-color: #35465C
+        }
+
+            .resp-sharing-button--tumblr:hover {
+                background-color: #222d3c
+            }
+
+        .resp-sharing-button--reddit {
+            background-color: #5f99cf
+        }
+
+            .resp-sharing-button--reddit:hover {
+                background-color: #3a80c1
+            }
+
+        .resp-sharing-button--google {
+            background-color: #dd4b39
+        }
+
+            .resp-sharing-button--google:hover {
+                background-color: #c23321
+            }
+
+        .resp-sharing-button--linkedin {
+            background-color: #0077b5
+        }
+
+            .resp-sharing-button--linkedin:hover {
+                background-color: #046293
+            }
+
+        .resp-sharing-button--email {
+            background-color: #777
+        }
+
+            .resp-sharing-button--email:hover {
+                background-color: #5e5e5e
+            }
+
+        .resp-sharing-button--xing {
+            background-color: #1a7576
+        }
+
+            .resp-sharing-button--xing:hover {
+                background-color: #114c4c
+            }
+
+        .resp-sharing-button--whatsapp {
+            background-color: #25D366
+        }
+
+            .resp-sharing-button--whatsapp:hover {
+                background-color: #1da851
+            }
+
+        .resp-sharing-button--hackernews {
+            background-color: #FF6600
+        }
+
+            .resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {
+                background-color: #FB6200
+            }
+
+        .resp-sharing-button--vk {
+            background-color: #507299
+        }
+
+            .resp-sharing-button--vk:hover {
+                background-color: #43648c
+            }
+
+        .resp-sharing-button--facebook {
+            background-color: #3b5998;
+            border-color: #3b5998;
+        }
+
+            .resp-sharing-button--facebook:hover,
+            .resp-sharing-button--facebook:active {
+                background-color: #2d4373;
+                border-color: #2d4373;
+            }
+
+        .resp-sharing-button--twitter {
+            background-color: #55acee;
+            border-color: #55acee;
+        }
+
+            .resp-sharing-button--twitter:hover,
+            .resp-sharing-button--twitter:active {
+                background-color: #2795e9;
+                border-color: #2795e9;
+            }
+
+        .resp-sharing-button--tumblr {
+            background-color: #35465C;
+            border-color: #35465C;
+        }
+
+            .resp-sharing-button--tumblr:hover,
+            .resp-sharing-button--tumblr:active {
+                background-color: #222d3c;
+                border-color: #222d3c;
+            }
+
+        .resp-sharing-button--email {
+            background-color: #777777;
+            border-color: #777777;
+        }
+
+            .resp-sharing-button--email:hover,
+            .resp-sharing-button--email:active {
+                background-color: #5e5e5e;
+                border-color: #5e5e5e;
+            }
+
+        .resp-sharing-button--pinterest {
+            background-color: #bd081c;
+            border-color: #bd081c;
+        }
+
+            .resp-sharing-button--pinterest:hover,
+            .resp-sharing-button--pinterest:active {
+                background-color: #8c0615;
+                border-color: #8c0615;
+            }
+    </style>
 </body>
 </html>
