@@ -39,39 +39,68 @@
          //https://www.affiliatefix.com/threads/help-bemob-and-adcombo-conversion-tracking.162016/
     -->
     <style>
-        form {
+        .vp-svg {
+            position: absolute;
+            width: 100%;
+            background-image: url(svg2.svg);
+            background-size: 100%;
+            padding-top: 100%;
+        }
+
+        .vp-svg1 {
+            background-position: 0% 0%;
+        }
+
+        .vp-svg2 {
+            background-position: 0% 50%;
+        }
+
+        .vp-svg3 {
+            background-position: 0% 100%;
+        }
+
+        .bg-svg1 {
+            position: absolute;
+            width: 100%;
+            background-image: url(sprite.svg);
+            background-color: pink;
+            background-size: 206.25%;
+            padding-top: 100%;
+        }
+
+
+        .icon-home {
+            background-position: 0% 0%;
+        }
+
+        .icon-home2 {
+            background-position: 100% 0%;
+        }
+
+        .icon-home3 {
+            background-position: 0% 100%;
+        }
+
+        .icon-office {
+            background-position: 100% 100%;
+        }
+
+
+
+
+
+        xform {
             xborder: 1px solid bisque;
             width: 50%;
             min-width: 220px;
             margin: 0 auto;
         }
 
-            form div {
-                text-align: center;
-            }
-
-        input[type="text"] {
-            box-sizing: border-box; /*https://stackoverflow.com/questions/11125727/why-is-input-wider-than-i-told-it-to-be*/
-            padding-left: 10px
+        form div {
+            text-align: center;
         }
 
-
-
-        select, input[type="text"] {
-            font-family: inherit;
-            font-size: inherit;
-            display: block;
-            color: var(--color-1-2);
-            width: 96%;
-            margin: 10px auto;
-            height: 50px;
-            border: none;
-            border: 2px solid var(--color-1-2);
-            background: none;
-            xouline: none;
-        }
-
-        form button {
+        xform button {
             width: 96%;
             height: 50px;
             border-radius: 25px;
@@ -86,18 +115,7 @@
             margin: 20px
         }
 
-        ::placeholder {
-            color: var(--color-1-2);
-            opacity: 1; /* Firefox */
-        }
 
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: var(--color-1-2);
-        }
-
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: var(--color-1-2);
-        }
 
         .Aold_price {
             text-decoration: line-through
@@ -125,9 +143,11 @@
 
                       }*/
         :root { /*:root is synonim of html tag*/
-            --color-1-0: #808080;
+            --color-1-0: hsl(235,60%,13%); /*#051a41;*/
+            --xcolor-1-0: #808080;
             --color-1-1: #423c15;
             --color-1-2: bisque;
+            --color-1-2: red;
         }
 
         #color1 {
@@ -178,6 +198,7 @@
         }
 
         nav {
+            xclear: both;
             xbackground: hotpink;
         }
 
@@ -194,6 +215,7 @@
             nav #textsize {
                 display: inline-block;
                 vertical-align: top;
+                xvertical-align: bottom;
             }
 
                 nav #txtszrw,
@@ -354,7 +376,7 @@
         }
 
             button > span:first-child,
-            .link1, legend, .paging input {
+            .link1, .legend1, .paging input {
                 position: absolute;
                 width: 0;
                 height: 0;
@@ -380,7 +402,7 @@
 
         /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /*HOVER or ACTIVE*/
-
+        .submitvisitor button:hover,
         .paging input:checked + .label1,
         .bg4inv,
         button:hover,
@@ -400,6 +422,7 @@
         /*FOCUS */
 
         /**:focus,*/
+        .submitvisitor button:focus,
         select:focus, input[type="text"]:focus,
         form button:focus,
         .paging input:focus + .label1,
@@ -470,6 +493,7 @@
         /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
         /*WHEEL*/
         #spinw {
+            xbackground: red;
             clear: both;
             width: 50%;
             padding-bottom: 50%;
@@ -482,6 +506,7 @@
         }
 
         #spinw .svg1 {
+            background: blue;
             position: absolute;
             width: 92%;
             top: 4%;
@@ -712,7 +737,7 @@
 
 
         .section {
-            background-color: var(--color-1-1);
+            background-color: var(--color-1-0);
             color: var(--color-1-2);
             width: 72%; /*golden ratio*/
             margin: auto;
@@ -1654,199 +1679,6 @@
         }
 
 
-        .resp-sharing-button__link,
-        .resp-sharing-button__icon {
-            display: inline-block
-        }
-
-        .resp-sharing-button__link {
-            text-decoration: none;
-            color: #fff;
-            margin: 0.5em
-        }
-
-        .resp-sharing-button {
-            border-radius: 5px;
-            transition: 25ms ease-out;
-            padding: 0.5em 0.75em;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif
-        }
-
-        .resp-sharing-button__icon svg {
-            width: 1em;
-            height: 1em;
-            margin-right: 0.4em;
-            vertical-align: top
-        }
-
-        .resp-sharing-button--small svg {
-            margin: 0;
-            vertical-align: middle
-        }
-
-        /* Non solid icons get a stroke */
-        .resp-sharing-button__icon {
-            stroke: #fff;
-            fill: none
-        }
-
-        /* Solid icons get a fill */
-        .resp-sharing-button__icon--solid,
-        .resp-sharing-button__icon--solidcircle {
-            fill: #fff;
-            stroke: none
-        }
-
-        .resp-sharing-button--twitter {
-            background-color: #55acee
-        }
-
-            .resp-sharing-button--twitter:hover {
-                background-color: #2795e9
-            }
-
-        .resp-sharing-button--pinterest {
-            background-color: #bd081c
-        }
-
-            .resp-sharing-button--pinterest:hover {
-                background-color: #8c0615
-            }
-
-        .resp-sharing-button--facebook {
-            background-color: #3b5998
-        }
-
-            .resp-sharing-button--facebook:hover {
-                background-color: #2d4373
-            }
-
-        .resp-sharing-button--tumblr {
-            background-color: #35465C
-        }
-
-            .resp-sharing-button--tumblr:hover {
-                background-color: #222d3c
-            }
-
-        .resp-sharing-button--reddit {
-            background-color: #5f99cf
-        }
-
-            .resp-sharing-button--reddit:hover {
-                background-color: #3a80c1
-            }
-
-        .resp-sharing-button--google {
-            background-color: #dd4b39
-        }
-
-            .resp-sharing-button--google:hover {
-                background-color: #c23321
-            }
-
-        .resp-sharing-button--linkedin {
-            background-color: #0077b5
-        }
-
-            .resp-sharing-button--linkedin:hover {
-                background-color: #046293
-            }
-
-        .resp-sharing-button--email {
-            background-color: #777
-        }
-
-            .resp-sharing-button--email:hover {
-                background-color: #5e5e5e
-            }
-
-        .resp-sharing-button--xing {
-            background-color: #1a7576
-        }
-
-            .resp-sharing-button--xing:hover {
-                background-color: #114c4c
-            }
-
-        .resp-sharing-button--whatsapp {
-            background-color: #25D366
-        }
-
-            .resp-sharing-button--whatsapp:hover {
-                background-color: #1da851
-            }
-
-        .resp-sharing-button--hackernews {
-            background-color: #FF6600
-        }
-
-            .resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {
-                background-color: #FB6200
-            }
-
-        .resp-sharing-button--vk {
-            background-color: #507299
-        }
-
-            .resp-sharing-button--vk:hover {
-                background-color: #43648c
-            }
-
-        .resp-sharing-button--facebook {
-            background-color: #3b5998;
-            border-color: #3b5998;
-        }
-
-            .resp-sharing-button--facebook:hover,
-            .resp-sharing-button--facebook:active {
-                background-color: #2d4373;
-                border-color: #2d4373;
-            }
-
-        .resp-sharing-button--twitter {
-            background-color: #55acee;
-            border-color: #55acee;
-        }
-
-            .resp-sharing-button--twitter:hover,
-            .resp-sharing-button--twitter:active {
-                background-color: #2795e9;
-                border-color: #2795e9;
-            }
-
-        .resp-sharing-button--tumblr {
-            background-color: #35465C;
-            border-color: #35465C;
-        }
-
-            .resp-sharing-button--tumblr:hover,
-            .resp-sharing-button--tumblr:active {
-                background-color: #222d3c;
-                border-color: #222d3c;
-            }
-
-        .resp-sharing-button--email {
-            background-color: #777777;
-            border-color: #777777;
-        }
-
-            .resp-sharing-button--email:hover,
-            .resp-sharing-button--email:active {
-                background-color: #5e5e5e;
-                border-color: #5e5e5e;
-            }
-
-        .resp-sharing-button--pinterest {
-            background-color: #bd081c;
-            border-color: #bd081c;
-        }
-
-            .resp-sharing-button--pinterest:hover,
-            .resp-sharing-button--pinterest:active {
-                background-color: #8c0615;
-                border-color: #8c0615;
-            }
 
         #colors {
         }
@@ -1914,11 +1746,48 @@
 
                 #colors button:nth-child(12), #colors button:nth-child(12):hover {
                     background: #bbbbbb;
+                    background: DeepPink;
+                    background: Pink;
                     color: black;
                 }
 
         #debuginfo, #apiqs {
             display: none
+        }
+
+        @media only screen and (max-width: 1300px) {
+            #spinw {
+                width: 60%;
+                padding-bottom: 60%;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            #spinw {
+                width: 70%;
+                padding-bottom: 70%;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            #spinw {
+                width: 80%;
+                padding-bottom: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            #spinw {
+                width: 90%;
+                padding-bottom: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #spinw {
+                width: 96%;
+                padding-bottom: 96%;
+            }
         }
     </style>
 
@@ -1953,6 +1822,8 @@
 </head>
 <body style="overflow-x:auto;  overflow-y:scroll">
     <!--"overflow:scroll" scroll bar is always visible even on f5-->
+
+
     <span id="debuginfo"></span>
     <span id="apiqs"></span>
     <!--
@@ -1960,7 +1831,13 @@
         -->
 
     <div class="section">
-        <header>
+
+
+
+
+
+
+        <header xstyle="display:none">
             <!--LOGO
             <svg class="xbg1 pad-t2prc" id="logo" width="100%" height="100%" viewBox="0 0 2000 160"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1979,17 +1856,17 @@
                             visibility: visible;
                         }
                         /*
-                        @media only screen and (max-width: 850px) {
-                            #svgtitle {
-                                visibility: hidden;
+                            @media only screen and (max-width: 850px) {
+                                #svgtitle {
+                                    visibility: hidden;
+                                }
+
+                                #svgtitles {
+                                    visibility: visible;
+                                }
                             }
 
-                            #svgtitles {
-                                visibility: visible;
-                            }
-                        }
-
-                        */
+                            */
                     </style>
                 </defs>
                 <text id="stext" dy="" x="50%" y="50%" font-size="192" font-weight="900" letter-spacing="0"
@@ -2006,6 +1883,234 @@
                     <use xlink:href="#stext" class="bodyqus"></use>
                 </g>
             </svg>
+
+
+
+
+            <style>
+
+
+
+
+                .submitvisitor {
+                    xdisplay: none;
+                    xbox-sizing: border-box; /*https://stackoverflow.com/questions/11125727/why-is-input-wider-than-i-told-it-to-be*/
+                    xborder: 2px solid var(--color-1-2);
+                    padding: 0.3rem 0;
+                    max-width: 24rem;
+                    width: 96%;
+                    margin: 0.3rem auto;
+                    background-color: salmon;
+                    text-align: center;
+                    xdisplay: inline-block;
+                    xposition: relative;
+                    xdisplay: block;
+                }
+
+                    .submitvisitor .svgicons {
+                        vertical-align: middle;
+                        display: inline-block;
+                        background: pink;
+                        width: 5rem;
+                        height: 2rem;
+                    }
+
+                    .submitvisitor .textinput {
+                        vertical-align: middle;
+                        display: inline-block;
+                        background: pink;
+                        max-width: 18rem;
+                        height: 2rem;
+                    }
+
+                    .submitvisitor input, .submitvisitor button {
+                        border: 2px solid var(--color-1-2);
+                        padding: 0 0 0 0.5rem;
+                        vertical-align: middle;
+                        display: inline-block;
+                        font-family: inherit;
+                        font-size: inherit;
+                        color: var(--color-1-2);
+                        xborder: none;
+                        background: transparent;
+                        xbackground-color: none;
+                        background: olive;
+                        xtext-align: center;
+                        xmax-width: 17.8rem;
+                        xmax-width: 18rem;
+                        xwidth: 96%;
+                        height: 2rem;
+                        /*border-box-padding and borders width are included in element width*/
+                        box-sizing: border-box; /*https://stackoverflow.com/questions/11125727/why-is-input-wider-than-i-told-it-to-be*/
+                        xmargin: 0 0 0 2.2rem;
+                        xz-index: 10;
+                        xdisplay: inline;
+                        xposition: absolute;
+                        xpadding-left: calc(1em + 10px + 8px); /* icon width + icon padding-left + desired separation*/
+                        xdisplay: none;
+                    }
+
+
+                    .submitvisitor button {
+                        margin: 0;
+                        padding: 0;
+                        xborder: 2px solid var(--color-1-2);
+                    }
+
+                    .submitvisitor svg {
+                        vertical-align: middle;
+                        xdisplay: inline-block;
+                        background-color: blue;
+                        width: 2rem;
+                        height: 2rem;
+                        fill: currentColor;
+                        color: var(--color-1-2);
+                        xstroke-width: 0;
+                        xmargin: 1rem;
+                        xstroke: currentColor;
+                        xolor: currentColor;
+                        xz-index: 11;
+                        xfloat: left;
+                        xmax-width: 40px;
+                        xmargin: 0 auto;
+                        xposition: absolute;
+                        xleft: -90px;
+                        xtop: 50%;
+                        xleft: 10px;
+                        xtransform: translateY(-50%);
+                        xdisplay: inline;
+                        xdisplay: none;
+                    }
+
+                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: red;
+                }
+
+                ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: var(--color-1-2);
+                    opacity: 0.9; /* Firefox */
+                }
+
+                :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: var(--color-1-2);
+                    opacity: 0.9; /* Firefox */
+                }
+
+                ::-ms-input-placeholder { /* Microsoft Edge */
+                    color: var(--color-1-2);
+                    opacity: 0.9; /* Firefox */
+                }
+
+                ::-moz-placeholder { /* Firefox 19+ */
+                    color: var(--color-1-2);
+                    opacity: 1; /* Firefox */
+                }
+
+                :-moz-placeholder { /* Firefox 18- */
+                    color: var(--color-1-2);
+                    opacity: 1; /* Firefox */
+                }
+
+                .spritesheet {
+                    display: none;
+                }
+
+                .wr12, .wr13 {
+                    position: relative;
+                    max-width: 24rem;
+                    width: 100%;
+                    margin: 0.2rem auto;
+                    height: 2.4rem;
+                    xbackground: green;
+                    xborder-bottom: 2px solid var(--color-1-2);
+                    box-sizing: border-box;
+                }
+
+                    .wr13 svg,.wr12 svg, .wr12 .svg2 {
+                        position: absolute;
+                        width: 2rem;
+                        height: 2rem;
+                        xvertical-align: middle;
+                        top: 0.2rem;
+                        left: 0.2rem;
+                        fill: currentColor;
+                        color: var(--color-1-2);
+                    }
+
+                    .wr12 input, .wr12 .input2 {
+                        font-size: 1.2rem;
+                        xfont-size: inherit;
+                        position: absolute;
+                        height: 2.4rem;
+                        padding: 0 0 0 2.4rem;
+                        border: none;
+                        width: 100%;
+                        box-sizing: border-box;
+                        background: none;
+                        color: var(--color-1-2);
+                        border-bottom: 2px solid var(--color-1-2);
+                    }
+
+                    .wr12 .svg2 {
+                        left: 2.2rem;
+                    }
+
+                    .wr12 .input2 {
+                        padding: 0 0 0 4.4rem;
+                    }
+
+                .wr13 {
+                    height: 3rem;
+                }
+
+                    .wr13 button {
+                        position: relative;
+                        font-size: 1.5rem;
+                        height: 3rem;
+                        xposition: absolute;
+                        width: 100%;
+                        box-sizing: border-box;
+                        xtop: 1.2rem;
+                        margin: 0rem 0;
+                    }
+
+                        .wr13 button svg {
+                            xposition: absolute;
+                            top: 0.4rem;
+                            left: 1rem;
+                        }
+
+                        .wr13 button:hover svg {
+                            xz-index: 99;
+                            xleft: 4.4rem;
+                            fill: var(--color-1-1);
+                            color: var(--color-1-1);
+                        }
+            </style>
+            <div style="clear:both;xdisplay:none">
+                <div class="wr12">
+                    <input type="text" placeholder="Name">
+                    <svg><use xlink:href="#i2"></use></svg>
+                </div>
+                <div class="wr12">
+                    <input type="text" class="input2" value="+66" placeholder="Phone">
+                    <svg><use xlink:href="#i1"></use></svg>
+                    <svg class="svg2"><use xlink:href="#i3"></use></svg>
+                </div>
+
+                <div class="wr13">
+                    <button xid='apiformbutton' xstyle="border-radius:20px" type='button' XXXclass="xbtn js_submit button__text btn-order">
+                        <svg xclass="svgbutt"><use xlink:href="#i4"></use></svg>
+                       
+                        สั่งซื้อ
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
 
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <!--NAV & FONT-->
@@ -2079,12 +2184,23 @@
                 คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้<!-- คุณจะใช้จ่าย-->
             </h1>
         </header>
+
+
+
+
+
+
+
+
+
+
+
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <div id="scroll"></div>
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--pages-->
-        <div class="posts" id="posts">
+        <div class="posts" id="posts" xstyle="display:none">
             <!--ovf triggers mar-t1em in pagination-->
             <div class="post" id="post1">
                 <div class="postpart">Part 1 TESTIMONIALS</div>
@@ -2614,9 +2730,9 @@
         </div><!--END PAGES-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--PAGINATION-->
-        <div class="paging xbg5">
-            <fieldset>
-                <legend>select part of article</legend>
+        <div class="paging xbg5" xstyle="display:none">
+            <xfieldset>
+                <xlegend class="legend1">select part of article</xlegend>
                 <!--1-autocomplete="off" is needed for firefox
                 2-class of each input mus be equal to corresp postpart id
                 -->
@@ -2657,7 +2773,7 @@
                                 </li>
                             </ul>
                 -->
-            </fieldset>
+            </xfieldset>
         </div> <!--END PAGINATION-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--  <button id="scrolltop" type="button">
@@ -2670,7 +2786,7 @@
         -->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--OFFER-->
-        <div class="xbg1 xt-a-c xmar-lr2prc clrbth  ovf-a">
+        <div class="xbg1 xt-a-c xmar-lr2prc clrbth  ovf-a" xstyle="display:none">
             <!--ovf-a is neededto fill full background for text-->
 
             <h1 class="textshadow">VVVISAGEMAX ผลิตภัณฑ์อาจขาดตลาด</h1>
@@ -2703,118 +2819,26 @@
         </div> <!--END OFFER-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--WHEEL-->
+        <!--ICONS
         <div id="spinw">
-            <!--css outside of svg does not work
+            <div class="bg-svg1 icon-home"> </div>
+        </div>
+        <div id="spinw">
+            <div class="bg-svg1 icon-home2"> </div>
+        </div>
+        <div id="spinw">
+            <div class="bg-svg1 icon-home3"> </div>
+        </div>
+        <div id="spinw">
+            <div class="bg-svg1 icon-office"></div>
+        </div>
 
-            <svg class="svg1 bg1" width="100%" height="100%" viewBox="0 0 229.183118052 229.183118052" xreserveAspectRatio="xMinYMin meet"
-                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        -->
 
-                -->
-
-            <svg class="svg1 xbg1" viewBox="0 0 230 230">
-                <defs>
-                    <style type="text/css">
-                        text {
-                            xxfont-size: 30px;
-                            xxtransform-origin: 114.591559026px 114.591559026px; /*on ios does not work*/
-                        }
-
-                        @media only screen and (max-width: 1300px) {
-                            #spinw {
-                                width: 60%;
-                                padding-bottom: 60%;
-                            }
-                        }
-
-                        @media only screen and (max-width: 1100px) {
-                            #spinw {
-                                width: 70%;
-                                padding-bottom: 70%;
-                            }
-                        }
-
-                        @media only screen and (max-width: 900px) {
-                            #spinw {
-                                width: 80%;
-                                padding-bottom: 80%;
-                            }
-                        }
-
-                        @media only screen and (max-width: 700px) {
-                            #spinw {
-                                width: 90%;
-                                padding-bottom: 90%;
-                            }
-                        }
-
-                        @media only screen and (max-width: 500px) {
-                            #spinw {
-                                width: 96%;
-                                padding-bottom: 96%;
-                            }
-                        }
-                    </style>
-                </defs>
-
-                <!--
-                -->
-                <circle cx="115" cy="115" r="119.591559026"></circle>
-
-                <circle id="spinw2" cx="115" cy="115" r="114.591559026"> </circle>
-                <use xlink:href="#spinw2" class="spn1"></use>
-                <use xlink:href="#spinw2" class="spn1"></use>
-                <use xlink:href="#spinw2" class="spn1"></use>
-                <use xlink:href="#spinw2" class="spn1"></use>
-                <use xlink:href="#spinw2" class="spn1"></use>
-                <use xlink:href="#spinw2" class="spn1"></use>
-
-
-                <g class="divtoberotated1">
-                    <!--
-                    -->
-                    <circle id="spinw1" cx="115" cy="115" r="57.2957795131" stroke-width="104.591559026"></circle>
-                    <use xlink:href="#spinw1" class="sectorq"></use>
-                    <use xlink:href="#spinw1" class="sectorq"></use>
-                    <use xlink:href="#spinw1" class="sectorq"></use>
-                    <use xlink:href="#spinw1" class="sectorq"></use>
-                    <use xlink:href="#spinw1" class="sectorq"></use>
-                    <use xlink:href="#spinw1" class="sectorq"></use>
-
-                    <!---->
-
-                    <g class="crsr-d">
-                        <text x="15" y="115" fill="red" font-size="30" dominant-baseline="central"
-                              transform="rotate(30 114.591559026 114.591559026)">50%</text>
-                        <text x="15" y="115" fill="black" font-size="30" dominant-baseline="central"
-                              transform="rotate(90 114.591559026 114.591559026)">0%</text>
-                        <text x="15" y="115" fill="green" font-size="30" dominant-baseline="central"
-                              transform="rotate(150 114.591559026 114.591559026)">10%</text>
-                        <text x="15" y="115" fill="white" font-size="30" dominant-baseline="central"
-                              transform="rotate(210 114.591559026 114.591559026)">20%</text>
-                        <text x="15" y="115" fill="green" font-size="30" dominant-baseline="central"
-                              transform="rotate(270 114.591559026 114.591559026)">30%</text>
-                        <text x="15" y="115" fill="white" font-size="30" dominant-baseline="central"
-                              transform="rotate(330 114.591559026 114.591559026)">40%</text>
-                    </g>
-                </g>
-
-                <polyline points="110,85 115,70 120,85 110,85" style="stroke:#006600;fill:#33cc33;"></polyline>
-                <circle cx="115" cy="115" r="32.6478897565" fill="black"> </circle>
-
-                <circle id="spinw3" cx="115" cy="115" r="28.6478897565"></circle>
-                <use xlink:href="#spinw3" class="spn1 spn2"></use>
-                <use xlink:href="#spinw3" class="spn1 spn2"></use>
-                <use xlink:href="#spinw3" class="spn1 spn2"></use>
-                <use xlink:href="#spinw3" class="spn1 spn2"></use>
-                <use xlink:href="#spinw3" class="spn1 spn2"></use>
-                <use xlink:href="#spinw3" class="spn1 spn2"></use>
-
-                <!--                <circle  cx="114.591559026" cy="114.591559026" r="26.6478897565" fill="#999"> </circle>
-                -->
-                <circle cx="115" cy="115" r="24.6478897565" fill="#fff"> </circle>
-                <text x="50%" y="50%" fill="green" font-size="18" text-anchor="middle" dominant-baseline="central">SPIN</text>
-
-            </svg>
+        <div id="spinw" xstyle="display:none">
+            <div class="vp-svg vp-svg1"></div>
+            <div class="vp-svg vp-svg2 divtoberotated1"></div>
+            <div class="vp-svg vp-svg3"></div>
 
             <button type="button" id="coffeeButton">
                 <span> click here for the chance to win up to 50% discount</span>
@@ -2830,39 +2854,68 @@
                     <div id="wheelpopOK" class="pop-up-button">OK</div>
                 </div>
             </div>
-        </div>
+        </div><!-- spinw  -->
         <!-- END WHEEL-->
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-        <!--IFRAME
-        <div style="width:50%;margin:0 auto;background:green;xoverflow:hidden;">
-            <iframe src="http://ecoslim.trendynow.xyz/forms/?target=-7EBNQCgQAAAO0wQNGSAAFAQEREQoRCQoRDUIRDRIAAX9hZGNvbWJvATE&btn_text_color=ffffff&btn_shdw=990000&bg_opacity=0.5&form_width=80&name_width=80&phone_width=80&btn_font=19&btn_font_pos=12px&btn_edit_text=Placeorder&name_pos=margin&phone_pos=margin&button_pos=margin"
-                    frameborder="1" style="width:500px;height:250px;margin:0 auto;display:block;opacity:1"></iframe>
-        </div>
-            -->
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <div id="scrolltoform"></div>
-        <div id="apiform" style="display:none">
-            <div style="text-align:center;width:100%;margin:0 auto">To get your discount please enter your name and phone number and</div>
+        <div id="apiform" style=" display:none; xwidth:400px;xmargin:0 auto; text-align:center">
+
+
+
+
+
+
+
             <!-- AD_Form -->
-            <form id="order_form" xaction="order.php" xxxclass="xmain_form" autocomplete="off" xxxmethod="POST">
+            <!-- <form method="POST" action="order.html" id="order_form" xxxclass="xmain_form" autocomplete="off">
+            -->
+            <fieldset>
+                <legend>please type your name and phone number</legend>
                 <select class="xinp" id="country_code_selector" name="country">
                     <option value="TH"> ประเทศไทย </option>
                 </select>
-                <input id="apiname" title="&#9787;นางนาฏยา วนิชธัญญาทรัพย์" class="xinp" name="name" placeholder="&#9787;ชื่อ" type="text">
-                <input id="apiphone" title="&#9743;&#9742;+66XXXXXXXX" class="xinp only_number" name="phone" placeholder="&#9743;&#9742;หมายเลขโทรศัพท์" type="text">
+                <div class="submitvisitor">
+                    <svg><use xlink:href="#i2"></use></svg>
+                    <input type="text" id="apiname" title="นางนาฏยา วนิชธัญญาทรัพย์" name="name" placeholder="ชื่อ">
+                </div>
+                <div class="submitvisitor">
+                    <svg><use xlink:href="#i1"></use></svg>
+                    <input type="text" id="apiphone" title="+66XXXXXXXX" name="phone" placeholder="หมายเลขโทรศัพท์">
+                </div>
+
+
+
                 <div class="Aold_price"><span> ราคาเก่า: </span><span> 1980 ฿ </span></div>
                 <div class="xnew_price"><span> ราคาใหม่: </span><span> 990 ฿ </span></div>
-                <button id='apiformbutton' type='button' XXXclass="xbtn js_submit button__text btn-order"> &#9755;&#10148;สั่งซื้อ&#9754; </button>
-                <!--if there's only one <button> inside the <form>, that button will be treated as the "submit" button.
-                So you should be in the habit of expressly specifying which button is the submit button.
-                instead of button input type="submit" usually used
+                <!--
+                 <input type="button" value="Submit" id='apiformbutton'>
                 -->
+                <div class="submitvisitor">
+                    <svg><use xlink:href="#i1"></use></svg>
+                    <input type="button" value=" สั่งซื้อ" id='apiformbutton'>
 
-            </form>
+                </div>
+                <button id='apiformbutton' style="border-radius:20px" type='button' XXXclass="xbtn js_submit button__text btn-order">
+                    สั่งซื้อ
+
+                </button>
+
+
+
+            </fieldset>
+            <!--    if there's only one <button> inside the <form>, that button will be treated as the "submit" button.
+            So you should be in the habit of expressly specifying which button is the submit button.
+            instead of button input type="submit" usually used
+            -->
+            <!--     </form>
+            -->
         </div>
         <!-- AD_Form-end -->
         <!--SUCESS-->
         <!--  -->
-        <div id="apisuccess" style="text-align:center;display:none">
+        <div id="apisuccess" style="text-align:center;xdisplay:none">
             <h2>ขอแสดงความยินดีด้วย! เราได้รับการสั่งซื้อของคุณเรียบร้อยแล้ว!</h2>
             <p>ชั้นตอนต่อไป อีกสักครู่พนักงานโทรศัพท์ของเราจะติดต่อคุณเพื่อยืนยันการสั่งซื้อ  กรุณาตรวจสอบให้แน่ใจว่า โทรศัพท์ของคุณเปิดอยู่</p>
             <h3>กรุณาตรวจสอบความถูกต้องของข้อมูลที่คุณกรอกไว้’</h3>
@@ -2876,7 +2929,7 @@
         <!--END SUCESS-->
         <!--FAIL-->
         <!---->
-        <div id="apierror" style="text-align:center;display:none">
+        <div id="apierror" style="text-align:center;xdisplay:none">
             <h2>Unknown error! Please try again!</h2>
             <p><span>← Try again</span></p>
         </div>
@@ -2884,7 +2937,7 @@
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <!-- LIST-->
         <h1> 6 สินค้ายอดนิยมของคนไทยตอนนี้</h1>
-        <div class="masonry  mar-lr2prc clrbth">
+        <div class="masonry  mar-lr2prc clrbth" xstyle="display:none">
             <div class="item">
                 1
                 <div class="sprite0 sprite-1  lz q75"> </div>
@@ -2966,18 +3019,7 @@
      </script>
     -->
     <div id="log"></div><div id="log2"></div>
-    <head1>
-        <!--        <script src="js/jquery-1.12.4.min.js" type="text/javascript">
-            </script>
-            <script src="js/9_10_11_12.min.js" type="text/javascript">
-            </script>
-            <script src="js/common.js">
-            </script>
-            <script src="js/js.cookie.min.js" type="text/javascript">
-            </script>
-        -->
 
-    </head1>
     <script>
         // pass url parameters https://html-online.com/articles/get-url-parameters-javascript/
         //https://stackoverflow.com/questions/2405355/how-to-pass-a-parameter-to-a-javascript-through-a-url-and-display-it-on-a-page
@@ -3101,6 +3143,8 @@
 
         window.addEventListener("load", doconload, false);
         function doconload() {
+            logo.focus();//for firefox;
+
             //LAZY
             var x = document.getElementsByClassName("q75");
             var i;
@@ -3115,17 +3159,22 @@
 
             //https://afarkas.github.io/lazysizes/index.html
 
-            function filldate() {
-                //DATE // Array of day names
-                var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
-                // Array of month Names
-                var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
-                var now = new Date();
-                // document.write(dayNames[now.getDay()] + ", " + // monthNames[now.getMonth()] + " " + // now.getDate() + ", " + now.getFullYear());
-                document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
-            }
 
-            filldate();
+            //Cross site XMLHttpRequests
+            //https://www.moxio.com/blog/12/how-to-make-a-cross-domain-request-in-javascript-using-cors
+
+            //device info https://medium.com/creative-technology-concepts-code/detect-device-browser-and-version-using-javascript-8b511906745
+
+            //TOO SLOW!!! https://blog.bitsrc.io/javascript-device-detection-bf75eb782fdf
+
+            //device info src="https://frubil.info/"
+            //how to really defer javascript -defer attr is not a help
+            //very helpful function
+            /* */
+
+
+
+
             /*TOP MENU*/
             /*            window.document.getElementById("topnavicon").addEventListener("click", function () {
                             //when top menu icon  is clicked
@@ -3147,7 +3196,6 @@
             //document.querySelector('#logo').focus();//for firefox;
             //logo.setAttribute('tabindex', '0');
 
-            logo.focus();//for firefox;
 
 
             function ftoggle() {
@@ -3173,6 +3221,73 @@
 
             var colorchange = document.querySelector('#colorchange');
             colorchange.addEventListener('click', ftoggle);
+
+            //COLOR
+            (function () {
+                function color() {
+                    //console.log(this);
+                    var htmlroot = document.documentElement;
+                    var c = window.getComputedStyle(this, null).getPropertyValue('color');
+                    var bc = window.getComputedStyle(this, null).getPropertyValue('background-color');
+                    htmlroot.style.setProperty('--color-1-1', bc);
+                    htmlroot.style.setProperty('--color-1-2', c);
+                }
+                var arr = document.getElementsByClassName('clrbtn');
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i].onclick = color;
+                }
+            })();
+
+
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            function loadJavaScript(src, integr, crossor, bool) {
+                var script = document.createElement("script");
+                //                script.src = "http://js.frubil.info/";
+                if (bool) { script.src = src }
+                else { script.text = src }
+
+                script.src = src;
+                script.integrity = integr;
+                script.crossOrigin = crossor;
+                script.type = "text/javascript";
+
+                script.onload = function () {
+                    console.log(src, '  successful');
+                    if (src.includes('sentry')) {
+                        Sentry.init({ dsn: 'https://1747a379a80b4e19b9ad26818f021522@sentry.io/1866289' });
+                        //TEST    Sentry.captureException(new Error("Something broke"));
+                    }
+                    //var info = "client.class=" + FRUBIL.client.class + ",client.name=" + FRUBIL.client.name +
+                    //  ",device.brand=" + FRUBIL.device.brand + ",device.marketname=" + FRUBIL.device.marketname;
+                }
+
+                script.onerror = function (e) {
+                    console.error(src, ' load error');
+                }
+                // document.getElementsByTagName("head")[0].appendChild(script);
+                document.head.appendChild(script);
+            }
+            //loadJavaScript("https://frubil.info/", '','',true);
+            loadJavaScript("https://browser.sentry-cdn.com/5.10.2/bundle.min.js",
+                "sha384-ssBfXiBvlVC7bdA/VX03S88B5MwXQWdnpJRbUYFPgswlOBwETwTp6F3SMUNpo9M9",
+                "anonymous", true);
+
+
+
+
+
+            function filldate() {
+                //DATE // Array of day names
+                var dayNames = new Array("วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์");
+                // Array of month Names
+                var monthNames = new Array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
+                var now = new Date();
+                // document.write(dayNames[now.getDay()] + ", " + // monthNames[now.getMonth()] + " " + // now.getDate() + ", " + now.getFullYear());
+                document.getElementById('date1').innerHTML += dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+            }
+
+            filldate();
 
             //WHEEL
             (function () {
@@ -3236,25 +3351,6 @@
                 })
                 */
                 //3 JS LINK for popup OK button
-                //get url params https://davidwalsh.name/query-string-javascript
-                let urlParamsObject = new URLSearchParams(window.location.search);
-                let urlParamsString = urlParamsObject.toString();
-                let mgid_campaign_id = urlParamsObject.get('campaign_id');
-                let mgid_widget_id = urlParamsObject.get('widget_id');
-                let mgid_teaser_id = urlParamsObject.get('teaser_id');
-                let mgid_click_id = urlParamsObject.get('click_id');
-                let mgid_click_price = urlParamsObject.get('click_price');
-                let mgid_geo = urlParamsObject.get('geo');//if camp has multiple geos
-                let mgid_geo_region = urlParamsObject.get('geo_region');//if camp has multiple geos
-
-                //  var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
-                //  clk = "https://smartly.tk";
-                var div = "~";
-                var subacc = "?subacc=" + mgid_click_id + div + mgid_click_price;
-                var subacc2 = "&subacc2=" + mgid_campaign_id + div + mgid_widget_id;
-                var subacc3 = "&subacc3=" + mgid_teaser_id + div + mgid_geo;
-                var subacc4 = "&subacc4=" + mgid_geo_region;
-
                 //   clk = clk + subacc + subacc2 + subacc3 + subacc4;
                 //test https://nowtrendy.tk?campaign_id=111&widget_id=222&teaser_id=333&click_id=444&click_price=555&geo=666
 
@@ -3287,41 +3383,27 @@
 
 
 
-            //COLOR
-            (function () {
-                function color() {
-                    //console.log(this);
-                    var htmlroot = document.documentElement;
-                    var c = window.getComputedStyle(this, null).getPropertyValue('color');
-                    var bc = window.getComputedStyle(this, null).getPropertyValue('background-color');
-                    htmlroot.style.setProperty('--color-1-1', bc);
-                    htmlroot.style.setProperty('--color-1-2', c);
-                }
-                var arr = document.getElementsByClassName('clrbtn');
-                for (var i = 0; i < arr.length; i++) {
-                    arr[i].onclick = color;
-                }
-            })();
-
-            //disable up/down  keys standard behav  for radio buttons and form
-            var ChangeUpDownKeys = function (e) {
-                var eltype = document.activeElement.type;
-                if (eltype == "radio" || eltype == "select-one" || eltype == "text") {
-                    if (e.keyCode == 38) {//arrow up
-                        e.preventDefault();
-                        window.scrollBy(0, -100);
-                    }
-                    else if (e.keyCode == 40) {//arrow down
-                        e.preventDefault();
-                        window.scrollBy(0, 100);
-                    }
-                }
-            }
-            document.onkeydown = ChangeUpDownKeys;
 
             //*******************************
             //pagination
             (function () {
+                //disable up/down  keys standard behav  for radio buttons and form
+                var ChangeUpDownKeys = function (e) {
+                    var eltype = document.activeElement.type;
+                    if (eltype == "radio" || eltype == "select-one" || eltype == "text") {
+                        if (e.keyCode == 38) {//arrow up
+                            e.preventDefault();
+                            window.scrollBy(0, -100);
+                        }
+                        else if (e.keyCode == 40) {//arrow down
+                            e.preventDefault();
+                            window.scrollBy(0, 100);
+                        }
+                    }
+                }
+                document.onkeydown = ChangeUpDownKeys;
+
+
                 function loopPosts(aciveradio) {
                     var posts = document.getElementsByClassName('post');
                     //console.log("posts ", posts.length);
@@ -3343,342 +3425,671 @@
             })();//pagination
 
             ////////////////////////////////////////////
-            //Cross site XMLHttpRequests
-            //https://www.moxio.com/blog/12/how-to-make-a-cross-domain-request-in-javascript-using-cors
-
-            //device info https://medium.com/creative-technology-concepts-code/detect-device-browser-and-version-using-javascript-8b511906745
-
-            //TOO SLOW!!! https://blog.bitsrc.io/javascript-device-detection-bf75eb782fdf
-
-            //device info src="https://frubil.info/"
-            //how to really defer javascript -defer attr is not a help
-            //very helpful function
-            /* */
-            function loadJavaScript(src, bool) {
-                var script = document.createElement("script");
-                //                script.src = "http://js.frubil.info/";
-                if (bool) { script.src = src }
-                else { script.text = src }
-
-                script.src = src;
-                script.type = "text/javascript";
-                script.onload = function () {
-                    console.log(src, '  successful');
-                    //var info = "client.class=" + FRUBIL.client.class + ",client.name=" + FRUBIL.client.name +
-                    //  ",device.brand=" + FRUBIL.device.brand + ",device.marketname=" + FRUBIL.device.marketname;
-
-                    //document.getElementById('log2').innerHTML = "log2=" + info;
-                    if (src == "js/jquery-1.12.4.min9_10_11_12.js") {
-                        loadJavaScript("js/common.js");
-                        //   loadJavaScript("js/9_10_11_12.min.js");
-
-
-
-                    }
-                }
-                script.onerror = function (e) {
-                    console.error(src, ' load error');
-                }
-                // document.getElementsByTagName("head")[0].appendChild(script);
-                document.head.appendChild(script);
-            }
             /////////////////////////////
-            let apiqsstring = document.getElementById("apiqs").innerText
-            console.log( apiqsstring )
-            console.log("referrer= ", document.referrer)
-          //  history.replaceState({}, null, "/index.html");
+            /////////////////////////////
+            /////////////////////////////
+            (function () {
+                //SAVE QUERY STRING TO strage - in casecookie not available
 
-/*
-            //QUERY STRING
-            let urlParamsObject = new URLSearchParams(window.location.search);
-            function getparam(name) {
-                const val = urlParamsObject.get(name)//return null if not exist
-                //                return val ? val : 'none'
-                return val
-            }
+                /*
+                let urlParamsObject = new URLSearchParams(window.location.search);
+                let urlParamsString = urlParamsObject.toString();
 
-            const qs_campaign_id = getparam('campaign_id');
-            const qs_widget_id = getparam('widget_id');
-            const qs_teaser_id = getparam('teaser_id');
-            const qs_click_id = getparam('click_id');
-            const qs_click_price = getparam('click_price');
-            const qs_geo = getparam('geo');//if camp has multiple geos
-            const qs_geo_region = getparam('geo_region');//if camp has multiple geos
-            const qs_refer = getparam('ref');
-            const qs_ip = getparam('ip');
-            const qs_country = getparam('country');
+                function qs(name) {
+                let val = urlParamsObject.get(name)//return null if not exist
+                //if (!val) val = 'none'
+                // setcookie(name, val)
+                if (val) {
+                apiqs += '&' + name + '=' + val
+                //    return val
+                }
+                }
+                //get url params https://davidwalsh.name/query-string-javascript
+                let mgid_campaign_id = urlParamsObject.get('campaign_id');
+                let mgid_widget_id = urlParamsObject.get('widget_id');
+                let mgid_teaser_id = urlParamsObject.get('teaser_id');
+                let mgid_click_id = urlParamsObject.get('click_id');
+                let mgid_click_price = urlParamsObject.get('click_price');
+                let mgid_geo = urlParamsObject.get('geo');//if camp has multiple geos
+                let mgid_geo_region = urlParamsObject.get('geo_region');//if camp has multiple geos
+
+                //  var clk = "https://" + "go." + "take-" + "action." + "net/" + "click/1";
+                //  clk = "https://smartly.tk";
+                */
 
 
-            // history.pushState({ foo: 'fake' }, 'Fake Url', 'https://trendygoods.tk/');
 
-            //END QUERY STRING
 
-            //READ COOKIE
 
-            let cookieString = document.cookie
-            console.log('cookieString='+cookieString)
-            function getCookie(name) {
-                let result = null
-                //  let cookieString = window.cookie
-                if (cookieString) {
-                    let cookies = cookieString.split(';')
-                    cookies.forEach(cookie => {
-                        let cookieName = cookie.split('=')[0].trim()
-                        if (cookieName == name) {
-                            let cookieVal = cookie.split('=')[1]
-                            result = cookieVal
+                //let url = document.location.href
+                //let qs = url.includes('?') ? url.split('?')[1] : ''
+                //console.log('qs=' + qs)
+
+
+
+                function getcookie() {
+                    let cook = ''
+                    document.cookie.split(';').forEach(cookie => {
+                        if (cookie.includes('apiqs')) {
+                            cook = cookie.replace('apiqs=', '').replace(/&&&/g, '=').trim()
                         }
                     })
+                    return cook
                 }
-                return result
-                // return result ? result : 'none'
-            }
 
-            const c_campaign_id = getCookie('campaign_id');
-            const c_widget_id = getCookie('widget_id');
-            const c_teaser_id = getCookie('teaser_id');
-            const c_click_id = getCookie('click_id');
-            const c_click_price = getCookie('click_price');
-            const c_geo = getCookie('geo');//if camp has multiple geos
-            const c_geo_region = getCookie('geo_region');//if camp has multiple geos
-            const c_refer = getCookie('ref');//if camp has multiple geos
-            const c_ip = getCookie('ip');
-            const c_country = getCookie('country');
+                //let refer = ''//the same on first load and reload
+                let qs = window.location.search.substring(1)
+                console.log('qs=' + qs)
 
-            //END READ COOKIE
+                if ((qs.includes('campaign_id') &&
+                    qs.includes('widget_id') &&
+                    qs.includes('teaser_id') &&
+                    qs.includes('click_id') &&
+                    qs.includes('click_price'))) {//directly from mgid
 
-            ////////////////////////////////
-            //READ APIQS SPAN
-            function getspan(name) {
-                let result = null
-                //       let apiqsstring = document.getElementById("apiqs").innerText
-                //                if (apiqsstring) {
-                //                  let apiqsarr = apiqsstring.split('&')
-                document.getElementById("apiqs").innerText.split('&').forEach(el => {
-                    if (el.split('=')[0].trim() == name) result = el.split('=')[1]
-                })
-                //              }
-                return result
-                // return result ? result : 'none'
-            }
-            const s_campaign_id = getspan('campaign_id');
-            const s_widget_id = getspan('widget_id');
-            const s_teaser_id = getspan('teaser_id');
-            const s_click_id = getspan('click_id');
-            const s_click_price = getspan('click_price');
-            const s_geo = getspan('geo');//if camp has multiple geos
-            const s_geo_region = getspan('geo_region');//if camp has multiple geos
-            const s_refer = getspan('ref');//if camp has multiple geos
-            const s_ip = getspan('ip');
-            const s_country = getspan('country');
+                    //refer = document.referrer//the same on first load and reload
+                    qs += '&referrer=' + document.referrer.replace('https://', '')
+                    console.log("qs+ref= ", qs)
 
+                    // window.location.replace--to simulate an http redirect(thus not generating a history item
+                    history.replaceState({}, null, "/");//index.html
+                    sessionStorage.setItem('qs', qs)
+                    //sessionStorage.setItem('refer', document.referrer)
 
-            //END APIQS SPAN
-            console.log('campaign_id=' + qs_campaign_id + ',' + c_campaign_id + ',' + s_campaign_id)
-            console.log('widget_id=' + qs_widget_id + ',' + c_widget_id + ',' + s_widget_id)
-            console.log('teaser_id=' + qs_teaser_id + ',' + c_teaser_id + ',' + s_teaser_id)
-            console.log('click_id=' + qs_click_id + ',' + c_click_id + ',' + s_click_id)
-            console.log('click_price=' + qs_click_price + ',' + c_click_price + ',' + s_click_price)
-            console.log('geo=' + qs_geo + ',' + c_geo + ',' + s_geo)
-            console.log('geo_region=' + qs_geo_region + ',' + c_geo_region + ',' + s_geo_region)
-            console.log('refer=' + qs_refer + ',' + c_refer + ',' + s_refer + ',' + document.referrer)
-            console.log('ip=' + qs_ip + ',' + c_ip + ',' + s_ip)
-            console.log('country=' + qs_country + ',' + c_country + ',' + s_country)
+                    //NOW available 2 WAYS TO GET params for api
+                    //1- query params and 2-cookie
 
-
-
-
-
-            function getres(qs, cook, span) {
-                return qs ? qs : (cook ? cook : (span ? span : null))
-            }
-
-            const campaign_id = getres(qs_campaign_id, c_campaign_id, s_campaign_id)
-            const widget_id = getres(qs_widget_id, c_widget_id, s_widget_id)
-            const teaser_id = getres(qs_teaser_id, c_teaser_id, s_teaser_id)
-            const click_id = getres(qs_click_id, c_click_id, s_click_id)
-            const click_price = getres(qs_click_price, c_click_price, s_click_price)
-            const geo = getres(qs_geo, c_geo, s_geo)
-            const geo_region = getres(qs_geo_region, c_geo_region, s_geo_region)
-            const refer = getres(qs_refer, c_refer, s_refer)
-
-
-
-
-
-
-            let misspar =
-                campaign_id &&
-                    widget_id &&
-                    teaser_id &&
-                    click_id &&
-                    click_price &&
-                    geo &&
-                    geo_region ? true : false;
-
-
-            //            console.log('apiqs=', document.getElementById("apiqs").innerText)
-
-
-            //   loadJavaScript("https://frubil.info/", true);
-            //FORM BUTTON
-            document.getElementById('apiformbutton').onclick = function () {
-                document.getElementById('apierror').style.display = 'none'
-                document.getElementById('apisuccess').style.display = 'none'
-                fetchapi();
-            }
-
-            const
-                offer_id = '12049';
-            //    ,referrer = document.referrer;
-
-
-            const params =
-                "&name=" + document.getElementById("apiname").value +
-                "&phone=" + document.getElementById("apiphone").value +
-                "&offer_id=" + offer_id +
-                "&base_url=" + 'https://trendygoods.tk/' + offer_id + '/' +
-                "&price=990" + document.getElementById("apiqs").innerText;
-  */
-  
-           // console.log("paramsr= ", params)
-
-            //SEND ORDER
-            async function fetchapi() {
-
-                // fetch('https://test.cors.workers.dev/?' + 'z' + params
-                const fetchurl = 'https://cors.vlapar.workers.dev/?' + 'z' + params
-                //                return;
-                try {
-                    const resp = await fetch(
-                        fetchurl,
-                        {
-                            headers: {
-                                'content-type': 'application/json;charset=UTF-8',
-                            }
-                        })
-                    const myJson = await response.json();
-                    if (resp.ok == 'ok') {
-                        if (myJson.code == 'ok') {
-                            document.getElementById('apisuccess').style.display = 'block'
-                        } else {
-                            document.getElementById('apierror').style.display = 'block'
-                        }
+                }
+                else {
+                    // RELOAD happened-no url query- read cookie or storage
+                    //no mgid params in qs--read cookie
+                    qs = getcookie()//with refer
+                    console.log('qs(reload-cook)=' + qs)
+                    if (qs == '') {
+                        qs = sessionStorage.getItem('qs')
+                        console.log('qs(reload-sess)=' + qs)
                     }
-                } catch (error) {
-                    document.getElementById('apierror').style.display = 'block'
-                    console.log('catch Error message:', error.statusText)
-                    console.error(error);
+                }//reload
+                let query = {}
+                //  let pairs = (qs[0] === '?' ? qs.substr(1) : qs).split('&');
+                if (qs) qs.split('&').forEach(pair => {
+                    let split = pair.split('=')
+                    //     query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+                    //     console.log(query[decodeURIComponent(pair[0])] + '===' + decodeURIComponent(pair[1] || ''))
+                    //  console.log(split[0] + '==' + split[1])
+                    query[split[0]] = split[1]
+                    //  console.log(pair[0]+'=='+pair[1] )
+                })
+
+                let refer = query['referrer']
+
+                // refer = query['refer']
+                //  country = query['country']
+                //  ip = query['ip']
+                console.log('query=' + JSON.stringify(query))
+                let subacc = "&subacc=" + query['campaign_id'] + '||' + query['widget_id']
+                let subacc2 = "&subacc2=" + query['teaser_id'] + '||' + query['click_price']
+                let subacc3 = "&subacc3=" + query['click_id']
+                let subacc4 = "&subacc4="
+
+
+
+
+                //SPAN ONLLY FOR DEBUG BECAUSE SPAN GO FROM BROWSER CACHE
+                // let apiqsstring = document.getElementById("apiqs").innerText
+                //  console.log('apiqsstring(SPANS FOR DEBUG ONLY, DONT USE IN PRODUCTION)=', apiqsstring)
+
+
+
+
+                //FORM BUTTON
+                /**/
+
+                document.getElementById('apiformbutton').onclick = function () {
+                    document.getElementById('apierror').style.display = 'none'
+                    document.getElementById('apisuccess').style.display = 'none'
+                    try {
+                        fetchapi();
+                    } catch (err) {
+                        Sentry.captureException(err);
+                    }
+
+
+
                 }
-            }
+                // console.log("paramsr= ", params)
+
+                //SEND ORDER
+                async function fetchapi() {
+
+                    const baseurl = window.location.hostname + window.location.pathname
+                    const offer_id = '12049'
+                    const price = '990'
+                    //    ,referrer = document.referrer;
+
+
+                    const params =
+                        "&name=" + document.getElementById("apiname").value +
+                        "&phone=" + document.getElementById("apiphone").value +
+                        "&offer_id=" + offer_id +
+                        "&base_url=" + baseurl +
+                        "&referrer=" + refer +
+                        // 'https://trendygoods.tk/' + offer_id + '/' +
+                        "&price=" + price +
+                        subacc + subacc2 + subacc3 + subacc4
+                    console.log("params= ", params)
+                    /// those below will be get in worker
+                    //  +
+                    //  "&referrer=" + refer +
+                    //  "&country_code=" + country +
+                    //  "&ip=" + ip
+                    let fetchurl = window.location.origin + '/api/'
+                    fetchurl = window.location.origin + '/apitest/'
+
+
+                    // fetch('https://test.cors.workers.dev/?' + 'z' + params
+                    //window.location.href = '../'; //one level up
+                    //window.location.href = '/path'; //relative to domain
+                    //                return;
 
 
 
+
+                    var xhr = null
+                    if (window.XMLHttpRequest)
+                        xhr = new XMLHttpRequest();
+                    else if (window.ActiveXObject) // code for IE6, IE5
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    if (xhr != null) {
+                        xhr.open('GET', fetchurl);
+                        xhr.setRequestHeader('apiparams', params)
+                        xhr.setRequestHeader('formsendlog', //params +
+                            "&campaign_id=" + query['campaign_id'] +
+                            '&widget_id=' + query['widget_id'] +
+                            "&teaser_id=" + query['teaser_id'] +
+                            '&click_price=' + query['click_price'] +
+                            "&click_id=" + query['click_id'])
+                        //xhr.setRequestHeader('content-type', 'application/json;charset=UTF-8')
+
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState !== 4) return;//skip 1,2,3
+                            //4 means that request finished and response is ready
+                            //Sentry.captureException(new Error(query['click_id'] + '|' + xhr.status + ',' + xhr.statusText + ',' + xhr.responseText));
+
+                            if (xhr.status >= 200 && xhr.status < 300) {
+                                var obj = JSON.parse(xhr.responseText)
+                                //var rsph=xhr.getResponseHeader('apiret')
+                                var obj1 = JSON.parse(xhr.getResponseHeader('apiret'))
+                                console.log('success=', obj);
+                                console.log('success=', obj1);
+                                if (!fetchurl.includes('apitest')) {
+
+                                    if (obj.code == 'ok') {
+                                        document.getElementById('apisuccess').style.display = 'block'
+                                    } else {
+                                        document.getElementById('apierror').style.display = 'block'
+                                    }
+                                }
+
+                            } else {//if name is numbers than status=400
+                                console.log('error', xhr);
+                            }
+                        };
+                        xhr.send();
+                    }
+                    else {
+                        alert("Your browser does not support XMLHTTP.");
+                        Sentry.captureException(new Error("Your browser does not support XMLHTTP"));
+                    }
+                    /*
+                                             code: "ok"
+                    msg: "Order saved"
+                    order_id: 66112982
+                    is_double: false
+                    warning: Array(1)
+                    0: "Need to add terms & conditions."
+
+                   apiret: {"code":"error","error":"wrong_name"} 400
+
+
+                   */
+
+
+
+
+
+                    return
+
+
+
+
+                    try {
+                        const resp = await fetch(
+                            fetchurl,
+                            {
+                                headers: {
+                                    'apiparams': params,
+                                    'content-type': 'application/json;charset=UTF-8'
+                                }
+                            })
+                        console.log('111')
+
+                        //const myJson = await resp.json();
+                        //console.log('myJson=' + JSON.stringify(myJson))
+                        /*failed
+                        let allh = {}
+                        for (var pair of myJson.entries()) {
+                        allh['rqh_' + pair[0]] = pair[1];
+                        }
+                        console.log('allh=' +allh)
+                        */
+                        console.log("resp.ok=  " + resp.ok)
+
+                        if (resp.ok) {//200-299 response
+                            let resp_header_apiret = resp.headers.get('apiret');
+                            let obj = JSON.parse(resp_header_apiret)
+
+                            console.log("resp_header_apiret=  " + resp_header_apiret)
+                            console.log("resp_header_apiurl=  " + resp.headers.get('apiurl'))
+                            console.log("resp_header_apiret.code=  " + obj.code)
+                            if (obj.code == 'ok') {
+                                document.getElementById('apisuccess').style.display = 'block'
+                            } else {
+                                // console.log('myJson.code=' + myJson.code)
+                                document.getElementById('apierror').style.display = 'block'
+                            }/**/
+                        } else {//non 200-299 response
+                            throw Error(resp.statusText);
+
+                            // console.log('resp.ok=' + resp.ok)
+                        }
+                    } catch (error) {
+                        document.getElementById('apierror').style.display = 'block'
+                        console.log('catch Error message:', error.statusText)
+
+                        console.log('Looks like there was a problem: \n', error);
+                    }
+                }
+
+            })();//FORM BUTTON
+
+            //CONTRAST CHECKER https://dev.to/alvaromontoro/building-your-own-color-contrast-checker-4j7o
+            (function () {
+                // function from https://stackoverflow.com/a/5624139/3695983
+
+
+            })();//
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //https://codepen.io/natewiley/pen/NNgqVJ
+            (function () {
+                "use strict";
+
+                // Canvas things
+                var canvas = document.getElementById('canvas'),
+                    ctx = canvas.getContext('2d'),
+                    canvasWidth = canvas.width = window.innerWidth,
+                    canvasHeight = canvas.height = window.innerHeight;
+
+                // Mouse things
+                var mouseX,
+                    mouseY,
+                    pop = false,
+                    attract = false;
+
+                // Check if mouse event is over a bubble
+                var mouseOver = function (x, y, radius) {
+                    var diffX = mouseX - x;
+                    var diffY = mouseY - y;
+
+                    if (diffX < radius && diffX > (radius * -1) && diffY < radius && diffY > (radius * -1)) {
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                // Used for randomizing everything
+                var randomNum = function (min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                };
+
+                // Used for changing settings with a random number
+                var changeSettings = function (setting, min, max, prob) {
+                    var chance = randomNum(0, prob);
+
+                    if (setting < min || chance === 1) {
+                        return 1;
+                    } else if (setting > max || chance === 2) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                };
+
+                // Bubble config
+                var bubbles = [], // Holds all the bubbles as objects
+                    count = 0, // Bubble count
+                    maxCount = 10, // Max bubbles to render on start
+                    maxSize = 100,
+                    minSize = 5,
+                    minSpeed = 5,
+                    maxSpeed = 10,
+                    bgcolor = 'hsl(235,60%,13%)', // Canvas bg
+                    colors = [ // Color palette
+                        { color1: '#fa4c2b', color2: '#6aff6e' },
+                        { color1: '#ffff82', color2: '#ffce72' },
+                        { color1: '#fa4c2b', color2: '#0bfcff' }
+                    ];
+
+                // Bubble constructor
+                var Bubble = function (x, y, size) {
+                    this.id = count + 1;
+                    this.x = x || randomNum(0, canvasWidth);
+                    this.y = y || randomNum(0, canvasHeight);
+                    this.radius = size || randomNum(minSize, maxSize);
+                    this.color = colors[randomNum(0, colors.length - 1)];
+
+                    this.speed = randomNum(minSpeed, maxSpeed) / 10;
+                    this.speedBackup = this.speed;
+                    this.directionX = randomNum(-1, 1) || 1;
+                    this.directionY = randomNum(-1, 1) || 1;
+                    this.flicker = 0;
+
+                    count++; // Number bubbles
+                    bubbles[count] = this; // Add to main object
+                };
+
+                // When popping a bubble
+                Bubble.prototype.destroy = function () {
+                    // Generate number of smaller bubbles based on radius
+                    var popCount = this.radius / 10 > 0 ? this.radius / 10 : 2;
+
+                    // Generate smaller bubbles, size based on radius
+                    for (var i = 0; i < popCount; i++) {
+                        new Bubble(this.x, this.y, randomNum(this.radius / 4, this.radius / 2));
+                    }
+
+                    // Make popped bubble smaller and change color
+                    this.radius = randomNum(this.radius / 4, this.radius / 2);
+                    this.color = colors[randomNum(0, colors.length - 1)];
+                };
+
+                // Bubble drawing animation
+                Bubble.prototype.draw = function () {
+
+                    // Change direction randomly, default to same direction
+                    this.directionX = changeSettings(this.x, 0, canvasWidth, 500) || this.directionX;
+                    this.directionY = changeSettings(this.y, 0, canvasHeight, 500) || this.directionY;
+
+                    // Reset speed
+                    this.speed = this.speedBackup;
+
+                    // If mouse is held down & bubble is within 200px of mouse
+                    if (attract === true && mouseOver(this.x, this.y, 200)) {
+                        var moveTowardMouse = randomNum(0, 15); // Chance of being attracted by mouse
+                        if (moveTowardMouse === 5) {
+                            this.directionX = mouseX - this.x > 0 ? 1 : -1;
+                        } else if (moveTowardMouse === 1) {
+                            this.directionY = mouseY - this.y > 0 ? 1 : -1;
+                        }
+
+                        this.speed = 1.25; // Speed up
+                    }
+
+                    // Move bubbles
+                    this.x += this.speed * this.directionX;
+                    this.y += this.speed * this.directionY;
+
+                    // Change radius
+                    this.radius += changeSettings(this.radius, minSize, maxSize, 15);
+
+                    // Draw the bubbles
+                    ctx.save();
+                    ctx.globalCompositeOperation = 'color-dodge';
+                    ctx.beginPath();
+
+                    var gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+                    gradient.addColorStop(0, this.color.color1);
+                    gradient.addColorStop(0.5, this.color.color2);
+                    gradient.addColorStop(1, 'rgba(250,76,43,0)');
+
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+                    ctx.fillStyle = gradient;
+                    ctx.fill();
+                    ctx.closePath();
+                    ctx.restore();
+
+                    // Pop bubbles if mouse coords match
+                    if (pop === true && mouseOver(this.x, this.y, this.radius)) {
+                        bubbles[this.id].destroy();
+                        pop = false;
+                    }
+
+                };
+
+                // Create initial bubbles
+                for (var i = 0; i < maxCount; i++) {
+                    new Bubble();
+                }
+
+                // Call animation
+                var animate = function () {
+
+                    // Clear canvas and fill with background color
+                    ctx.fillStyle = bgcolor;
+                    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+                    // Draw bubbles
+                    for (var i = 1; i <= count; i++) {
+                        bubbles[i].draw();
+                    }
+
+                    requestAnimationFrame(animate);
+
+                };
+
+                requestAnimationFrame(animate);
+
+                // Click to add new bubble
+                canvas.addEventListener('click', function (e) {
+                    new Bubble(e.pageX, e.pageY);
+                });
+
+                // Sets mouse coords for popping bubbles
+                canvas.addEventListener('contextmenu', function (e) {
+                    mouseX = e.pageX;
+                    mouseY = e.pageY;
+                    pop = true;
+                    e.preventDefault();
+                });
+
+                // Attract bubbles
+                var startAttracting;
+
+                canvas.addEventListener('mousedown', function (e) {
+                    mouseX = e.pageX;
+                    mouseY = e.pageY;
+
+                    // Wait 0.5s before attracting bubbles
+                    clearTimeout(startAttracting);
+                    startAttracting = setTimeout(function () {
+                        return attract = true;
+                    }, 500);
+                });
+
+                // If mouse held down, update coords as the mouse moves
+                canvas.addEventListener('mousemove', function (e) {
+                    if (attract) {
+                        mouseX = e.pageX;
+                        mouseY = e.pageY;
+                    }
+                });
+
+                // Clear attract
+                canvas.addEventListener('mouseup', function (e) {
+                    clearTimeout(startAttracting);
+                    attract = false;
+                });
+
+                // Resize canvas with window resize
+                var resizing;
+
+                window.addEventListener('resize', function () {
+                    clearTimeout(resizing);
+                    resizing = setTimeout(function () {
+                        canvasWidth = canvas.width = window.innerWidth;
+                        canvasHeight = canvas.height = window.innerHeight;
+                    }, 500);
+                });
+
+            }());
         }//ONLOAD
-
-
-
-
-                                                    //https://confluence.adcombo.com/display/DOCS/Incoming+orders+API
-                                                    //https://medium.com/netscape/hacking-it-out-when-cors-wont-let-you-be-great-35f6206cc646
-                                                    //https://www.npmjs.com/package/cors
-
-                                                    //https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
-                                                    //https://github.com/Rob--W/cors-anywhere/#documentation
-
-                                                    //same origin policy is only implemented in browser - to - server communication.
-                                                    //Which means it doesn’t have to be enforced in server - to - server communication!
-                                                    //github is installed and running on  heroku.Use example
-                                                    //     https://cors-anywhere.herokuapp.com/https://api.adcombo.com/api/v2/order/create/
-                                                    //The one downside of the cors-anywhere proxy is that can often take a while to receive a response.
-                                                    //The latency is high enough to make your applications appear a bit sluggish.
-
-                                                    //cors jsonp
-                                                    /*  var qs = '?api_key=59b55ad7a1ce696911de5ded88519dc5';
-                                                      var apiurl = 'https://api.adcombo.com/api/v2/order/create/' + qs;
-                                                      function CB_FUNCTION_HERE() { }
-                                                      var jsonp = 'https://json2jsonp.com/?url=' + encodeURIComponent(apiurl) + '&callback=CB_FUNCTION_HERE';//WORKS!!!
-                                                      var proxy = 'https://cors-anywhere.herokuapp.com/' + (apiurl);//WORKS!!!
-
-                                                      var target = proxy;
-                                                      console.log(target);
-                                                      var request = new XMLHttpRequest();
-                                                      request.open('GET', target, true);
-                                                      request.onload = function () {
-                                                          var json = this.response;
-                                                          console.log(json);
-                                                          //var data = JSON.parse(this.response);
-                                                          if (request.status >= 200 && request.status < 400) {
-                                                              // data.forEach(movie => {
-                                                              console.log('success')
-                                                              // })
-                                                          } else {
-                                                              console.log('error')
-                                                          }
-                                                      }
-                                                      */
-                                                    //  request.send();
-                                                    /*result of jsonp
-                                                      CB_FUNCTION_HERE({
-                                                      "code": "error",
-                                                      "error": "Missing required param: referrer,country_code,phone,base_url,offer_id,price,ip"
-                                                    }
-                                                    )
-                                                    */
-
-                                                    ////////FAIL//////  IT WORKS!!! /////////////////////////////
-                                                    /*  let script = document.createElement('script');
-                                                      script.src = encodeURIComponent(apiurl) + '&callback=CB_FUNCTION_HERE';
-                                                      console.log(script.src)
-                                                      document.body.append(script);
-                                                      */
-                                                    //IP https://developers.cloudflare.com/workers/templates/snippets/country_code/
-                                                    //https://developers.cloudflare.com/workers/archive/recipes/country-blocking/
-                                                    //https://scotch.io/tutorials/serverless-cloudflare-workers-are-pretty-awesome
-                                                    //https://developers.cloudflare.com/workers/templates/snippets/cors_header_proxy/
-                                                    //https://github.com/cloudflare/worker-examples/blob/master/examples/security/deny-robot.js
-                                                    /*https://codingthesmartway.com/fetch-api-introduction-to-promised-based-data-fetching-in-plain-javascript/ */
-                                                    //https://jvns.ca/blog/2018/09/03/editing-my-blog-s-http-headers-with-cloudflare-workers/
-                                                    //https://blog.danielgray.me/cloudflare-workers-site-security/
-                                                    //https://jvns.ca/blog/2018/09/03/editing-my-blog-s-http-headers-with-cloudflare-workers/
-                                                    //https://developers.cloudflare.com/workers/tutorials/localize-a-website/
-                                                    //https://blog.danielgray.me/cloudflare-workers-site-security/
-                                                    //https://securityheaders.com/
-                                                    //https://report-uri.com/
-
-
-                                                    /*
-                                                    //otional
-                                                    const subacc, subacc2, subacc3, subacc4,
-                                                        utm_campaign, utm_content, utm_medium, utm_source, utm_term
-                                                    Response will be in JSON format. Response fields:
-                                                    code - ‘ok’ if success, ‘error’ otherwise
-                                                  msg - success message if code = ‘ok’
-                                                     error - error message if code = ‘error’
-                                                    order_id - order id in AdCombo
-                                                   is_double - True if order with the same phone exist. order_id in this case would be for previous order in our system
-                                                     */
-                                                    //to test use ms visstud code live server extention
-                                                    //it autoreload page when its code changes
-                                                    //use also jsonplaceholder  site to test rest api access
-                                                    //https://findwork.dev/blog/testing-cloudflare-workers/
-
-
-
-                                                    /*https://codingthesmartway.com/fetch-api-introduction-to-promised-based-data-fetching-in-plain-javascript/ */
-                                                    //fetch first par is url orrequest obj
-                                                    //fetch returns promise obj
-
-                                                    // https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name
-
-
-
-
     </script>
 
+    <canvas id="canvas" style="width:100% ;   box-sizing: border-box;  "></canvas>
 
-    <a target="_blank" href="https://trendygoods.tk/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg">
-    https://trendygoods.tk/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg
+    <a style="display:none" target="_blank" href="https://trendygoods.tk/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg">
+        click
     </a>
+
+
+
+    <svg class="spritesheet">
+        <symbol id="i1" xheight="384" viewBox="-64 0 384 384" xwidth="384">
+            <!--smartphone (8).svg-->
+            <title>i1</title>
+            <path d="m256 0h-256v384h256zm-88.265625 32-10.277344 24h-58.90625l-10.285156-24zm56.265625 320h-192v-320h21.449219l24 56h101.09375l24-56h21.457031zm0 0" />
+            <path d="m112 288h32v32h-32zm0 0" />
+        </symbol>
+        <symbol id="i2" xheight="384pt" viewBox="-16 0 384 384" xwidth="384pt">
+            <!--avatar.svg-->
+            <title>i2</title>
+            <path d="m176 0c-97.046875 0-176 78.953125-176 176 0 45.9375 18.054688 89.871094 49.863281 122.585938-11.679687 21.191406-17.863281 44.910156-17.863281 69.414062v16h32v-16c0-22.640625 6.703125-44.457031 19.382812-63.070312l.015626-.019532c20.90625-30.621094 55.523437-48.910156 92.601562-48.910156s71.695312 18.289062 92.609375 48.910156l.015625.019532c12.671875 18.613281 19.375 40.429687 19.375 63.070312v16h32v-16c0-24.503906-6.183594-48.222656-17.863281-69.414062 31.808593-32.714844 49.863281-76.648438 49.863281-122.585938 0-97.046875-78.953125-176-176-176zm-56 168c0-30.871094 25.121094-56 56-56s56 25.128906 56 56-25.121094 56-56 56-56-25.128906-56-56zm112.414062 67.496094c.609376-.503906 1.136719-1.089844 1.730469-1.617188 1.574219-1.390625 3.136719-2.789062 4.597657-4.285156.816406-.832031 1.5625-1.714844 2.347656-2.578125 1.230468-1.359375 2.453125-2.71875 3.597656-4.152344.785156-.976562 1.503906-1.992187 2.25-3 1.039062-1.414062 2.046875-2.839843 3.007812-4.320312.695313-1.078125 1.351563-2.183594 2-3.296875.878907-1.503906 1.710938-3.023438 2.503907-4.582032.582031-1.152343 1.152343-2.3125 1.6875-3.488281.726562-1.609375 1.390625-3.246093 2.023437-4.910156.457032-1.195313.910156-2.386719 1.320313-3.601563.582031-1.761718 1.070312-3.550781 1.542969-5.351562.3125-1.175781.648437-2.34375.914062-3.542969.4375-2.027343.75-4.089843 1.054688-6.167969.144531-1.027343.359374-2.035156.472656-3.074218.335937-3.128906.535156-6.304688.535156-9.527344 0-48.519531-39.480469-88-88-88s-88 39.480469-88 88c0 3.222656.199219 6.398438.535156 9.527344.113282 1.039062.320313 2.039062.472656 3.074218.296876 2.070313.609376 4.140626 1.054688 6.167969.265625 1.199219.601562 2.359375.914062 3.542969.472657 1.800781.960938 3.597656 1.542969 5.351562.410157 1.214844.863281 2.40625 1.320313 3.601563.632812 1.664063 1.296875 3.300781 2.023437 4.910156.535157 1.183594 1.097657 2.335938 1.6875 3.488281.792969 1.558594 1.625 3.078126 2.503907 4.582032.648437 1.113281 1.304687 2.21875 2 3.296875.953124 1.480469 1.96875 2.90625 3.007812 4.320312.746094 1.007813 1.464844 2.023438 2.25 3 1.144531 1.433594 2.367188 2.792969 3.597656 4.152344.785156.855469 1.53125 1.746094 2.347656 2.578125 1.46875 1.496094 3.03125 2.894531 4.597657 4.285156.59375.519532 1.128906 1.105469 1.730469 1.617188-19.296876 8.199218-36.714844 20.582031-50.914063 36.449218-23.480469-26.25-36.671875-60.386718-36.671875-95.945312 0-79.398438 64.601562-144 144-144s144 64.601562 144 144c0 35.558594-13.191406 69.695312-36.671875 95.9375-14.199219-15.859375-31.617187-28.242188-50.914063-36.441406zm0 0" />
+            <path d="m112 352h128v32h-128zm0 0" />
+        </symbol>
+        <symbol id="i3" xheight="384pt" viewBox="0 0 384 384" xwidth="384pt">
+            <!--telephone.svg-->
+            <path d="m336 0h-288c-26.472656 0-48 21.527344-48 48v112h32v176c0 26.472656 21.527344 48 48 48h224c26.472656 0 48-21.535156 48-48v-176h32v-112c0-26.472656-21.527344-48-48-48zm-16 336c0 8.824219-7.175781 16-16 16h-224c-8.824219 0-16-7.175781-16-16v-16h256zm-184-104c0-30.878906 25.121094-56 56-56s56 25.121094 56 56-25.121094 56-56 56-56-25.121094-56-56zm184 56h-60.167969c12.59375-15.222656 20.167969-34.742188 20.167969-56 0-48.519531-39.480469-88-88-88s-88 39.480469-88 88c0 21.257812 7.574219 40.777344 20.167969 56h-60.167969v-128h35.089844l24-64h137.820312l24 64h35.089844zm32-160h-44.910156l-24-64h-182.179688l-24 64h-44.910156v-80c0-8.824219 7.175781-16 16-16h288c8.824219 0 16 7.175781 16 16zm0 0" />
+        </symbol>
+        <symbol id="i4" xheight="384pt" viewBox="0 0 384 384" xwidth="384pt">
+            <!--send.svg-->
+
+            <rect x="-9.915" y="305.323" transform="matrix(0.7072 -0.707 0.707 0.7072 -208.8352 138.3712)" width="145.119" height="32" />
+            <rect x="122.623" y="277.727" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.9027 667.0181)" width="32" height="111.191" />
+            <rect x="34.633" y="189.707" transform="matrix(0.7071 0.7071 -0.7071 0.7071 188.2846 36.0448)" width="32" height="111.191" />
+            <path d="M383.937,0l-32.976,10.992l-0.32-0.328l-0.648,0.648L2.449,127.16l176.072,78.256l78.256,176.072L372.625,33.936
+				l0.64-0.64l-0.32-0.32L383.937,0z M90.833,131.432l208.568-69.528L187.097,174.216L90.833,131.432z M252.505,293.104
+				l-42.784-96.264L322.025,84.536L252.505,293.104z" />
+        </symbol>
+        <symbol id="i5" xheight="384pt" viewBox="0 0 368 368" xwidth="384pt">
+            <!--click.svg-->
+            <path style="fill:#CCE4FF;" d="M152,161.28c28.24-12.32,48-40.48,48-73.28c0-44.16-35.84-80-80-80S40,43.84,40,88
+	c0,32.8,19.76,60.96,48,73.28V88c0-17.68,14.32-32,32-32s32,14.32,32,32V161.28z" />
+            <path style="fill:#007AFF;" d="M56,224c-22.056,0-40,17.944-40,40v96c0,4.416,3.584,8,8,8s8-3.584,8-8v-96c0-13.232,10.768-24,24-24
+	s24,10.768,24,24v64c0,4.416,3.584,8,8,8s8-3.584,8-8V161.376v-0.008V88c0-13.232,10.768-24,24-24s24,10.768,24,24v73.368v0.008V200
+	v64c0,4.416,3.584,8,8,8s8-3.584,8-8v-64c0-13.232,10.768-24,24-24s24,10.768,24,24v64c0,4.416,3.576,8,8,8s8-3.584,8-8v-64
+	c0-13.232,10.768-24,24-24s24,10.768,24,24v64c0,4.416,3.576,8,8,8s8-3.584,8-8v-32c0-13.232,10.768-24,24-24s24,10.768,24,24v128
+	c0,4.416,3.576,8,8,8s8-3.584,8-8V232c0-22.056-17.944-40-40-40c-9.04,0-17.296,3.128-24,8.208V200c0-22.056-17.944-40-40-40
+	c-13.072,0-24.696,6.304-32,16.024c-7.304-9.72-18.928-16.024-32-16.024c-9,0-17.312,2.992-24,8.016v-1.712
+	c29.312-14.952,48-45.112,48-78.304c0-48.52-39.48-88-88-88S32,39.48,32,88c0,33.192,18.688,63.352,48,78.304V232.2
+	C73.296,227.128,65.04,224,56,224z M48,88c0-39.696,32.304-72,72-72s72,32.304,72,72c0,24.272-12.28,46.48-32,59.68V88
+	c0-22.056-17.944-40-40-40S80,65.944,80,88v59.68C60.28,134.48,48,112.272,48,88z" />
+        </symbol>
+
+    </svg>
+    <!--
+        Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    https://svgsprit.es/
+    -->
+    <!--
+    //https://confluence.adcombo.com/display/DOCS/Incoming+orders+API
+    //https://medium.com/netscape/hacking-it-out-when-cors-wont-let-you-be-great-35f6206cc646
+    //https://www.npmjs.com/package/cors
+    //https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
+    //https://github.com/Rob--W/cors-anywhere/#documentation
+    //same origin policy is only implemented in browser - to - server communication.
+    //Which means it doesn’t have to be enforced in server - to - server communication!
+    //github is installed and running on  heroku.Use example
+    //     https://cors-anywhere.herokuapp.com/https://api.adcombo.com/api/v2/order/create/
+    //The one downside of the cors-anywhere proxy is that can often take a while to receive a response.
+    //The latency is high enough to make your applications appear a bit sluggish.
+    //cors jsonp
+    /*  var qs = '?api_key=59b55ad7a1ce696911de5ded88519dc5';
+    var apiurl = 'https://api.adcombo.com/api/v2/order/create/' + qs;
+    function CB_FUNCTION_HERE() { }
+    var jsonp = 'https://json2jsonp.com/?url=' + encodeURIComponent(apiurl) + '&callback=CB_FUNCTION_HERE';//WORKS!!!
+    var proxy = 'https://cors-anywhere.herokuapp.com/' + (apiurl);//WORKS!!!
+    var target = proxy;
+    console.log(target);
+    var request = new XMLHttpRequest();
+    request.open('GET', target, true);
+    request.onload = function () {
+    var json = this.response;
+    console.log(json);
+    //var data = JSON.parse(this.response);
+    if (request.status >= 200 && request.status < 400) {
+    // data.forEach(movie => {
+    console.log('success')
+    // })
+    } else {
+    console.log('error')
+    }
+    }
+    */
+    //  request.send();
+    /*result of jsonp
+    CB_FUNCTION_HERE({
+    "code": "error",
+    "error": "Missing required param: referrer,country_code,phone,base_url,offer_id,price,ip"
+    }
+    )
+    */
+    ////////FAIL//////  IT WORKS!!! /////////////////////////////
+    /*  let script = document.createElement('script');
+    script.src = encodeURIComponent(apiurl) + '&callback=CB_FUNCTION_HERE';
+    console.log(script.src)
+    document.body.append(script);
+    */
+    //IP https://developers.cloudflare.com/workers/templates/snippets/country_code/
+    //https://developers.cloudflare.com/workers/archive/recipes/country-blocking/
+    //https://scotch.io/tutorials/serverless-cloudflare-workers-are-pretty-awesome
+    //https://developers.cloudflare.com/workers/templates/snippets/cors_header_proxy/
+    //https://github.com/cloudflare/worker-examples/blob/master/examples/security/deny-robot.js
+    /*https://codingthesmartway.com/fetch-api-introduction-to-promised-based-data-fetching-in-plain-javascript/ */
+    //https://jvns.ca/blog/2018/09/03/editing-my-blog-s-http-headers-with-cloudflare-workers/
+    //https://blog.danielgray.me/cloudflare-workers-site-security/
+    //https://jvns.ca/blog/2018/09/03/editing-my-blog-s-http-headers-with-cloudflare-workers/
+    //https://developers.cloudflare.com/workers/tutorials/localize-a-website/
+    //https://blog.danielgray.me/cloudflare-workers-site-security/
+    //https://securityheaders.com/
+    //https://report-uri.com/
+    /*
+    //otional
+    const subacc, subacc2, subacc3, subacc4,
+    utm_campaign, utm_content, utm_medium, utm_source, utm_term
+    Response will be in JSON format. Response fields:
+    code - ‘ok’ if success, ‘error’ otherwise
+    msg - success message if code = ‘ok’
+    error - error message if code = ‘error’
+    order_id - order id in AdCombo
+    is_double - True if order with the same phone exist. order_id in this case would be for previous order in our system
+    */
+    //to test use ms visstud code live server extention
+    //it autoreload page when its code changes
+    //use also jsonplaceholder  site to test rest api access
+    //https://findwork.dev/blog/testing-cloudflare-workers/
+    /*https://codingthesmartway.com/fetch-api-introduction-to-promised-based-data-fetching-in-plain-javascript/ */
+    //fetch first par is url orrequest obj
+    //fetch returns promise obj
+    // https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name
+
+
+    -->
+
+
+
 </body>
+
 </html>
