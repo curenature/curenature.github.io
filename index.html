@@ -147,7 +147,7 @@
             --xcolor-1-0: #808080;
             --color-1-1: #423c15;
             --color-1-2: bisque;
-            --color-1-2: red;
+            x--color-1-2: red;
         }
 
         #color1 {
@@ -2015,98 +2015,77 @@
                     display: none;
                 }
 
-                .wr12, .wr13 {
-                    position: relative;
+
+
+
+                /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+                .wr12 {
+                    text-align: center;
                     max-width: 24rem;
                     width: 100%;
-                    margin: 0.2rem auto;
-                    height: 2.4rem;
+                    margin: 0.5rem auto;
                     xbackground: green;
-                    xborder-bottom: 2px solid var(--color-1-2);
                     box-sizing: border-box;
                 }
 
-                    .wr13 svg,.wr12 svg, .wr12 .svg2 {
-                        position: absolute;
-                        width: 2rem;
-                        height: 2rem;
-                        xvertical-align: middle;
-                        top: 0.2rem;
-                        left: 0.2rem;
-                        fill: currentColor;
-                        color: var(--color-1-2);
-                    }
 
-                    .wr12 input, .wr12 .input2 {
+                    .wr12 input, .wr12 button {
+                        display: inline-block;
                         font-size: 1.2rem;
-                        xfont-size: inherit;
-                        position: absolute;
                         height: 2.4rem;
-                        padding: 0 0 0 2.4rem;
-                        border: none;
-                        width: 100%;
                         box-sizing: border-box;
                         background: none;
                         color: var(--color-1-2);
-                        border-bottom: 2px solid var(--color-1-2);
+                        border: 2px solid var(--color-1-2);
+                        text-align: center;
+                        width: 100%;
+                        margin: 0 auto
                     }
 
-                    .wr12 .svg2 {
-                        left: 2.2rem;
-                    }
-
-                    .wr12 .input2 {
-                        padding: 0 0 0 4.4rem;
-                    }
-
-                .wr13 {
-                    height: 3rem;
-                }
-
-                    .wr13 button {
-                        position: relative;
+                    .wr12 button {
                         font-size: 1.5rem;
                         height: 3rem;
-                        xposition: absolute;
-                        width: 100%;
-                        box-sizing: border-box;
-                        xtop: 1.2rem;
-                        margin: 0rem 0;
                     }
 
-                        .wr13 button svg {
-                            xposition: absolute;
-                            top: 0.4rem;
-                            left: 1rem;
-                        }
-
-                        .wr13 button:hover svg {
+                        .wr12 button:hover {
                             xz-index: 99;
                             xleft: 4.4rem;
                             fill: var(--color-1-1);
                             color: var(--color-1-1);
+                            background-color: var(--color-1-2);
                         }
+
+                    .wr12 svg {
+                        display: inline-block;
+                        width: 2rem;
+                        height: 2rem;
+                        fill: currentColor;
+                        color: var(--color-1-2);
+                    }
             </style>
             <div style="clear:both;xdisplay:none">
-                <div class="wr12">
-                    <input type="text" placeholder="Name">
-                    <svg><use xlink:href="#i2"></use></svg>
-                </div>
-                <div class="wr12">
-                    <input type="text" class="input2" value="+66" placeholder="Phone">
-                    <svg><use xlink:href="#i1"></use></svg>
-                    <svg class="svg2"><use xlink:href="#i3"></use></svg>
-                </div>
+                <fieldset style="margin:0;padding:0;">
+                    <legend style="text-align:center">type your data</legend>
+                    <div class="wr12">
+                        <svg><use xlink:href="#i2"></use></svg>
+                        <input type="text" placeholder="your name">
+                    </div>
+                    <div class="wr12">
+                        <svg><use xlink:href="#i1"></use></svg>
+                        <svg xclass="svg2"><use xlink:href="#i3"></use></svg>
+                        <input type="text" class="input2" value="+66" placeholder="Phone">
+                    </div>
 
-                <div class="wr13">
-                    <button xid='apiformbutton' xstyle="border-radius:20px" type='button' XXXclass="xbtn js_submit button__text btn-order">
+                    <div class="wr12 w13">
                         <svg xclass="svgbutt"><use xlink:href="#i4"></use></svg>
-                       
-                        สั่งซื้อ
-                    </button>
-                </div>
+                        <button xid='apiformbutton' xstyle="border-radius:20px" type='button' XXXclass="xbtn js_submit button__text btn-order">
+                            สั่งซื้อ
+                        </button>
+                    </div>
+                </fieldset>
             </div>
-
 
 
 
@@ -2203,7 +2182,7 @@
         <div class="posts" id="posts" xstyle="display:none">
             <!--ovf triggers mar-t1em in pagination-->
             <div class="post" id="post1">
-                <div class="postpart">Part 1 TESTIMONIALS</div>
+                <div class="postpart">Part 1 TESTI MONIALS</div>
 
                 <!--TESTIMONIALS-->
                 <!--TESTIMONIAL 1-->
@@ -2789,7 +2768,7 @@
         <div class="xbg1 xt-a-c xmar-lr2prc clrbth  ovf-a" xstyle="display:none">
             <!--ovf-a is neededto fill full background for text-->
 
-            <h1 class="textshadow">VVVISAGEMAX ผลิตภัณฑ์อาจขาดตลาด</h1>
+            <h1 class="textshadow">VVVISAGE MAX ผลิตภัณฑ์อาจขาดตลาด</h1>
             <div class="CaptImgL mar-l1prc qq prod">
                 <div class="sprite2 png1  lz q75"> </div>
             </div>
