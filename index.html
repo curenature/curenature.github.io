@@ -1887,209 +1887,6 @@
 
 
 
-            <style>
-
-
-
-
-                .submitvisitor {
-                    xdisplay: none;
-                    xbox-sizing: border-box; /*https://stackoverflow.com/questions/11125727/why-is-input-wider-than-i-told-it-to-be*/
-                    xborder: 2px solid var(--color-1-2);
-                    padding: 0.3rem 0;
-                    max-width: 24rem;
-                    width: 96%;
-                    margin: 0.3rem auto;
-                    background-color: salmon;
-                    text-align: center;
-                    xdisplay: inline-block;
-                    xposition: relative;
-                    xdisplay: block;
-                }
-
-                    .submitvisitor .svgicons {
-                        vertical-align: middle;
-                        display: inline-block;
-                        background: pink;
-                        width: 5rem;
-                        height: 2rem;
-                    }
-
-                    .submitvisitor .textinput {
-                        vertical-align: middle;
-                        display: inline-block;
-                        background: pink;
-                        max-width: 18rem;
-                        height: 2rem;
-                    }
-
-                    .submitvisitor input, .submitvisitor button {
-                        border: 2px solid var(--color-1-2);
-                        padding: 0 0 0 0.5rem;
-                        vertical-align: middle;
-                        display: inline-block;
-                        font-family: inherit;
-                        font-size: inherit;
-                        color: var(--color-1-2);
-                        xborder: none;
-                        background: transparent;
-                        xbackground-color: none;
-                        background: olive;
-                        xtext-align: center;
-                        xmax-width: 17.8rem;
-                        xmax-width: 18rem;
-                        xwidth: 96%;
-                        height: 2rem;
-                        /*border-box-padding and borders width are included in element width*/
-                        box-sizing: border-box; /*https://stackoverflow.com/questions/11125727/why-is-input-wider-than-i-told-it-to-be*/
-                        xmargin: 0 0 0 2.2rem;
-                        xz-index: 10;
-                        xdisplay: inline;
-                        xposition: absolute;
-                        xpadding-left: calc(1em + 10px + 8px); /* icon width + icon padding-left + desired separation*/
-                        xdisplay: none;
-                    }
-
-
-                    .submitvisitor button {
-                        margin: 0;
-                        padding: 0;
-                        xborder: 2px solid var(--color-1-2);
-                    }
-
-                    .submitvisitor svg {
-                        vertical-align: middle;
-                        xdisplay: inline-block;
-                        background-color: blue;
-                        width: 2rem;
-                        height: 2rem;
-                        fill: currentColor;
-                        color: var(--color-1-2);
-                        xstroke-width: 0;
-                        xmargin: 1rem;
-                        xstroke: currentColor;
-                        xolor: currentColor;
-                        xz-index: 11;
-                        xfloat: left;
-                        xmax-width: 40px;
-                        xmargin: 0 auto;
-                        xposition: absolute;
-                        xleft: -90px;
-                        xtop: 50%;
-                        xleft: 10px;
-                        xtransform: translateY(-50%);
-                        xdisplay: inline;
-                        xdisplay: none;
-                    }
-
-                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                    color: red;
-                }
-
-                ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                    color: var(--color-1-2);
-                    opacity: 0.9; /* Firefox */
-                }
-
-                :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                    color: var(--color-1-2);
-                    opacity: 0.9; /* Firefox */
-                }
-
-                ::-ms-input-placeholder { /* Microsoft Edge */
-                    color: var(--color-1-2);
-                    opacity: 0.9; /* Firefox */
-                }
-
-                ::-moz-placeholder { /* Firefox 19+ */
-                    color: var(--color-1-2);
-                    opacity: 1; /* Firefox */
-                }
-
-                :-moz-placeholder { /* Firefox 18- */
-                    color: var(--color-1-2);
-                    opacity: 1; /* Firefox */
-                }
-
-                .spritesheet {
-                    display: none;
-                }
-
-
-
-
-                /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-
-                .wr12 {
-                    text-align: center;
-                    max-width: 24rem;
-                    width: 100%;
-                    margin: 0.5rem auto;
-                    xbackground: green;
-                    box-sizing: border-box;
-                }
-
-
-                    .wr12 input, .wr12 button {
-                        display: inline-block;
-                        font-size: 1.2rem;
-                        height: 2.4rem;
-                        box-sizing: border-box;
-                        background: none;
-                        color: var(--color-1-2);
-                        border: 2px solid var(--color-1-2);
-                        text-align: center;
-                        width: 100%;
-                        margin: 0 auto
-                    }
-
-                    .wr12 button {
-                        font-size: 1.5rem;
-                        height: 3rem;
-                    }
-
-                        .wr12 button:hover {
-                            xz-index: 99;
-                            xleft: 4.4rem;
-                            fill: var(--color-1-1);
-                            color: var(--color-1-1);
-                            background-color: var(--color-1-2);
-                        }
-
-                    .wr12 svg {
-                        display: inline-block;
-                        width: 2rem;
-                        height: 2rem;
-                        fill: currentColor;
-                        color: var(--color-1-2);
-                    }
-            </style>
-            <div style="clear:both;xdisplay:none">
-                <fieldset style="margin:0;padding:0;">
-                    <legend style="text-align:center">type your data</legend>
-                    <div class="wr12">
-                        <svg><use xlink:href="#i2"></use></svg>
-                        <input type="text" placeholder="your name">
-                    </div>
-                    <div class="wr12">
-                        <svg><use xlink:href="#i1"></use></svg>
-                        <svg xclass="svg2"><use xlink:href="#i3"></use></svg>
-                        <input type="text" class="input2" value="+66" placeholder="Phone">
-                    </div>
-
-                    <div class="wr12 w13">
-                        <svg xclass="svgbutt"><use xlink:href="#i4"></use></svg>
-                        <button xid='apiformbutton' xstyle="border-radius:20px" type='button' XXXclass="xbtn js_submit button__text btn-order">
-                            สั่งซื้อ
-                        </button>
-                    </div>
-                </fieldset>
-            </div>
-
-
-
-
 
             <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
             <!--NAV & FONT-->
@@ -2839,57 +2636,128 @@
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <div id="scrolltoform"></div>
-        <div id="apiform" style=" display:none; xwidth:400px;xmargin:0 auto; text-align:center">
+
+        <style>
+            ::-webkit-input-placeholder {
+                color: var(--color-1-2);
+            }
+
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: var(--color-1-2);
+                opacity: 0.7; /* Firefox */
+            }
+
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: var(--color-1-2);
+                opacity: 0.7; /* Firefox */
+            }
+
+            ::-ms-input-placeholder { /* Microsoft Edge */
+                color: var(--color-1-2);
+                opacity: 0.7; /* Firefox */
+            }
+
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: var(--color-1-2);
+                opacity: 1; /* Firefox */
+            }
+
+            :-moz-placeholder { /* Firefox 18- */
+                color: var(--color-1-2);
+                opacity: 1; /* Firefox */
+            }
+
+            .spritesheet {
+                display: none;
+            }
+
+            /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+            .wr12 {
+                text-align: center;
+                max-width: 24rem;
+                width: 100%;
+                margin: 0.5rem auto;
+                xbackground: green;
+                box-sizing: border-box;
+            }
+
+                .wr12 .num {
+                    border: 2px solid var(--color-1-2);
+                }
+
+                .wr12 input, .wr12 button {
+                    display: inline-block;
+                    font-size: 1.1rem;
+                    height: 2.4rem;
+                    background: none;
+                    border: 2px solid var(--color-1-2);
+                    color: var(--color-1-2);
+                    text-align: center;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 0 auto
+                }
+
+                .wr12 button {
+                    border-radius: 0.7rem;
+                    font-size: 1.5rem;
+                    height: 3rem;
+                }
+
+                    .wr12 button:hover {
+                        color: var(--color-1-1);
+                        background-color: var(--color-1-2);
+                    }
+
+                .wr12 svg {
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    fill: currentColor;
+                }
+
+            .error {
+                border-color: red;
+            }
+
+            .error-message {
+                color: red;
+                font-style: italic;
+                margin-bottom: 1em;
+            }
+        </style>
+
+        <!-- AD_Form -->
+        <div id="apiform" style="text-align:center">
+            <div class="Aold_price"><span> ราคาเก่า: </span><span> 1980 ฿ </span></div>
+            <div class="xnew_price"><span> ราคาใหม่: </span><span> 990 ฿ </span></div>
+            <form id="form1" class="validate">
+                <fieldset style="margin:0;padding:0">
+                    <!--please type your name and phone number to get more information-->
+                    <!--  <legend>โปรดพิมพ์ชื่อและหมายเลขโทรศัพท์ของคุณ</legend>-->
+                    <legend>โปรดพิมพ์ชื่อและหมายเลขโทรศัพท์ของคุณเพื่อรับข้อมูลเพิ่มเติม</legend>
+                    <div class="wr12">
+                        <svg><use xlink:href="#i2"></use></svg>
+                        <!--your name-->
+                        <span>ชื่อของคุณ</span>
+                        <input type="text" name="name" title='ชื่อของคุณ' required minlength="3" maxlength="25" xplaceholder="your name">
+                    </div>
+                    <div class="wr12">
+                        <svg><use xlink:href="#i1"></use></svg>
+                        <svg><use xlink:href="#i3"></use></svg>
+                        <!--8 or 9 digits after +66-->
+                        <span>8 หรือ 9 หลักหลังจาก +66</span>
+                        <input type="text" name="phone" pattern='^\+66[0-9]{8,9}$' value="+66" required xplaceholder="phone# +661234567">
+                    </div>
 
 
-
-
-
-
-
-            <!-- AD_Form -->
-            <!-- <form method="POST" action="order.html" id="order_form" xxxclass="xmain_form" autocomplete="off">
-            -->
-            <fieldset>
-                <legend>please type your name and phone number</legend>
-                <select class="xinp" id="country_code_selector" name="country">
-                    <option value="TH"> ประเทศไทย </option>
-                </select>
-                <div class="submitvisitor">
-                    <svg><use xlink:href="#i2"></use></svg>
-                    <input type="text" id="apiname" title="นางนาฏยา วนิชธัญญาทรัพย์" name="name" placeholder="ชื่อ">
-                </div>
-                <div class="submitvisitor">
-                    <svg><use xlink:href="#i1"></use></svg>
-                    <input type="text" id="apiphone" title="+66XXXXXXXX" name="phone" placeholder="หมายเลขโทรศัพท์">
-                </div>
-
-
-
-                <div class="Aold_price"><span> ราคาเก่า: </span><span> 1980 ฿ </span></div>
-                <div class="xnew_price"><span> ราคาใหม่: </span><span> 990 ฿ </span></div>
-                <!--
-                 <input type="button" value="Submit" id='apiformbutton'>
-                -->
-                <div class="submitvisitor">
-                    <svg><use xlink:href="#i1"></use></svg>
-                    <input type="button" value=" สั่งซื้อ" id='apiformbutton'>
-
-                </div>
-                <button id='apiformbutton' style="border-radius:20px" type='button' XXXclass="xbtn js_submit button__text btn-order">
-                    สั่งซื้อ
-
-                </button>
-
-
-
-            </fieldset>
-            <!--    if there's only one <button> inside the <form>, that button will be treated as the "submit" button.
-            So you should be in the habit of expressly specifying which button is the submit button.
-            instead of button input type="submit" usually used
-            -->
-            <!--     </form>
-            -->
+                    <div class="wr12">
+                        <svg><use xlink:href="#i4"></use></svg>
+                        <span>place order</span>
+                        <button id='apiformbutton' type='button'>สั่งซื้อ</button>
+                    </div>
+                </fieldset>
+            </form>
         </div>
         <!-- AD_Form-end -->
         <!--SUCESS-->
@@ -3406,8 +3274,257 @@
             ////////////////////////////////////////////
             /////////////////////////////
             /////////////////////////////
-            /////////////////////////////
+
+            //FORM///////////////////////////
             (function () {
+                //VALIDATION
+                //FORM VALIDATION
+                //https://css-tricks.com/form-validation-part-2-constraint-validation-api-javascript/
+                // Add the novalidate attribute to block native browser validator
+                var forms = document.querySelectorAll('.validate');
+                for (var i = 0; i < forms.length; i++) {
+                    forms[i].setAttribute('novalidate', true);
+                    console.log('form#=', i)
+                }
+
+
+                // Validate the field
+                var hasError = function (field) {
+                    console.log('hasError field.type=', field.type)
+                    // Don't validate submits, buttons, file and reset inputs, and disabled fields
+                    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === 'fieldset') return;
+                    console.log('>>>field.type=', field.type)
+                    // Get validity
+                    var validity = field.validity;
+
+                    // If valid, return null
+                    if (validity.valid) return;
+
+                    // If field is required and empty
+                    //คุณไม่ได้ระบุชื่อจริง - You didn't specify a real name.
+                    if (validity.valueMissing) //return 'Please fill out this field.';
+                        return 'กรุณากรอกข้อมูลในช่องนี้'
+                    // If not the right type
+                    if (validity.typeMismatch) {
+
+                        // Email
+                        if (field.type === 'email') return 'Please enter an email address.';
+
+                        // URL
+                        if (field.type === 'url') return 'Please enter a URL.';
+
+                    }
+
+
+                    if (validity.tooShort) //return 'Please lengthen this text to ' + field.getAttribute('minLength') + ' characters or more. You are currently using ' + field.value.length + ' characters.';
+                        return 'โปรดเพิ่มความยาวข้อความนี้เป็น ' + field.getAttribute('minLength') + ' ตัวอักษรหรือมากกว่า คุณใช้อักขระ ' + field.value.length + ' ตัวในขณะนี้'
+
+                    if (validity.tooLong) //return 'Please shorten this text to no more than ' + field.getAttribute('maxLength') + ' characters. You are currently using ' + field.value.length + ' characters.';
+                        return 'โปรดย่อข้อความนี้ให้เหลือไม่เกิน ' + field.getAttribute('maxLength') + ' ข้อ ตัวละคร คุณใช้อักขระ ' + field.value.length + ' ตัวในขณะนี้'
+
+                    // If number input isn't a number
+                    if (validity.badInput) return 'Please enter a number.';
+
+                    // If a number value doesn't match the step interval
+                    if (validity.stepMismatch) return 'Please select a valid value.';
+
+                    // If a number field is over the max
+                    if (validity.rangeOverflow) return 'Please select a value that is no more than ' + field.getAttribute('max') + '.';
+
+                    // If a number field is below the min
+                    if (validity.rangeUnderflow) return 'Please select a value that is no less than ' + field.getAttribute('min') + '.';
+
+                    // If pattern doesn't match
+                    if (validity.patternMismatch) {
+                        // If pattern info is included, return custom error
+                        if (field.hasAttribute('title')) return field.getAttribute('title');
+                        // Otherwise, generic error
+                        //return 'Please match the requested format.';
+                        return 'โปรดตรงกับรูปแบบที่ร้องขอ'
+                    }
+                    // If all else fails, return a generic catchall error
+                    //return 'The value you entered for this field is invalid.';
+                    return 'ค่าที่คุณป้อนสำหรับฟิลด์นี้ไม่ถูกต้อง'
+                };
+
+                // Show an error message
+                var showError = function (field, error) {
+                    // Add error class to field
+                    field.classList.add('error');
+                    // If the field is a radio button and part of a group, error all and get the last item in the group
+                    if (field.type === 'radio' && field.name) {
+                        var group = document.getElementsByName(field.name);
+                        if (group.length > 0) {
+                            for (var i = 0; i < group.length; i++) {
+                                // Only check fields in current form
+                                if (group[i].form !== field.form) continue;
+                                group[i].classList.add('error');
+                            }
+                            field = group[group.length - 1];
+                        }
+                    }
+                    // Get field id or name
+                    var id = field.id || field.name;
+                    if (!id) return;
+
+                    // Check if error message field already exists
+                    // If not, create one
+                    var message = field.form.querySelector('.error-message#error-for-' + id);
+                    if (!message) {
+                        message = document.createElement('div');
+                        message.className = 'error-message';
+                        message.id = 'error-for-' + id;
+
+                        // If the field is a radio button or checkbox, insert error after the label
+                        var label;
+                        if (field.type === 'radio' || field.type === 'checkbox') {
+                            label = field.form.querySelector('label[for="' + id + '"]') || field.parentNode;
+                            if (label) {
+                                label.parentNode.insertBefore(message, label.nextSibling);
+                            }
+                        }
+
+                        // Otherwise, insert it after the field
+                        if (!label) {
+                            field.parentNode.insertBefore(message, field.nextSibling);
+                        }
+
+                    }
+
+                    // Add ARIA role to the field
+                    field.setAttribute('aria-describedby', 'error-for-' + id);
+
+                    // Update error message
+                    message.innerHTML = error;
+
+                    // Show error message
+                    message.style.display = 'block';
+                    message.style.visibility = 'visible';
+
+                };//showError
+
+
+                // Remove the error message
+                var removeError = function (field) {
+                    // Remove error class to field
+                    field.classList.remove('error');
+                    // Remove ARIA role from the field
+                    field.removeAttribute('aria-describedby');
+                    // If the field is a radio button and part of a group, remove error from all and get the last item in the group
+                    if (field.type === 'radio' && field.name) {
+                        var group = document.getElementsByName(field.name);
+                        if (group.length > 0) {
+                            for (var i = 0; i < group.length; i++) {
+                                // Only check fields in current form
+                                if (group[i].form !== field.form) continue;
+                                group[i].classList.remove('error');
+                            }
+                            field = group[group.length - 1];
+                        }
+                    }
+
+                    // Get field id or name
+                    var id = field.id || field.name;
+                    if (!id) return;
+
+
+                    // Check if an error message is in the DOM
+                    var message = field.form.querySelector('.error-message#error-for-' + id + '');
+                    if (!message) return;
+
+                    // If so, hide it
+                    message.innerHTML = '';
+                    message.style.display = 'none';
+                    message.style.visibility = 'hidden';
+                };
+
+
+                // Listen to all blur events
+                document.addEventListener('blur', function (event) {
+                    // Only run if the field is in a form to be validated
+                    if (!event.target.form) return;
+                    if (!event.target.form.classList.contains('validate')) return;
+                    console.log('blur event.target', event.target.type)
+                    // Validate the field
+                    var error = hasError(event.target);
+
+                    // If there's an error, show it
+                    if (error) {
+                        console.log('blur error=', error)
+                        showError(event.target, error);
+                        return;
+                    }
+
+                    // Otherwise, remove any existing error message
+                    removeError(event.target);
+
+                }, true);
+
+                function allValid() {
+                    var form = document.getElementById('form1')
+                    var fields = form.elements;
+                    // Validate each field
+                    // Store the first field with an error to a variable so we can bring it into focus later
+                    var error, hasErrors;
+                    for (var i = 0; i < fields.length; i++) {
+                        error = hasError(fields[i]);
+                        if (error) {
+                            showError(fields[i], error);
+                            if (!hasErrors) {
+                                hasErrors = fields[i];
+                            }
+                        }
+                    }
+
+                    // If there are errrors, don't submit form and focus on first element with error
+                    console.log('hasErrors=', hasErrors)
+                    if (hasErrors) {
+                        //event.preventDefault();
+                        hasErrors.focus();
+                        return false
+                    }
+                    return true
+                }
+
+                if (false)
+                    // Check all fields on submit
+
+                    document.addEventListener('submit', function (event) {
+
+                        // Only run on forms flagged for validation
+                        if (!event.target.classList.contains('validate')) return;
+
+                        // Get all of the form elements
+                        var fields = event.target.elements;
+
+                        // Validate each field
+                        // Store the first field with an error to a variable so we can bring it into focus later
+                        var error, hasErrors;
+                        for (var i = 0; i < fields.length; i++) {
+                            error = hasError(fields[i]);
+                            if (error) {
+                                showError(fields[i], error);
+                                if (!hasErrors) {
+                                    hasErrors = fields[i];
+                                }
+                            }
+                        }
+
+                        // If there are errrors, don't submit form and focus on first element with error
+                        if (hasErrors) {
+                            event.preventDefault();
+                            hasErrors.focus();
+                        }
+
+                        // Otherwise, let the form submit normally
+                        // You could also bolt in an Ajax form submit process here
+
+                    }, false);
+
+
+
+
+                //FORM BUTTON CLICK
                 //SAVE QUERY STRING TO strage - in casecookie not available
 
                 /*
@@ -3528,7 +3645,7 @@
                     document.getElementById('apierror').style.display = 'none'
                     document.getElementById('apisuccess').style.display = 'none'
                     try {
-                        fetchapi();
+                        if (allValid()) fetchapi();
                     } catch (err) {
                         Sentry.captureException(err);
                     }
@@ -3688,9 +3805,13 @@
 
                         console.log('Looks like there was a problem: \n', error);
                     }
-                }
+                }//fetchapi
 
-            })();//FORM BUTTON
+
+
+
+
+            })();//FORM
 
             //CONTRAST CHECKER https://dev.to/alvaromontoro/building-your-own-color-contrast-checker-4j7o
             (function () {
@@ -3701,6 +3822,8 @@
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //CANVAS
+
             //https://codepen.io/natewiley/pen/NNgqVJ
             (function () {
                 "use strict";
@@ -3924,10 +4047,16 @@
                 });
 
             }());
+            //END CANVAS
+
+
+
         }//ONLOAD
+
+
     </script>
 
-    <canvas id="canvas" style="width:100% ;   box-sizing: border-box;  "></canvas>
+    <canvas id="canvas" style="width:100% ;   box-sizing: border-box;xheight:20rem  "></canvas>
 
     <a style="display:none" target="_blank" href="https://trendygoods.tk/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg">
         click
