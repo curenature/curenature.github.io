@@ -118,7 +118,7 @@
 
 
         .Aold_price {
-            text-decoration: line-through
+            xtext-decoration: line-through
         }
 
 
@@ -2694,7 +2694,7 @@
                     color: var(--color-1-2);
                     text-align: center;
                     box-sizing: border-box;
-                    width: 100%;
+                    width: 96%;
                     margin: 0 auto
                 }
 
@@ -2702,6 +2702,7 @@
                     border-radius: 0.7rem;
                     font-size: 1.5rem;
                     height: 3rem;
+                    xwidth: 96%;
                 }
 
                     .wr12 button:hover {
@@ -2729,8 +2730,8 @@
 
         <!-- AD_Form -->
         <div id="apiform" style="text-align:center">
-            <div class="Aold_price"><span> ราคาเก่า: </span><span> 1980 ฿ </span></div>
-            <div class="xnew_price"><span> ราคาใหม่: </span><span> 990 ฿ </span></div>
+            <div><span>ราคาเก่า: </span><span> 1980 ฿ </span></div>
+            <div><span>ราคาใหม่: </span><span> 990 ฿ </span></div>
             <form id="form1" class="validate">
                 <fieldset style="margin:0;padding:0">
                     <!--please type your name and phone number to get more information-->
@@ -2740,21 +2741,22 @@
                         <svg><use xlink:href="#i2"></use></svg>
                         <!--your name-->
                         <span>ชื่อของคุณ</span>
-                        <input type="text" name="name" title='ชื่อของคุณ' required minlength="3" maxlength="25" xplaceholder="your name">
+                        <input type="text" name="name" xtitle='ชื่อของคุณ' required minlength="3" maxlength="25" xplaceholder="your name">
                     </div>
                     <div class="wr12">
                         <svg><use xlink:href="#i1"></use></svg>
                         <svg><use xlink:href="#i3"></use></svg>
-                        <!--8 or 9 digits after +66-->
-                        <span>8 หรือ 9 หลักหลังจาก +66</span>
-                        <input type="text" name="phone" pattern='^\+66[0-9]{8,9}$' value="+66" required xplaceholder="phone# +661234567">
+                        <!--your phone-->
+                        <span>โทรศัพท์ของคุณ</span>
+                        <input type="text" name="phone" pattern='^\+66[0-9]{8,10}$' value="+66" required xplaceholder="phone# +661234567">
                     </div>
 
 
                     <div class="wr12">
                         <svg><use xlink:href="#i4"></use></svg>
-                        <span>place order</span>
-                        <button id='apiformbutton' type='button'>สั่งซื้อ</button>
+                        
+                        <!--order  สั่งซื้อ-->
+                        <button id='apiformbutton' type='button'>ส่ง</button>
                     </div>
                 </fieldset>
             </form>
@@ -2762,7 +2764,7 @@
         <!-- AD_Form-end -->
         <!--SUCESS-->
         <!--  -->
-        <div id="apisuccess" style="text-align:center;xdisplay:none">
+        <div id="apisuccess" style="text-align:center;display:none">
             <h2>ขอแสดงความยินดีด้วย! เราได้รับการสั่งซื้อของคุณเรียบร้อยแล้ว!</h2>
             <p>ชั้นตอนต่อไป อีกสักครู่พนักงานโทรศัพท์ของเราจะติดต่อคุณเพื่อยืนยันการสั่งซื้อ  กรุณาตรวจสอบให้แน่ใจว่า โทรศัพท์ของคุณเปิดอยู่</p>
             <h3>กรุณาตรวจสอบความถูกต้องของข้อมูลที่คุณกรอกไว้’</h3>
@@ -2776,7 +2778,7 @@
         <!--END SUCESS-->
         <!--FAIL-->
         <!---->
-        <div id="apierror" style="text-align:center;xdisplay:none">
+        <div id="apierror" style="text-align:center;display:none">
             <h2>Unknown error! Please try again!</h2>
             <p><span>← Try again</span></p>
         </div>
