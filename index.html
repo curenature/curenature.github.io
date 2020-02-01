@@ -96,15 +96,15 @@
             margin: 0 auto;
         }
 
-        form div {
-            text-align: center;
-        }
+            xform div {
+                text-align: center;
+            }
 
-        xform button {
-            width: 96%;
-            height: 50px;
-            border-radius: 25px;
-        }
+            xform button {
+                width: 96%;
+                height: 50px;
+                border-radius: 25px;
+            }
 
 
 
@@ -142,6 +142,13 @@
                                   color: #423c15
 
                       }*/
+        html {
+            /*  font: 62.5%/1.4 'Helvetica Neue', arial, helvetica, helve, sans-serif;
+                               */ font: 110%/1.8 'Helvetica Neue', arial, helvetica, helve, sans-serif;
+            font: 110%/1.8;
+            /*1.4 - line height is 1.4 times bigger than font height*/
+        }
+
         :root { /*:root is synonim of html tag*/
             --color-1-0: hsl(235,60%,13%); /*#051a41;*/
             --xcolor-1-0: #808080;
@@ -279,10 +286,6 @@
 
 
 
-        xxhtml {
-            scroll-behavior: smooth;
-        }
-
         .posts {
             xmargin: 0 2%;
             xbackground-color: tan;
@@ -386,7 +389,9 @@
             }
 
 
-        fieldset {
+        fieldset { /*by def it has not null mar,pad*/
+            margin: 0;
+            padding: 0;
             border: none;
         }
 
@@ -713,19 +718,13 @@
         /*Google recommends using at least the browser default line-height of 1.2
                                               which means that the spaces between lines of text are at least 1.2 times
                                               the size of the text itself.*/
-        html {
-            /*  font: 62.5%/1.4 'Helvetica Neue', arial, helvetica, helve, sans-serif;
-                               */ font: 110%/1.8 'Helvetica Neue', arial, helvetica, helve, sans-serif;
-            font: 110%/1.8;
-            /*1.4 - line height is 1.4 times bigger than font height*/
-        }
 
         html, body, div, span, p {
             margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             background: var(--color-1-0);
             /* padding: 0 2em 0 2em;
                                                           */
@@ -737,69 +736,16 @@
 
 
         .section {
-            background-color: var(--color-1-0);
+            xbackground-color: var(--color-1-0);
             color: var(--color-1-2);
             width: 72%; /*golden ratio*/
             margin: auto;
-            xpadding: 0 2%;
-            xclear: both;
-            /*  padding: 0px;
-                             margin: 0px;
-                           background-color: #423c15;
-                          */
-        }
-
-
-        .xcol {
-            display: block;
-            float: left;
-            text-align: left;
-            /* background: #DCDCDC;
-                                        padding: 0 0 1px 0;
-                                           */ /*1px is important margin: 0;*/
-        }
-
-        .x---spanC1 {
-            /*  width: calc(100%*70/100);*/
-            width: 100%;
-        }
-
-        .x---spanC2 {
-            /*width: calc(100%*30/100);*/
-            width: 50%;
-        }
-
-        .x---spanC3 {
-            width: calc(100%/3);
-            xwidth: 50%;
-        }
-
-
-        .xgroup:before,
-        .xgroup:after {
-            content: "";
-            display: table;
-        }
-
-        .xgroup:after {
-            clear: both;
-        }
-
-        .xgroup { /*https://css-tricks.com/almanac/properties/z/zoom/*/
-            zoom: 1; /*for ie6,7 bugs fix*/
         }
 
         a {
-            color: hotpink;
+            color: salmon;
         }
 
-        xxxa {
-            margin: 0;
-            padding: 0;
-            xfont-size: 100%;
-            vertical-align: baseline;
-            background: transparent;
-        }
 
         h1, h2, h3, h4, h5, h6 {
             margin: 0;
@@ -1822,8 +1768,12 @@
 </head>
 <body style="overflow-x:auto;  overflow-y:scroll">
     <!--"overflow:scroll" scroll bar is always visible even on f5-->
-
-
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9M54QN"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <span id="debuginfo"></span>
     <span id="apiqs"></span>
     <!--
@@ -2507,8 +2457,8 @@
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--PAGINATION-->
         <div class="paging xbg5" xstyle="display:none">
-            <xfieldset>
-                <xlegend class="legend1">select part of article</xlegend>
+            <fieldset>
+                <legend class="legend1">select part of article</legend>
                 <!--1-autocomplete="off" is needed for firefox
                 2-class of each input mus be equal to corresp postpart id
                 -->
@@ -2523,33 +2473,7 @@
                 <label for="n4" class="label1">4</label>
                 <input id="n5" type="radio" name="postpart" value="" class="post5" autocomplete="off">
                 <label for="n5" class="label1">5</label>
-                <!--
-
-
-                            <ul>
-                                <li>
-                                    <input id="n1" type="radio" name="parts of article" value="part 1" class="post1" checked autocomplete="off">
-                                    <label for="n1" class="label1">1</label>
-                                </li>
-                                <li>
-                                    <input id="n2" type="radio" name="parts of article" value="part 2" class="post2" autocomplete="off">
-                                    <label for="n2" class="label1">2</label>
-                                </li>
-                                <li>
-                                    <input id="n3" type="radio" name="parts of article" value="part 3" class="post3" autocomplete="off">
-                                    <label for="n3" class="label1">3</label>
-                                </li>
-                                <li>
-                                    <input id="n4" type="radio" name="parts of article" value="part 4" class="post4" autocomplete="off">
-                                    <label for="n4" class="label1">4</label>
-                                </li>
-                                <li>
-                                    <input id="n5" type="radio" name="parts of article" value="part 5" class="post5" autocomplete="off">
-                                    <label for="n5" class="label1">5</label>
-                                </li>
-                            </ul>
-                -->
-            </xfieldset>
+            </fieldset>
         </div> <!--END PAGINATION-->
         <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <!--  <button id="scrolltop" type="button">
@@ -2635,15 +2559,18 @@
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-        <div id="scrolltoform"></div>
+        <div id="xxxscrolltoform"></div>
+        <!-- AD_Form -->
 
         <style>
+
             ::-webkit-input-placeholder {
                 color: var(--color-1-2);
             }
 
             ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
                 color: var(--color-1-2);
+                text-align: left;
                 opacity: 0.7; /* Firefox */
             }
 
@@ -2681,9 +2608,7 @@
                 box-sizing: border-box;
             }
 
-                .wr12 .num {
-                    border: 2px solid var(--color-1-2);
-                }
+
 
                 .wr12 input, .wr12 button {
                     display: inline-block;
@@ -2726,14 +2651,17 @@
                 font-style: italic;
                 margin-bottom: 1em;
             }
+
+            .d-no {
+                display: none
+            }
         </style>
 
-        <!-- AD_Form -->
-        <div id="apiform" style="text-align:center">
+        <div id="apiform" class="t-a-c xd-no">
             <div><span>ราคาเก่า: </span><span> 1980 ฿ </span></div>
             <div><span>ราคาใหม่: </span><span> 990 ฿ </span></div>
             <form id="form1" class="validate">
-                <fieldset style="margin:0;padding:0">
+                <fieldset>
                     <!--please type your name and phone number to get more information-->
                     <!--  <legend>โปรดพิมพ์ชื่อและหมายเลขโทรศัพท์ของคุณ</legend>-->
                     <legend>โปรดพิมพ์ชื่อและหมายเลขโทรศัพท์ของคุณเพื่อรับข้อมูลเพิ่มเติม</legend>
@@ -2741,21 +2669,25 @@
                         <svg><use xlink:href="#i2"></use></svg>
                         <!--your name-->
                         <span>ชื่อของคุณ</span>
-                        <input type="text" name="name" xtitle='ชื่อของคุณ' required minlength="3" maxlength="25" xplaceholder="your name">
+                        <input id="api-name" type="text" name="name" xtitle='ชื่อของคุณ' required minlength="3" maxlength="25" xplaceholder=">>">
                     </div>
                     <div class="wr12">
                         <svg><use xlink:href="#i1"></use></svg>
                         <svg><use xlink:href="#i3"></use></svg>
                         <!--your phone-->
                         <span>โทรศัพท์ของคุณ</span>
-                        <input type="text" name="phone" pattern='^\+66[0-9]{8,10}$' value="+66" required xplaceholder="phone# +661234567">
+                        <input id="api-phone" type="text" name="phone" pattern='^\+66[0-9]{8,10}$' value="+66" required xplaceholder="phone# +661234567">
                     </div>
 
 
                     <div class="wr12">
                         <svg><use xlink:href="#i4"></use></svg>
-                        
-                        <!--order  สั่งซื้อ-->
+
+                        <!--order  สั่งซื้อ
+                        GET YOUR DISCOUNT  รับส่วนลดของคุณ
+
+                        -->
+
                         <button id='apiformbutton' type='button'>ส่ง</button>
                     </div>
                 </fieldset>
@@ -2764,23 +2696,51 @@
         <!-- AD_Form-end -->
         <!--SUCESS-->
         <!--  -->
-        <div id="apisuccess" style="text-align:center;display:none">
+        <div id="apisuccess" class="t-a-c xd-no xspin-result-wrapper" style="display:block">
+            <div class="wr12">
+                <svg><use xlink:href="#i7"></use></svg>
+            </div>
+            <!--Congratulations! We have received your order!-->
             <h2>ขอแสดงความยินดีด้วย! เราได้รับการสั่งซื้อของคุณเรียบร้อยแล้ว!</h2>
+            <!--The next step. After a moment, our phone staff will contact you to confirm the order. Please make sure that Your phone is on.-->
             <p>ชั้นตอนต่อไป อีกสักครู่พนักงานโทรศัพท์ของเราจะติดต่อคุณเพื่อยืนยันการสั่งซื้อ  กรุณาตรวจสอบให้แน่ใจว่า โทรศัพท์ของคุณเปิดอยู่</p>
+            <!--Please check the accuracy of the information you entered. '-->
             <h3>กรุณาตรวจสอบความถูกต้องของข้อมูลที่คุณกรอกไว้’</h3>
-            <ul>
-                <li>ชื่อและนามสกุลของคุณ:<span>name</span></li>
-                <li>หมายเลขโทรศัพท์:<span>phone</span></li>
-            </ul>
+            <xul>
+                <!--Your first and last name-->
+                <xli>ชื่อและนามสกุลของคุณ:<span id="isnameok"></span></xli>
+                <br />
+                <!--Phone number-->
+                <xli>หมายเลขโทรศัพท์:<span id="isphoneok"></span></xli>
+            </xul>
+            <!-- If you fill in the wrong information Please re-enter.-->
             <p><span>ถ้าคุณกรอกข้อมูลผิด กรุณากรอกใหม่อีกครั้ง</span></p>
+
+            <div class="wr12">
+                <svg><use xlink:href="#i8"></use></svg>
+
+                <!--ok  ตกลง-->
+                <!--re-enter  เข้าใหม่-->
+                <!--modify ปรับเปลี่ยน-->
+                <button id='api-re-enter' type='button'>ปรับเปลี่ยน</button>
+            </div>
         </div>
 
         <!--END SUCESS-->
         <!--FAIL-->
         <!---->
-        <div id="apierror" style="text-align:center;display:none">
-            <h2>Unknown error! Please try again!</h2>
-            <p><span>← Try again</span></p>
+        <div id="apierror" class="t-a-c xd-no">
+            <!--  <h2>Unknown error! Please try again!</h2>-->
+            <h2>ข้อผิดพลาดที่ไม่รู้จัก! กรุณาลองอีกครั้ง!</h2>
+
+            <div class="wr12">
+                <svg><use xlink:href="#i6"></use></svg>
+                <!--try again  ลองอีกครั้ง-->
+                <button id='api-re-try' type='button'>ลองอีกครั้ง</button>
+            </div>
+
+
+
         </div>
         <!--END FAIL-->
         <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -2790,64 +2750,73 @@
             <div class="item">
                 1
                 <div class="sprite0 sprite-1  lz q75"> </div>
-                <a class="bg4" href="l1.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l1.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 2
                 <div class="sprite sprite-2  lz q75"> </div>
-                <a class="bg4" href="l2.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l2.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 3
                 <div class="sprite sprite-4  lz q75"> </div>
-                <a class="bg4" href="l3.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l3.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 4
                 <div class="sprite sprite-5  lz q75"> </div>
-                <a class="bg4" href="l4.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l4.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 5
                 <div class="sprite sprite-6  lz q75"> </div>
-                <a class="bg4" href="l5.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l5.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 6
                 <div class="sprite sprite-k1  lz q75"> </div>
-                <a class="bg4" href="l6.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l6.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 7
                 <div class="sprite sprite-k2  lz q75"> </div>
-                <a class="bg4" href="l7.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l7.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 8
                 <div class="sprite sprite-k4  lz q75"> </div>
-                <a class="bg4" href="l8.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l8.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 9
                 <div class="sprite sprite-k6  lz q75"> </div>
-                <a class="bg4" href="l9.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l9.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 10
                 <div class="sprite0 sprite-k7  lz q75"> </div>
-                <a class="bg4" href="l10.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l10.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
             <div class="item">
                 11
                 <div class="sprite sprite-k8  lz q75"> </div>
-                <a class="bg4" href="l11.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l11.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div> <div class="item">
                 12
                 <div class="sprite sprite-k9  lz q75"> </div>
-                <a class="bg4" href="l12.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
+                <a href="l12.html"> คุณจะยอมจ่ายเงินเพียงไม่กี่บาทเพื่อให้ดูเด็กลงถึง 15 ปีไหม? คุณหมอรายการทีวีชื่อดังเกี่ยวกับวิธีลดเลือนริ้วรอยแบบใหม่ยอมทำเช่นนั้นแน่ๆ! ศัลยแพทย์ถึงกับฉุนเกี่ยวกับการเปิดเผยเรื่องนี้ คุณจะใช้จ่าย</a>
             </div>
         </div>
         <!-- END LIST-->
+
+        <div class="t-a-c">
+            <span> © 2020 Copyright. All rights reserved. </span>
+            <br>
+            <a href="https://dadbab.info/content/shared/html/policy_en.html" target="_blank"> Privacy policy </a>
+            |
+            <a href="http://ac-feedback.com/report_form/"> Report </a><p></p>
+        </div>
+
     </div><!-- END SECTION-->
     <!-- https://codepen.io/cesar2535/pen/ByYXpN/
     -->
@@ -3138,6 +3107,11 @@
 
             filldate();
 
+            const Elapisuccess = document.getElementById("apisuccess")
+            const Elapierror = document.getElementById("apierror")
+            const Elisnameok = document.getElementById('isnameok')
+            const Elisphoneok = document.getElementById('isphoneok')
+            const Elapiform = document.getElementById("apiform");
             //WHEEL
             (function () {
                 // var wheel = document.querySelector('.divtoberotated1');
@@ -3207,16 +3181,16 @@
                 //var closePopup = document.querySelector('.close-popup');
                 document.querySelector('.close-popup').onclick = function () {
                     resultWrapper.style.display = "none";
-                    document.getElementById("apiform").style.display = 'block'
-                    document.getElementById("scrolltoform").scrollIntoView({ behavior: 'smooth' });
+                    Elapiform.style.display = 'block'
+                    Elapiform.scrollIntoView({ behavior: 'smooth' });
                 }
                 document.getElementById("wheelpopOK").addEventListener("click", function (e) {
                     //  window.document.location.href = clk;
                     //  window.document.location.replace(clk);//LP not stored in history
                     resultWrapper.style.display = "none";
-                    //                    var form = window.document.getElementById("apiform");
-                    document.getElementById("apiform").style.display = 'block';
-                    document.getElementById("scrolltoform").scrollIntoView({ behavior: 'smooth' });
+                    // var form = window.document.getElementById("apiform");
+                    Elapiform.style.display = 'block';
+                    Elapiform.scrollIntoView({ behavior: 'smooth' });
 
                     /*   window.open(clk, "_blank");
                        if (window.location.hostname.indexOf(kk(s229144183)) < 0) {
@@ -3273,12 +3247,13 @@
                 }
             })();//pagination
 
-            ////////////////////////////////////////////
-            /////////////////////////////
-            /////////////////////////////
-
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            //FORM
             //FORM///////////////////////////
             (function () {
+
                 //VALIDATION
                 //FORM VALIDATION
                 //https://css-tricks.com/form-validation-part-2-constraint-validation-api-javascript/
@@ -3488,41 +3463,10 @@
                     return true
                 }
 
-                if (false)
-                    // Check all fields on submit
-
-                    document.addEventListener('submit', function (event) {
-
-                        // Only run on forms flagged for validation
-                        if (!event.target.classList.contains('validate')) return;
-
-                        // Get all of the form elements
-                        var fields = event.target.elements;
-
-                        // Validate each field
-                        // Store the first field with an error to a variable so we can bring it into focus later
-                        var error, hasErrors;
-                        for (var i = 0; i < fields.length; i++) {
-                            error = hasError(fields[i]);
-                            if (error) {
-                                showError(fields[i], error);
-                                if (!hasErrors) {
-                                    hasErrors = fields[i];
-                                }
-                            }
-                        }
-
-                        // If there are errrors, don't submit form and focus on first element with error
-                        if (hasErrors) {
-                            event.preventDefault();
-                            hasErrors.focus();
-                        }
-
-                        // Otherwise, let the form submit normally
-                        // You could also bolt in an Ajax form submit process here
-
-                    }, false);
-
+                //end validation
+                //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 
@@ -3576,14 +3520,17 @@
                 }
 
                 //let refer = ''//the same on first load and reload
-                let qs = window.location.search.substring(1)
-                console.log('qs=' + qs)
+                const cook = getcookie()
+                console.log('cookie=' + cook)
 
-                if ((qs.includes('campaign_id') &&
-                    qs.includes('widget_id') &&
-                    qs.includes('teaser_id') &&
-                    qs.includes('click_id') &&
-                    qs.includes('click_price'))) {//directly from mgid
+                let qs = window.location.search.substring(1)
+                //console.log('qs=' + qs)
+                if ((qs.includes('click_id')/* &&
+                                                qs.includes('category_id') &&
+                                                qs.includes('widget_id') &&
+                                                qs.includes('teaser_id') &&
+                                                qs.includes('campaign_id') &&
+                                                qs.includes('click_price')*/)) {//directly from mgid
 
                     //refer = document.referrer//the same on first load and reload
                     qs += '&referrer=' + document.referrer.replace('https://', '')
@@ -3592,43 +3539,26 @@
                     // window.location.replace--to simulate an http redirect(thus not generating a history item
                     history.replaceState({}, null, "/");//index.html
                     sessionStorage.setItem('qs', qs)
+                    // !!! site worker already set cookie with all query params and referrer
+
                     //sessionStorage.setItem('refer', document.referrer)
 
-                    //NOW available 2 WAYS TO GET params for api
-                    //1- query params and 2-cookie
 
                 }
                 else {
                     // RELOAD happened-no url query- read cookie or storage
                     //no mgid params in qs--read cookie
-                    qs = getcookie()//with refer
-                    console.log('qs(reload-cook)=' + qs)
+                    qs = cook//with refer
+                    console.log('(reload)')
                     if (qs == '') {
                         qs = sessionStorage.getItem('qs')
                         console.log('qs(reload-sess)=' + qs)
-                    }
+                    } else console.log('(reload-cook)')
                 }//reload
-                let query = {}
-                //  let pairs = (qs[0] === '?' ? qs.substr(1) : qs).split('&');
-                if (qs) qs.split('&').forEach(pair => {
-                    let split = pair.split('=')
-                    //     query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
-                    //     console.log(query[decodeURIComponent(pair[0])] + '===' + decodeURIComponent(pair[1] || ''))
-                    //  console.log(split[0] + '==' + split[1])
-                    query[split[0]] = split[1]
-                    //  console.log(pair[0]+'=='+pair[1] )
-                })
-
-                let refer = query['referrer']
-
-                // refer = query['refer']
-                //  country = query['country']
-                //  ip = query['ip']
-                console.log('query=' + JSON.stringify(query))
-                let subacc = "&subacc=" + query['campaign_id'] + '||' + query['widget_id']
-                let subacc2 = "&subacc2=" + query['teaser_id'] + '||' + query['click_price']
-                let subacc3 = "&subacc3=" + query['click_id']
-                let subacc4 = "&subacc4="
+                //let subacc = "&subacc=" + query['campaign_id'] + '||' + query['widget_id']
+                //let subacc2 = "&subacc2=" + query['teaser_id'] + '||' + query['click_price']
+                //let subacc3 = "&subacc3=" + query['click_id']
+                //let subacc4 = "&subacc4="
 
 
 
@@ -3640,12 +3570,20 @@
 
 
 
-                //FORM BUTTON
+                //FORM BUTTON LISTENER
                 /**/
 
+                document.getElementById('api-re-enter').onclick = function () {
+                    Elapiform.scrollIntoView({ behavior: 'smooth' });
+                }
+
+                document.getElementById('api-re-try').onclick = function () {
+                    Elapiform.scrollIntoView({ behavior: 'smooth' });
+                }
+
                 document.getElementById('apiformbutton').onclick = function () {
-                    document.getElementById('apierror').style.display = 'none'
-                    document.getElementById('apisuccess').style.display = 'none'
+                    Elapierror.style.display = 'none'
+                    Elapisuccess.style.display = 'none'
                     try {
                         if (allValid()) fetchapi();
                     } catch (err) {
@@ -3659,22 +3597,52 @@
 
                 //SEND ORDER
                 async function fetchapi() {
+                    let query = {}
+                    //  let pairs = (qs[0] === '?' ? qs.substr(1) : qs).split('&');
+                    if (qs) qs.split('&').forEach(pair => {
+                        let split = pair.split('=')
+                        //     query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+                        //     console.log(query[decodeURIComponent(pair[0])] + '===' + decodeURIComponent(pair[1] || ''))
+                        //  console.log(split[0] + '==' + split[1])
+                        query[split[0]] = split[1]
+                        //  console.log(pair[0]+'=='+pair[1] )
+                    })
+
+
+                    // refer = query['refer']
+                    //  country = query['country']
+                    //  ip = query['ip']
+                    console.log('query=' + JSON.stringify(query))
+
+                    const refer = query['referrer']
+
+                    const subacc = "&subacc=" + query['click_id']
+                    const subacc2 = "&subacc2=" + query['widget_id']
+                    const subacc3 = "&subacc3=" + query['teaser_id']
+                    const subacc4 = "&subacc4=" + query['click_price']
+                    const utm_campaign = '&utm_campaign=' + query['campaign_id']
+                    const utm_content = '&utm_content=' + query['geo']
+                    const utm_medium = '&utm_medium=' + query['geo_region']
+                    const utm_source = '&utm_source=MGID'
+                    //   utm_term
 
                     const baseurl = window.location.hostname + window.location.pathname
                     const offer_id = '12049'
                     const price = '990'
                     //    ,referrer = document.referrer;
-
-
+                    const name = document.getElementById("api-name").value
+                    const phone = document.getElementById("api-phone").value
+                    const subacc_utm = subacc + subacc2 + subacc3 + subacc4 + utm_campaign + utm_content + utm_medium + utm_source
                     const params =
-                        "&name=" + document.getElementById("apiname").value +
-                        "&phone=" + document.getElementById("apiphone").value +
+                        "&name=" + name +
+                        "&phone=" + phone +
                         "&offer_id=" + offer_id +
                         "&base_url=" + baseurl +
                         "&referrer=" + refer +
                         // 'https://trendygoods.tk/' + offer_id + '/' +
                         "&price=" + price +
-                        subacc + subacc2 + subacc3 + subacc4
+                        subacc_utm
+
                     console.log("params= ", params)
                     /// those below will be get in worker
                     //  +
@@ -3701,12 +3669,7 @@
                     if (xhr != null) {
                         xhr.open('GET', fetchurl);
                         xhr.setRequestHeader('apiparams', params)
-                        xhr.setRequestHeader('formsendlog', //params +
-                            "&campaign_id=" + query['campaign_id'] +
-                            '&widget_id=' + query['widget_id'] +
-                            "&teaser_id=" + query['teaser_id'] +
-                            '&click_price=' + query['click_price'] +
-                            "&click_id=" + query['click_id'])
+                        xhr.setRequestHeader('formsendlog', subacc_utm)
                         //xhr.setRequestHeader('content-type', 'application/json;charset=UTF-8')
 
                         xhr.onreadystatechange = function () {
@@ -3721,16 +3684,26 @@
                                 console.log('success=', obj);
                                 console.log('success=', obj1);
                                 if (!fetchurl.includes('apitest')) {
-
-                                    if (obj.code == 'ok') {
-                                        document.getElementById('apisuccess').style.display = 'block'
+                                    if (obj.code !== 'ok') {
+                                        Elapierror.style.display = 'block'
+                                        Elapierror.scrollIntoView({ behavior: 'smooth' });
                                     } else {
-                                        document.getElementById('apierror').style.display = 'block'
+                                        Elapisuccess.style.display = 'block'
+                                        Elisnameok.innerText = name
+                                        Elisphoneok.innerText = phone
+                                        Elapisuccess.scrollIntoView({ behavior: 'smooth' });
                                     }
                                 }
-
+                                else {
+                                    Elapisuccess.style.display = 'block'
+                                    Elisnameok.innerText = name
+                                    Elisphoneok.innerText = phone
+                                    Elapisuccess.scrollIntoView({ behavior: 'smooth' });
+                                }
                             } else {//if name is numbers than status=400
                                 console.log('error', xhr);
+                                Elapierror.style.display = 'block'
+                                Elapierror.scrollIntoView({ behavior: 'smooth' });
                             }
                         };
                         xhr.send();
@@ -3791,23 +3764,25 @@
                             console.log("resp_header_apiurl=  " + resp.headers.get('apiurl'))
                             console.log("resp_header_apiret.code=  " + obj.code)
                             if (obj.code == 'ok') {
-                                document.getElementById('apisuccess').style.display = 'block'
+                                Elapisuccess.style.display = 'block'
                             } else {
                                 // console.log('myJson.code=' + myJson.code)
-                                document.getElementById('apierror').style.display = 'block'
+                                Elapierror.style.display = 'block'
                             }/**/
                         } else {//non 200-299 response
+
                             throw Error(resp.statusText);
 
                             // console.log('resp.ok=' + resp.ok)
                         }
                     } catch (error) {
-                        document.getElementById('apierror').style.display = 'block'
+                        Elapierror.style.display = 'block'
                         console.log('catch Error message:', error.statusText)
-
                         console.log('Looks like there was a problem: \n', error);
                     }
                 }//fetchapi
+
+
 
 
 
@@ -4059,10 +4034,16 @@
     </script>
 
     <canvas id="canvas" style="width:100% ;   box-sizing: border-box;xheight:20rem  "></canvas>
-
-    <a style="display:none" target="_blank" href="https://trendygoods.tk/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg">
-        click
-    </a>
+    <p>
+        <a xxstyle="display:none" target="_blank" href="https://take-action.net/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg">
+            click
+        </a>
+    </p>
+    <p>
+        <a xxstyle="display:none" target="_blank" href="https://trendygoods.tk/?campaign_id=cmid&widget_id=wid&teaser_id=tid&click_id=clid&click_price=cprice&geo=geo&geo_region=greg">
+            click
+        </a>
+    </p>
 
 
 
@@ -4106,6 +4087,91 @@
 	c29.312-14.952,48-45.112,48-78.304c0-48.52-39.48-88-88-88S32,39.48,32,88c0,33.192,18.688,63.352,48,78.304V232.2
 	C73.296,227.128,65.04,224,56,224z M48,88c0-39.696,32.304-72,72-72s72,32.304,72,72c0,24.272-12.28,46.48-32,59.68V88
 	c0-22.056-17.944-40-40-40S80,65.944,80,88v59.68C60.28,134.48,48,112.272,48,88z" />
+        </symbol>
+        <symbol id="i6" xheight="384pt" viewBox="0 0 467.955 467.955" xwidth="384pt">
+            <!--refresh.svg-->
+            <g>
+                <g>
+                    <path d="M385.202,105.426c-38.128-45.408-93.968-71.448-153.2-71.448c-107.6,0-195.576,85.416-199.8,192h-24.2
+			c-3.232,0-6.16,1.944-7.392,4.936c-1.24,2.992-0.552,6.432,1.736,8.72l64,64c1.56,1.56,3.608,2.344,5.656,2.344
+			s4.096-0.784,5.656-2.344l64-64c2.288-2.288,2.976-5.728,1.736-8.72c-1.232-2.992-4.16-4.936-7.392-4.936H112.41
+			c4.144-62.44,56.12-112,119.592-112c35.336,0,68.704,15.512,91.56,42.576c7.168,8.488,17.656,13.624,28.776,14.088
+			c11.08,0.4,22.112-3.808,30.024-11.712C396.922,144.37,398.178,120.858,385.202,105.426z M116.689,241.978l-44.688,44.688
+			l-44.688-44.688h12.688h64H116.689z M371.05,147.618c-4.832,4.832-11.288,7.256-18.048,7.04
+			c-6.752-0.28-12.864-3.272-17.216-8.432c-25.904-30.664-63.728-48.248-103.784-48.248c-72.304,0-131.608,56.72-135.768,128H48.17
+			c4.208-97.76,85.056-176,183.832-176c54.496,0,105.864,23.96,140.952,65.744C380.634,124.866,379.794,138.874,371.05,147.618z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M465.61,228.322l-64-64c-3.128-3.128-8.184-3.128-11.312,0l-64,64c-2.288,2.288-2.976,5.728-1.736,8.72
+			s4.16,4.936,7.392,4.936h23.608c-4.008,63.4-55.024,112-119.608,112c-35.336,0-68.704-15.512-91.56-42.576
+			c-7.168-8.488-17.656-13.624-28.776-14.088c-11.184-0.432-22.12,3.808-30.024,11.712c-14.56,14.56-15.816,38.072-2.84,53.504
+			c38.12,45.408,93.96,71.448,153.2,71.448c107.6,0,195.576-85.416,199.8-192h24.2c3.232,0,6.16-1.944,7.392-4.936
+			C468.586,234.049,467.898,230.609,465.61,228.322z M235.954,417.978c-54.504,0-105.872-23.96-140.952-65.744
+			c-7.68-9.144-6.84-23.152,1.904-31.896c4.576-4.576,10.576-7.064,16.992-7.064c0.352,0,0.704,0.008,1.056,0.024
+			c6.752,0.28,12.864,3.272,17.216,8.432c25.904,30.664,63.728,48.248,103.784,48.248c73.576,0,131.776-55.6,135.784-128h48.048
+			C415.578,339.738,334.73,417.978,235.954,417.978z M427.954,225.978h-64h-12.688l44.688-44.688l44.688,44.688H427.954z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M350.802,115.178c-65.504-65.504-172.096-65.504-237.592,0c-3.128,3.128-3.128,8.184,0,11.312
+			c3.128,3.128,8.184,3.128,11.312,0c59.264-59.248,155.696-59.248,214.968,0c1.56,1.56,3.608,2.344,5.656,2.344
+			c2.048,0,4.096-0.784,5.656-2.344C353.93,123.362,353.93,118.306,350.802,115.178z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M350.81,341.466c-3.128-3.128-8.2-3.128-11.32,0c-59.264,59.248-155.704,59.248-214.968,0
+			c-3.128-3.128-8.184-3.128-11.312,0s-3.128,8.184,0,11.312c32.752,32.752,75.776,49.128,118.8,49.128s86.048-16.376,118.8-49.128
+			C353.938,349.65,353.938,344.594,350.81,341.466z" />
+                </g>
+
+        </symbol>
+        <symbol id="i7" xheight="384pt" viewBox="0 0 368.002 368.002" xwidth="384pt">
+            <!--arrow.svg-->
+            <path d="m365.65625 2.347656c-3.128906-3.128906-8.183594-3.128906-11.3125 0l-34.34375 34.34375v-28.6875c0-4.417968-3.574219-7.99999975-8-7.99999975s-8 3.58203175-8 7.99999975v44.6875l-32 32v-28.6875c0-4.417968-3.574219-8-8-8s-8 3.582032-8 8v44.6875l-29.800781 29.796875c-24.039063-21.375-55.574219-34.484375-90.199219-34.484375-74.992188 0-136 61.007813-136 136 0 74.988282 61.007812 136 136 136s136-61.011718 136-136c0-34.625-13.113281-66.160156-34.488281-90.203125l29.800781-29.796875h44.6875c4.425781 0 8-3.585937 8-8 0-4.417968-3.574219-8-8-8h-28.6875l32-32h44.6875c4.425781 0 8-3.585937 8-8 0-4.417968-3.574219-8-8-8h-28.6875l34.34375-34.347656c3.128906-3.125 3.128906-8.183594 0-11.308594zm-109.65625 229.65625c0 66.167969-53.832031 120-120 120s-120-53.832031-120-120c0-66.167968 53.832031-120 120-120 30.207031 0 57.769531 11.300782 78.886719 29.796875l-22.613281 22.617188c-15.273438-12.726563-34.890626-20.414063-56.273438-20.414063-48.519531 0-88 39.476563-88 88 0 48.519532 39.480469 88 88 88s88-39.480468 88-88c0-21.386718-7.6875-41-20.414062-56.273437l22.613281-22.617188c18.496093 21.121094 29.800781 48.679688 29.800781 78.890625zm-96 0c0 13.230469-10.769531 24-24 24s-24-10.769531-24-24c0-13.234375 10.769531-24 24-24s24 10.765625 24 24zm-1.976562-33.339844c-6.328126-4.191406-13.886719-6.660156-22.023438-6.660156-22.054688 0-40 17.941406-40 40 0 22.054688 17.945312 40 40 40s40-17.945312 40-40c0-8.136718-2.472656-15.699218-6.664062-22.027344l22.863281-22.863281c9.863281 12.320313 15.800781 27.914063 15.800781 44.890625 0 39.695313-32.304688 72-72 72s-72-32.304687-72-72c0-39.699218 32.304688-72 72-72 16.976562 0 32.566406 5.933594 44.886719 15.796875zm0 0" />
+        </symbol>
+        <symbol id="i8" xheight="384pt" viewBox="0 0 512 512" xwidth="384pt">
+            <!--fix.svg-->
+
+            <g>
+                <g>
+                    <path d="M403.513,192.551h-23.529l4.875-14.571c1.314-3.929-0.805-8.179-4.732-9.493c-3.932-1.319-8.18,0.805-9.493,4.732
+			l-6.468,19.331h-48.157c1.967-5.877,18.917-56.543,22.13-66.145c12.833,8.264,27.95,12.752,44.007,12.405l-3.351,10.017
+			c-1.314,3.929,0.805,8.179,4.732,9.493c3.931,1.316,8.179-0.804,9.493-4.732l5.709-17.066
+			c51.157-13.073,68.451-72.685,33.282-111.532c-3.853-4.256-10.86-2.769-12.673,2.653l-17.487,52.272l-25.838,5.258L358.54,65.427
+			L377.124,9.88c0.796-2.379,0.351-4.997-1.188-6.979c-1.538-1.98-3.968-3.059-6.466-2.882
+			c-60.227,4.349-86.664,73.489-43.796,116.363l-13.816,41.296c-102.667,2.477-89.331,42.645-154.718,50.997
+			c-1.849-9.185-9.977-16.123-19.698-16.123H81.631c-11.081,0-20.096,9.015-20.096,20.096V345.24
+			c0,11.081,9.015,20.096,20.096,20.096h55.811c10.236,0,18.692-7.698,19.925-17.606c34.414,2.285,37.349,13.901,85.192,17.091
+			l-3.036,9.074c-26.256,3.687-48.239,21.042-56.424,45.509c-7.671,22.931-1.879,48.837,15.115,67.608
+			c3.843,4.246,10.856,2.779,12.673-2.653l17.488-52.274l25.836-5.257l17.472,19.748L253.1,502.12
+			c-1.687,5.042,2.283,10.239,7.653,9.861c56.503-4.077,84.59-65.979,49.233-110.205l12.315-36.805h39.313
+			c14.985,0,27.177-12.192,27.177-27.179c0-5.056-1.389-9.795-3.803-13.854c15.94-5.901,22.612-24.82,13.967-39.355
+			c15.94-5.9,22.612-24.819,13.967-39.355c10.363-3.836,17.769-13.818,17.769-25.499
+			C430.691,204.744,418.499,192.551,403.513,192.551z M358.928,16.981L342.94,64.773c-0.851,2.541-0.28,5.343,1.495,7.351
+			l23.211,26.233c1.776,2.006,4.488,2.911,7.113,2.38l34.325-6.985c2.626-0.534,4.768-2.429,5.617-4.97l14.214-42.486
+			c7.067,12.905,8.613,27.711,3.985,41.543c-15.458,46.202-83.19,47.857-106.707,4.421
+			C309.689,61.776,325.521,26.241,358.928,16.981z M307.997,461.185c-5.544,16.569-19.374,29.029-36.701,33.832l15.988-47.791
+			c0.851-2.541,0.28-5.343-1.495-7.351l-23.211-26.235c-1.812-2.047-4.546-2.904-7.113-2.38l-34.324,6.984
+			c-2.626,0.534-4.767,2.429-5.617,4.97l-14.214,42.487c-23.707-43.301,19.06-90.836,68.5-74.294
+			C300.171,401.574,317.494,432.791,307.997,461.185z M255.518,373.363l2.68-8.011c0,0,6.276-0.382,48.285-0.382l-8.352,24.962
+			C285.651,380.032,270.556,374.456,255.518,373.363z M403.514,231.906c-10.708,0-79.305,0-90.11,0
+			c-4.143,0-7.501,3.357-7.501,7.501s3.357,7.501,7.501,7.501h76.145c6.714,0,12.176,5.461,12.176,12.175
+			c0,6.716-5.462,12.179-12.176,12.179c-28.751,0-47.53,0-76.145,0c-4.143,0-7.501,3.357-7.501,7.501
+			c0,4.143,3.357,7.501,7.501,7.501h62.177c6.714,0,12.177,5.461,12.177,12.175c0,6.716-5.462,12.179-12.177,12.179
+			c-6.415,0-55.808,0-62.177,0c-4.143,0-7.501,3.357-7.501,7.501c0,4.142,3.357,7.501,7.501,7.501h48.211
+			c6.714,0,12.176,5.461,12.176,12.175c0,6.714-5.462,12.178-12.176,12.178c-0.487,0-91.113-0.015-91.599,0.023
+			c-0.418,0.032-42.384,3.156-77.335-10.692c-1.322-0.519-16.356-5.473-35.145-6.594v-76.321c0-4.143-3.358-7.501-7.501-7.501
+			s-7.501,3.357-7.501,7.501v88.854c0,2.809-2.285,5.094-5.094,5.094H81.631c-2.809,0-5.094-2.285-5.094-5.094V212.646
+			c0-2.809,2.285-5.094,5.094-5.094h55.811c2.809,0,5.094,2.285,5.094,5.094v20.736c0,4.143,3.358,7.501,7.501,7.501
+			s7.501-3.357,7.501-7.501v-9.625c70.648-8.032,56.75-47.339,149.248-50.916l-8.308,24.83c-0.766,2.288-0.384,4.804,1.025,6.763
+			c1.409,1.958,3.675,3.118,6.088,3.118c49.607,0,48.011,0,97.924,0c6.715,0,12.177,5.462,12.177,12.177
+			C415.691,226.444,410.229,231.906,403.514,231.906z" />
+                </g>
+            </g>
         </symbol>
 
     </svg>
@@ -4197,7 +4263,6 @@
 
 
     -->
-
 
 
 </body>
